@@ -237,20 +237,47 @@
     "__ScenePrivateMapOtherAreaEnterMapOverview": {
         "desc": "在其他区域，进入地区总览界面",
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "Or",
             "param": {
-                "roi": [
-                    -400,
-                    -200,
-                    400,
-                    200
-                ],
-                "template": [
-                    "SceneManager/MapOverviewEnter.png",
-                    "SceneManager/MapOverviewEnterHover.png"
-                ],
-                "green_mask": true,
-                "threshold": 0.9
+                "any_of": [
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "roi": [
+                                    -400,
+                                    -200,
+                                    400,
+                                    200
+                                ],
+                                "template": [
+                                    "SceneManager/MapOverviewEnter.png",
+                                    "SceneManager/MapOverviewEnterHover.png"
+                                ],
+                                "green_mask": true,
+                                "threshold": 0.9
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    -400,
+                                    -200,
+                                    400,
+                                    200
+                                ],
+                                // English button label; localized clients retain template recognition.
+                                "expected": [
+                                    // @i18n-skip
+                                    "(?i)Region\\s*Overview"
+                                ]
+                            }
+                        }
+                    }
+                ]
             }
         },
         "action": {
