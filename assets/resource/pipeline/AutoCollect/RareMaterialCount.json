@@ -36,9 +36,7 @@
             54,
             40
         ],
-        "expected": [
-            "^[0O]$"
-        ],
+        "expected": ["^[0-4O]$"],
         "only_rec": true
     },
     "AutoCollectRareOresPanel": {
@@ -61,9 +59,7 @@
             54,
             40
         ],
-        "expected": [
-            "^[0O]$"
-        ],
+        "expected": ["^[0-4O]$"],
         "only_rec": true
     },
     "AutoCollectRareGrowthsAvailable": {"recognition": "OCR", "roi": [
@@ -71,11 +67,11 @@
             228,
             54,
             40
-        ], "expected": ["^[1-9][0-9]*$"], "only_rec": true},
+        ], "expected": ["^(?:[5-9]|[1-9][0-9]+)$"], "only_rec": true},
     "AutoCollectRareOresAvailable": {"recognition": "OCR", "roi": [
             1123,
             204,
             54,
             40
-        ], "expected": ["^[1-9][0-9]*$"], "only_rec": true}
+        ], "expected": ["^(?:[5-9]|[1-9][0-9]+)$"], "only_rec": true}
 }

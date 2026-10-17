@@ -187,9 +187,12 @@
     },
     "AutoCollectRoute15CountUnavailable": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute15HistoryBegin"],
+        "next": [],
         "focus": {"Node.Action.Starting": "$option.AutoCollectRoute15.count_unavailable"}
     },
     "AutoCollectRoute15CheckMaterial1Available": {"recognition": "And", "all_of": [
