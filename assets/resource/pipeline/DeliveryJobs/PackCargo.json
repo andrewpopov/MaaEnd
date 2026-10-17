@@ -536,6 +536,7 @@
         "desc": "关闭「快速转交」的获得奖励界面",
         "recognition": "And",
         "all_of": [
+            "DeliveryJobsQuickTransferRewardTitle",
             "CloseRewardsButton"
         ],
         "pre_wait_freezes": {
@@ -756,16 +757,23 @@
     },
     "DeliveryJobsQuickTransferRewardClose": {
         "desc": "奖励画面静止后重新定位确认按钮，避免动画中的旧坐标",
-        "recognition": "TemplateMatch",
-        "roi": [
-            540,
-            538,
-            209,
-            182
+        "recognition": "And",
+        "all_of": [
+            "DeliveryJobsQuickTransferRewardTitle",
+            {
+                "recognition": "TemplateMatch",
+                "roi": [
+                    540,
+                    538,
+                    209,
+                    182
+                ],
+                "template": "Common/Button/CloseRewardButton.png",
+                "method": 5,
+                "threshold": 0.9
+            }
         ],
-        "template": "Common/Button/CloseRewardButton.png",
-        "method": 5,
-        "threshold": 0.9,
+        "box_index": 1,
         "pre_delay": 0,
         "action": "Click",
         "post_delay": 0,
@@ -773,5 +781,25 @@
         "next": [
             "DeliveryJobsQuickTransferBackToLocalDepotNode"
         ]
+    },
+    "DeliveryJobsQuickTransferRewardTitle": {
+        "desc": "识别快速转交奖励界面标题",
+        "recognition": "OCR",
+        "roi": [
+            520,
+            90,
+            240,
+            60
+        ],
+        "expected": [
+            "获得奖励",
+            "獲得獎勵",
+            "Rewards Acquired",
+            "報酬一覧",
+            "보상 획득"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0
     }
 }
