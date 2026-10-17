@@ -548,11 +548,11 @@
             ]
         },
         "pre_delay": 0,
-        "action": "Click",
+        "action": "DoNothing",
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
-            "DeliveryJobsQuickTransferBackToLocalDepotNode"
+            "DeliveryJobsQuickTransferRewardClose"
         ]
     },
     "DeliveryJobsQuickTransferBackToLocalDepotNode": {
@@ -752,6 +752,26 @@
         "rate_limit": 0,
         "next": [
             "InLocalDepotNode"
+        ]
+    },
+    "DeliveryJobsQuickTransferRewardClose": {
+        "desc": "奖励画面静止后重新定位确认按钮，避免动画中的旧坐标",
+        "recognition": "TemplateMatch",
+        "roi": [
+            540,
+            538,
+            209,
+            182
+        ],
+        "template": "Common/Button/CloseRewardButton.png",
+        "method": 5,
+        "threshold": 0.9,
+        "pre_delay": 0,
+        "action": "Click",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "DeliveryJobsQuickTransferBackToLocalDepotNode"
         ]
     }
 }
