@@ -41,8 +41,8 @@ and published branch. It does not wait for, download, or install the artifact.
 **The standard CI package downloads stock MXU.** Our pause/resume and agent shutdown
 fixes live in the local MXU checkout. Do not install stock CI artifacts over that
 customized GUI. A complete custom package must also build our maintained MXU fork
-against its compatible MaaFramework version. App installation and idle checks are
-intentionally outside this script; configuration and collection history stay put.
+against its compatible MaaFramework version. The sync script does not install apps; the separate layered installer below
+checks for running processes and preserves configuration and collection history.
 
 The same sync/check engine supports MXU once its local fixes are committed and
 pushed to a fork with `origin` pointing to our fork and `upstream` to MistEO/MXU:
@@ -58,3 +58,32 @@ runtime. No schedules, automatic merges, force pushes, or app replacements are
 created. Run `check` daily, and `prepare` when updates are available. After a PR is
 merged, remove its clean worktree with `git worktree remove <path>`; manifests stay
 available for reference.
+
+## Applying our layers when installing
+
+The MaaEnd fork build already includes our task, combat, reward and collection
+changes: these are source commits merged with upstream. The second code layer is
+our separately built MXU executable, containing pause/resume and safe agent
+shutdown. Account configuration and runtime collection history form the third
+layer and must remain in the installed directory.
+
+After downloading and extracting a successful fork Windows x64 package, and
+checking custom MXU against that package's MaaFramework runtime, close MaaEnd:
+
+```powershell
+.\tools\Install-Layered.ps1 -PackagePath '<extracted-package>' -GuiPath '<custom-mxu.exe>' -SourceCommit '<package-source-sha>'
+```
+
+This previews the install. Add `-Apply` to apply it. The installer refuses running
+MaaEnd/installed agent processes, inserts the custom GUI, backs up replaced code
+and resources under `install/backups/layered-…`, and records component hashes in
+`layers.json`. It overlays only shipped static data files, preserves other runtime
+data, and verifies configuration and collection-history hashes. Replacement
+failures roll back automatically. Preview does not replace files. The installer
+does not download packages, certify their build provenance, or run compatibility
+tests: use artifacts from our validated fork build and a compatible custom GUI.
+
+Tests: `python -m unittest discover -s tools -p test_fork_sync.py` and
+`powershell -File tools/test_layered_install.ps1`. The installer test uses temporary
+fixtures to verify success, preservation of user data, and rollback after a locked
+file prevents replacement. It does not change the actual app.
