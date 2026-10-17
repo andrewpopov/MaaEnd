@@ -118,8 +118,10 @@ job or automatic PR merge is created.
 Each run records source SHAs, the artifact run, archive and GUI hashes, and test
 completion in `.cache/layered-update/<time>/update.json`. To resume after a build
 failure or after resolving and committing GUI merge conflicts in the printed
-worktree, use `-Resume '<path-to-update.json>'` with Stage or Install. A changed
-application input or new GUI upstream ancestry requires a fresh stage. Keep a
+worktree, use `-Resume '<path-to-update.json>'` with Stage or Install. A completed
+stage reuses its tested GUI only when the source commit and executable hash match.
+New upstream commits do not start another sync while installing that pinned build.
+Changed fork application inputs require a fresh stage. Keep a
 resumed GUI worktree until its update is installed; `-MxuRepo` can explicitly use
 that merged source as the custom GUI source for later updates.
 

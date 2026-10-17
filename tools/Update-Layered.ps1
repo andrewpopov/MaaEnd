@@ -69,7 +69,7 @@ Get-GitOutput $mxu @('fetch','--no-recurse-submodules',$mxuRemote,"refs/heads/ma
 $mxuMissing=Get-GitOutput $mxu @('rev-list','--count',"HEAD..$mxuRemote/main")
 Write-Host "MXU: $mxuMissing upstream commits to merge with our local GUI layer."
 if ($Action -eq 'Check') { return }
-if ($missing -gt 0) {
+if ($missing -gt 0 -and -not $Resume) {
     $openPrs=(((Invoke-Checked $repo 'gh' @('pr','list','--repo',$fork,'--base','v2','--json','headRefName,url')) -join "`n") | ConvertFrom-Json)
     $existing=@($openPrs | Where-Object { $_.headRefName -like 'codex/sync-maaend-*' })
     if ($existing.Count -gt 0) { throw "An upstream sync PR is already open: $($existing[0].url). Merge it after CI, then rerun." }
@@ -96,7 +96,7 @@ if ($Resume) {
     $guiWork=$manifest.mxu_worktree
     if (-not $guiWork -or -not (Test-Path -LiteralPath $guiWork)) { throw 'No GUI worktree was prepared. Start a fresh stage.' }
     if ((Get-GitOutput $guiWork @('status','--porcelain','--untracked-files=no'))) { throw 'Commit GUI conflict resolutions before resuming.' }
-    Get-GitOutput $guiWork @('merge-base','--is-ancestor',"$mxuRemote/main",'HEAD') | Out-Host
+    if (-not $manifest.mxu_commit) { Get-GitOutput $guiWork @('merge-base','--is-ancestor',"$mxuRemote/main",'HEAD') | Out-Host }
     $selected=[pscustomobject]@{headSha=$manifest.source_commit}
     function Save-Manifest { $manifest | ConvertTo-Json -Depth 6 | Set-Content -LiteralPath $manifestPath -Encoding utf8 }
 } else {
@@ -151,8 +151,19 @@ try {
     throw
 }
 }
-$manifest.mxu_commit=Get-GitOutput $guiWork @('rev-parse','HEAD')
-Save-Manifest
+$currentGuiCommit=Get-GitOutput $guiWork @('rev-parse','HEAD')
+$gui=Join-Path $stage 'custom-MaaEnd.exe'
+$reuseGui=$Resume -and $manifest.gui_sha256 -and $manifest.compatibility_test -and ($manifest.mxu_commit -eq $currentGuiCommit)
+if ($reuseGui) {
+    if (-not (Test-Path -LiteralPath $gui) -or (Get-FileHash -LiteralPath $gui).Hash -ne $manifest.gui_sha256) {
+        throw 'Staged GUI is missing or its hash changed. Stage a fresh update.'
+    }
+    Write-Host 'Reusing the staged GUI and its passed compatibility check.'
+} else {
+    $manifest.mxu_commit=$currentGuiCommit
+    $manifest.gui_sha256=$null
+    $manifest.compatibility_test=$null
+    Save-Manifest
 Invoke-Checked $guiWork 'pnpm' @('install','--frozen-lockfile') | Out-Host
 Invoke-Checked $guiWork 'pnpm' @('test') | Out-Host
 Invoke-Checked $guiWork 'pnpm' @('build') | Out-Host
@@ -173,9 +184,10 @@ try {
         if ($null -eq $setting[1]) { Remove-Item ('Env:'+$setting[0]) -ErrorAction SilentlyContinue } else { Set-Item ('Env:'+$setting[0]) $setting[1] }
     }
 }
-$manifest.gui_sha256=(Get-FileHash -LiteralPath $gui).Hash
-$manifest.compatibility_test='passed: queue preservation and stop while paused'
-Save-Manifest
+    $manifest.gui_sha256=(Get-FileHash -LiteralPath $gui).Hash
+    $manifest.compatibility_test='passed: queue preservation and stop while paused'
+    Save-Manifest
+}
 $installerArgs=@{PackagePath=$package; GuiPath=$gui; InstallPath=$InstallPath; SourceCommit=$selected.headSha}
 if ($Action -eq 'Install') { $installerArgs.Apply=$true }
 & (Join-Path $PSScriptRoot 'Install-Layered.ps1') @installerArgs
