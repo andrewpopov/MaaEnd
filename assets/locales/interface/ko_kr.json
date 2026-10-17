@@ -1124,6 +1124,7 @@
     "option.AutoCollectCommonRoute3.failed": "<span style=\"color: red; font-weight: bold;\">채집 경로 3: 화염 풍뎅이 채집 실패</span>",
     "option.AutoCollectCommonRoute3.label": "채집 경로 3: 화염 풍뎅이",
     "option.AutoCollectCommonRoute3.skipped": "채집 경로 3: 화염 풍뎅이 재고가 목표에 도달하여 이번에는 건너뜁니다",
+    "option.AutoCollectCommonRoute3.unsafe_skip": "⚠️ Android 일반 채집 경로 3은 추락 및 사망으로 건너뜁니다. 경로 재검증이 필요하며 완료나 재실행 대기 시간을 기록하지 않습니다.",
     "option.AutoCollectCommonRoute4.failed": "<span style=\"color: red; font-weight: bold;\">채집 경로 4: 야광 풍뎅이 채집 실패</span>",
     "option.AutoCollectCommonRoute4.label": "채집 경로 4: 야광 풍뎅이",
     "option.AutoCollectCommonRoute4.skipped": "채집 경로 4: 야광 풍뎅이 재고가 목표에 도달하여 이번에는 건너뜁니다",

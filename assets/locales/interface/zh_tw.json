@@ -1124,6 +1124,7 @@
     "option.AutoCollectCommonRoute3.failed": "<span style=\"color: red; font-weight: bold;\">路線3：灼殼蟲採集失敗</span>",
     "option.AutoCollectCommonRoute3.label": "路線3：灼殼蟲",
     "option.AutoCollectCommonRoute3.skipped": "路線3：灼殼蟲 庫存已達目標，本次跳過",
+    "option.AutoCollectCommonRoute3.unsafe_skip": "⚠️ Android 略過灼殼蟲採集路線（普通路線3）：發生墜落死亡，路徑需要重新驗證；不記錄完成或冷卻。",
     "option.AutoCollectCommonRoute4.failed": "<span style=\"color: red; font-weight: bold;\">路線4：螢殼蟲採集失敗</span>",
     "option.AutoCollectCommonRoute4.label": "路線4：螢殼蟲",
     "option.AutoCollectCommonRoute4.skipped": "路線4：螢殼蟲 庫存已達目標，本次跳過",

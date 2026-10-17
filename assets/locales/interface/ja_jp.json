@@ -1124,6 +1124,7 @@
     "option.AutoCollectCommonRoute3.failed": "<span style=\"color: red; font-weight: bold;\">採集ルート3：アブリムシ：採集失敗</span>",
     "option.AutoCollectCommonRoute3.label": "採集ルート3：アブリムシ",
     "option.AutoCollectCommonRoute3.skipped": "採集ルート3：アブリムシ 在庫が目標に達したため、今回はスキップします",
+    "option.AutoCollectCommonRoute3.unsafe_skip": "⚠️ Androidの通常採集ルート3（灼殻虫）は転落・死亡のためスキップします。経路の再検証が必要です。完了やクールダウンは記録しません。",
     "option.AutoCollectCommonRoute4.failed": "<span style=\"color: red; font-weight: bold;\">採集ルート4：ホタルムシ：採集失敗</span>",
     "option.AutoCollectCommonRoute4.label": "採集ルート4：ホタルムシ",
     "option.AutoCollectCommonRoute4.skipped": "採集ルート4：ホタルムシ 在庫が目標に達したため、今回はスキップします",

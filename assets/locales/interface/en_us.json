@@ -1124,6 +1124,7 @@
     "option.AutoCollectCommonRoute3.failed": "<span style=\"color: red; font-weight: bold;\">Collect Route 3: Scorchbug collection failed</span>",
     "option.AutoCollectCommonRoute3.label": "Collect Route 3: Scorchbug",
     "option.AutoCollectCommonRoute3.skipped": "Collect Route 3: Scorchbug — target inventory reached, skipped this run",
+    "option.AutoCollectCommonRoute3.unsafe_skip": "⚠️ Skipping Scorchbug (regular route 3) on Android after a fall/death. The path needs revalidation; no completion or cooldown is recorded.",
     "option.AutoCollectCommonRoute4.failed": "<span style=\"color: red; font-weight: bold;\">Collect Route 4: Glowbug collection failed</span>",
     "option.AutoCollectCommonRoute4.label": "Collect Route 4: Glowbug",
     "option.AutoCollectCommonRoute4.skipped": "Collect Route 4: Glowbug — target inventory reached, skipped this run",

@@ -1124,6 +1124,7 @@
     "option.AutoCollectCommonRoute3.failed": "<span style=\"color: red; font-weight: bold;\">线路3：灼壳虫采集失败</span>",
     "option.AutoCollectCommonRoute3.label": "线路3：灼壳虫",
     "option.AutoCollectCommonRoute3.skipped": "线路3：灼壳虫 库存已达目标，本次跳过",
+    "option.AutoCollectCommonRoute3.unsafe_skip": "⚠️ 安卓端跳过灼壳虫采集路线（普通线路3）：发生坠落死亡，路径需要重新验证；不记录完成或冷却。",
     "option.AutoCollectCommonRoute4.failed": "<span style=\"color: red; font-weight: bold;\">线路4：萤壳虫采集失败</span>",
     "option.AutoCollectCommonRoute4.label": "线路4：萤壳虫",
     "option.AutoCollectCommonRoute4.skipped": "线路4：萤壳虫 库存已达目标，本次跳过",
