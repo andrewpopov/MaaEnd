@@ -207,7 +207,7 @@
             "AutoCollectRoute8CheckMaterial1Available",
             "AutoCollectRoute8CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute8CountUnavailable"]
+        "on_error": ["AutoCollectRoute8MaterialCheckFailed"]
     },
     "AutoCollectRoute8CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
@@ -232,5 +232,11 @@
     "AutoCollectRoute8CheckMaterial1Available": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute8HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute8HistoryBegin"]},
+    "AutoCollectRoute8MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute8CountUnavailable"]
+    }
 }

@@ -492,7 +492,7 @@
             "AutoCollectRoute7CheckMaterial1Available",
             "AutoCollectRoute7CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute7CountUnavailable"]
+        "on_error": ["AutoCollectRoute7MaterialCheckFailed"]
     },
     "AutoCollectRoute7CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
@@ -516,7 +516,7 @@
             "AutoCollectRoute7CheckMaterial2Available",
             "AutoCollectRoute7CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute7CountUnavailable"]
+        "on_error": ["AutoCollectRoute7MaterialCheckFailed"]
     },
     "AutoCollectRoute7CheckMaterial2Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
@@ -545,5 +545,11 @@
     "AutoCollectRoute7CheckMaterial2Available": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7HistoryBegin"]},
+    "AutoCollectRoute7MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute7CountUnavailable"]
+    }
 }

@@ -14,6 +14,10 @@ func TestCombatContinuesWhileCombosCoolDownAndLockIsPending(t *testing.T) {
 		{Box: maa.Rect{502, 629, 91, 14}, Label: LabelEnergyLevelFull},
 		{Box: maa.Rect{712, 315, 23, 18}, Label: LabelEnemyTarget},
 	}}}}
+	previous := screenAnalyzer
+	screenAnalyzer = sa
+	t.Cleanup(func() { screenAnalyzer = previous })
+	sa.RefreshLayout(nil)
 	if len(sa.GetCharacterComboFull()) != 0 {
 		t.Fatal("fixture must have no ready combo")
 	}

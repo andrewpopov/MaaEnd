@@ -161,7 +161,7 @@
             "AutoCollectRoute3CheckMaterial1Available",
             "AutoCollectRoute3CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute3CountUnavailable"]
+        "on_error": ["AutoCollectRoute3MaterialCheckFailed"]
     },
     "AutoCollectRoute3CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
@@ -186,5 +186,11 @@
     "AutoCollectRoute3CheckMaterial1Available": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute3HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute3HistoryBegin"]},
+    "AutoCollectRoute3MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute3CountUnavailable"]
+    }
 }

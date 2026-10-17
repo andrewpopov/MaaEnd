@@ -323,7 +323,7 @@
             "AutoCollectRoute10CheckMaterial1Available",
             "AutoCollectRoute10CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute10CountUnavailable"]
+        "on_error": ["AutoCollectRoute10MaterialCheckFailed"]
     },
     "AutoCollectRoute10CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
@@ -347,7 +347,7 @@
             "AutoCollectRoute10CheckMaterial2Available",
             "AutoCollectRoute10CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute10CountUnavailable"]
+        "on_error": ["AutoCollectRoute10MaterialCheckFailed"]
     },
     "AutoCollectRoute10CheckMaterial2Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
@@ -376,5 +376,11 @@
     "AutoCollectRoute10CheckMaterial2Available": {"recognition": "And", "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10HistoryBegin"]},
+    "AutoCollectRoute10MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute10CountUnavailable"]
+    }
 }

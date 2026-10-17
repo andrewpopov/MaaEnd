@@ -55,6 +55,7 @@
                 "EssenceFilterFinishAction",
                 "EssenceFilterInitAction",
                 "EssenceFilterSkillDecisionAction",
+                "ExitGameLauncherAction",
                 "FailureCollectorFinish",
                 "FailureCollectorReset",
                 "FailureCollectorRunTask",

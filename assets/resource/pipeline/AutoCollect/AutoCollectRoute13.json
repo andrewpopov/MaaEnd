@@ -251,7 +251,7 @@
             "AutoCollectRoute13CheckMaterial1Available",
             "AutoCollectRoute13CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute13CountUnavailable"]
+        "on_error": ["AutoCollectRoute13MaterialCheckFailed"]
     },
     "AutoCollectRoute13CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
@@ -276,5 +276,11 @@
     "AutoCollectRoute13CheckMaterial1Available": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13HistoryBegin"]},
+    "AutoCollectRoute13MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute13CountUnavailable"]
+    }
 }

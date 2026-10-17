@@ -162,7 +162,7 @@
             "AutoCollectRoute5CheckMaterial1Available",
             "AutoCollectRoute5CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute5CountUnavailable"]
+        "on_error": ["AutoCollectRoute5MaterialCheckFailed"]
     },
     "AutoCollectRoute5CheckMaterial1Empty": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
@@ -187,5 +187,11 @@
     "AutoCollectRoute5CheckMaterial1Available": {"recognition": "And", "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute5HistoryBegin"]}
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute5HistoryBegin"]},
+    "AutoCollectRoute5MaterialCheckFailed": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute5CountUnavailable"]
+    }
 }
