@@ -87,3 +87,46 @@ Tests: `python -m unittest discover -s tools -p test_fork_sync.py` and
 `powershell -File tools/test_layered_install.ps1`. The installer test uses temporary
 fixtures to verify success, preservation of user data, and rollback after a locked
 file prevents replacement. It does not change the actual app.
+
+## One-command layered updates (PowerShell 7)
+
+```powershell
+.\tools\Update-Layered.ps1 Check
+.\tools\Update-Layered.ps1 Stage
+# Close MaaEnd before replacing files:
+.\tools\Update-Layered.ps1 Install
+```
+
+`Stage` fetches both upstream repositories. Missing MaaEnd commits go through the
+existing sync PR and validation process; rerun after its CI passes and it is merged.
+It reuses an open sync PR rather than creating duplicates. If a matching successful
+Windows package is unavailable, it requests CI and stops until that build succeeds.
+
+The updater selects a successful fork build whose application inputs match our
+fork, downloads and extracts its artifact, snapshots our local MXU source using a
+separate Git index, and merges MXU upstream in an isolated worktree. Your original
+checkout, staged edits and custom source remain intact. It installs dependencies,
+runs frontend tests and build, runs the offline pause/resume compatibility test
+against the package's framework, and builds production MXU with embedded assets.
+Stage leaves the app running and does not replace its files.
+
+`Install` performs the same process and calls the backed-up layered installer,
+then verifies the desktop shortcut. It requires MaaEnd and installed agents to be
+closed. It does not terminate tasks or launch the app automatically. No scheduled
+job or automatic PR merge is created.
+
+Each run records source SHAs, the artifact run, archive and GUI hashes, and test
+completion in `.cache/layered-update/<time>/update.json`. To resume after a build
+failure or after resolving and committing GUI merge conflicts in the printed
+worktree, use `-Resume '<path-to-update.json>'` with Stage or Install. A changed
+application input or new GUI upstream ancestry requires a fresh stage. Keep a
+resumed GUI worktree until its update is installed; `-MxuRepo` can explicitly use
+that merged source as the custom GUI source for later updates.
+
+A trusted local download can be reused with `-BuildRun <run-id> -ArchivePath
+'<MaaEnd-win-x86_64.zip>'`. The selected run must still be a successful matching
+fork build; the operator is responsible for supplying the archive from that run.
+The default path always downloads from GitHub Actions. Run manifests and build
+worktrees remain available for diagnosis; cleanup is manual.
+
+Offline updater regression: `pwsh -File tools/test_update_layered.ps1`.

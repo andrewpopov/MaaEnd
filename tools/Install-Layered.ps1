@@ -17,14 +17,16 @@ function Assert-Within([string]$Root, [string]$Path) {
         throw "Path is outside its intended directory: $absolute"
     }
 }
-if (Get-Process MaaEnd -ErrorAction SilentlyContinue) {
-    throw 'Close MaaEnd before installation. Running task and agent processes must finish first.'
-}
-# A leftover child agent can still hold DLLs and write history after the GUI closes.
-foreach ($process in Get-CimInstance Win32_Process -Filter "Name='go-service.exe' OR Name='cpp-algo.exe'") {
-    if (-not $process.ExecutablePath) { throw 'Cannot verify the path of a running agent. Close it first.' }
-    if ($process.ExecutablePath.StartsWith($install + '\', [StringComparison]::OrdinalIgnoreCase)) {
-        throw "An installed agent is still running: $($process.ProcessId)"
+if ($Apply) {
+    if (Get-Process MaaEnd -ErrorAction SilentlyContinue) {
+        throw 'Close MaaEnd before installation. Running task and agent processes must finish first.'
+    }
+    # A leftover child agent can still hold DLLs and write history after the GUI closes.
+    foreach ($process in Get-CimInstance Win32_Process -Filter "Name='go-service.exe' OR Name='cpp-algo.exe'") {
+        if (-not $process.ExecutablePath) { throw 'Cannot verify the path of a running agent. Close it first.' }
+        if ($process.ExecutablePath.StartsWith($install + '\', [StringComparison]::OrdinalIgnoreCase)) {
+            throw "An installed agent is still running: $($process.ProcessId)"
+        }
     }
 }
 $allowed = @('agent','locales','maafw','resource','resource_adb','resource_cloud_adb',
