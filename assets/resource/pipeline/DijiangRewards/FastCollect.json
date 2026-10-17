@@ -128,7 +128,8 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
-            "DijiangRewardsFastCollectCluesSuccess"
+            "DijiangRewardsFastCollectCluesSuccess",
+            "DijiangRewardsFastCollectCluesReturned"
         ]
     },
     "DijiangRewardsFastCollectCluesSuccess": {
@@ -153,6 +154,36 @@
         "next": [
             "DijiangRewardsFastCollectAddItemData",
             "InDijiangControlNexus"
+        ]
+    },
+    "DijiangRewardsFastCollectCluesUnavailable": {
+        "recognition": "OCR",
+        "roi": [
+            1037,
+            45,
+            243,
+            372
+        ],
+        "expected": [
+            "线索",
+            "線索",
+            "(?i)Clues",
+            "手がかり"
+        ],
+        "inverse": true,
+        "next": [
+            "DijiangRewardsFastCollectCluesSuccess",
+            "InDijiangControlNexus"
+        ]
+    },
+    "DijiangRewardsFastCollectCluesReturned": {
+        "recognition": "And",
+        "all_of": [
+            "InDijiangControlNexus"
+        ],
+        "next": [
+            "DijiangRewardsFastCollectCluesSuccess",
+            "DijiangRewardsFastCollectCluesUnavailable"
         ]
     }
 }

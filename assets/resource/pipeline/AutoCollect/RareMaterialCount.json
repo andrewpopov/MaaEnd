@@ -1,0 +1,81 @@
+{
+    "AutoCollectRareChooseMarker": {
+        "recognition": "OCR",
+        "roi": [
+            950,
+            400,
+            320,
+            225
+        ],
+        "expected": [
+            "(?i)^Rare\\s+(?:Growths|Ores)$"
+        ],
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AutoCollectRareGrowthsPanel": {
+        "recognition": "OCR",
+        "roi": [
+            870,
+            60,
+            340,
+            45
+        ],
+        "expected": [
+            "(?i)^Rare\\s+Growths$"
+        ]
+    },
+    "AutoCollectRareGrowthsZero": {
+        "recognition": "OCR",
+        "roi": [
+            1123,
+            228,
+            54,
+            40
+        ],
+        "expected": [
+            "^[0O]$"
+        ],
+        "only_rec": true
+    },
+    "AutoCollectRareOresPanel": {
+        "recognition": "OCR",
+        "roi": [
+            870,
+            60,
+            340,
+            45
+        ],
+        "expected": [
+            "(?i)^Rare\\s+Ores$"
+        ]
+    },
+    "AutoCollectRareOresZero": {
+        "recognition": "OCR",
+        "roi": [
+            1123,
+            204,
+            54,
+            40
+        ],
+        "expected": [
+            "^[0O]$"
+        ],
+        "only_rec": true
+    },
+    "AutoCollectRareGrowthsAvailable": {"recognition": "OCR", "roi": [
+            1123,
+            228,
+            54,
+            40
+        ], "expected": ["^[1-9][0-9]*$"], "only_rec": true},
+    "AutoCollectRareOresAvailable": {"recognition": "OCR", "roi": [
+            1123,
+            204,
+            54,
+            40
+        ], "expected": ["^[1-9][0-9]*$"], "only_rec": true}
+}

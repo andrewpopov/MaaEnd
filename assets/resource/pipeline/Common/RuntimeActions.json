@@ -1,0 +1,14 @@
+{
+    "_GO_SERVICE_FOCUS_": {
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "__RepeatUntilActionInner": {
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0,
+        "rate_limit": 0
+    }
+}

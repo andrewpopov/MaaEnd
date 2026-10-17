@@ -2,10 +2,9 @@
     "AutoCollectCommonRoute3Start": {
         "desc": "灼壳虫采集线，6个点",
         "enabled": false,
-        "pre_delay": 0,
-        "post_delay": 0,
         "next": [
-            "AutoCollectCommonRoute3"
+            "AutoCollectCommonRoute3HistoryDue",
+            "AutoCollectCommonRoute3HistorySkipped"
         ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectCommonRoute3.label"
@@ -13,6 +12,12 @@
     },
     "AutoCollectCommonRoute3End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute3",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectCommonRoute3": {
@@ -224,5 +229,33 @@
                 "trace": true
             }
         }
+    },
+    "AutoCollectCommonRoute3Run": {
+        "desc": "灼壳虫采集线，6个点",
+        "enabled": true,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "AutoCollectCommonRoute3"
+        ]
+    },
+    "AutoCollectCommonRoute3HistoryDue": {
+        "recognition": "Custom",
+        "custom_recognition": "AutoCollectRouteDue",
+        "custom_recognition_param": {
+            "route": "AutoCollectCommonRoute3"
+        },
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute3",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectCommonRoute3Run"
+        ]
+    },
+    "AutoCollectCommonRoute3HistorySkipped": {
+        "action": "DoNothing"
     }
 }

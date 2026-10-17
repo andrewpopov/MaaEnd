@@ -2,22 +2,19 @@
     "AutoCollectRoute14Start": {
         "desc": "晶化多齿叶",
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldValleyIVTheHub3"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute14AssertLocation1"
-        ],
+        "next": ["AutoCollectRoute14CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute14.label"
         }
     },
     "AutoCollectRoute14End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute14",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute14AssertLocation1": {
@@ -168,5 +165,84 @@
                 "trace": true
             }
         }
-    }
+    },
+    "AutoCollectRoute14Run": {
+        "desc": "晶化多齿叶",
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldValleyIVTheHub3"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute14AssertLocation1"
+        ]
+    },
+    "AutoCollectRoute14HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute14",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute14Run"
+        ]
+    },
+    "AutoCollectRoute14CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapValleyIVTheHub"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute14CheckMaterial1"],
+        "on_error": ["AutoCollectRoute14CountUnavailable"]
+    },
+    "AutoCollectRoute14CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareGrowths", "at": [
+                606.54,
+                993.55
+            ]},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute14CheckMaterial1Empty",
+            "AutoCollectRoute14CheckMaterial1Available",
+            "AutoCollectRoute14CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute14CountUnavailable"]
+    },
+    "AutoCollectRoute14CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute14SkipDepleted"]},
+    "AutoCollectRoute14SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute14.skip_empty"}
+    },
+    "AutoCollectRoute14CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute14HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute14.count_unavailable"}
+    },
+    "AutoCollectRoute14CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute14HistoryBegin"]}
 }

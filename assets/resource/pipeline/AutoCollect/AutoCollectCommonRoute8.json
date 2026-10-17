@@ -2,10 +2,9 @@
     "AutoCollectCommonRoute8Start": {
         "desc": "金石稻采集线，12个",
         "enabled": false,
-        "pre_delay": 0,
-        "post_delay": 0,
         "next": [
-            "AutoCollectCommonRoute8"
+            "AutoCollectCommonRoute8HistoryDue",
+            "AutoCollectCommonRoute8HistorySkipped"
         ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectCommonRoute8.label"
@@ -13,6 +12,12 @@
     },
     "AutoCollectCommonRoute8End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute8",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectCommonRoute8": {
@@ -140,5 +145,33 @@
                 "trace": true
             }
         }
+    },
+    "AutoCollectCommonRoute8Run": {
+        "desc": "金石稻采集线，12个",
+        "enabled": true,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "AutoCollectCommonRoute8"
+        ]
+    },
+    "AutoCollectCommonRoute8HistoryDue": {
+        "recognition": "Custom",
+        "custom_recognition": "AutoCollectRouteDue",
+        "custom_recognition_param": {
+            "route": "AutoCollectCommonRoute8"
+        },
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute8",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectCommonRoute8Run"
+        ]
+    },
+    "AutoCollectCommonRoute8HistorySkipped": {
+        "action": "DoNothing"
     }
 }

@@ -23,7 +23,9 @@
                     "custom_action": "AutoAltClickAction",
                     "wait_nodes": [
                         "__ScenePrivateWorldSpaceExitConfirm",
-                        "__ScenePrivateEndVisit"
+                        "__ScenePrivateEndVisit",
+                        "SceneWaitLoadingExit",
+                        "InWorld"
                     ]
                 }
             }
@@ -31,7 +33,9 @@
         "post_delay": 0,
         "next": [
             "__ScenePrivateWorldSpaceExitConfirm",
-            "__ScenePrivateEndVisit"
+            "__ScenePrivateEndVisit",
+            "[JumpBack]SceneWaitLoadingExit",
+            "__ScenePrivateAnyEnterWorldSuccess"
         ]
     },
     "__ScenePrivateWorldStorySkip": {
@@ -90,13 +94,17 @@
                 "custom_action_param": {
                     "action": "Click",
                     "wait_nodes": [
-                        "__ScenePrivateWorldSpaceExitConfirm"
+                        "__ScenePrivateWorldSpaceExitConfirm",
+                        "SceneWaitLoadingExit",
+                        "InWorld"
                     ]
                 }
             }
         },
         "next": [
-            "__ScenePrivateWorldSpaceExitConfirm"
+            "__ScenePrivateWorldSpaceExitConfirm",
+            "[JumpBack]SceneWaitLoadingExit",
+            "__ScenePrivateAnyEnterWorldSuccess"
         ]
     },
     "__ScenePrivateWorldSpaceExitConfirm": {

@@ -1,22 +1,19 @@
 {
     "AutoCollectRoute5Start": {
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldValleyIVTheHub2"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute5AssertLocation"
-        ],
+        "next": ["AutoCollectRoute5CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute5.label"
         }
     },
     "AutoCollectRoute5End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute5",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute5AssertLocation": {
@@ -112,5 +109,83 @@
         "focus": {
             "Node.Recognition.Succeeded": "等待10s完成收集"
         }
-    }
+    },
+    "AutoCollectRoute5Run": {
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldValleyIVTheHub2"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute5AssertLocation"
+        ]
+    },
+    "AutoCollectRoute5HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute5",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute5Run"
+        ]
+    },
+    "AutoCollectRoute5CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapValleyIVTheHub"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute5CheckMaterial1"],
+        "on_error": ["AutoCollectRoute5CountUnavailable"]
+    },
+    "AutoCollectRoute5CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareOres", "at": [
+                536.32,
+                757.02
+            ]},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute5CheckMaterial1Empty",
+            "AutoCollectRoute5CheckMaterial1Available",
+            "AutoCollectRoute5CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute5CountUnavailable"]
+    },
+    "AutoCollectRoute5CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute5SkipDepleted"]},
+    "AutoCollectRoute5SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute5.skip_empty"}
+    },
+    "AutoCollectRoute5CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute5HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute5.count_unavailable"}
+    },
+    "AutoCollectRoute5CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute5HistoryBegin"]}
 }

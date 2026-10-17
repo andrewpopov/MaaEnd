@@ -8,6 +8,9 @@ import (
 	"sort"
 	"strconv"
 	"strings"
+	"unicode"
+
+	"golang.org/x/text/unicode/norm"
 
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/outposttrading/internal/ocrmatch"
 	maa "github.com/MaaXYZ/maa-framework-go/v4"
@@ -226,9 +229,37 @@ func stockNameWithinAnchorColumns(
 }
 
 func matchStockPageNames(ocrItems []ocrmatch.Item, groups []itemPriorityGroup) []stockNameMatch {
+	// The vertical rarity marker can be recognized as an extra capital I before an English name.
+	// Keep exact known names unchanged; remove one marker only if the remainder is a full known name.
+	knownNames := make(map[string]struct{})
+	for _, group := range groups {
+		for _, candidate := range group.Candidates {
+			knownNames[ocrmatch.StripSeparators(candidate)] = struct{}{}
+		}
+	}
+	normalizedItems := append([]ocrmatch.Item(nil), ocrItems...)
+	for i, item := range normalizedItems {
+		if _, exact := knownNames[ocrmatch.StripSeparators(item.Text)]; exact {
+			continue
+		}
+		// OCR may add a Latin accent (Jincão Tea). Accept the correction only
+		// when the complete corrected text is already a known catalog name.
+		text := foldStockLatinAccents(strings.TrimSpace(item.Text))
+		if _, known := knownNames[ocrmatch.StripSeparators(text)]; known {
+			normalizedItems[i].Text = text
+			continue
+		}
+		if !strings.HasPrefix(text, "I") {
+			continue
+		}
+		name := strings.TrimSpace(strings.TrimPrefix(text, "I"))
+		if _, known := knownNames[ocrmatch.StripSeparators(name)]; known {
+			normalizedItems[i].Text = name
+		}
+	}
 	matches := make([]stockNameMatch, 0, len(groups))
 	for _, group := range groups {
-		match := ocrmatch.FindBest(ocrItems, group.Candidates)
+		match := ocrmatch.FindBest(normalizedItems, group.Candidates)
 		if match == nil {
 			continue
 		}
@@ -236,6 +267,22 @@ func matchStockPageNames(ocrItems []ocrmatch.Item, groups []itemPriorityGroup) [
 	}
 	sortStockNameMatchesByGrid(matches)
 	return matches
+}
+
+// foldStockLatinAccents preserves CJK combining marks and restores NFC afterward.
+func foldStockLatinAccents(text string) string {
+	var b strings.Builder
+	latin := false
+	for _, r := range norm.NFD.String(text) {
+		if unicode.Is(unicode.Mn, r) && latin {
+			continue
+		}
+		b.WriteRune(r)
+		if !unicode.Is(unicode.Mn, r) {
+			latin = unicode.In(r, unicode.Latin)
+		}
+	}
+	return norm.NFC.String(b.String())
 }
 
 func findStockNameForAnchor(

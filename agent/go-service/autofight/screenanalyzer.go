@@ -512,3 +512,13 @@ func (sa *ScreenAnalyzer) GetMenuList() bool {
 func (sa *ScreenAnalyzer) GetMenuOperators() bool {
 	return sa.hasLabelInFrames(LabelMenuOperators, 3, false)
 }
+
+// CombatReady requires the combat HUD, but does not wait for a combo cooldown.
+func (sa *ScreenAnalyzer) CombatReady() bool {
+	return sa.GetEnergyLevel(false) >= 0 && sa.GetCharacterSelect() > 0 && !sa.GetCharacterLevel()
+}
+
+// CombatTargetVisible lets skills run while lock-on is still being acquired.
+func (sa *ScreenAnalyzer) CombatTargetVisible(lockEnabled bool) bool {
+	return !lockEnabled || sa.GetEnemyLocked() || sa.GetEnemyTarget()
+}

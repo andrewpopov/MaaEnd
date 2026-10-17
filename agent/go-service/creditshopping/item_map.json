@@ -52,5 +52,8 @@
     "硬質金型": "CastDie",
     "重型强固模具": "HeavyCastDie",
     "重型強固模具": "HeavyCastDie",
-    "重硬質金型": "HeavyCastDie"
+    "重硬質金型": "HeavyCastDie",
+    "Elementary Combat": "ElementaryCombatRecord",
+    "Elementary Cognitive": "ElementaryCognitiveCarrier",
+    "Intermediate Combat": "IntermediateCombatRecord"
 }

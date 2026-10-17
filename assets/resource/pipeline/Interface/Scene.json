@@ -336,16 +336,41 @@
     "SceneWaitLoadingExit": {
         "desc": "判断当前场景在加载界面，什么都不做，用于等待加载界面消失",
         "recognition": {
-            "type": "TemplateMatch",
+            "type": "Or",
             "param": {
-                "roi": [
-                    0,
-                    0,
-                    200,
-                    200
-                ],
-                "template": [
-                    "SceneManager/LoadingIcon.png"
+                "any_of": [
+                    {
+                        "recognition": {
+                            "type": "TemplateMatch",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    200,
+                                    200
+                                ],
+                                "template": [
+                                    "SceneManager/LoadingIcon.png"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    1100,
+                                    640,
+                                    150,
+                                    50
+                                ],
+                                "expected": [
+                                    "(?i)NOW\\s*LOADING\\.{0,3}"
+                                ]
+                            }
+                        }
+                    }
                 ]
             }
         },

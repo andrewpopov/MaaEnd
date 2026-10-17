@@ -12,12 +12,13 @@
                 "AttachToExpectedRegexAction",
                 "AutoAltClickAction",
                 "AutoAltSwipeAction",
+                "AutoCollectHistory",
                 "AutoCtrlClickAction",
-                "AutoFightMainAction",
                 "AutoDeliveryResolveDepotAction",
                 "AutoDeliveryResolveDestinationAction",
                 "AutoEssenceLoadInventoryAction",
                 "AutoEssenceTargetPlanAction",
+                "AutoFightMainAction",
                 "AutoSellItemExecuteItemTaskAction",
                 "AutoStockStapleQuantityControlAction",
                 "AutoStockpile.ReconcileDecision",
@@ -34,6 +35,7 @@
                 "BatchAddFriendsUIDOnEmptyAction",
                 "BetterSliding",
                 "CameraScanAction",
+                "CaptureUid",
                 "CharacterControllerForwardAxisAction",
                 "CharacterControllerPitchDeltaAction",
                 "CharacterControllerRelativeMoveAction",
@@ -41,7 +43,6 @@
                 "CharacterMoveToTargetAction",
                 "CharacterMoveToTargetNotFoundAction",
                 "CharacterSearchAction",
-                "CaptureUid",
                 "ClearHitCount",
                 "CloseGameAction",
                 "CreditShoppingScanItemAction",
@@ -54,17 +55,17 @@
                 "EssenceFilterFinishAction",
                 "EssenceFilterInitAction",
                 "EssenceFilterSkillDecisionAction",
-				"FailureCollectorFinish",
-				"FailureCollectorRunTask",
-				"FailureCollectorReset",
+                "FailureCollectorFinish",
+                "FailureCollectorReset",
+                "FailureCollectorRunTask",
                 "FalseAction",
                 "FocusOCRAction",
                 "ImageCheckSetResultAction",
                 "ImportBluePrintsEnterCodeAction",
                 "ImportBluePrintsFinishAction",
                 "ImportBluePrintsInitTextAction",
-                "IntelArchiveResolveTruncAction",
                 "IntelArchiveResetSessionAction",
+                "IntelArchiveResolveTruncAction",
                 "IntelArchiveShowInventoryAction",
                 "ItemTransferFallbackAction",
                 "ItemTransferOCRAction",
@@ -78,12 +79,12 @@
                 "PostStop",
                 "PullCountCalculatorAction",
                 "PuzzleAction",
-                "SeizeDeliveryJobsResetScanStateAction",
-                "SeizeDeliveryJobsScanTargetAction",
                 "RealTimeTaskAction",
                 "RepeatUntilFoundAction",
                 "RepeatUntilNotFoundAction",
                 "SceneManagerMenuListClickItemAction",
+                "SeizeDeliveryJobsResetScanStateAction",
+                "SeizeDeliveryJobsScanTargetAction",
                 "SubTask",
                 "SyncItemData",
                 "TrialOfSwordmancy.Decide",
@@ -100,7 +101,9 @@
         {
             "if": {
                 "properties": {
-                    "custom_action": { "const": "MapNavigateAction" }
+                    "custom_action": {
+                        "const": "MapNavigateAction"
+                    }
                 },
                 "required": [
                     "custom_action"
@@ -127,247 +130,424 @@
         {
             "if": {
                 "properties": {
-                    "custom_action": { "const": "CaptureUid" }
+                    "custom_action": {
+                        "const": "CaptureUid"
+                    }
                 },
-                "required": ["custom_action"]
+                "required": [
+                    "custom_action"
+                ]
             },
             "then": {
                 "properties": {
                     "custom_action_param": {
                         "type": "object",
                         "properties": {
-                            "use_cache": { "type": "boolean" },
-                            "stay_on_current_screen": { "type": "boolean" },
-                            "allow_unknown": { "type": "boolean" },
-                            "clear_cache": { "type": "boolean" },
-                            "output_type": { "enum": ["hashed", "masked", "raw"] }
+                            "use_cache": {
+                                "type": "boolean"
+                            },
+                            "stay_on_current_screen": {
+                                "type": "boolean"
+                            },
+                            "allow_unknown": {
+                                "type": "boolean"
+                            },
+                            "clear_cache": {
+                                "type": "boolean"
+                            },
+                            "output_type": {
+                                "enum": [
+                                    "hashed",
+                                    "masked",
+                                    "raw"
+                                ]
+                            }
                         },
                         "additionalProperties": false
                     }
                 }
             }
         },
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "AutoDeliveryResolveDestinationAction" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/auto_delivery.schema.json#/$defs/ResolveDestinationParam" }
-				}
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "AddItemData" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/ims.schema.json#/$defs/AddItemDataParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "SyncItemData" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/ims.schema.json#/$defs/SyncItemDataParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "UpdateItemQuantity" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/ims.schema.json#/$defs/UpdateItemQuantityParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "FailureCollectorReset" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/failure_collector.schema.json#/$defs/BaseParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "FailureCollectorRunTask" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/failure_collector.schema.json#/$defs/RunTaskParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "FailureCollectorFinish" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/failure_collector.schema.json#/$defs/FinishParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "FocusOCRAction" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"type": "object",
-				"required": [ "custom_action_param" ],
-				"properties": {
-					"custom_action_param": {
-						"type": "object",
-						"additionalProperties": false,
-						"required": [ "node" ],
-						"properties": {
-							"node": {
-								"type": "string",
-								"minLength": 1
-							},
-							"focus": {
-								"type": "string"
-							}
-						}
-					}
-				}
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "OutpostTradingLocationPlan" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/outpost_trading.schema.json#/$defs/LocationPlanParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "OutpostTradingPrioritySession" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/outpost_trading.schema.json#/$defs/PrioritySessionParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "CameraScanAction" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/camerascan.schema.json#/$defs/CameraScanParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "RepeatUntilFoundAction" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/repeat_action.schema.json#/$defs/RepeatUntilFoundParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		},
-		{
-			"if": {
-				"properties": {
-					"custom_action": { "const": "RepeatUntilNotFoundAction" }
-				},
-				"required": [ "custom_action" ]
-			},
-			"then": {
-				"properties": {
-					"custom_action_param": { "$ref": "./components/repeat_action.schema.json#/$defs/RepeatUntilNotFoundParam" }
-				},
-				"required": [ "custom_action_param" ]
-			}
-		}
-	],
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "AutoDeliveryResolveDestinationAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/auto_delivery.schema.json#/$defs/ResolveDestinationParam"
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "AddItemData"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/ims.schema.json#/$defs/AddItemDataParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "SyncItemData"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/ims.schema.json#/$defs/SyncItemDataParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "UpdateItemQuantity"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/ims.schema.json#/$defs/UpdateItemQuantityParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "FailureCollectorReset"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/failure_collector.schema.json#/$defs/BaseParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "FailureCollectorRunTask"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/failure_collector.schema.json#/$defs/RunTaskParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "FailureCollectorFinish"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/failure_collector.schema.json#/$defs/FinishParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "FocusOCRAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "type": "object",
+                "required": [
+                    "custom_action_param"
+                ],
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "node"
+                        ],
+                        "properties": {
+                            "node": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "focus": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "OutpostTradingLocationPlan"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/outpost_trading.schema.json#/$defs/LocationPlanParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "OutpostTradingPrioritySession"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/outpost_trading.schema.json#/$defs/PrioritySessionParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "CameraScanAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/camerascan.schema.json#/$defs/CameraScanParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "RepeatUntilFoundAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/repeat_action.schema.json#/$defs/RepeatUntilFoundParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "RepeatUntilNotFoundAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "$ref": "./components/repeat_action.schema.json#/$defs/RepeatUntilNotFoundParam"
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "required": [
+                    "custom_action"
+                ],
+                "properties": {
+                    "custom_action": {
+                        "const": "AutoCollectHistory"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "custom_action_param"
+                ],
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "route": {
+                                "type": "string",
+                                "pattern": "^AutoCollect(Common)?Route[1-9][0-9]*$"
+                            },
+                            "event": {
+                                "enum": [
+                                    "started",
+                                    "completed"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "route",
+                            "event"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        }
+    ],
     "if": {
         "type": "object",
-        "required": [ "custom_action" ],
-        "properties": { "custom_action": { "const": "AutoAltSwipeAction" } }
+        "required": [
+            "custom_action"
+        ],
+        "properties": {
+            "custom_action": {
+                "const": "AutoAltSwipeAction"
+            }
+        }
     },
     "then": {
         "type": "object",
-        "required": [ "custom_action_param" ],
+        "required": [
+            "custom_action_param"
+        ],
         "properties": {
-            "custom_action_param": { "$ref": "./components/auto_alt.schema.json#/$defs/AutoAltSwipeParam" }
+            "custom_action_param": {
+                "$ref": "./components/auto_alt.schema.json#/$defs/AutoAltSwipeParam"
+            }
         }
     },
     "else": {
         "if": {
             "type": "object",
-            "required": [ "custom_action" ],
+            "required": [
+                "custom_action"
+            ],
             "properties": {
-                "custom_action": { "const": "FailureCollectorRunTask" }
+                "custom_action": {
+                    "const": "FailureCollectorRunTask"
+                }
             }
         },
         "then": {
             "type": "object",
-            "required": [ "custom_action_param" ],
+            "required": [
+                "custom_action_param"
+            ],
             "properties": {
-                "custom_action_param": { "$ref": "./components/failure_collector.schema.json#/$defs/RunTaskParam" }
+                "custom_action_param": {
+                    "$ref": "./components/failure_collector.schema.json#/$defs/RunTaskParam"
+                }
             }
         }
     }

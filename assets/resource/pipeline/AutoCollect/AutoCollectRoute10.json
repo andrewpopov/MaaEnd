@@ -2,22 +2,19 @@
     "AutoCollectRoute10Start": {
         "desc": "共两个重红柱状菌采集点",
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldWulingJingyuValley1"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute10AssertLocation1"
-        ],
+        "next": ["AutoCollectRoute10CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute10.label"
         }
     },
     "AutoCollectRoute10End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute10",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute10AssertLocation1": {
@@ -272,5 +269,112 @@
                 "trace": true
             }
         }
-    }
+    },
+    "AutoCollectRoute10Run": {
+        "desc": "共两个重红柱状菌采集点",
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldWulingJingyuValley1"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute10AssertLocation1"
+        ]
+    },
+    "AutoCollectRoute10HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute10",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute10Run"
+        ]
+    },
+    "AutoCollectRoute10CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapWulingJingyuValley"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute10CheckMaterial1"],
+        "on_error": ["AutoCollectRoute10CountUnavailable"]
+    },
+    "AutoCollectRoute10CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "Wuling", "icon": "RareGrowths", "at": [
+                943.76,
+                2232.41
+            ], "vote_grid": 5},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute10CheckMaterial1Empty",
+            "AutoCollectRoute10CheckMaterial1Available",
+            "AutoCollectRoute10CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute10CountUnavailable"]
+    },
+    "AutoCollectRoute10CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10CheckMaterial2"]},
+    "AutoCollectRoute10CheckMaterial2": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "Wuling", "icon": "RareGrowths", "at": [
+                887.24,
+                2235.88
+            ], "vote_grid": 5},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute10CheckMaterial2Empty",
+            "AutoCollectRoute10CheckMaterial2Available",
+            "AutoCollectRoute10CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute10CountUnavailable"]
+    },
+    "AutoCollectRoute10CheckMaterial2Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10SkipDepleted"]},
+    "AutoCollectRoute10SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute10.skip_empty"}
+    },
+    "AutoCollectRoute10CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute10HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute10.count_unavailable"}
+    },
+    "AutoCollectRoute10CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10HistoryBegin"]},
+    "AutoCollectRoute10CheckMaterial2Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute10HistoryBegin"]}
 }

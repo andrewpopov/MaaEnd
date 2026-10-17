@@ -2,10 +2,9 @@
     "AutoCollectCommonRoute6Start": {
         "desc": "琼叶参采集线，4个坐标，5个物品",
         "enabled": false,
-        "pre_delay": 0,
-        "post_delay": 0,
         "next": [
-            "AutoCollectCommonRoute6"
+            "AutoCollectCommonRoute6HistoryDue",
+            "AutoCollectCommonRoute6HistorySkipped"
         ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectCommonRoute6.label"
@@ -13,6 +12,12 @@
     },
     "AutoCollectCommonRoute6End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute6",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectCommonRoute6": {
@@ -207,5 +212,33 @@
                 "trace": true
             }
         }
+    },
+    "AutoCollectCommonRoute6Run": {
+        "desc": "琼叶参采集线，4个坐标，5个物品",
+        "enabled": true,
+        "pre_delay": 0,
+        "post_delay": 0,
+        "next": [
+            "AutoCollectCommonRoute6"
+        ]
+    },
+    "AutoCollectCommonRoute6HistoryDue": {
+        "recognition": "Custom",
+        "custom_recognition": "AutoCollectRouteDue",
+        "custom_recognition_param": {
+            "route": "AutoCollectCommonRoute6"
+        },
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectCommonRoute6",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectCommonRoute6Run"
+        ]
+    },
+    "AutoCollectCommonRoute6HistorySkipped": {
+        "action": "DoNothing"
     }
 }

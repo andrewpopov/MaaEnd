@@ -1,4 +1,5 @@
 {
+    "autocollect.cooldown_skip": "Skipping %s: completed at %s; available again after the local daily reset at %s.",
     "autodelivery.destination.recycle_bin": "%s Resource Recycle Station #%d",
     "autodelivery.focus.depot_resolved": "🚛 Depot identified: %s",
     "autodelivery.focus.depot_zipline_required": "🚛 <span style=\"color: red; font-weight: bold;\">Depot %s can only be reached by zipline</span>. Ziplines are currently disabled and there is no walking route; enable \"Prefer Ziplines for Delivery\" in the task options and retry.",

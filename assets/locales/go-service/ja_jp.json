@@ -1,4 +1,5 @@
 {
+    "autocollect.cooldown_skip": "%s をスキップ：%s に完了済み。現地時刻のデイリー更新 %s 以降に再実行します。",
     "autodelivery.destination.recycle_bin": "%s・資源回収ステーション #%d",
     "autodelivery.focus.depot_resolved": "🚛 倉庫拠点を確認しました：%s",
     "autodelivery.focus.depot_zipline_required": "🚛 <span style=\"color: red; font-weight: bold;\">倉庫拠点 %s にはジップラインでしか到達できません</span>。ジップラインが無効のため徒歩では移動できません。タスクオプションの「配送時にジップラインを優先」を有効にして再試行してください。",

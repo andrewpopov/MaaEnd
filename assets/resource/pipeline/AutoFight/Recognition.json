@@ -380,8 +380,8 @@
         "roi": [
             0,
             200,
-            160,
-            200
+            640,
+            120
         ],
         "template": "ProtocolSpace/SpaceResart.png",
         "green_mask": true

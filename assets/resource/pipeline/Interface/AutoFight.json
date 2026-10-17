@@ -18,7 +18,7 @@
             "enable_break_accumulating_power": true,
             "enable_skill": true,
             "enable_health_dangerous_switch": true,
-            "reserve_skill_level": 1,
+            "reserve_skill_level": 0,
             "enable_end_skill": true,
             "enable_lock_target": true,
             "end_axis_timeline_code": "",

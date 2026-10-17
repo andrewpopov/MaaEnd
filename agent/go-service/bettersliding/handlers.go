@@ -230,7 +230,7 @@ func (a *BetterSlidingAction) handleGetSliderMaxQuantity(ctx *maa.Context, arg *
 	a.targetReachable = outcome == sliderQuantityOutcomeTargetReachable
 
 	if outcome == sliderQuantityOutcomeClamped {
-		a.logger.Warn().
+		a.logger.Info().
 			Int("original_target_quantity", originalResolvedTargetQuantity).
 			Int("clamped_target_quantity", a.TargetQuantity).
 			Int("slider_max_quantity", a.sliderMaxQuantity).

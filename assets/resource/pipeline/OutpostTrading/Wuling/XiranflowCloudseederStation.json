@@ -1099,7 +1099,7 @@
         "roi": [
             198,
             167,
-            331,
+            700,
             127
         ],
         "expected": [
@@ -1169,7 +1169,7 @@
         "roi": [
             145,
             103,
-            998,
+            1090,
             518
         ],
         "pre_delay": 0,
@@ -1191,7 +1191,7 @@
         "roi": [
             145,
             103,
-            998,
+            1090,
             518
         ],
         "pre_delay": 0,
@@ -1283,7 +1283,12 @@
             "OutOfRangeOverrideEnable": "OutpostTradingReserveAlreadySatisfied",
             "TargetReachableOverrideEnable": "OutpostTradingReserveQuantityReached"
         },
-        "post_wait_freezes": 80,
+        "post_wait_freezes": {"time": 80, "target": [
+                1107,
+                535,
+                74,
+                29
+            ]},
         "post_delay": 0,
         "rate_limit": 0,
         // next 运行时由 OutpostTradingReserveSession 覆写（与上面注入 attach 的是同一次调用）：

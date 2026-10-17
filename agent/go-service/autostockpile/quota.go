@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	overflowCurrentMaxRe = regexp.MustCompile(`(\d+)/(\d+)`)
+	overflowCurrentMaxRe = regexp.MustCompile(`(\d+)\s*/\s*(\d+)`)
 	overflowPlusRe       = regexp.MustCompile(`\+(\d+)`)
 )
 
@@ -28,6 +28,11 @@ func runOverflowDetailOCR(ctx *maa.Context, img image.Image) (current int, max i
 	current, max, ok = parseOverflowCurrentMax(ocrTextCandidates(detail, ocrTextPolicyFilteredOnly))
 	if !ok {
 		return 0, 0, 0, false
+	}
+
+	// No purchase is possible when quota is exhausted; the addition label may be absent.
+	if current == 0 {
+		return current, max, 0, true
 	}
 
 	plus, ok = runOverflowQuotaAdditionOCR(ctx, img)

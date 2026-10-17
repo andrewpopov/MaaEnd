@@ -1,22 +1,19 @@
 {
     "AutoCollectRoute4Start": {
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldValleyIVPowerPlateau3"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute4AssertLocation"
-        ],
+        "next": ["AutoCollectRoute4CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute4.label"
         }
     },
     "AutoCollectRoute4End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute4",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute4AssertLocation": {
@@ -111,5 +108,83 @@
                 "trace": true
             }
         }
-    }
+    },
+    "AutoCollectRoute4Run": {
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldValleyIVPowerPlateau3"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute4AssertLocation"
+        ]
+    },
+    "AutoCollectRoute4HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute4",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute4Run"
+        ]
+    },
+    "AutoCollectRoute4CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapValleyIVPowerPlateau"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute4CheckMaterial1"],
+        "on_error": ["AutoCollectRoute4CountUnavailable"]
+    },
+    "AutoCollectRoute4CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareGrowths", "at": [
+                711.13,
+                378.74
+            ]},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute4CheckMaterial1Empty",
+            "AutoCollectRoute4CheckMaterial1Available",
+            "AutoCollectRoute4CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute4CountUnavailable"]
+    },
+    "AutoCollectRoute4CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute4SkipDepleted"]},
+    "AutoCollectRoute4SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute4.skip_empty"}
+    },
+    "AutoCollectRoute4CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute4HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute4.count_unavailable"}
+    },
+    "AutoCollectRoute4CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute4HistoryBegin"]}
 }

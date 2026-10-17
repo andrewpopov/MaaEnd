@@ -338,7 +338,7 @@ func shouldRouteSkip(reason AbortReason) bool {
 }
 
 func shouldStopTask(reason AbortReason) bool {
-	return reason.isFatal()
+	return reason.isFatal() || reason == AbortReasonQuotaUnavailableWarn
 }
 
 func lookupAbortReasonText(reason AbortReason) string {

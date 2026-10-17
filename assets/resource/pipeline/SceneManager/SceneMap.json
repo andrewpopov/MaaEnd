@@ -212,26 +212,22 @@
     },
     "__ScenePrivateMapDijiangEnterMapOverview": {
         "desc": "在帝江号地图，进入地区总览界面",
-        "recognition": {
-            "type": "TemplateMatch",
-            "param": {
-                "roi": [
-                    -250,
-                    0,
-                    250,
-                    160
-                ],
-                "template": [
-                    "SceneManager/MapExitDijiang.png"
-                ]
-            }
-        },
+        "recognition": {"type": "And", "param": {"all_of": [
+                    "InMapDijiang",
+                    {"recognition": {"type": "TemplateMatch", "param": {"roi": [
+                                    -250,
+                                    0,
+                                    250,
+                                    160
+                                ], "template": ["SceneManager/MapExitDijiang.png"]}}}
+                ], "box_index": 1}},
         "action": {
             "type": "Click"
         },
         "post_wait_freezes": 400,
         "next": [
-            "__ScenePrivateMapAnyEnterMapOverviewSuccess"
+            "__ScenePrivateMapAnyEnterMapOverviewSuccess",
+            "__ScenePrivateMapOtherAreaEnterMapOverview"
         ]
     },
     "__ScenePrivateMapOtherAreaEnterMapOverview": {

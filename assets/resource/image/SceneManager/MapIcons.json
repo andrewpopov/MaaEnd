@@ -38,5 +38,31 @@
             "../SeizeDeliveryJobs/DeliveryPoint.png"
         ],
         "threshold": 0.8
+    },
+    "RareGrowths": {
+        "gate": 10,
+        "scale_step": 0.025,
+        "scale": [
+            0.9,
+            1.15
+        ],
+        "threshold": 0.75,
+        "templates": [
+            "MapRareGrowths.png"
+        ],
+        "occluded_by_player": true
+    },
+    "RareOres": {
+        "gate": 10,
+        "scale_step": 0.025,
+        "scale": [
+            0.9,
+            1.15
+        ],
+        "threshold": 0.75,
+        "templates": [
+            "MapRareOres.png"
+        ],
+        "occluded_by_player": true
     }
 }

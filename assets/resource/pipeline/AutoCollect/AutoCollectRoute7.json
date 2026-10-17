@@ -2,22 +2,19 @@
     "AutoCollectRoute7Start": {
         "desc": "本路线包含两个收集点，血菌和武陵石",
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldWulingWulingCity1"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute7AssertLocation1"
-        ],
+        "next": ["AutoCollectRoute7CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute7.label"
         }
     },
     "AutoCollectRoute7End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute7",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute7AssertLocation1": {
@@ -441,5 +438,112 @@
         "focus": {
             "Node.Recognition.Succeeded": "等待10s完成收集"
         }
-    }
+    },
+    "AutoCollectRoute7Run": {
+        "desc": "本路线包含两个收集点，血菌和武陵石",
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldWulingWulingCity1"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute7AssertLocation1"
+        ]
+    },
+    "AutoCollectRoute7HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute7",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute7Run"
+        ]
+    },
+    "AutoCollectRoute7CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapWulingWulingCity"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute7CheckMaterial1"],
+        "on_error": ["AutoCollectRoute7CountUnavailable"]
+    },
+    "AutoCollectRoute7CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "Wuling", "icon": "RareGrowths", "at": [
+                545.9,
+                1395.9
+            ], "vote_grid": 5},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute7CheckMaterial1Empty",
+            "AutoCollectRoute7CheckMaterial1Available",
+            "AutoCollectRoute7CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute7CountUnavailable"]
+    },
+    "AutoCollectRoute7CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7CheckMaterial2"]},
+    "AutoCollectRoute7CheckMaterial2": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "Wuling", "icon": "RareOres", "at": [
+                553.72,
+                1338.19
+            ], "vote_grid": 5},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute7CheckMaterial2Empty",
+            "AutoCollectRoute7CheckMaterial2Available",
+            "AutoCollectRoute7CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute7CountUnavailable"]
+    },
+    "AutoCollectRoute7CheckMaterial2Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7SkipDepleted"]},
+    "AutoCollectRoute7SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute7.skip_empty"}
+    },
+    "AutoCollectRoute7CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute7HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute7.count_unavailable"}
+    },
+    "AutoCollectRoute7CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareGrowthsPanel",
+            "AutoCollectRareGrowthsAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7HistoryBegin"]},
+    "AutoCollectRoute7CheckMaterial2Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute7HistoryBegin"]}
 }

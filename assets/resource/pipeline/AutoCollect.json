@@ -20,7 +20,7 @@
         "pre_delay": 0,
         "post_delay": 0,
         "next": [
-            "AutoCollectResetFailures"
+            "AutoCollectCaptureAccount"
         ],
         "attach": {
             "monday": false,
@@ -2602,5 +2602,17 @@
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectCommonRoute8.failed"
         }
+    },
+    "AutoCollectCaptureAccount": {
+        "action": "Custom",
+        "custom_action": "CaptureUid",
+        "custom_action_param": {
+            "use_cache": false,
+            "stay_on_current_screen": true,
+            "allow_unknown": true
+        },
+        "next": [
+            "AutoCollectResetFailures"
+        ]
     }
 }

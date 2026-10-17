@@ -1188,7 +1188,15 @@
         },
         "pre_delay": 0,
         "action": {
-            "type": "Click"
+            "type": "Click",
+            "param": {
+                "target": [
+                    1205,
+                    235,
+                    35,
+                    35
+                ]
+            }
         },
         "post_delay": 0,
         "rate_limit": 0,
@@ -1522,6 +1530,7 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
+            "[JumpBack]SceneNoticeRewardsConfirmClick",
             "InReceptionRoom"
         ]
     },
@@ -1611,7 +1620,7 @@
                 "roi": [
                     11,
                     6,
-                    360,
+                    500,
                     51
                 ],
                 "expected": [
@@ -1635,6 +1644,7 @@
         "post_delay": 0,
         "rate_limit": 0,
         "next": [
+            "[JumpBack]SceneNoticeRewardsConfirmClick",
             "[JumpBack]ReceptionRoomSendCluesQuickGiveDuplicates",
             "[JumpBack]ReceptionRoomSendCluesSelectClues",
             "[JumpBack]ReceptionRoomSendCluesSwipe",

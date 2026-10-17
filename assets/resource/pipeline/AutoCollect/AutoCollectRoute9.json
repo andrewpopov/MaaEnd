@@ -2,22 +2,19 @@
     "AutoCollectRoute9Start": {
         "desc": "燎石",
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldWulingWulingCity7"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute9AssertLocation1"
-        ],
+        "next": ["AutoCollectRoute9CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute9.label"
         }
     },
     "AutoCollectRoute9End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute9",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute9AssertLocation1": {
@@ -189,5 +186,84 @@
         "focus": {
             "Node.Recognition.Succeeded": "等待10s完成收集"
         }
-    }
+    },
+    "AutoCollectRoute9Run": {
+        "desc": "燎石",
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldWulingWulingCity7"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute9AssertLocation1"
+        ]
+    },
+    "AutoCollectRoute9HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute9",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute9Run"
+        ]
+    },
+    "AutoCollectRoute9CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapWulingWulingCity"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute9CheckMaterial1"],
+        "on_error": ["AutoCollectRoute9CountUnavailable"]
+    },
+    "AutoCollectRoute9CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "Wuling", "icon": "RareOres", "at": [
+                837.45,
+                1954.4
+            ], "vote_grid": 5},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute9CheckMaterial1Empty",
+            "AutoCollectRoute9CheckMaterial1Available",
+            "AutoCollectRoute9CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute9CountUnavailable"]
+    },
+    "AutoCollectRoute9CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute9SkipDepleted"]},
+    "AutoCollectRoute9SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute9.skip_empty"}
+    },
+    "AutoCollectRoute9CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute9HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute9.count_unavailable"}
+    },
+    "AutoCollectRoute9CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute9HistoryBegin"]}
 }

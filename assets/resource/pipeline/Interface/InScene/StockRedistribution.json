@@ -55,6 +55,7 @@
             200
         ],
         "expected": [
+            "(?i)Friend's\\s*Price",
             "好友价格",
             "好友價格",
             "(?i)Friends\\s*'\\s*Prices",

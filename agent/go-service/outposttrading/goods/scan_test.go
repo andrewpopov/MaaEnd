@@ -57,3 +57,65 @@ func TestBuildStockPageItemsKeepsUnreadableStockAsUnknown(t *testing.T) {
 		t.Fatalf("item c = %+v, want known stock 0", item)
 	}
 }
+
+func TestStockNamesRecognizeEnglishRarityMarker(t *testing.T) {
+	groups := []itemPriorityGroup{
+		{ItemID: "battery", Candidates: []string{"SC Wuling Battery"}},
+		{ItemID: "part", Candidates: []string{"Hetonite Part"}},
+		{ItemID: "xiranite", Candidates: []string{"Xiranite"}},
+	}
+	items := []ocrmatch.Item{
+		{Text: "I SC Wuling Battery", Box: maa.Rect{204, 153, 180, 26}},
+		{Text: "IHetonite Part", Box: maa.Rect{593, 155, 138, 21}},
+		{Text: "IXiranite", Box: maa.Rect{980, 426, 88, 25}},
+	}
+	if got := matchStockPageNames(items, groups); len(got) != 3 {
+		t.Fatalf("matched %d names, want 3: %+v", len(got), got)
+	}
+	if items[0].Text != "I SC Wuling Battery" {
+		t.Fatal("input OCR was mutated")
+	}
+}
+
+func TestStockNamesKeepExactNamesAndRejectOtherPrefixes(t *testing.T) {
+	groups := []itemPriorityGroup{
+		{ItemID: "iron", Candidates: []string{"Iron"}},
+		{ItemID: "ron", Candidates: []string{"ron"}},
+		{ItemID: "part", Candidates: []string{"Hetonite Part"}},
+	}
+	got := matchStockPageNames([]ocrmatch.Item{
+		{Text: "Iron", Box: maa.Rect{0, 0, 40, 20}},
+		{Text: "JHetonite Part", Box: maa.Rect{100, 0, 120, 20}},
+	}, groups)
+	if len(got) != 1 || got[0].itemID != "iron" {
+		t.Fatalf("unexpected matches: %+v", got)
+	}
+}
+
+func TestStockNamesCorrectSpuriousLatinAccentOnlyForKnownFullName(t *testing.T) {
+	groups := []itemPriorityGroup{{ItemID: "tea", Candidates: []string{"Jincao Tea"}}, {ItemID: "accented", Candidates: []string{"Café"}}, {ItemID: "plain", Candidates: []string{"Cafe"}}}
+	for _, text := range []string{"Jincão Tea", "IJincão Tea"} {
+		input := []ocrmatch.Item{{Text: text, Box: maa.Rect{981, 289, 112, 26}}}
+		got := matchStockPageNames(input, groups)
+		if len(got) != 1 || got[0].itemID != "tea" {
+			t.Fatalf("%q: got %+v", text, got)
+		}
+		if input[0].Text != text {
+			t.Fatal("input OCR mutated")
+		}
+	}
+	got := matchStockPageNames([]ocrmatch.Item{{Text: "Café", Box: maa.Rect{0, 0, 30, 20}}}, groups)
+	if len(got) != 1 || got[0].itemID != "accented" {
+		t.Fatalf("exact accented catalog name changed: %+v", got)
+	}
+	for _, text := range []string{"Jincão Drink", "Jincão Tea Extra"} {
+		if got := matchStockPageNames([]ocrmatch.Item{{Text: text, Box: maa.Rect{0, 0, 100, 20}}}, groups); len(got) != 0 {
+			t.Fatalf("unknown name %q matched: %+v", text, got)
+		}
+	}
+	for _, text := range []string{"ガラス", "晶体", "무릉"} {
+		if got := foldStockLatinAccents(text); got != text {
+			t.Fatalf("non-Latin text %q changed to %q", text, got)
+		}
+	}
+}

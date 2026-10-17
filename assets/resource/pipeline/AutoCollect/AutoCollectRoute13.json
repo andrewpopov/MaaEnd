@@ -2,22 +2,19 @@
     "AutoCollectRoute13Start": {
         "desc": "中黯石",
         "enabled": false,
-        "action": "Custom",
-        "custom_action": "SubTask",
-        "custom_action_param": {
-            "sub": [
-                "SceneEnterWorldValleyIVOriginLodespring3"
-            ]
-        },
-        "next": [
-            "AutoCollectRoute13AssertLocation1"
-        ],
+        "next": ["AutoCollectRoute13CheckMaterialMap"],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute13.label"
         }
     },
     "AutoCollectRoute13End": {
         "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute13",
+            "event": "completed"
+        },
         "post_delay": 0
     },
     "AutoCollectRoute13AssertLocation1": {
@@ -200,5 +197,84 @@
         "focus": {
             "Node.Recognition.Succeeded": "等待10s完成收集"
         }
-    }
+    },
+    "AutoCollectRoute13Run": {
+        "desc": "中黯石",
+        "enabled": true,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterWorldValleyIVOriginLodespring3"
+            ]
+        },
+        "next": [
+            "AutoCollectRoute13AssertLocation1"
+        ]
+    },
+    "AutoCollectRoute13HistoryBegin": {
+        "action": "Custom",
+        "custom_action": "AutoCollectHistory",
+        "custom_action_param": {
+            "route": "AutoCollectRoute13",
+            "event": "started"
+        },
+        "next": [
+            "AutoCollectRoute13Run"
+        ]
+    },
+    "AutoCollectRoute13CheckMaterialMap": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneEnterMapValleyIVOriginLodespring"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute13CheckMaterial1"],
+        "on_error": ["AutoCollectRoute13CountUnavailable"]
+    },
+    "AutoCollectRoute13CheckMaterial1": {
+        "recognition": "Custom",
+        "custom_recognition": "MapFind",
+        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareOres", "at": [
+                982.18,
+                387.6
+            ]},
+        "pre_delay": 0,
+        "action": "Click",
+        "post_wait_freezes": 500,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "[JumpBack]AutoCollectRareChooseMarker",
+            "AutoCollectRoute13CheckMaterial1Empty",
+            "AutoCollectRoute13CheckMaterial1Available",
+            "AutoCollectRoute13CountUnavailable"
+        ],
+        "on_error": ["AutoCollectRoute13CountUnavailable"]
+    },
+    "AutoCollectRoute13CheckMaterial1Empty": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresZero"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13SkipDepleted"]},
+    "AutoCollectRoute13SkipDepleted": {
+        "pre_delay": 0,
+        "action": "Custom",
+        "custom_action": "SubTask",
+        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "post_delay": 0,
+        "rate_limit": 0,
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute13.skip_empty"}
+    },
+    "AutoCollectRoute13CountUnavailable": {
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": ["AutoCollectRoute13HistoryBegin"],
+        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute13.count_unavailable"}
+    },
+    "AutoCollectRoute13CheckMaterial1Available": {"recognition": "And", "all_of": [
+            "AutoCollectRareOresPanel",
+            "AutoCollectRareOresAvailable"
+        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13HistoryBegin"]}
 }

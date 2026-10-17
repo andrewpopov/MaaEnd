@@ -624,7 +624,8 @@
                         "ProtocolSpaceOperationalManualSwitchProtocolSpaceTab": {
                             "expected": [
                                 "员养成",
-                                "Operator Progression"
+                                // Operator Progression (OCR splits the English label over two lines). @i18n-skip
+                                "(?i)^Operator(?:\\s*Progression)?$"
                             ],
                             "anchor": {
                                 "ProtocolSpaceOperationalManualFindProtocolSpaceEnableAnchor": "ProtocolSpaceOperationalManualFindProtocolSpaceNormalEnable",
@@ -647,7 +648,8 @@
                         "ProtocolSpaceOperationalManualSwitchProtocolSpaceTab": {
                             "expected": [
                                 "武器养成",
-                                "Weapon Progression"
+                                // Weapon Progression (OCR splits the English label over two lines). @i18n-skip
+                                "(?i)^Weapon(?:\\s*Progression)?$"
                             ],
                             "anchor": {
                                 "ProtocolSpaceOperationalManualFindProtocolSpaceEnableAnchor": "ProtocolSpaceOperationalManualFindProtocolSpaceNormalEnable",

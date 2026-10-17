@@ -101,7 +101,13 @@
                     90
                 ],
                 "expected": [
-                    "\\d/\\d"
+                    "\\d+\\s*/\\s*\\d+"
+                ],
+                "replace": [
+                    [
+                        "[OoＯ]",
+                        "0"
+                    ]
                 ],
                 "color_filter": "AutoStockpileQuotaFilter"
             }

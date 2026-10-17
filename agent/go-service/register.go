@@ -3,6 +3,7 @@ package main
 import (
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/accountswitch"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/aerosalvage"
+	"github.com/MaaXYZ/MaaEnd/agent/go-service/autocollect"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/autodelivery"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/autoecofarm"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/autoessence"
@@ -86,6 +87,7 @@ func registerAll() {
 	schedule.Register()
 
 	// Business Custom
+	autocollect.Register()
 	accountswitch.Register()
 	aerosalvage.Register()
 	captureuid.Register()

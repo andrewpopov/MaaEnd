@@ -598,7 +598,7 @@
                         "expected": [
                             "地区建设",
                             "地區建設",
-                            "(?i)^Regional(\\s*Development)?$",
+                            "(?i)^Reg[iIl1]onal(\\s*Development)?$",
                             "地域建設",
                             "지역 건설"
                         ]
@@ -654,15 +654,15 @@
             {
                 "recognition": "OCR",
                 "roi": [
-                    400,
-                    150,
-                    450,
-                    180
+                    280,
+                    160,
+                    730,
+                    90
                 ],
                 "expected": [
                     "解锁",
                     "解鎖",
-                    "contents added",
+                    "(?i)Regional\\s*Development\\s*Contents?\\s*Added",
                     "解放",
                     "해제"
                 ]
@@ -670,10 +670,10 @@
             {
                 "recognition": "TemplateMatch",
                 "roi": [
-                    950,
-                    150,
-                    270,
-                    180
+                    1130,
+                    155,
+                    130,
+                    120
                 ],
                 "template": "Common/Button/CloseButtonType4.png"
             }
@@ -1721,7 +1721,7 @@
                 "roi": [
                     0,
                     0,
-                    200,
+                    360,
                     60
                 ],
                 "expected": [

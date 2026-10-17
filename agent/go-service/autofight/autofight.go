@@ -214,16 +214,7 @@ func (r *AutoFightEntryRecognition) Run(ctx *maa.Context, arg *maa.CustomRecogni
 		return nil, false
 	}
 
-	if screenAnalyzer.GetEnergyLevel(false) < 0 {
-		return nil, false
-	}
-
-	comboFull := screenAnalyzer.GetCharacterComboFull()
-	if len(comboFull) == 0 {
-		return nil, false
-	}
-
-	if screenAnalyzer.GetCharacterLevel() {
+	if !screenAnalyzer.CombatReady() {
 		return nil, false
 	}
 
@@ -391,6 +382,7 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 	var noLockStart time.Time
 	var lastAttackReassert time.Time
 	var lockTargetStage lockStage
+	actionQueue = nil
 	lastDodgeAt = time.Now()
 	lastAttackReassert = time.Now()
 	firstNoLockIteration := true
@@ -490,6 +482,11 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 				Any("comboFull", comboFull).
 				Msg("initial character count detected")
 			maafocus.Print(ctx, i18n.T("autofight.character_count", characterCount))
+		}
+
+		// Ready combos take priority over movement and do not wait for a timeline.
+		if params.EnableCombo && screenAnalyzer.GetCharacterComboActive() {
+			enqueueAction(fightAction{executeAt: time.Now(), action: ActionCombo})
 		}
 
 		if params.EnableDodge {
@@ -611,12 +608,8 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 			}
 		}
 
-		hasEnemyTarget := false
-		if params.EnableLockTarget && screenAnalyzer.GetEnemyLocked() {
-			hasEnemyTarget = true
-		} else if !params.EnableLockTarget {
-			hasEnemyTarget = true
-		}
+		// A visible enemy is sufficient; acquiring lock-on must not stall the rotation.
+		hasEnemyTarget := screenAnalyzer.CombatTargetVisible(params.EnableLockTarget)
 
 		if params.EnableHealthDangerousSwitch {
 			if charSelect > 0 && slices.Contains(healthDangerous, charSelect) && len(healthNormal) > 0 {
@@ -632,13 +625,6 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 		endSkillFull := screenAnalyzer.GetEndSkillFull(true)
 		energyLevel := screenAnalyzer.GetEnergyLevel(true)
 		if timeline == nil {
-			if params.EnableCombo && screenAnalyzer.GetCharacterComboActive() {
-				enqueueAction(fightAction{
-					executeAt: time.Now(),
-					action:    ActionCombo,
-				})
-			}
-
 			if params.EnableEndSkill && hasEnemyTarget {
 				if len(endSkillFull) > 0 {
 					screenAnalyzer.MarkLabelUsed(endSkillFullLabel())
@@ -688,15 +674,6 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 			if hasEnemyTarget && timeline.ActionFinish() {
 				maafocus.PrintThrottle(ctx, 3*time.Second, i18n.T("autofight.endaxis.retry_timeline"))
 				timeline.SelectScenario(ctx, characterCount, comboFull, endSkillFull, energyLevel, params.SkipComboCooldown)
-			}
-
-			if screenAnalyzer.GetCharacterComboActive() && !timeline.ActionFinish() {
-				if screenAnalyzer.GetCharacterComboActive() {
-					enqueueAction(fightAction{
-						executeAt: time.Now(),
-						action:    ActionCombo,
-					})
-				}
 			}
 
 			action := timeline.FrontAction()

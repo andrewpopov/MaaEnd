@@ -7,7 +7,7 @@
                 "roi": [
                     0,
                     0,
-                    215,
+                    400,
                     60
                 ],
                 "expected": [
@@ -57,13 +57,14 @@
         "roi": [
             60,
             190,
-            350,
+            280,
             430
         ],
         "expected": [
             "员养成",
             "員養成",
-            "Operator Progression"
+            // Operator Progression (OCR splits the English label over two lines). @i18n-skip
+            "(?i)^Operator(?:\\s*Progression)?$"
         ],
         "pre_wait_freezes": 200,
         "action": "Click",

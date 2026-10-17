@@ -1,4 +1,5 @@
 {
+    "autocollect.cooldown_skip": "跳过 %s：已于 %s 完成，将于本地每日重置时间 %s 后恢复。",
     "autodelivery.destination.recycle_bin": "%s资源回收站 #%d",
     "autodelivery.focus.depot_resolved": "🚛 已识别仓储节点：%s",
     "autodelivery.focus.depot_zipline_required": "🚛 <span style=\"color: red; font-weight: bold;\">仓储节点 %s 只能通过滑索抵达</span>，当前未启用滑索，无法步行前往；请在任务选项中开启「送货时优先使用滑索」后重试",
