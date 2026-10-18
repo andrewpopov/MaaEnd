@@ -1,0 +1,16 @@
+{
+    "InnkeepingAssistRead": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingAssistAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    }
+}

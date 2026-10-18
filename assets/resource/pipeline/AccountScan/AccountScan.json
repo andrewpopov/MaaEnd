@@ -1,0 +1,292 @@
+{
+    "AccountScanIdentityCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "account_identity"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanOperatorsCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "operators"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanSkillsCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "skills"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanEquippedWeaponsCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "equipped_weapons"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanWeaponInventoryCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "weapon_inventory"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanEquippedGearCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "equipped_gear"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanGearInventoryCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "gear_inventory"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanGearPlansCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "gear_plans"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanGearRecipesCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "gear_recipes"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanCraftMaterialsCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "craft_materials"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanArtificingCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "artificing"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanTeamPresetsCapture": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "AccountScanCaptureAction",
+                "custom_action_param": {
+                    "task_id": "team_presets"
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "AccountScanOperatorsStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanOperatorsReady",
+            "AccountScanOperatorsNavigate"
+        ]
+    },
+    "AccountScanOperatorsReady": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    500,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    60,
+                                    200,
+                                    350,
+                                    100
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanOperatorsCapture"
+        ]
+    },
+    "AccountScanOperatorsNavigate": {
+        "max_hit": 1,
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuOperator"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanOperatorsReady"
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "schema_version": 1,
+    "operator": "Si",
+    "loadout_name": "Si - Cryo Combo",
+    "gear": {
+        "armor": {
+            "item_name": "Type 50 Yinglung Soft Armor"
+        },
+        "gloves": {
+            "item_name": "Type 50 Yinglung Gauntlets"
+        },
+        "kit_1": {
+            "item_name": "Type 50 Yinglung Beacon"
+        },
+        "kit_2": {
+            "item_name": "Redeemer Seal"
+        }
+    },
+    "artifice_attempts": [],
+    "donor_allowlist": [],
+    "spend_limits": {},
+    "notes": "Draft gear target from saved reference; account ownership, recipe variants, item stats and costs must be reviewed. Empty artifice attempts and budgets do not authorize upgrades."
+}

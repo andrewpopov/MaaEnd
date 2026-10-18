@@ -845,6 +845,16 @@ def main() -> None:
             print(f"  {Console.ok('->')} {docs_img_dst}")
         else:
             print(f"  {Console.warn(t('warning'))} {t('docs_copy_failed')}")
+    # The read-only scan UI action imports evidence through this Python store.
+    scan_tools = install_dir / "tools"
+    scan_specs = scan_tools / "combat_reference"
+    scan_specs.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(root_dir / "tools" / "account_scan.py", scan_tools / "account_scan.py")
+    shutil.copy2(root_dir / "tools" / "gear_workflow.py", scan_tools / "gear_workflow.py")
+    shutil.copy2(
+        root_dir / "tools" / "combat_reference" / "account_scan_tasks.json",
+        scan_specs / "account_scan_tasks.json",
+    )
     _timing("step1 copy assets+docs", t_step1_start)
 
     # 2. 构建 Go Agent

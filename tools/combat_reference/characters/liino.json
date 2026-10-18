@@ -1,0 +1,73 @@
+{
+    "id": "liino",
+    "name": "Liino",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/liino",
+    "source_reported_update": "02/September/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "e57b3b81"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Bedazzling Night Debut",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Golden Age",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Eternal Xiranite",
+            "equipment": {
+                "armor": "Eternal Xiranite Light Armor",
+                "gloves": "Eternal Xiranite Hands",
+                "kit_1": "Eternal Xiranite Bracing Slab T1",
+                "kit_2": "LYNX Slab"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "LYNX",
+            "equipment": {
+                "armor": "Eternal Xiranite Light Armor",
+                "gloves": "LYNX Gauntlets T1",
+                "kit_1": "LYNX Slab",
+                "kit_2": "LYNX Slab"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Off Field",
+            "order": "Ultimate > Combo Skill = Battle Skill > Basic Attack"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "typhoeus-01",
+        "typhoeus-02",
+        "typhoeus-03",
+        "zhuang-fangyi-01"
+    ],
+    "rotation_catalog_ids": [
+        "typhoeus-timeline-1",
+        "zhuang-fangyi-timeline-1"
+    ],
+    "notes": []
+}

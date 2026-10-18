@@ -1,0 +1,22 @@
+Laevatain - build guide summary
+Source: https://www.prydwen.gg/arknights-endfield/characters/laevatain
+Source update: 26/June/2026
+Retrieved: 2026-10-17 (America/Los_Angeles)
+
+Weapons (published order within each section; Potential belongs to the weapon):
+- Forgeborn Scathe (P0; general)
+- Umbral Torch (P5; general)
+- Umbral Torch (P0; general)
+- Fortmaker (P5; specialist)
+
+Gear loadouts (four equipment slots, preserving the exact source names):
+- Hot Work: Armor = Redeemer Armor; Gloves = Hot Work Gauntlets; Kit 1 = Hot Work Pyrometer; Kit 2 = Hot Work Pyrometer
+- Hot Work: Armor = Hot Work Exo-Rig; Gloves = Hot Work Gauntlets; Kit 1 = Hot Work Pyrometer; Kit 2 = LYNX Slab
+
+Skill investment:
+- Main Field: Ultimate = Battle Skill > Combo Skill > Basic Attack
+
+Choose the loadout for its intended team and resource thresholds. An investment priority is not a button sequence. Refer to the original guide for stat targets, calculations, substitutions, and combat details.
+
+Local team references: laevatain-01, laevatain-02, laevatain-03
+Local rotation references: laevatain-rotation-1, laevatain-rotation-2

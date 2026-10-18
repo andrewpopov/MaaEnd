@@ -1,0 +1,384 @@
+{
+    "schema_version": 1,
+    "scope": "Read-only account scan tasks; capture first, review and parse afterward.",
+    "live_status": "emulator_roster_capture_under_live_validation",
+    "tasks": [
+        {
+            "id": "account_identity",
+            "title": "Account and server",
+            "depends_on": [],
+            "fields": [
+                "uid",
+                "server"
+            ],
+            "required_views": [
+                "Account/profile page showing UID and server"
+            ],
+            "required_for_review": [
+                "uid",
+                "server"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "operators",
+            "title": "Owned operators",
+            "depends_on": [
+                "account_identity"
+            ],
+            "fields": [
+                "operator_name",
+                "level",
+                "promotion",
+                "potential",
+                "primary_attribute",
+                "secondary_attribute"
+            ],
+            "required_views": [
+                "Owned roster overview",
+                "Each operator overview"
+            ],
+            "required_for_review": [
+                "operator_name",
+                "level",
+                "potential"
+            ],
+            "navigation_status": "emulator_state_driven_roster_capture_implemented",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion.",
+            "live_validation": {
+                "date": "2026-10-18",
+                "controller": "Endies/ADB 1280x720 English",
+                "captured_operators": 29,
+                "result": "passed_full_roster_capture",
+                "reviewed": false
+            }
+        },
+        {
+            "id": "skills",
+            "title": "Abilities and talents",
+            "depends_on": [
+                "operators"
+            ],
+            "fields": [
+                "operator_name",
+                "skill_name",
+                "rank",
+                "mastery",
+                "unlocked",
+                "talents"
+            ],
+            "required_views": [
+                "Ability Matrix",
+                "Each ability detail",
+                "Combat talents and unlock states"
+            ],
+            "required_for_review": [
+                "operator_name",
+                "skill_name",
+                "rank",
+                "unlocked"
+            ],
+            "navigation_status": "emulator_state_driven_roster_capture_implemented",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion.",
+            "live_validation": {
+                "date": "2026-10-18",
+                "complete_operator_details": [
+                    "Rossi",
+                    "Wulfgard",
+                    "Endministrator",
+                    "Gilberta",
+                    "Si",
+                    "Camille"
+                ],
+                "full_roster_passed": false,
+                "latest_failure": "Arcane: AccountBatchTalentOpen05, 2026-10-18 09:44 local; partial evidence retained in runtime store"
+            }
+        },
+        {
+            "id": "equipped_weapons",
+            "title": "Equipped weapons and essences",
+            "depends_on": [
+                "operators"
+            ],
+            "fields": [
+                "operator_name",
+                "weapon_name",
+                "level",
+                "promotion",
+                "potential",
+                "essence",
+                "stats",
+                "passives"
+            ],
+            "required_views": [
+                "Weapon overview",
+                "Weapon passive details",
+                "Equipped essence details"
+            ],
+            "required_for_review": [
+                "operator_name",
+                "weapon_name",
+                "level",
+                "potential"
+            ],
+            "navigation_status": "emulator_state_driven_roster_capture_implemented",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "weapon_inventory",
+            "title": "Owned weapon inventory",
+            "depends_on": [
+                "account_identity"
+            ],
+            "fields": [
+                "weapon_id",
+                "weapon_name",
+                "level",
+                "potential",
+                "locked",
+                "equipped_by",
+                "essence",
+                "stats"
+            ],
+            "required_views": [
+                "All weapon inventory pages",
+                "Each distinct weapon copy and detail"
+            ],
+            "required_for_review": [
+                "weapon_id",
+                "weapon_name",
+                "level",
+                "potential",
+                "locked"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "equipped_gear",
+            "title": "Equipped operator gear",
+            "depends_on": [
+                "operators"
+            ],
+            "fields": [
+                "operator_name",
+                "slot",
+                "item_id",
+                "item_name",
+                "level",
+                "stats",
+                "set_name",
+                "artifice_levels",
+                "equipped"
+            ],
+            "required_views": [
+                "Operator gear summary",
+                "Armor detail",
+                "Gloves detail",
+                "Kit 1 detail",
+                "Kit 2 detail"
+            ],
+            "required_for_review": [
+                "operator_name",
+                "slot",
+                "item_name",
+                "equipped"
+            ],
+            "navigation_status": "emulator_state_driven_roster_capture_implemented",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "gear_inventory",
+            "title": "Gear inventory and donor candidates",
+            "depends_on": [
+                "account_identity"
+            ],
+            "fields": [
+                "item_id",
+                "item_name",
+                "slot",
+                "level",
+                "stats",
+                "set_name",
+                "artifice_levels",
+                "locked",
+                "favorite",
+                "equipped_by",
+                "quantity"
+            ],
+            "required_views": [
+                "All gear inventory pages",
+                "Distinct copies, lock state, equipped badges and enhancement lines"
+            ],
+            "required_for_review": [
+                "item_id",
+                "item_name",
+                "slot",
+                "level",
+                "locked",
+                "quantity"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "gear_plans",
+            "title": "Saved gear loadouts",
+            "depends_on": [
+                "operators"
+            ],
+            "fields": [
+                "operator_name",
+                "plan_id",
+                "plan_name",
+                "equipment",
+                "active",
+                "shared_items"
+            ],
+            "required_views": [
+                "Gear Plan list",
+                "Each existing saved plan and its four slots"
+            ],
+            "required_for_review": [
+                "operator_name",
+                "plan_id",
+                "plan_name",
+                "equipment"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "gear_recipes",
+            "title": "Unlocked recipes and crafting costs",
+            "depends_on": [
+                "account_identity"
+            ],
+            "fields": [
+                "recipe_id",
+                "item_name",
+                "slot",
+                "unlocked",
+                "technique",
+                "materials",
+                "currency_cost",
+                "batch_size",
+                "output_stats"
+            ],
+            "required_views": [
+                "Assembly recipe list and locked entries",
+                "Each recipe cost and output preview",
+                "Available assembly techniques"
+            ],
+            "required_for_review": [
+                "recipe_id",
+                "item_name",
+                "unlocked"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "craft_materials",
+            "title": "Materials, currencies and catalysts",
+            "depends_on": [
+                "account_identity"
+            ],
+            "fields": [
+                "item_name",
+                "quantity",
+                "category",
+                "region",
+                "binding"
+            ],
+            "required_views": [
+                "Crafting material inventory",
+                "Relevant currency balances",
+                "Wuling Artificing Catalysts"
+            ],
+            "required_for_review": [
+                "item_name",
+                "quantity",
+                "category"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "artificing",
+            "title": "Artificing levels, donors and costs",
+            "depends_on": [
+                "gear_inventory",
+                "craft_materials"
+            ],
+            "fields": [
+                "target_item_id",
+                "slot",
+                "stat_line",
+                "current_level",
+                "maximum_level",
+                "pity",
+                "donor_item_id",
+                "match_quality",
+                "success_chance",
+                "catalyst_cost",
+                "other_costs"
+            ],
+            "required_views": [
+                "Target item's enhancement lines and current levels",
+                "Each relevant donor-match preview",
+                "Success chance, pity and resource-cost preview"
+            ],
+            "required_for_review": [
+                "target_item_id",
+                "stat_line",
+                "current_level",
+                "match_quality"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        },
+        {
+            "id": "team_presets",
+            "title": "Team presets and combat configuration",
+            "depends_on": [
+                "operators",
+                "skills",
+                "equipped_weapons",
+                "equipped_gear"
+            ],
+            "fields": [
+                "team_id",
+                "team_name",
+                "members",
+                "controlled_operator",
+                "combat_settings",
+                "rotation_id"
+            ],
+            "required_views": [
+                "Team slots and saved squads",
+                "Active operator",
+                "Existing MaaEnd combat settings"
+            ],
+            "required_for_review": [
+                "team_id",
+                "members"
+            ],
+            "navigation_status": "navigation_not_yet_mapped",
+            "read_only": true,
+            "coverage_rule": "Capture every required view and paginate through all relevant entries; review linked records and explicitly attest coverage before completion."
+        }
+    ]
+}

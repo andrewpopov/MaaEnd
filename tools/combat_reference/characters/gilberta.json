@@ -1,0 +1,93 @@
+{
+    "id": "gilberta",
+    "name": "Gilberta",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/gilberta",
+    "source_reported_update": "14/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "f6b5f59f"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Delivery Guaranteed",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Stanza of Memorials",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Opus: Etch Figure",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 4,
+            "name": "OBJ Arts Identifier",
+            "weapon_potential": 5,
+            "section": "specialist",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Eternal Xiranite",
+            "equipment": {
+                "armor": "Eternal Xiranite Armor",
+                "gloves": "Eternal Xiranite Gloves T1",
+                "kit_1": "Eternal Xiranite Auxiliary Arm",
+                "kit_2": "Eternal Xiranite Auxiliary Arm"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "Swordmancer",
+            "equipment": {
+                "armor": "Swordmancer Heavy Armor",
+                "gloves": "Eternal Xiranite Gloves T1",
+                "kit_1": "Swordmancer NAV Beacon",
+                "kit_2": "Swordmancer NAV Beacon"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Off Field",
+            "order": "Ultimate > Combo Skill > Battle Skill = Basic Attack"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "rossi-01",
+        "rossi-02",
+        "yvonne-01",
+        "yvonne-02",
+        "avywenna-02",
+        "avywenna-03",
+        "typhoeus-03",
+        "zhuang-fangyi-02"
+    ],
+    "rotation_catalog_ids": [
+        "rossi-rotation-1",
+        "rossi-rotation-2",
+        "yvonne-rotation-1",
+        "yvonne-rotation-2"
+    ],
+    "notes": []
+}

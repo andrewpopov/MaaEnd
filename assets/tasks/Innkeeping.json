@@ -1,0 +1,18 @@
+{
+    "task": [
+        {
+            "name": "InnkeepingAssist",
+            "label": "$task.InnkeepingAssist.label",
+            "entry": "InnkeepingAssistRead",
+            "description": "$task.InnkeepingAssist.description",
+            "group": [
+                "innkeeping"
+            ],
+            "controller": [
+                "Win32-Front",
+                "ADB",
+                "CloudADB"
+            ]
+        }
+    ]
+}

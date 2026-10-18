@@ -1,0 +1,70 @@
+{
+    "id": "rossi",
+    "name": "Rossi",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/rossi",
+    "source_reported_update": "14/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "a4f32828"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Lupine Scarlet",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Glorious Memory",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Glorious Memory",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "MI Security",
+            "equipment": {
+                "armor": "MI Security Armor T1",
+                "gloves": "MI Security Gloves T1",
+                "kit_1": "MI Security Scope T1",
+                "kit_2": "MI Security Scope T1"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Main Field",
+            "order": "Ultimate > Combo Skill > Basic Attack >= Battle Skill"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "rossi-01",
+        "rossi-02",
+        "rossi-03",
+        "mi-fu-02"
+    ],
+    "rotation_catalog_ids": [
+        "rossi-rotation-1",
+        "rossi-rotation-2"
+    ],
+    "notes": [
+        "Rossi's combo requires a timed second input. Skill investment order does not replace the state-dependent combo sequence."
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "id": "laevatain",
+    "name": "Laevatain",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/laevatain",
+    "source_reported_update": "26/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "7fdae258"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Forgeborn Scathe",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Umbral Torch",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Umbral Torch",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 4,
+            "name": "Fortmaker",
+            "weapon_potential": 5,
+            "section": "specialist",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Hot Work",
+            "equipment": {
+                "armor": "Redeemer Armor",
+                "gloves": "Hot Work Gauntlets",
+                "kit_1": "Hot Work Pyrometer",
+                "kit_2": "Hot Work Pyrometer"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "Hot Work",
+            "equipment": {
+                "armor": "Hot Work Exo-Rig",
+                "gloves": "Hot Work Gauntlets",
+                "kit_1": "Hot Work Pyrometer",
+                "kit_2": "LYNX Slab"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Main Field",
+            "order": "Ultimate = Battle Skill > Combo Skill > Basic Attack"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "laevatain-01",
+        "laevatain-02",
+        "laevatain-03"
+    ],
+    "rotation_catalog_ids": [
+        "laevatain-rotation-1",
+        "laevatain-rotation-2"
+    ],
+    "notes": []
+}

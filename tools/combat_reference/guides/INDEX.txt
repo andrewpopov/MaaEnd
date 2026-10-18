@@ -1,0 +1,40 @@
+All-character build reference
+Retrieved 2026-10-17 (America/Los_Angeles)
+34 directory entries; 33 published builds; Argent Flow is upcoming.
+99 weapon entries, 54 complete four-slot gear loadouts, 36 role-specific skill investment orders.
+Original summaries and factual build records; original articles are linked, not mirrored.
+
+Akekuri: akekuri.txt | https://www.prydwen.gg/arknights-endfield/characters/akekuri
+Alesh: alesh.txt | https://www.prydwen.gg/arknights-endfield/characters/alesh
+Antal: antal.txt | https://www.prydwen.gg/arknights-endfield/characters/antal
+Arcane: arcane.txt | https://www.prydwen.gg/arknights-endfield/characters/arcane
+Arclight: arclight.txt | https://www.prydwen.gg/arknights-endfield/characters/arclight
+Ardelia: ardelia.txt | https://www.prydwen.gg/arknights-endfield/characters/ardelia
+Argent Flow: argent-flow.txt | https://www.prydwen.gg/arknights-endfield/characters/argent-flow
+Avywenna: avywenna.txt | https://www.prydwen.gg/arknights-endfield/characters/avywenna
+Camille: camille.txt | https://www.prydwen.gg/arknights-endfield/characters/camille
+Catcher: catcher.txt | https://www.prydwen.gg/arknights-endfield/characters/catcher
+Chen Qianyu: chen-qianyu.txt | https://www.prydwen.gg/arknights-endfield/characters/chen-qianyu
+Da Pan: da-pan.txt | https://www.prydwen.gg/arknights-endfield/characters/da-pan
+Ember: ember.txt | https://www.prydwen.gg/arknights-endfield/characters/ember
+Endministrator: endministrator.txt | https://www.prydwen.gg/arknights-endfield/characters/endministrator
+Estella: estella.txt | https://www.prydwen.gg/arknights-endfield/characters/estella
+Fluorite: fluorite.txt | https://www.prydwen.gg/arknights-endfield/characters/fluorite
+Gilberta: gilberta.txt | https://www.prydwen.gg/arknights-endfield/characters/gilberta
+Laevatain: laevatain.txt | https://www.prydwen.gg/arknights-endfield/characters/laevatain
+Last Rite: last-rite.txt | https://www.prydwen.gg/arknights-endfield/characters/last-rite
+Lifeng: lifeng.txt | https://www.prydwen.gg/arknights-endfield/characters/lifeng
+Liino: liino.txt | https://www.prydwen.gg/arknights-endfield/characters/liino
+Mi Fu: mi-fu.txt | https://www.prydwen.gg/arknights-endfield/characters/mi-fu
+Perlica: perlica.txt | https://www.prydwen.gg/arknights-endfield/characters/perlica
+Pogranichnik: pogranichnik.txt | https://www.prydwen.gg/arknights-endfield/characters/pogranichnik
+Purrchena: purrchena.txt | https://www.prydwen.gg/arknights-endfield/characters/purrchena
+Rossi: rossi.txt | https://www.prydwen.gg/arknights-endfield/characters/rossi
+Si: si.txt | https://www.prydwen.gg/arknights-endfield/characters/si
+Snowshine: snowshine.txt | https://www.prydwen.gg/arknights-endfield/characters/snowshine
+Tangtang: tangtang.txt | https://www.prydwen.gg/arknights-endfield/characters/tangtang
+Typhoeus: typhoeus.txt | https://www.prydwen.gg/arknights-endfield/characters/typhoeus
+Wulfgard: wulfgard.txt | https://www.prydwen.gg/arknights-endfield/characters/wulfgard
+Xaihi: xaihi.txt | https://www.prydwen.gg/arknights-endfield/characters/xaihi
+Yvonne: yvonne.txt | https://www.prydwen.gg/arknights-endfield/characters/yvonne
+Zhuang Fangyi: zhuang-fangyi.txt | https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi

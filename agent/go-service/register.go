@@ -1,6 +1,7 @@
 package main
 
 import (
+	"github.com/MaaXYZ/MaaEnd/agent/go-service/accountscan"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/accountswitch"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/aerosalvage"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/autocollect"
@@ -38,6 +39,7 @@ import (
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/dijiangrewards"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/essencefilter"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/ims"
+	"github.com/MaaXYZ/MaaEnd/agent/go-service/innkeeping"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/intelarchive"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/itemtransfer"
 	"github.com/MaaXYZ/MaaEnd/agent/go-service/outposttrading"
@@ -89,6 +91,8 @@ func registerAll() {
 	schedule.Register()
 
 	// Business Custom
+	accountscan.Register()
+	innkeeping.Register()
 	autocollect.Register()
 	accountswitch.Register()
 	aerosalvage.Register()

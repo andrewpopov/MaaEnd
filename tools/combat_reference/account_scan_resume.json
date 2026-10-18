@@ -1,0 +1,13 @@
+{
+    "session_id": "7ea55097fa8a4daa80c52100629d39f5",
+    "status": "deferred_until_emulator",
+    "account_label": "endies-unverified-account",
+    "account_uid_verified": false,
+    "database": "C:\\Users\\andre\\Documents\\Codex\\Repositories\\MaaEnd\\install\\data\\AccountScans\\account_scans.sqlite3",
+    "export": "C:\\Users\\andre\\Documents\\Codex\\Repositories\\MaaEnd\\install\\data\\AccountScans\\exports\\7ea55097fa8a4daa80c52100629d39f5.json",
+    "task_definitions": "tools/combat_reference/account_scan_tasks.json",
+    "launcher": "tools/Scan-Account.ps1",
+    "screenshots_imported": 48,
+    "parsed_records": 0,
+    "automatic_navigation": "Unmapped screens remain pending until validated on Endies. Current capture command saves the already-open page only."
+}

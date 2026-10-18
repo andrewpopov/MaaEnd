@@ -1,0 +1,19 @@
+{
+    "status": "deferred_until_emulator",
+    "capture_directory": "C:\\Users\\andre\\Documents\\Codex\\Repositories\\MaaEnd\\install\\data\\RosterScans\\20261017-180113",
+    "script": "tools/capture_roster.py",
+    "launcher": "tools/Capture-Roster.ps1",
+    "operators": 6,
+    "screenshots": 48,
+    "last_error": "Navigation failed: Gear -> Overview; progress saved",
+    "resume_requirements": [
+        "Select the Endies controller, not Arkies / Arknights",
+        "Verify 1280x720 English operator UI on emulator",
+        "Validate navigation and resume capture using existing checkpoint; PC capture profile has not yet been validated on emulator"
+    ],
+    "task": "Resume roster / weapon / gear / ability screenshots, then process images and plan equipment, upgrades and crafting",
+    "game_changes_applied": false,
+    "original_capture_directory": "C:\\Users\\andre\\.codex\\visualizations\\2026\\10\\14\\01a13ad0-0d02-7e70-8b34-8746d9656ddb\\roster-capture-20261017-180113",
+    "deferred_by_user": true,
+    "resume_controller": "Endies / Arknights Endfield emulator; never Arkies"
+}

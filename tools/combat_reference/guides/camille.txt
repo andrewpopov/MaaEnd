@@ -1,0 +1,17 @@
+Camille - build guide summary
+Source: https://www.prydwen.gg/arknights-endfield/characters/camille
+Source update: 16/August/2026
+Retrieved: 2026-10-17 (America/Los_Angeles)
+
+Weapons (published order within each section; Potential belongs to the weapon):
+- Blessing of Lustrous Carmine (P0; general)
+- Beacon of Duty (P5; general)
+
+Gear loadouts (four equipment slots, preserving the exact source names):
+- Frontiers: Armor = Frontiers Protection Suit; Gloves = Frontiers Fiber Gloves T1; Kit 1 = Frontiers Extra O2 Tube; Kit 2 = Rift Trekker Silver Blade
+- Eternal Xiranite: Armor = MI Security Armor T1; Gloves = Eternal Xiranite Gloves T1; Kit 1 = Eternal Xiranite Power Core; Kit 2 = Eternal Xiranite Power Core
+
+Skill investment:
+- Heat Support: Combo Skill = Battle Skill >= Ultimate > Basic Attack
+
+Choose the loadout for its intended team and resource thresholds. An investment priority is not a button sequence. Refer to the original guide for stat targets, calculations, substitutions, and combat details.

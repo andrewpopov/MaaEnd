@@ -1,0 +1,79 @@
+{
+    "id": "da-pan",
+    "name": "Da Pan",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/da-pan",
+    "source_reported_update": "14/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "2c663f95"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Amaranthine Tassel",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Exemplar",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Phantom Pain",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Grizzled Edge",
+            "equipment": {
+                "armor": "Grizzled Edge Armor",
+                "gloves": "Grizzled Edge Gauntlets",
+                "kit_1": "Grizzled Edge Push Knife",
+                "kit_2": "Swordmancer NAV Beacon"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "Swordmancer",
+            "equipment": {
+                "armor": "Swordmancer Light Armor",
+                "gloves": "Swordmancer TAC Gauntlets T1",
+                "kit_1": "Swordmancer NAV Beacon",
+                "kit_2": "Swordmancer NAV Beacon"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Main Field",
+            "order": "Basic Attack > Combo Skill > Battle Skill = Ultimate"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "lifeng-02",
+        "lifeng-03",
+        "da-pan-02",
+        "da-pan-03"
+    ],
+    "rotation_catalog_ids": [
+        "lifeng-rotation-2"
+    ],
+    "notes": []
+}

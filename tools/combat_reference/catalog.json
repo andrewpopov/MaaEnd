@@ -1,0 +1,3100 @@
+{
+    "schema_version": 1,
+    "retrieved_on": "2026-10-17",
+    "timezone": "America/Los_Angeles",
+    "purpose": "Local reference library for later roster matching and team-specific combat development.",
+    "execution_status": "reference_only_not_enabled_in_automation",
+    "ownership_status": "not_checked_against_completed_roster_scan",
+    "sources": [
+        {
+            "id": "laevatain",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/laevatain",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "Build four Melting Flame stacks before the enhanced skill; preserve 100 SP for Laevatain during her ultimate.",
+                "Align Antal's ultimate and Ardelia's debuff with Laevatain's burst. Wulfgard's skill consumes Combustion instead of adding Heat when enhanced."
+            ]
+        },
+        {
+            "id": "rossi",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/rossi",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "Rossi combo includes a timed second input; a single generic combo press does not describe its full execution. Coordinate Endministrator's combo with that second hit."
+            ]
+        },
+        {
+            "id": "yvonne",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/yvonne",
+            "retrieved_on": "2026-10-17",
+            "notes": []
+        },
+        {
+            "id": "last-rite",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/last-rite",
+            "retrieved_on": "2026-10-17",
+            "notes": []
+        },
+        {
+            "id": "avywenna",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/avywenna",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "Keep basic-attack strings going between windows. Arclight consumes Electrification for resources; save SP for Avywenna's spear retrieval."
+            ]
+        },
+        {
+            "id": "endministrator",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/endministrator",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "These are alternate openers for the same lineup. Choose which operator consumes Vulnerability; do not combine both consumers blindly."
+            ]
+        },
+        {
+            "id": "lifeng",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/lifeng",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "The second diagram is a setup fragment, not a complete repeating damage rotation."
+            ]
+        },
+        {
+            "id": "da-pan",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/da-pan",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "This page provides team lineups but no explicit action diagram in the inspected section. Do not fabricate a precise rotation."
+            ]
+        },
+        {
+            "id": "pogranichnik",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/pogranichnik",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "The first team's Crush/Breach openers are already captured from Endministrator's guide."
+            ]
+        },
+        {
+            "id": "arcane",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/arcane",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "The first timeline uses the guide's listed equipment. Arcane's attribute-selected form changes behavior: INT requires Intellect >= Will; WILL requires Will > Intellect. Verify the intended form before reuse."
+            ]
+        },
+        {
+            "id": "mi-fu",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/mi-fu",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "Keep the source's Vulnerability and skill-order dependencies. The timeline is a guide scenario, with gear and encounter assumptions still requiring in-game validation."
+            ]
+        },
+        {
+            "id": "typhoeus",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/typhoeus",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "The captured diagram is associated with the first listed lineup. Arcane form, build, energy and encounter prerequisites must be checked before execution."
+            ]
+        },
+        {
+            "id": "zhuang-fangyi",
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi",
+            "retrieved_on": "2026-10-17",
+            "notes": [
+                "This is the Liino lineup's five-skill format; the Gilberta variant instead uses a three-skill format. Do not reuse the same timeline across variants."
+            ]
+        }
+    ],
+    "teams": [
+        {
+            "id": "laevatain-01",
+            "members": [
+                "Laevatain",
+                "Wulfgard",
+                "Antal",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Laevatain",
+                        "Wulfgard",
+                        "Antal",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2"
+            ]
+        },
+        {
+            "id": "laevatain-02",
+            "members": [
+                "Laevatain",
+                "Akekuri",
+                "Antal",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Laevatain",
+                        "Akekuri",
+                        "Antal",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "laevatain-03",
+            "members": [
+                "Laevatain",
+                "Wulfgard",
+                "Akekuri",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Laevatain",
+                        "Wulfgard",
+                        "Akekuri",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "rossi-01",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Endministrator",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Endministrator",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "rossi-rotation-1",
+                "rossi-rotation-2"
+            ]
+        },
+        {
+            "id": "rossi-02",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "rossi-03",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Endministrator",
+                "Perlica"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Endministrator",
+                        "Perlica"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "yvonne-01",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Tangtang",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Tangtang",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "yvonne-rotation-1",
+                "yvonne-rotation-2"
+            ]
+        },
+        {
+            "id": "yvonne-02",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Alesh",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Alesh",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "yvonne-03",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Alesh",
+                "Estella"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Alesh",
+                        "Estella"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "last-rite-01",
+            "members": [
+                "Last Rite",
+                "Xaihi",
+                "Tangtang",
+                "Perlica"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Last Rite",
+                        "Xaihi",
+                        "Tangtang",
+                        "Perlica"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "last-rite-rotation-1",
+                "last-rite-rotation-2"
+            ]
+        },
+        {
+            "id": "last-rite-02",
+            "members": [
+                "Last Rite",
+                "Perlica",
+                "Xaihi",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Last Rite",
+                        "Perlica",
+                        "Xaihi",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "last-rite-03",
+            "members": [
+                "Last Rite",
+                "Fluorite",
+                "Xaihi",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Last Rite",
+                        "Fluorite",
+                        "Xaihi",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "avywenna-01",
+            "members": [
+                "Avywenna",
+                "Arclight",
+                "Perlica",
+                "Antal"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Avywenna",
+                        "Arclight",
+                        "Perlica",
+                        "Antal"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "avywenna-rotation-1",
+                "avywenna-rotation-2"
+            ]
+        },
+        {
+            "id": "avywenna-02",
+            "members": [
+                "Avywenna",
+                "Arclight",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Avywenna",
+                        "Arclight",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "avywenna-03",
+            "members": [
+                "Avywenna",
+                "Akekuri",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Avywenna",
+                        "Akekuri",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "endministrator-01",
+            "members": [
+                "Endministrator",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "endministrator-rotation-1",
+                "endministrator-rotation-2"
+            ]
+        },
+        {
+            "id": "endministrator-02",
+            "members": [
+                "Endministrator",
+                "Lifeng",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Endministrator",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "lifeng-rotation-1"
+            ]
+        },
+        {
+            "id": "endministrator-03",
+            "members": [
+                "Endministrator",
+                "Estella",
+                "Alesh",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Endministrator",
+                        "Estella",
+                        "Alesh",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "lifeng-02",
+            "members": [
+                "Lifeng",
+                "Da Pan",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Lifeng",
+                        "Da Pan",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Da Pan",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "lifeng-rotation-2"
+            ]
+        },
+        {
+            "id": "lifeng-03",
+            "members": [
+                "Lifeng",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Da Pan"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Lifeng",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Da Pan"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Pogranichnik",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Da Pan"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "da-pan-02",
+            "members": [
+                "Da Pan",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Da Pan",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Da Pan",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "da-pan-03",
+            "members": [
+                "Da Pan",
+                "Endministrator",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Da Pan",
+                        "Endministrator",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "arcane-01",
+            "members": [
+                "Arcane",
+                "Tangtang",
+                "Xaihi",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Arcane",
+                        "Tangtang",
+                        "Xaihi",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "arcane-timeline-1"
+            ]
+        },
+        {
+            "id": "arcane-02",
+            "members": [
+                "Yvonne",
+                "Tangtang",
+                "Xaihi",
+                "Arcane"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Yvonne",
+                        "Tangtang",
+                        "Xaihi",
+                        "Arcane"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "arcane-03",
+            "members": [
+                "Arcane",
+                "Perlica",
+                "Xaihi",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Arcane",
+                        "Perlica",
+                        "Xaihi",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "mi-fu-01",
+            "members": [
+                "Mi Fu",
+                "Chen Qianyu",
+                "Pogranichnik",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Chen Qianyu",
+                        "Pogranichnik",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "mi-fu-timeline-1"
+            ]
+        },
+        {
+            "id": "mi-fu-02",
+            "members": [
+                "Mi Fu",
+                "Rossi",
+                "Pogranichnik",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Rossi",
+                        "Pogranichnik",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "mi-fu-03",
+            "members": [
+                "Mi Fu",
+                "Chen Qianyu",
+                "Pogranichnik",
+                "Lifeng"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Chen Qianyu",
+                        "Pogranichnik",
+                        "Lifeng"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "typhoeus-01",
+            "members": [
+                "Typhoeus",
+                "Perlica",
+                "Arcane",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Perlica",
+                        "Arcane",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "typhoeus-timeline-1"
+            ]
+        },
+        {
+            "id": "typhoeus-02",
+            "members": [
+                "Typhoeus",
+                "Ardelia",
+                "Arcane",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Ardelia",
+                        "Arcane",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "typhoeus-03",
+            "members": [
+                "Typhoeus",
+                "Perlica",
+                "Gilberta",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Perlica",
+                        "Gilberta",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "zhuang-fangyi-01",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "zhuang-fangyi-timeline-1"
+            ]
+        },
+        {
+            "id": "zhuang-fangyi-02",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        },
+        {
+            "id": "zhuang-fangyi-03",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Antal"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Antal"
+                    ]
+                }
+            ],
+            "rotation_ids": []
+        }
+    ],
+    "rotations": [
+        {
+            "id": "laevatain-rotation-1",
+            "team_id": "laevatain-01",
+            "source_id": "laevatain",
+            "name": "Single-target opener",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": "Antal",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Antal",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Laevatain",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Laevatain",
+                    "action": "enhanced_skill",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "laevatain-rotation-2",
+            "team_id": "laevatain-01",
+            "source_id": "laevatain",
+            "name": "Post-opener energy build",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Laevatain",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Antal",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Laevatain",
+                    "action": "enhanced_skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Laevatain",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "rossi-rotation-1",
+            "team_id": "rossi-01",
+            "source_id": "rossi",
+            "name": "Finisher-supported cycle",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "Finisher SP recovery for the second Rossi skill",
+                "Endministrator P2 for the guide's intended buff synergy"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": "Gilberta",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "finisher",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "rossi-rotation-2",
+            "team_id": "rossi-01",
+            "source_id": "rossi",
+            "name": "Wulfgard P5 cycle",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "Wulfgard P5 combo reset",
+                "Endministrator P2 for the guide's intended buff synergy"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": "Gilberta",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Wulfgard",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Rossi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "yvonne-rotation-1",
+            "team_id": "yvonne-01",
+            "source_id": "yvonne",
+            "name": "Full-energy burst",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "All ultimates ready",
+                "Xaihi skill pre-cast where permitted"
+            ],
+            "notes": [
+                "The guide explains starting Yvonne's dive and immediately using Tangtang's ultimate; the diagram places the ultimate before the dive. Preserve that timing ambiguity for live validation, rather than enforcing the drawn order."
+            ],
+            "steps": [
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "dive_attack",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "ultimate",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "yvonne-rotation-2",
+            "team_id": "yvonne-01",
+            "source_id": "yvonne",
+            "name": "Zero-energy 1/3-infliction cycle",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "Yvonne 12.3% ultimate gain efficiency"
+            ],
+            "notes": [
+                "First Yvonne skill consumes one infliction; later skill consumes three. If using no extra ultimate efficiency, the guide instead calls for five total infliction stacks.",
+                "Wait for Tangtang combo readiness before applying Cryo when possible."
+            ],
+            "steps": [
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "final_strike",
+                    "repeat": 2
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 2
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Yvonne",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Gilberta",
+                    "action": "ultimate",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "last-rite-rotation-1",
+            "team_id": "last-rite-01",
+            "source_id": "last-rite",
+            "name": "Zero-energy cycle",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "Xaihi and Perlica Potential energy-cost reductions; exact ranks must be checked against the linked guide/build"
+            ],
+            "notes": [
+                "Control switches between Last Rite and Tangtang to land final strikes, build stagger and recover SP."
+            ],
+            "steps": [
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 2
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "finisher",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 2
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "dive_attack",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "last-rite-rotation-2",
+            "team_id": "last-rite-01",
+            "source_id": "last-rite",
+            "name": "Full-energy burst",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "All ultimates ready",
+                "Xaihi and Last Rite skills pre-cast where permitted"
+            ],
+            "notes": [
+                "After Tangtang's first combo, the guide generally favors controlling Tangtang."
+            ],
+            "steps": [
+                {
+                    "operator": "Xaihi",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Xaihi",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "dive_attack",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Tangtang",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Last Rite",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "avywenna-rotation-1",
+            "team_id": "avywenna-01",
+            "source_id": "avywenna",
+            "name": "Electric opener",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": "Antal",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Antal",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Avywenna",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "avywenna-rotation-2",
+            "team_id": "avywenna-01",
+            "source_id": "avywenna",
+            "name": "Stagger burst",
+            "coverage": "scenario_sequence",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [
+                "The source orders impacts, not button presses: Arclight's skill may need casting before the stagger-producing final strike lands.",
+                "Antal combo is positioned before forced Electrification for the Arts Burst interaction."
+            ],
+            "steps": [
+                {
+                    "operator": "Arclight",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Antal",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Antal",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Avywenna",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Avywenna",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "ultimate",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Perlica",
+                    "action": "finisher",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Avywenna",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Arclight",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "endministrator-rotation-1",
+            "team_id": "endministrator-01",
+            "source_id": "endministrator",
+            "name": "Crush opener",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Pogranichnik",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "endministrator-rotation-2",
+            "team_id": "endministrator-01",
+            "source_id": "endministrator",
+            "name": "Breach opener",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Pogranichnik",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Pogranichnik",
+                    "action": "combo",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "lifeng-rotation-1",
+            "team_id": "endministrator-02",
+            "source_id": "lifeng",
+            "name": "Lifeng physical opener",
+            "coverage": "opener",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Lifeng",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "skill",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Chen Qianyu",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Lifeng",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Endministrator",
+                    "action": "skill",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "lifeng-rotation-2",
+            "team_id": "lifeng-02",
+            "source_id": "lifeng",
+            "name": "Da Pan setup fragment",
+            "coverage": "setup_fragment",
+            "requires": [
+                "Guide's equipment, resources, enemy state and combo conditions"
+            ],
+            "notes": [],
+            "steps": [
+                {
+                    "operator": null,
+                    "action": "final_strike",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "combo",
+                    "repeat": 1
+                },
+                {
+                    "operator": "Ardelia",
+                    "action": "skill",
+                    "repeat": 1
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "arcane-timeline-1",
+            "team_id": "arcane-01",
+            "source_id": "arcane",
+            "name": "First lineup: published timeline",
+            "coverage": "scenario_timeline",
+            "requires": [
+                "Source's listed gear and attribute form",
+                "Initial energy and Potential requirements must be checked against the linked guide"
+            ],
+            "timing_basis": "DOM action positions / displayed 100 pixels per second axis; schematic, not measured game timing",
+            "steps": [
+                {
+                    "diagram_seconds": 0,
+                    "operator": "Tangtang",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 0.5,
+                    "operator": "Tangtang",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Xaihi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 2,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 2.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 3,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 3.5,
+                    "operator": "Xaihi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 4,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 4,
+                    "operator": "Tangtang",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 4.5,
+                    "operator": "Xaihi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 6,
+                    "operator": "Tangtang",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 6.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 7,
+                    "operator": "Xaihi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Tangtang",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Akekuri",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 8,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 8.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 9,
+                    "operator": "Xaihi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 9.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 10,
+                    "operator": "Tangtang",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 10.5,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 11,
+                    "operator": "Tangtang",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 11,
+                    "operator": "Xaihi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 11.5,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 12,
+                    "operator": "Xaihi",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 12.5,
+                    "operator": "Arcane",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 13,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 13.5,
+                    "operator": "Tangtang",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 14,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 14.5,
+                    "operator": "Akekuri",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 15,
+                    "operator": "Arcane",
+                    "action": "finisher"
+                },
+                {
+                    "diagram_seconds": 15.5,
+                    "operator": "Tangtang",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 16,
+                    "operator": "Tangtang",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 16.5,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 16.5,
+                    "operator": "Tangtang",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 17,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 17.5,
+                    "operator": "Akekuri",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 18,
+                    "operator": "Arcane",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 18.5,
+                    "operator": "Arcane",
+                    "action": "ultimate"
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "mi-fu-timeline-1",
+            "team_id": "mi-fu-01",
+            "source_id": "mi-fu",
+            "name": "First lineup: published timeline",
+            "coverage": "scenario_timeline",
+            "requires": [
+                "Source's listed gear and attribute form",
+                "Initial energy and Potential requirements must be checked against the linked guide"
+            ],
+            "timing_basis": "DOM action positions / displayed 100 pixels per second axis; schematic, not measured game timing",
+            "steps": [
+                {
+                    "diagram_seconds": 0,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 0.5,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 1,
+                    "operator": "Chen Qianyu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1,
+                    "operator": "Ardelia",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 2,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 2.5,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 3,
+                    "operator": "Mi Fu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 3,
+                    "operator": "Chen Qianyu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 3.5,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 4,
+                    "operator": "Pogranichnik",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 4.5,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 5,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Chen Qianyu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Pogranichnik",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Ardelia",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 6,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 6.5,
+                    "operator": "Ardelia",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 7,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Mi Fu",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 8,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 8.5,
+                    "operator": "Mi Fu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 8.5,
+                    "operator": "Chen Qianyu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 9,
+                    "operator": "Ardelia",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 9.5,
+                    "operator": "Chen Qianyu",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 10,
+                    "operator": "Mi Fu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 10.5,
+                    "operator": "Mi Fu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 11,
+                    "operator": "Pogranichnik",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 11.5,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 12,
+                    "operator": "Mi Fu",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 12.5,
+                    "operator": "Chen Qianyu",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 12.5,
+                    "operator": "Pogranichnik",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 13,
+                    "operator": "Mi Fu",
+                    "action": "finisher"
+                },
+                {
+                    "diagram_seconds": 13.5,
+                    "operator": "Chen Qianyu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 14,
+                    "operator": "Mi Fu",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 14.5,
+                    "operator": "Mi Fu",
+                    "action": "skill"
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "typhoeus-timeline-1",
+            "team_id": "typhoeus-01",
+            "source_id": "typhoeus",
+            "name": "First lineup: published timeline",
+            "coverage": "scenario_timeline",
+            "requires": [
+                "Source's listed gear and attribute form",
+                "Initial energy and Potential requirements must be checked against the linked guide"
+            ],
+            "timing_basis": "DOM action positions / displayed 100 pixels per second axis; schematic, not measured game timing",
+            "steps": [
+                {
+                    "diagram_seconds": 0,
+                    "operator": "Liino",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 0.5,
+                    "operator": "Perlica",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 1,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 2,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 2.5,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 3,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 3.5,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 4,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 4.5,
+                    "operator": "Perlica",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 5,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 6,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 6.5,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7,
+                    "operator": "Typhoeus",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 8,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 8.5,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 9,
+                    "operator": "Typhoeus",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 9,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 9.5,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 10,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 10.5,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 11,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 11.5,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 12,
+                    "operator": "Liino",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 12.5,
+                    "operator": "Arcane",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 13,
+                    "operator": "Perlica",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 13.5,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 14,
+                    "operator": "Typhoeus",
+                    "action": "finisher"
+                },
+                {
+                    "diagram_seconds": 14.5,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 15,
+                    "operator": "Arcane",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 15.5,
+                    "operator": "Typhoeus",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 16,
+                    "operator": "Typhoeus",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 16.5,
+                    "operator": "Arcane",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 17,
+                    "operator": "Arcane",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 17.5,
+                    "operator": "Typhoeus",
+                    "action": "final_strike"
+                }
+            ],
+            "live_validated": false
+        },
+        {
+            "id": "zhuang-fangyi-timeline-1",
+            "team_id": "zhuang-fangyi-01",
+            "source_id": "zhuang-fangyi",
+            "name": "First lineup: published timeline",
+            "coverage": "scenario_timeline",
+            "requires": [
+                "Source's listed gear and attribute form",
+                "Initial energy and Potential requirements must be checked against the linked guide"
+            ],
+            "timing_basis": "DOM action positions / displayed 100 pixels per second axis; schematic, not measured game timing",
+            "steps": [
+                {
+                    "diagram_seconds": 0,
+                    "operator": "Liino",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 0.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 1,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Perlica",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 1.5,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 2,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 2.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 3,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 3.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 4,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 4.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 5,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 5.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 6,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 6.5,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 7.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 8,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 8.5,
+                    "operator": "Arclight",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 9,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 9.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 10,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 10,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 10.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 11,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 11.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 12,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 12.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 13,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 13.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 13.5,
+                    "operator": "Liino",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 14,
+                    "operator": "Liino",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 14.5,
+                    "operator": "Perlica",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 15,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 15.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "finisher"
+                },
+                {
+                    "diagram_seconds": 16,
+                    "operator": "Zhuang Fangyi",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 16.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 17,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 17.5,
+                    "operator": "Perlica",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 18,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 18.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 19,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 19.5,
+                    "operator": "Perlica",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 19.5,
+                    "operator": "Arclight",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 20,
+                    "operator": "Arclight",
+                    "action": "ultimate"
+                },
+                {
+                    "diagram_seconds": 20.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "final_strike"
+                },
+                {
+                    "diagram_seconds": 21,
+                    "operator": "Zhuang Fangyi",
+                    "action": "combo"
+                },
+                {
+                    "diagram_seconds": 21.5,
+                    "operator": "Zhuang Fangyi",
+                    "action": "skill"
+                },
+                {
+                    "diagram_seconds": 22,
+                    "operator": "Arclight",
+                    "action": "combo"
+                }
+            ],
+            "live_validated": false
+        }
+    ],
+    "limitations": [
+        "Source examples are encounter- and build-dependent; these are not universally optimal loops.",
+        "Only rotations explicitly associated with a lineup are attached. Alternate lineups are not assigned another team's rotation.",
+        "Unlabeled final strikes, finishers and dive attacks retain an unresolved controlled operator.",
+        "Timeline seconds are read from diagram positions against the displayed axis. They are not measured game timings or an executable EndAxis share code.",
+        "Existing MaaEnd importer covers skills and ultimates; combo timing, active operator changes and other conditions still need implementation and live validation."
+    ],
+    "review_queue": [
+        {
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/si",
+            "issue": "Inspected team blocks list three portraits, omitting the guide character. No complete four-member team or precise rotation was inferred."
+        }
+    ],
+    "statistics": {
+        "guides": 13,
+        "unique_compositions": 34,
+        "rotation_examples": 18,
+        "compositions_with_explicit_rotation": 12,
+        "timeline_events": 168
+    }
+}

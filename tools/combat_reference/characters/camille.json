@@ -1,0 +1,65 @@
+{
+    "id": "camille",
+    "name": "Camille",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/camille",
+    "source_reported_update": "16/August/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "881b2afa"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Blessing of Lustrous Carmine",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Beacon of Duty",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Frontiers",
+            "equipment": {
+                "armor": "Frontiers Protection Suit",
+                "gloves": "Frontiers Fiber Gloves T1",
+                "kit_1": "Frontiers Extra O2 Tube",
+                "kit_2": "Rift Trekker Silver Blade"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "Eternal Xiranite",
+            "equipment": {
+                "armor": "MI Security Armor T1",
+                "gloves": "Eternal Xiranite Gloves T1",
+                "kit_1": "Eternal Xiranite Power Core",
+                "kit_2": "Eternal Xiranite Power Core"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Heat Support",
+            "order": "Combo Skill = Battle Skill >= Ultimate > Basic Attack"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [],
+    "rotation_catalog_ids": [],
+    "notes": []
+}

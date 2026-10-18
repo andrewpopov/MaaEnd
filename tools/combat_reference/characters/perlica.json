@@ -1,0 +1,100 @@
+{
+    "id": "perlica",
+    "name": "Perlica",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/perlica",
+    "source_reported_update": "14/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "31329775"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Stanza of Memorials",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Detonation Unit",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Wild Wanderer",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 4,
+            "name": "Oblivion",
+            "weapon_potential": 0,
+            "section": "specialist",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "Pulser Labs",
+            "equipment": {
+                "armor": "Pulser Labs Disruptor Suit",
+                "gloves": "Aethertech Gloves",
+                "kit_1": "Pulser Labs Calibrator",
+                "kit_2": "Pulser Labs Calibrator"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        },
+        {
+            "source_order": 2,
+            "set": "Qingbo",
+            "equipment": {
+                "armor": "Qingbo Light Armor",
+                "gloves": "Qingbo Gloves",
+                "kit_1": "Qingbo Cask",
+                "kit_2": "Qingbo Cask"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Off Field",
+            "order": "Battle Skill >= Ultimate >= Basic Attack > Combo Skill"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "rossi-02",
+        "rossi-03",
+        "last-rite-01",
+        "last-rite-02",
+        "avywenna-01",
+        "avywenna-02",
+        "avywenna-03",
+        "arcane-03",
+        "typhoeus-01",
+        "typhoeus-03",
+        "zhuang-fangyi-01",
+        "zhuang-fangyi-02",
+        "zhuang-fangyi-03"
+    ],
+    "rotation_catalog_ids": [
+        "last-rite-rotation-1",
+        "last-rite-rotation-2",
+        "avywenna-rotation-1",
+        "avywenna-rotation-2",
+        "typhoeus-timeline-1",
+        "zhuang-fangyi-timeline-1"
+    ],
+    "notes": []
+}

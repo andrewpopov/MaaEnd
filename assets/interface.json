@@ -160,6 +160,16 @@
     ],
     "group": [
         {
+            "name": "account_scans",
+            "label": "$group.account_scans.label",
+            "default_expand": true
+        },
+        {
+            "name": "innkeeping",
+            "label": "$group.innkeeping.label",
+            "default_expand": false
+        },
+        {
             "name": "regional_development",
             "label": "$group.regional_development.label",
             "default_expand": true
@@ -202,9 +212,9 @@
     ],
     "task": [],
     "import": [
-        // pretask
+        "tasks/Innkeeping.json",
+        "tasks/AccountScan.json",
         "tasks/pretasks/LaunchGamePC.json",
-        // group: regional_development
         "tasks/OutpostTrading.json",
         "tasks/SeizeDeliveryJobs.json",
         "tasks/DeliveryJobs.json",
@@ -212,13 +222,11 @@
         "tasks/AutoStockStaple.json",
         "tasks/AutoSell.json",
         "tasks/EnvironmentMonitoring.json",
-        // group: valuables_vault
         "tasks/GearAssembly.json",
         "tasks/Weapon.json",
         "tasks/BatchUseDetector.json",
         "tasks/EssenceFilter.json",
         "tasks/DecomposeWeaponEssence.json",
-        // group: open_world
         "tasks/ResourceRecycleStation.json",
         "tasks/AutoCollect.json",
         "tasks/AutoEcoFarm.json",
@@ -228,7 +236,6 @@
         "tasks/ZiplineImport.json",
         "tasks/SharedZiplineDelete.json",
         "tasks/AeroSalvage.json",
-        // group: sanity_sink
         "tasks/AutoEssence/AutoEssence.json",
         "tasks/AutoEssence/Location/ChooseLocation.json",
         "tasks/AutoEssence/Location/SelectLocation.json",
@@ -247,13 +254,11 @@
         "tasks/AutoEssence/Location/WLSnowyForest.json",
         "tasks/AutoEssence/Target/Target.json",
         "tasks/ProtocolSpace.json",
-        // group: dijiang_ship
         "tasks/DijiangRewards.json",
         "tasks/VisitFriends.json",
         "tasks/GiftOperator.json",
         "tasks/BatchAddFriends.json",
         "tasks/BatchDeleteFriends.json",
-        // group: other_menu
         "tasks/PullCountCalculator.json",
         "tasks/BakerEntry.json",
         "tasks/ReadAllWiki.json",
@@ -264,25 +269,18 @@
         "tasks/CreditShopping.json",
         "tasks/AccountSwitch.json",
         "tasks/LaunchGameLinux.json",
-        // "tasks/DevTest.json", // mxu测试用
-        // "tasks/AdbAutoFightTest.json", // 🧪战斗测试，暂不上架
-        // "tasks/WebEvent202605.json", // 该活动已关闭
         "tasks/AndroidOpenGame.json",
         "tasks/CloseGame.json",
         "tasks/CloseGamePC.json",
-        // group: realtime
         "tasks/RealTimeTask.json",
-        // group: backpack
         "tasks/ItemTransfer.json",
         "tasks/Crafting.json",
         "tasks/SimpleProductionBatchStart.json",
         "tasks/ReceiveProdManual.json",
         "tasks/StashBackpack.json",
-        // preset
         "tasks/preset/DailyFull.json",
         "tasks/preset/QuickDaily.json",
         "tasks/preset/RealtimeAssist.json",
-        // setting
         "tasks/setting/Keymap.json",
         "tasks/setting/Zipline.json"
     ]

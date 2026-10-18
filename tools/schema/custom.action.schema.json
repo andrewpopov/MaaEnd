@@ -6,6 +6,8 @@
         "custom_action": {
             "enum": [
                 "325",
+                "AccountScanCaptureAction",
+                "AccountScanRosterStepAction",
                 "AccountSwitchWindowAction",
                 "AddItemData",
                 "AeroSalvageConfigureSwipeAction",
@@ -65,6 +67,7 @@
                 "ImportBluePrintsEnterCodeAction",
                 "ImportBluePrintsFinishAction",
                 "ImportBluePrintsInitTextAction",
+                "InnkeepingAssistAction",
                 "IntelArchiveResetSessionAction",
                 "IntelArchiveResolveTruncAction",
                 "IntelArchiveShowInventoryAction",
@@ -499,6 +502,129 @@
                         "required": [
                             "route",
                             "event"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "AccountScanCaptureAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "task_id": {
+                                "enum": [
+                                    "account_identity",
+                                    "operators",
+                                    "skills",
+                                    "equipped_weapons",
+                                    "weapon_inventory",
+                                    "equipped_gear",
+                                    "gear_inventory",
+                                    "gear_plans",
+                                    "gear_recipes",
+                                    "craft_materials",
+                                    "artificing",
+                                    "team_presets"
+                                ]
+                            },
+                            "page": {
+                                "type": "string"
+                            },
+                            "talent_count": {
+                                "enum": [
+                                    8,
+                                    12
+                                ]
+                            }
+                        },
+                        "required": [
+                            "task_id"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "required": [
+                    "custom_action_param"
+                ]
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "AccountScanRosterStepAction"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "resume": {
+                                "type": "boolean"
+                            },
+                            "step": {
+                                "enum": [
+                                    "begin",
+                                    "prepare",
+                                    "grid_top",
+                                    "dispatch",
+                                    "matrix_align",
+                                    "operator_done",
+                                    "advance",
+                                    "advance_after_scroll",
+                                    "scroll_start",
+                                    "scroll_capture",
+                                    "scroll_check",
+                                    "finish"
+                                ]
+                            },
+                            "task_id": {
+                                "enum": [
+                                    "operators",
+                                    "skills",
+                                    "equipped_weapons",
+                                    "equipped_gear"
+                                ]
+                            },
+                            "page": {
+                                "type": "string"
+                            },
+                            "next": {
+                                "type": "string"
+                            },
+                            "points": {
+                                "type": "array",
+                                "minItems": 9,
+                                "maxItems": 13,
+                                "items": {
+                                    "type": "array",
+                                    "minItems": 2,
+                                    "maxItems": 2,
+                                    "items": {
+                                        "type": "integer",
+                                        "minimum": 0,
+                                        "maximum": 1280
+                                    }
+                                }
+                            }
+                        },
+                        "required": [
+                            "step"
                         ],
                         "additionalProperties": false
                     }

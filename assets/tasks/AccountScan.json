@@ -1,0 +1,172 @@
+{
+    "task": [
+        {
+            "name": "AccountScanIdentity",
+            "label": "$task.AccountScanIdentity.label",
+            "entry": "AccountScanIdentityCapture",
+            "description": "$task.AccountScanIdentity.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanOperators",
+            "label": "$task.AccountScanOperators.label",
+            "entry": "AccountBatchEntryoperators",
+            "description": "$task.AccountScanOperators.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanSkills",
+            "label": "$task.AccountScanSkills.label",
+            "entry": "AccountBatchEntryskills",
+            "description": "$task.AccountScanSkills.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanEquippedWeapons",
+            "label": "$task.AccountScanEquippedWeapons.label",
+            "entry": "AccountBatchEntryequipped_weapons",
+            "description": "$task.AccountScanEquippedWeapons.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanWeaponInventory",
+            "label": "$task.AccountScanWeaponInventory.label",
+            "entry": "AccountScanWeaponInventoryCapture",
+            "description": "$task.AccountScanWeaponInventory.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanEquippedGear",
+            "label": "$task.AccountScanEquippedGear.label",
+            "entry": "AccountBatchEntryequipped_gear",
+            "description": "$task.AccountScanEquippedGear.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanGearInventory",
+            "label": "$task.AccountScanGearInventory.label",
+            "entry": "AccountScanGearInventoryCapture",
+            "description": "$task.AccountScanGearInventory.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanGearPlans",
+            "label": "$task.AccountScanGearPlans.label",
+            "entry": "AccountScanGearPlansCapture",
+            "description": "$task.AccountScanGearPlans.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanGearRecipes",
+            "label": "$task.AccountScanGearRecipes.label",
+            "entry": "AccountScanGearRecipesCapture",
+            "description": "$task.AccountScanGearRecipes.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanCraftMaterials",
+            "label": "$task.AccountScanCraftMaterials.label",
+            "entry": "AccountScanCraftMaterialsCapture",
+            "description": "$task.AccountScanCraftMaterials.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanArtificing",
+            "label": "$task.AccountScanArtificing.label",
+            "entry": "AccountScanArtificingCapture",
+            "description": "$task.AccountScanArtificing.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "AccountScanTeamPresets",
+            "label": "$task.AccountScanTeamPresets.label",
+            "entry": "AccountScanTeamPresetsCapture",
+            "description": "$task.AccountScanTeamPresets.description",
+            "group": [
+                "account_scans"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        }
+    ]
+}

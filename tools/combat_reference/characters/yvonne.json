@@ -1,0 +1,68 @@
+{
+    "id": "yvonne",
+    "name": "Yvonne",
+    "publication_status": "published_build",
+    "source_url": "https://www.prydwen.gg/arknights-endfield/characters/yvonne",
+    "source_reported_update": "14/June/2026",
+    "retrieved_on": "2026-10-17",
+    "source_facts_fingerprint": {
+        "algorithm": "FNV-1a-32 of normalized extracted build facts",
+        "value": "9bacd460"
+    },
+    "weapon_recommendations": [
+        {
+            "display_order": 1,
+            "name": "Artzy Tyrannical",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 2,
+            "name": "Navigator",
+            "weapon_potential": 5,
+            "section": "general",
+            "ownership_checked": false
+        },
+        {
+            "display_order": 3,
+            "name": "Wedge",
+            "weapon_potential": 0,
+            "section": "general",
+            "ownership_checked": false
+        }
+    ],
+    "gear_loadouts": [
+        {
+            "source_order": 1,
+            "set": "MI Security",
+            "equipment": {
+                "armor": "MI Security Overalls",
+                "gloves": "MI Security Hands PPE",
+                "kit_1": "MI Security Toolkit",
+                "kit_2": "MI Security Toolkit"
+            },
+            "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+            "ownership_checked": false
+        }
+    ],
+    "skill_upgrade_priorities": [
+        {
+            "role": "Main Field",
+            "order": "Ultimate > Basic Attack >= Battle Skill = Combo Skill"
+        }
+    ],
+    "stat_priority": null,
+    "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+    "team_catalog_ids": [
+        "yvonne-01",
+        "yvonne-02",
+        "yvonne-03",
+        "arcane-02"
+    ],
+    "rotation_catalog_ids": [
+        "yvonne-rotation-1",
+        "yvonne-rotation-2"
+    ],
+    "notes": []
+}

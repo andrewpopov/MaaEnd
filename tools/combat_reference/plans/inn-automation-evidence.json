@@ -1,0 +1,45 @@
+{
+    "status": "offline_ocr_review_complete_live_navigation_pending",
+    "recording_directory": "install\\data\\WorkflowRecordings\\inn-20261017-221228",
+    "ocr_review": "install\\data\\WorkflowRecordings\\inn-20261017-221228\\ocr\\inn-review.json",
+    "ocr_transcript": "install\\data\\WorkflowRecordings\\inn-20261017-221228\\ocr\\transcript.txt",
+    "ocr_unique_frames": 564,
+    "ocr_failures": 0,
+    "game_inputs_sent": false,
+    "observed_signals": [
+        "ordering",
+        "dining",
+        "bill_ready",
+        "kitchen_1",
+        "kitchen_2",
+        "kitchen_queue_full",
+        "tray_movement_restriction",
+        "gourmand_excludes_entree",
+        "helper_collecting_bills",
+        "closing_soon",
+        "closed_to_new_patrons",
+        "serve_remaining_orders",
+        "session_ended",
+        "auto_collect_remaining_income",
+        "sweet_and_salty_theme"
+    ],
+    "automation_implications": [
+        "Use live kitchen queue availability and recipe timers; do not repeat a full-queue action.",
+        "Track requested dish icons separately from OCR text; some order cards have no dish names.",
+        "Represent Gourmand requirements as positive and negative constraints.",
+        "Check helper collection state before scheduling a duplicate bill collection.",
+        "Separate normal operation, closing warning, post-close serving and session-ended states.",
+        "Plan delivery routes for carrying restrictions and observed tray capacity.",
+        "Keep pre-cooking limited to unreserved capacity and current demand; phase-based thresholds need more runs.",
+        "Use remaining service time versus cook-plus-travel time to limit late speculative cooking; prepared dishes remained at session end in this demonstration."
+    ],
+    "unvalidated": [
+        "dish icon classifier",
+        "physical movement and interaction mapping",
+        "exact kitchen and tray capacity rules across upgrades",
+        "how helper bill collection is triggered",
+        "optimal pre-cook quantities or round-phase thresholds",
+        "recovery from wrong dish, blocked path or full tray"
+    ],
+    "live_automation_enabled": false
+}

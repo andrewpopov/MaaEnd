@@ -1,0 +1,21 @@
+Rossi - build guide summary
+Source: https://www.prydwen.gg/arknights-endfield/characters/rossi
+Source update: 14/June/2026
+Retrieved: 2026-10-17 (America/Los_Angeles)
+
+Weapons (published order within each section; Potential belongs to the weapon):
+- Lupine Scarlet (P0; general)
+- Glorious Memory (P5; general)
+- Glorious Memory (P0; general)
+
+Gear loadouts (four equipment slots, preserving the exact source names):
+- MI Security: Armor = MI Security Armor T1; Gloves = MI Security Gloves T1; Kit 1 = MI Security Scope T1; Kit 2 = MI Security Scope T1
+
+Skill investment:
+- Main Field: Ultimate > Combo Skill > Basic Attack >= Battle Skill
+
+Choose the loadout for its intended team and resource thresholds. An investment priority is not a button sequence. Refer to the original guide for stat targets, calculations, substitutions, and combat details.
+Rossi's combo requires a timed second input. Skill investment order does not replace the state-dependent combo sequence.
+
+Local team references: rossi-01, rossi-02, rossi-03, mi-fu-02
+Local rotation references: rossi-rotation-1, rossi-rotation-2

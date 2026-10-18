@@ -1,0 +1,310 @@
+{
+    "retrieved_on": "2026-10-17",
+    "timezone": "America/Los_Angeles",
+    "statistics": {
+        "listed_characters": 34,
+        "published_builds": 33,
+        "upcoming_without_build": 1,
+        "weapon_recommendations": 99,
+        "gear_loadouts": 54,
+        "skill_priority_roles": 36
+    },
+    "files": {
+        "catalog.json": {
+            "bytes": 101311,
+            "sha256": "c02aa7a3bbd0817ededd001c9a727034f4d42abcc66269b56ef29135e5a9dfe8"
+        },
+        "characters/akekuri.json": {
+            "bytes": 2755,
+            "sha256": "70a8e834b1f1d03b283dbcb029a745f07b5dcc76ada3518c87a7658d8dd6585b"
+        },
+        "characters/alesh.json": {
+            "bytes": 2641,
+            "sha256": "e60ce3836f4ec8b97c1f1a4a44cd5c5b739e1a36452d29736516a48d01da367d"
+        },
+        "characters/antal.json": {
+            "bytes": 2307,
+            "sha256": "72edc9f68a5e420558ddfa167fe007fef31586d89fbf9a82148a0bf2ecb3b3f5"
+        },
+        "characters/arcane.json": {
+            "bytes": 3428,
+            "sha256": "ff02cbedde459b2fdc50603021d42dceeb5821596b3cdd7edeb32aea4576c415"
+        },
+        "characters/arclight.json": {
+            "bytes": 2850,
+            "sha256": "4a8d2d21c47af2700a44d104c3eee0bd95033bc3e97d4046106fe2cb3de2569f"
+        },
+        "characters/ardelia.json": {
+            "bytes": 2455,
+            "sha256": "d355789ef0747c1627db5e14691ba58fca15fe5f6b0a605639c7852eb68788ad"
+        },
+        "characters/argent-flow.json": {
+            "bytes": 882,
+            "sha256": "0751d23ed52e0997d07d0f944061376368ee79ec82facbcf5268ffe23cc96716"
+        },
+        "characters/avywenna.json": {
+            "bytes": 2173,
+            "sha256": "28fafdd17862ccf947948aebef374ec9d410733bb4ec3eb0fdf36e3999200903"
+        },
+        "characters/camille.json": {
+            "bytes": 2440,
+            "sha256": "e7653b3cbb6a1a0a8a121082dd57401d9567b2ae314dd1ec1990f092fb93a94d"
+        },
+        "characters/catcher.json": {
+            "bytes": 2068,
+            "sha256": "2af57930eb11a2c3f9fdd238418dae43d3e1fec6eb9ccc634615a99dfb693d45"
+        },
+        "characters/chen-qianyu.json": {
+            "bytes": 2967,
+            "sha256": "2b6cc7ddcf3f00343a9aec3fe97fb65db03d0682dbe2bccdaa25b9b5be8ae803"
+        },
+        "characters/da-pan.json": {
+            "bytes": 2732,
+            "sha256": "a93673ada285552ee50749974bb33150d3072535673b18ba2db06bf88fe6fd62"
+        },
+        "characters/ember.json": {
+            "bytes": 2023,
+            "sha256": "828605a6f91922ad48ce81e628a1b5303610f459a2f1aa7ab6528932e10f033e"
+        },
+        "characters/endministrator.json": {
+            "bytes": 3093,
+            "sha256": "eca3d730c474bb2f87a2eab2f1b402d7e2ccb3e0c86522b82fb461908b6c28c4"
+        },
+        "characters/estella.json": {
+            "bytes": 2102,
+            "sha256": "d8eb1f3ea46a0eadc0f5e33f341f24288265d2601a4cb6871a7c610dc0831e2d"
+        },
+        "characters/fluorite.json": {
+            "bytes": 2384,
+            "sha256": "f1a32f4b9a157171b7bfcc767c0096992c189727bdbd62bfdebc147b05afdc53"
+        },
+        "characters/gilberta.json": {
+            "bytes": 3176,
+            "sha256": "c74ecbc594f1b087ccade45938808f9bdc7fb2a5985b58d29963f931650827dd"
+        },
+        "characters/laevatain.json": {
+            "bytes": 2908,
+            "sha256": "06800572cf4e3dbc90c4223d656f7c0a93682cd47bf21c0d9d40b1e1aeee0cb4"
+        },
+        "characters/last-rite.json": {
+            "bytes": 2208,
+            "sha256": "eadb31381751ca96b5055c7367a0e02e5b1c75e286e8afef297aba2d4df70948"
+        },
+        "characters/lifeng.json": {
+            "bytes": 2977,
+            "sha256": "16e3f4b0c8131518dfe50b7d46fecc65bd6d7a3ee4947b35691af2be22012679"
+        },
+        "characters/liino.json": {
+            "bytes": 2554,
+            "sha256": "65aac369afdc7ba841694a92498f4d71192d76ba44484b87265630fae050cc66"
+        },
+        "characters/mi-fu.json": {
+            "bytes": 2164,
+            "sha256": "799de101d9feb94db67e89d02ebfbb20d0a199bab478293890757b228a9be8d8"
+        },
+        "characters/perlica.json": {
+            "bytes": 3300,
+            "sha256": "0509d494c295baca839c26f84c63b8915d0aa349e7db29ce3f0d3c9af6f7f620"
+        },
+        "characters/pogranichnik.json": {
+            "bytes": 2990,
+            "sha256": "e1c5fe2d74a3f09bf80ddfbb56ed624d5cda3a303ac3c4c7700e42fd525a7548"
+        },
+        "characters/purrchena.json": {
+            "bytes": 2178,
+            "sha256": "421ddf6ca06535595550d53a1f2166df67b3b51cc299f703eae5f15e33f464e0"
+        },
+        "characters/rossi.json": {
+            "bytes": 2335,
+            "sha256": "435b1f71437ccb89bbb90a020de58f0c69c1f6ade44f06b9c53658efa055be93"
+        },
+        "characters/si.json": {
+            "bytes": 2610,
+            "sha256": "ce2f6017eac1e251d2f759a80b391ff74db1f910098b923d6c03758ba1ab2865"
+        },
+        "characters/snowshine.json": {
+            "bytes": 2605,
+            "sha256": "625a30946d99b852e82619f6863fdd526b15674bee863dabdfdf82832761ee1d"
+        },
+        "characters/tangtang.json": {
+            "bytes": 2846,
+            "sha256": "be91721737a2e18ba5e7008dfa338db97abb5ee376402ae9977a0eb41b18afc2"
+        },
+        "characters/typhoeus.json": {
+            "bytes": 2178,
+            "sha256": "08a7e6ae6500323627a3d01ff6c9ea13d38400d82f7ae182b6ebbfb9c1db0654"
+        },
+        "characters/wulfgard.json": {
+            "bytes": 3120,
+            "sha256": "3353a1f95ef44b08c314a6f07d0a2339cd1380f944f5d7e4f95e77ca35ff9453"
+        },
+        "characters/xaihi.json": {
+            "bytes": 3006,
+            "sha256": "27fa5df89e0a535159822fbd615065bf6f0eaaa7e561e7b9484ed38792734601"
+        },
+        "characters/yvonne.json": {
+            "bytes": 2190,
+            "sha256": "5aaa577c3f79990e29e55cbfe9daa492d0a80bc753edd44de2bb841d8157ae99"
+        },
+        "characters/zhuang-fangyi.json": {
+            "bytes": 2179,
+            "sha256": "8599a0cbd04d60480a5e8366fe2651b79e97375ab383459c4d09bd18cd2ff0cd"
+        },
+        "characters.json": {
+            "bytes": 108145,
+            "sha256": "6a823b34590e3f305f03f629eee394cd2f7025f01c1f7a7d0fd40e6ad8e74763"
+        },
+        "guides/akekuri.txt": {
+            "bytes": 1138,
+            "sha256": "6378a1b5163afde8d6efcd8fad6e9fb312315d9d136cc7316083d4edba5fd6c6"
+        },
+        "guides/alesh.txt": {
+            "bytes": 1048,
+            "sha256": "e13123ed46802ffe78561fec679d50a67d4af16e69768d9c50f34d6b35675315"
+        },
+        "guides/antal.txt": {
+            "bytes": 1084,
+            "sha256": "d9037da134569a304a6d1661f603482eb5629b06f414f090b40405ad97c7f422"
+        },
+        "guides/arcane.txt": {
+            "bytes": 1448,
+            "sha256": "48276ea25caef1b7d8a320ed17aa3249db43c15b9521dfff5f946459fc2b6fa5"
+        },
+        "guides/arclight.txt": {
+            "bytes": 1221,
+            "sha256": "dde4f87c5a22c68c8701f35745a7881b6906d78aea8cbdf416a3aa3c6db5bfa8"
+        },
+        "guides/ardelia.txt": {
+            "bytes": 1272,
+            "sha256": "c86d700237387d2d19b5ea702a4c44d564c2703d0f0ed739ecbfa8d86ef51470"
+        },
+        "guides/argent-flow.txt": {
+            "bytes": 313,
+            "sha256": "2149733a59f6cb9803f9c01a3af5b1e80f96335aaca2436dbd8a89e025141107"
+        },
+        "guides/avywenna.txt": {
+            "bytes": 980,
+            "sha256": "e3e17801741640d6b094b20a46033aeb9893a9974d61523c33dca1aafc6582d2"
+        },
+        "guides/camille.txt": {
+            "bytes": 1032,
+            "sha256": "b737d304a1f08a3b1dea4ec9277a30bacd5a15f8a11e5dd3cbe7e92640f999e1"
+        },
+        "guides/catcher.txt": {
+            "bytes": 889,
+            "sha256": "f223b8347762aa2fc9bedd584da33b76363c5818b7e6ef6d4161d4fff63aea3e"
+        },
+        "guides/chen-qianyu.txt": {
+            "bytes": 1280,
+            "sha256": "11bf72857e6c7b0c959dfc482ce46bc4c00c907a751af12a224e3f12cc1b28b4"
+        },
+        "guides/da-pan.txt": {
+            "bytes": 1138,
+            "sha256": "368008d5c52616a911622db55b1966c169f9743634ae56b32ba8c7c216b28625"
+        },
+        "guides/ember.txt": {
+            "bytes": 846,
+            "sha256": "1374f7d850e2f0a6d082b354ba1b2310dc5fe85d5a6dd737cbfed74d2ee7d669"
+        },
+        "guides/endministrator.txt": {
+            "bytes": 1358,
+            "sha256": "b71d0229d039831d480229352823b9e42c1ed1f25f3b2b94a9014537c359a0eb"
+        },
+        "guides/estella.txt": {
+            "bytes": 921,
+            "sha256": "5e249d3c2c830963b2ffad1d1a1a26ed753231262187d55f115bee00264f450e"
+        },
+        "guides/fluorite.txt": {
+            "bytes": 984,
+            "sha256": "47e6469d7061bd566835f9065429dea96cfc70b604c603f6502a9a643581b1a5"
+        },
+        "guides/gilberta.txt": {
+            "bytes": 1329,
+            "sha256": "23cd81fcfe49b53dc510876c8490e055980c1b376d7f0dd5b9380d57dee71bbe"
+        },
+        "guides/INDEX.txt": {
+            "bytes": 3280,
+            "sha256": "cba38ba781c0f7d2f73e93d82032439b60e389fb4ba50e536aedd6955198358a"
+        },
+        "guides/laevatain.txt": {
+            "bytes": 1137,
+            "sha256": "a1f5d4ec72e0c13268023df7ecba2840d75e60bdcbaab7c9bffc069eedcf9556"
+        },
+        "guides/last-rite.txt": {
+            "bytes": 1014,
+            "sha256": "8e2d438e93c2204fc4a74ed4aaa7a5eb53f579ea002bc898a58affc4d6459581"
+        },
+        "guides/lifeng.txt": {
+            "bytes": 1198,
+            "sha256": "13007471c27053d334a0fd74347077c9f2f3eaae878a3e979c5540e79f458c25"
+        },
+        "guides/liino.txt": {
+            "bytes": 1124,
+            "sha256": "0a773d27eb716a5a32ccc40ed09c814c99b98d378bd5bb8d4d1af89bf0c5016f"
+        },
+        "guides/mi-fu.txt": {
+            "bytes": 985,
+            "sha256": "b861a264fa6c9dc1c41df42c550ede2f6dee49d293a9d24fab95e338132a0285"
+        },
+        "guides/perlica.txt": {
+            "bytes": 1377,
+            "sha256": "5a59762eac171b5302a3a025b1e3fd4d0ed8530a4f44c6587eb73eaef53e803b"
+        },
+        "guides/pogranichnik.txt": {
+            "bytes": 1279,
+            "sha256": "e8a664096ca06f07ca16f8112f20b650fa3c9ec46203c19c7cbfd6888ea4bbdb"
+        },
+        "guides/purrchena.txt": {
+            "bytes": 942,
+            "sha256": "279f15ec40633e7c6d8b0cfce9ae547da1389017a7945376a5153effb633f1af"
+        },
+        "guides/rossi.txt": {
+            "bytes": 1118,
+            "sha256": "511fe074538d6b0f86bf29a9ceb1646a28392f90293f6fddfa9c5afca6ee7258"
+        },
+        "guides/si.txt": {
+            "bytes": 1029,
+            "sha256": "9053c0b2370019fc321a62c47097211b43e6a31bc24fc02a636f0ecc83a19b7f"
+        },
+        "guides/snowshine.txt": {
+            "bytes": 1021,
+            "sha256": "81f1041a3dd47ce9e70236b73117c5bb9bda42075a117bdf607ae3efc1b2261b"
+        },
+        "guides/tangtang.txt": {
+            "bytes": 1206,
+            "sha256": "2397c996bcde48bb4929465d128ebebf90c63a770ce3a175df08c5b47254dcdf"
+        },
+        "guides/typhoeus.txt": {
+            "bytes": 996,
+            "sha256": "6dd1073328444426d6a10e768a2b2a13b21331123262069b3283f1c5c7547472"
+        },
+        "guides/wulfgard.txt": {
+            "bytes": 1397,
+            "sha256": "2f87938e23eaf182063c5ab148fa17abe3ff7f3715f0b9d7b045d7f59ade1a3d"
+        },
+        "guides/xaihi.txt": {
+            "bytes": 1314,
+            "sha256": "37834f24f2f796b40f2c5b1f299a5bd6f7cad62e709d6abb120929bfd687ac3a"
+        },
+        "guides/yvonne.txt": {
+            "bytes": 988,
+            "sha256": "385c399d964e5266477699cd9a0fd6a94d4d4647b92d6b6c310c4e28c0d2cd67"
+        },
+        "guides/zhuang-fangyi.txt": {
+            "bytes": 992,
+            "sha256": "2a06cdb4ca68fe7caf91cbd8b1f52628735d5e7c894411d670232b14574a7a52"
+        },
+        "README.en.md": {
+            "bytes": 3849,
+            "sha256": "80e1ba517b52d898be6f7d76c61a8c244ac936a391e6c2ad981aaf606ac1d331"
+        },
+        "README.md": {
+            "bytes": 3327,
+            "sha256": "cec032e81def13aa14390aeb7eaef3f54baf0066d1261d95ccbf69e9d8643749"
+        },
+        "roster_resume.json": {
+            "bytes": 1123,
+            "sha256": "b051919228611b7719658c47c986e3685bf495a8b2da73db512bf766ac7d745f"
+        }
+    }
+}

@@ -1,0 +1,124 @@
+{
+    "schema_version": 1,
+    "created_on": "2026-10-17",
+    "timezone": "America/Los_Angeles",
+    "status": "saved_for_later_by_user",
+    "character": "Si",
+    "objective": "Choose the strongest Si-centered team available on this account; craft missing appropriate gear, equip and save a loadout, and artifice it using a costed inventory-based plan.",
+    "live_actions_completed": false,
+    "resume_environment": "Endies emulator; leave Arkies / Arknights untouched",
+    "requires_before_spending": [
+        "Finish owned-operator scan including Si and candidate teammates, weapon and Potential levels, skills, gear and existing artificing",
+        "Inspect unlocked gear recipes, current equipment, crafting currencies and materials, and artificing catalysts",
+        "Inspect saved gear-plan controls and confirm the exact item names and stats in the English emulator UI",
+        "Choose the account-specific lineup and required ultimate-energy breakpoints before selecting final pieces",
+        "Calculate crafting quantities, donor gear, catalyst costs and staged artificing targets from inventory"
+    ],
+    "team": {
+        "initial_candidate": [
+            "Si",
+            "Arcane",
+            "Tangtang",
+            "Xaihi"
+        ],
+        "availability_verified": false,
+        "source_evidence": "Prydwen Si guide Team #1 lists Arcane, Tangtang and Xaihi; its equipment list and timeline explicitly include Si as the fourth operator.",
+        "selection_policy": "Compare owned, built lineups and actual weapons/Potentials. This published candidate is not a claim of best performance for an unscanned account.",
+        "arcane_form": "Verify the intended INT/WILL attribute form from the matching rotation before equipping her.",
+        "rotation_policy": "Use team-specific infliction consumption and combo timing, with basic attack strings between windows. Generic round-robin skill spam is insufficient."
+    },
+    "si_loadout": {
+        "proposed_name": "Si - Cryo Combo",
+        "preferred_weapon": "Jade Vessel if owned; source comparison uses P1, not a required ownership threshold",
+        "weapon_fallbacks_to_compare": [
+            "Long Heritage at owned Potential",
+            "Khravengger at owned Potential"
+        ],
+        "published_starting_gear": {
+            "armor": "Type 50 Yinglung Soft Armor",
+            "gloves": "Type 50 Yinglung Gauntlets",
+            "kit_1": "Type 50 Yinglung Beacon",
+            "kit_2": "Redeemer Seal"
+        },
+        "conditional_variants": [
+            {
+                "condition": "The actual rotation needs additional Ultimate Gain Efficiency while retaining the set",
+                "candidate": "Type 50 Yinglung Heavy Armor T1; compare damage and energy timing in-game"
+            },
+            {
+                "condition": "Compare a personal-combo-damage variant against the actual available patch items and rotation",
+                "candidate": {
+                    "armor": "Type 50 Yinglung Soft Armor",
+                    "gloves": "Eternal Xiranite Channeling Gloves",
+                    "kit_1": "Type 50 Yinglung Beacon",
+                    "kit_2": "Type 50 Yinglung Beacon"
+                },
+                "caveat": "Endfield Hub recommends this using its own item data, but notes missing data for a newly released Yinglung glove. Do not override the current in-game glove stats from this source alone."
+            },
+            {
+                "condition": "The selected team benefits more from Si carrying the support set",
+                "candidate": {
+                    "armor": "Eternal Xiranite Overalls",
+                    "gloves": "Eternal Xiranite Channeling Gloves",
+                    "kit_1": "Eternal Xiranite Rangefinder",
+                    "kit_2": "Redeemer Seal"
+                },
+                "caveat": "Compare existing teammate set coverage and Si personal damage before switching."
+            }
+        ],
+        "skill_investment_reference": "Combo Skill > Ultimate = Battle Skill > Basic Attack; support-role priorities can differ."
+    },
+    "crafting_and_artificing": {
+        "crafting_policy": "Reuse suitable owned equipment first; craft only missing final pieces and explicitly selected donor pieces.",
+        "artificing_policy": "Verify each piece and eligible enhancement line. Compare primary-attribute and combo-damage improvements per material cost, while meeting the required ultimate timing. Use the observed donor-match quality and current upgrade/pity state.",
+        "protected_donors": [
+            "Equipped gear",
+            "Locked or favorite gear",
+            "Previously upgraded gear unless explicitly selected for this purpose"
+        ],
+        "budget_and_target": "To be calculated from inventory before executing staged upgrades. No fixed maximum-material run is configured.",
+        "target_stats_verified": false,
+        "material_costs": null,
+        "final_artifice_targets": null,
+        "verification": [
+            "Capture final item names and enhancement levels",
+            "Verify the intended three-piece set is active",
+            "Save and re-open the named loadout",
+            "Verify selected team and Arcane form",
+            "Run a resource-farm or other appropriate combat check to verify energy, combos, survival and rewards"
+        ]
+    },
+    "implementation_status": {
+        "generic_gear_assembly_task_exists": true,
+        "targeted_loadout_crafting_and_artificing_flow": "Offline gear planner implemented in tools/gear_workflow.py; inventory reservations, shared cost limits, four-slot equip/loadout contracts and single artifice previews. Live screen navigation remains unimplemented and unvalidated.",
+        "roster_scan_checkpoint": "../roster_resume.json",
+        "build_reference": "../characters/si.json",
+        "gear_request": "si-gear-request.json",
+        "gear_preview": "../../../install/data/GearPlans/si-preview.json"
+    },
+    "sources": [
+        {
+            "url": "https://www.prydwen.gg/arknights-endfield/characters/si",
+            "checked_on": "2026-10-17",
+            "use": "Main build and team; equipment table resolves the missing fourth portrait in the team block."
+        },
+        {
+            "url": "https://endfieldhub.org/blog/best-si-build-arknights-endfield",
+            "checked_on": "2026-10-17",
+            "use": "Alternative damage build; explicitly incomplete new-glove data requires comparison with the client."
+        },
+        {
+            "url": "https://endfieldhub.org/tools/artificing-planner",
+            "checked_on": "2026-10-17",
+            "use": "Reference for future inventory-specific donor and cost planning; do not infer account inventory."
+        }
+    ],
+    "account_scan": {
+        "session_id": "7ea55097fa8a4daa80c52100629d39f5",
+        "resume_pointer": "../account_scan_resume.json",
+        "task_definitions": "../account_scan_tasks.json",
+        "database": "C:\\Users\\andre\\Documents\\Codex\\Repositories\\MaaEnd\\install\\data\\AccountScans\\account_scans.sqlite3",
+        "export": "C:\\Users\\andre\\Documents\\Codex\\Repositories\\MaaEnd\\install\\data\\AccountScans\\exports\\7ea55097fa8a4daa80c52100629d39f5.json",
+        "status": "partial_evidence_only_not_ready_for_spending"
+    }
+}
