@@ -2,7 +2,9 @@
     "AutoCollectRoute11Start": {
         "desc": "重黯石",
         "enabled": false,
-        "next": ["AutoCollectRoute11CheckMaterialMap"],
+        "next": [
+            "AutoCollectRoute11CheckMaterialMap"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute11.label"
         }
@@ -170,7 +172,7 @@
         "custom_action": "SubTask",
         "custom_action_param": {
             "sub": [
-                "SceneEnterWorldWulingJingyuValley4"
+                "SceneEnterWorldWulingJingyuValleyTreasureGrottoSouth"
             ]
         },
         "next": [
@@ -192,19 +194,33 @@
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneEnterMapWulingJingyuValley"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterMapWulingJingyuValley"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute11CheckMaterial1"],
-        "on_error": ["AutoCollectRoute11CountUnavailable"]
+        "next": [
+            "AutoCollectRoute11CheckMaterial1"
+        ],
+        "on_error": [
+            "AutoCollectRoute11CountUnavailable"
+        ]
     },
     "AutoCollectRoute11CheckMaterial1": {
         "recognition": "Custom",
         "custom_recognition": "MapFind",
-        "custom_recognition_param": {"zone": "Wuling", "icon": "RareOres", "at": [
+        "custom_recognition_param": {
+            "zone": "Wuling",
+            "icon": "RareOres",
+            "at": [
                 700.04,
                 2321.8
-            ], "vote_grid": 5},
+            ],
+            "vote_grid": 5
+        },
         "pre_delay": 0,
         "action": "Click",
         "post_wait_freezes": 500,
@@ -216,39 +232,75 @@
             "AutoCollectRoute11CheckMaterial1Available",
             "AutoCollectRoute11CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute11MaterialCheckFailed"]
+        "on_error": [
+            "AutoCollectRoute11MaterialCheckFailed"
+        ]
     },
-    "AutoCollectRoute11CheckMaterial1Empty": {"recognition": "And", "all_of": [
+    "AutoCollectRoute11CheckMaterial1Empty": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresZero"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute11SkipDepleted"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute11SkipDepleted"
+        ]
+    },
     "AutoCollectRoute11SkipDepleted": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute11.skip_empty"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute11.skip_empty"
+        }
     },
     "AutoCollectRoute11CountUnavailable": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
         "next": [],
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute11.count_unavailable"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute11.count_unavailable"
+        }
     },
-    "AutoCollectRoute11CheckMaterial1Available": {"recognition": "And", "all_of": [
+    "AutoCollectRoute11CheckMaterial1Available": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute11HistoryBegin"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute11HistoryBegin"
+        ]
+    },
     "AutoCollectRoute11MaterialCheckFailed": {
         "pre_delay": 0,
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute11CountUnavailable"]
+        "next": [
+            "AutoCollectRoute11CountUnavailable"
+        ]
     }
 }

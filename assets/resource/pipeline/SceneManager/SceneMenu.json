@@ -32,7 +32,7 @@
             20,
             20
         ],
-        "post_delay": 1500, // 3D动画菜单会一直动无法用wait_freeze
+        "post_delay": 1500,
         "rate_limit": 0,
         "next": [
             "[JumpBack]SceneNoticeRewardsUpgrade",
@@ -120,7 +120,7 @@
             "InMenuList"
         ],
         "pre_delay": 0,
-        "post_delay": 1500 // 3D动画菜单会一直动无法用wait_freeze
+        "post_delay": 1500
     },
     "__ScenePrivateWorldEnterMenuMission": {
         "desc": "从大世界进入任务界面",
@@ -670,10 +670,10 @@
             {
                 "recognition": "TemplateMatch",
                 "roi": [
-                    1130,
-                    155,
-                    130,
-                    120
+                    950,
+                    150,
+                    297,
+                    180
                 ],
                 "template": "Common/Button/CloseButtonType4.png"
             }
@@ -862,7 +862,7 @@
             ]
         },
         "pre_delay": 0,
-        "post_delay": 1500, // 弹窗可能延迟出现，只能硬等
+        "post_delay": 1500,
         "next": [
             "__ScenePrivateMenuEventOpenedClose",
             "__ScenePrivateAnyEnterMenuEventSuccess"
@@ -1069,7 +1069,7 @@
             ]
         },
         "pre_delay": 0,
-        "post_delay": 1500, // 没有提示只能硬等
+        "post_delay": 1500,
         "next": [
             "__ScenePrivateValuablesItemsExpired",
             "__ScenePrivateAnyEnterMenuValuablesSuccess"
@@ -1388,7 +1388,7 @@
                 200
             ]
         },
-        "post_delay": 500 // 不规则方块闪烁动画无法局部wait_freeze
+        "post_delay": 500
     },
     "__ScenePrivateWorldEnterMenuProtocolPass": {
         "desc": "从大世界进入通行证菜单",
@@ -2000,7 +2000,7 @@
         "action": {
             "type": "ClickKey",
             "param": {
-                "key": 75 // K
+                "key": 75
             }
         },
         "next": [
@@ -2048,7 +2048,7 @@
         "action": {
             "type": "ClickKey",
             "param": {
-                "key": 112 // F1
+                "key": 112
             }
         },
         "next": [

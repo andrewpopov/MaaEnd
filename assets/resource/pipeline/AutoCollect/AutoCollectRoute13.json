@@ -2,7 +2,9 @@
     "AutoCollectRoute13Start": {
         "desc": "中黯石",
         "enabled": false,
-        "next": ["AutoCollectRoute13CheckMaterialMap"],
+        "next": [
+            "AutoCollectRoute13CheckMaterialMap"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute13.label"
         }
@@ -205,7 +207,7 @@
         "custom_action": "SubTask",
         "custom_action_param": {
             "sub": [
-                "SceneEnterWorldValleyIVOriginLodespring3"
+                "SceneEnterWorldValleyIVOriginLodespringMiningAreaClinic"
             ]
         },
         "next": [
@@ -227,19 +229,32 @@
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneEnterMapValleyIVOriginLodespring"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterMapValleyIVOriginLodespring"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute13CheckMaterial1"],
-        "on_error": ["AutoCollectRoute13CountUnavailable"]
+        "next": [
+            "AutoCollectRoute13CheckMaterial1"
+        ],
+        "on_error": [
+            "AutoCollectRoute13CountUnavailable"
+        ]
     },
     "AutoCollectRoute13CheckMaterial1": {
         "recognition": "Custom",
         "custom_recognition": "MapFind",
-        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareOres", "at": [
+        "custom_recognition_param": {
+            "zone": "ValleyIV",
+            "icon": "RareOres",
+            "at": [
                 982.18,
                 387.6
-            ]},
+            ]
+        },
         "pre_delay": 0,
         "action": "Click",
         "post_wait_freezes": 500,
@@ -251,39 +266,75 @@
             "AutoCollectRoute13CheckMaterial1Available",
             "AutoCollectRoute13CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute13MaterialCheckFailed"]
+        "on_error": [
+            "AutoCollectRoute13MaterialCheckFailed"
+        ]
     },
-    "AutoCollectRoute13CheckMaterial1Empty": {"recognition": "And", "all_of": [
+    "AutoCollectRoute13CheckMaterial1Empty": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresZero"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13SkipDepleted"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute13SkipDepleted"
+        ]
+    },
     "AutoCollectRoute13SkipDepleted": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute13.skip_empty"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute13.skip_empty"
+        }
     },
     "AutoCollectRoute13CountUnavailable": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
         "next": [],
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute13.count_unavailable"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute13.count_unavailable"
+        }
     },
-    "AutoCollectRoute13CheckMaterial1Available": {"recognition": "And", "all_of": [
+    "AutoCollectRoute13CheckMaterial1Available": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute13HistoryBegin"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute13HistoryBegin"
+        ]
+    },
     "AutoCollectRoute13MaterialCheckFailed": {
         "pre_delay": 0,
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute13CountUnavailable"]
+        "next": [
+            "AutoCollectRoute13CountUnavailable"
+        ]
     }
 }

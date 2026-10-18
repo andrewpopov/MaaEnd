@@ -64,5 +64,15 @@
             "MapRareOres.png"
         ],
         "occluded_by_player": true
+    },
+    "FarmTerminal": {
+        "templates": [
+            "../AutoEcoFarm/FarmTerminal.png"
+        ]
+    },
+    "Ranch": {
+        "templates": [
+            "../AutoEcoFarm/Ranch.png"
+        ]
     }
 }

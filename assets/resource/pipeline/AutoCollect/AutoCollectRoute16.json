@@ -1,7 +1,9 @@
 {
     "AutoCollectRoute16Start": {
         "enabled": false,
-        "next": ["AutoCollectRoute16CheckMaterialMap"],
+        "next": [
+            "AutoCollectRoute16CheckMaterialMap"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute16.label"
         }
@@ -214,7 +216,7 @@
         "custom_action": "SubTask",
         "custom_action_param": {
             "sub": [
-                "SceneEnterWorldWulingNorthWulingExclusionZone7"
+                "SceneEnterWorldWulingNorthWulingExclusionZoneRDCenterRooftopWest"
             ]
         },
         "next": [
@@ -236,19 +238,33 @@
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneEnterMapWulingNorthWulingExclusionZone"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterMapWulingNorthWulingExclusionZone"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute16CheckMaterial1"],
-        "on_error": ["AutoCollectRoute16CountUnavailable"]
+        "next": [
+            "AutoCollectRoute16CheckMaterial1"
+        ],
+        "on_error": [
+            "AutoCollectRoute16CountUnavailable"
+        ]
     },
     "AutoCollectRoute16CheckMaterial1": {
         "recognition": "Custom",
         "custom_recognition": "MapFind",
-        "custom_recognition_param": {"zone": "Wuling", "icon": "RareOres", "at": [
+        "custom_recognition_param": {
+            "zone": "Wuling",
+            "icon": "RareOres",
+            "at": [
                 1498.43,
                 532.95
-            ], "vote_grid": 5},
+            ],
+            "vote_grid": 5
+        },
         "pre_delay": 0,
         "action": "Click",
         "post_wait_freezes": 500,
@@ -260,39 +276,75 @@
             "AutoCollectRoute16CheckMaterial1Available",
             "AutoCollectRoute16CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute16MaterialCheckFailed"]
+        "on_error": [
+            "AutoCollectRoute16MaterialCheckFailed"
+        ]
     },
-    "AutoCollectRoute16CheckMaterial1Empty": {"recognition": "And", "all_of": [
+    "AutoCollectRoute16CheckMaterial1Empty": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresZero"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute16SkipDepleted"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute16SkipDepleted"
+        ]
+    },
     "AutoCollectRoute16SkipDepleted": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute16.skip_empty"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute16.skip_empty"
+        }
     },
     "AutoCollectRoute16CountUnavailable": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
         "next": [],
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute16.count_unavailable"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute16.count_unavailable"
+        }
     },
-    "AutoCollectRoute16CheckMaterial1Available": {"recognition": "And", "all_of": [
+    "AutoCollectRoute16CheckMaterial1Available": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareOresPanel",
             "AutoCollectRareOresAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute16HistoryBegin"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute16HistoryBegin"
+        ]
+    },
     "AutoCollectRoute16MaterialCheckFailed": {
         "pre_delay": 0,
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute16CountUnavailable"]
+        "next": [
+            "AutoCollectRoute16CountUnavailable"
+        ]
     }
 }

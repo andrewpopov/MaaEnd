@@ -1,7 +1,9 @@
 {
     "AutoCollectRoute4Start": {
         "enabled": false,
-        "next": ["AutoCollectRoute4CheckMaterialMap"],
+        "next": [
+            "AutoCollectRoute4CheckMaterialMap"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute4.label"
         }
@@ -115,7 +117,7 @@
         "custom_action": "SubTask",
         "custom_action_param": {
             "sub": [
-                "SceneEnterWorldValleyIVPowerPlateau3"
+                "SceneEnterWorldValleyIVPowerPlateauEvacuationZone"
             ]
         },
         "next": [
@@ -137,19 +139,32 @@
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneEnterMapValleyIVPowerPlateau"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterMapValleyIVPowerPlateau"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute4CheckMaterial1"],
-        "on_error": ["AutoCollectRoute4CountUnavailable"]
+        "next": [
+            "AutoCollectRoute4CheckMaterial1"
+        ],
+        "on_error": [
+            "AutoCollectRoute4CountUnavailable"
+        ]
     },
     "AutoCollectRoute4CheckMaterial1": {
         "recognition": "Custom",
         "custom_recognition": "MapFind",
-        "custom_recognition_param": {"zone": "ValleyIV", "icon": "RareGrowths", "at": [
+        "custom_recognition_param": {
+            "zone": "ValleyIV",
+            "icon": "RareGrowths",
+            "at": [
                 711.13,
                 378.74
-            ]},
+            ]
+        },
         "pre_delay": 0,
         "action": "Click",
         "post_wait_freezes": 500,
@@ -161,39 +176,75 @@
             "AutoCollectRoute4CheckMaterial1Available",
             "AutoCollectRoute4CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute4MaterialCheckFailed"]
+        "on_error": [
+            "AutoCollectRoute4MaterialCheckFailed"
+        ]
     },
-    "AutoCollectRoute4CheckMaterial1Empty": {"recognition": "And", "all_of": [
+    "AutoCollectRoute4CheckMaterial1Empty": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsZero"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute4SkipDepleted"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute4SkipDepleted"
+        ]
+    },
     "AutoCollectRoute4SkipDepleted": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute4.skip_empty"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute4.skip_empty"
+        }
     },
     "AutoCollectRoute4CountUnavailable": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
         "next": [],
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute4.count_unavailable"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute4.count_unavailable"
+        }
     },
-    "AutoCollectRoute4CheckMaterial1Available": {"recognition": "And", "all_of": [
+    "AutoCollectRoute4CheckMaterial1Available": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute4HistoryBegin"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute4HistoryBegin"
+        ]
+    },
     "AutoCollectRoute4MaterialCheckFailed": {
         "pre_delay": 0,
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute4CountUnavailable"]
+        "next": [
+            "AutoCollectRoute4CountUnavailable"
+        ]
     }
 }

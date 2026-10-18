@@ -2,7 +2,9 @@
     "AutoCollectRoute12Start": {
         "desc": "中红柱状菌",
         "enabled": false,
-        "next": ["AutoCollectRoute12CheckMaterialMap"],
+        "next": [
+            "AutoCollectRoute12CheckMaterialMap"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$option.AutoCollectRoute12.label"
         }
@@ -173,7 +175,7 @@
         "custom_action": "SubTask",
         "custom_action_param": {
             "sub": [
-                "SceneEnterWorldWulingMarkerStone3"
+                "SceneEnterWorldWulingMarkerStoneRestrictedArea"
             ]
         },
         "next": [
@@ -195,19 +197,33 @@
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneEnterMapWulingMarkerStone"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneEnterMapWulingMarkerStone"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute12CheckMaterial1"],
-        "on_error": ["AutoCollectRoute12CountUnavailable"]
+        "next": [
+            "AutoCollectRoute12CheckMaterial1"
+        ],
+        "on_error": [
+            "AutoCollectRoute12CountUnavailable"
+        ]
     },
     "AutoCollectRoute12CheckMaterial1": {
         "recognition": "Custom",
         "custom_recognition": "MapFind",
-        "custom_recognition_param": {"zone": "Wuling", "icon": "RareGrowths", "at": [
+        "custom_recognition_param": {
+            "zone": "Wuling",
+            "icon": "RareGrowths",
+            "at": [
                 617.74,
                 2270.48
-            ], "vote_grid": 5},
+            ],
+            "vote_grid": 5
+        },
         "pre_delay": 0,
         "action": "Click",
         "post_wait_freezes": 500,
@@ -219,39 +235,75 @@
             "AutoCollectRoute12CheckMaterial1Available",
             "AutoCollectRoute12CountUnavailable"
         ],
-        "on_error": ["AutoCollectRoute12MaterialCheckFailed"]
+        "on_error": [
+            "AutoCollectRoute12MaterialCheckFailed"
+        ]
     },
-    "AutoCollectRoute12CheckMaterial1Empty": {"recognition": "And", "all_of": [
+    "AutoCollectRoute12CheckMaterial1Empty": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsZero"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute12SkipDepleted"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute12SkipDepleted"
+        ]
+    },
     "AutoCollectRoute12SkipDepleted": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute12.skip_empty"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute12.skip_empty"
+        }
     },
     "AutoCollectRoute12CountUnavailable": {
         "pre_delay": 0,
         "action": "Custom",
         "custom_action": "SubTask",
-        "custom_action_param": {"sub": ["SceneAnyEnterWorld"], "strict": true},
+        "custom_action_param": {
+            "sub": [
+                "SceneAnyEnterWorld"
+            ],
+            "strict": true
+        },
         "post_delay": 0,
         "rate_limit": 0,
         "next": [],
-        "focus": {"Node.Action.Starting": "$option.AutoCollectRoute12.count_unavailable"}
+        "focus": {
+            "Node.Action.Starting": "$option.AutoCollectRoute12.count_unavailable"
+        }
     },
-    "AutoCollectRoute12CheckMaterial1Available": {"recognition": "And", "all_of": [
+    "AutoCollectRoute12CheckMaterial1Available": {
+        "recognition": "And",
+        "all_of": [
             "AutoCollectRareGrowthsPanel",
             "AutoCollectRareGrowthsAvailable"
-        ], "pre_delay": 0, "post_delay": 0, "rate_limit": 0, "next": ["AutoCollectRoute12HistoryBegin"]},
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "AutoCollectRoute12HistoryBegin"
+        ]
+    },
     "AutoCollectRoute12MaterialCheckFailed": {
         "pre_delay": 0,
         "post_delay": 0,
         "rate_limit": 0,
-        "next": ["AutoCollectRoute12CountUnavailable"]
+        "next": [
+            "AutoCollectRoute12CountUnavailable"
+        ]
     }
 }
