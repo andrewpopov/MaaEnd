@@ -16,11 +16,26 @@
         ]
     },
     "__SeizeDeliveryJobsRecoJobListLoaded": {
-        "roi": [
-            1185,
-            210,
-            50,
-            420
+        "recognition": "Or",
+        "any_of": [
+            {
+                "recognition": "TemplateMatch",
+                "roi": [
+                    1170,
+                    210,
+                    100,
+                    420
+                ],
+                "template": "SeizeDeliveryJobs/DepotNodePage/JobListLoaded.png",
+                "order_by": "Score"
+            },
+            {
+                "recognition": "And",
+                "all_of": [
+                    "__SeizeDeliveryJobsRecoJobListActive",
+                    "__SeizeDeliveryJobsRecoAccept"
+                ]
+            }
         ]
     },
     "__SeizeDeliveryJobsRecoViewCurrentJob": {
