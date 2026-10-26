@@ -1,0 +1,21 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Fork-owned action parameter validators. Keep the shared registry integration to this reference.",
+    "allOf": [
+        {
+            "$ref": "./account.schema.json#/definitions/action"
+        },
+        {
+            "$ref": "./collection.schema.json#/definitions/action"
+        },
+        {
+            "$ref": "./combat.schema.json#/definitions/action"
+        },
+        {
+            "$ref": "./innkeeping.schema.json#/definitions/action"
+        },
+        {
+            "$ref": "./movement.schema.json#/definitions/action"
+        }
+    ]
+}

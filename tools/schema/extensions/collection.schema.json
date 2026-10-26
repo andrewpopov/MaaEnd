@@ -1,0 +1,85 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Fork-owned collection parameter contracts.",
+    "definitions": {
+        "action": {
+            "allOf": [
+                {
+                    "if": {
+                        "required": [
+                            "custom_action"
+                        ],
+                        "properties": {
+                            "custom_action": {
+                                "const": "AutoCollectHistory"
+                            }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "custom_action_param"
+                        ],
+                        "properties": {
+                            "custom_action_param": {
+                                "type": "object",
+                                "properties": {
+                                    "route": {
+                                        "type": "string",
+                                        "pattern": "^AutoCollect(Common)?Route[1-9][0-9]*$"
+                                    },
+                                    "event": {
+                                        "enum": [
+                                            "started",
+                                            "completed"
+                                        ]
+                                    }
+                                },
+                                "required": [
+                                    "route",
+                                    "event"
+                                ],
+                                "additionalProperties": false
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "recognition": {
+            "allOf": [
+                {
+                    "if": {
+                        "required": [
+                            "custom_recognition"
+                        ],
+                        "properties": {
+                            "custom_recognition": {
+                                "const": "AutoCollectRouteDue"
+                            }
+                        }
+                    },
+                    "then": {
+                        "required": [
+                            "custom_recognition_param"
+                        ],
+                        "properties": {
+                            "custom_recognition_param": {
+                                "type": "object",
+                                "properties": {
+                                    "route": {
+                                        "type": "string",
+                                        "pattern": "^AutoCollectCommonRoute[1-9][0-9]*$"
+                                    }
+                                },
+                                "required": [
+                                    "route"
+                                ],
+                                "additionalProperties": false
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

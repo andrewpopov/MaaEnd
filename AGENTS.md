@@ -130,3 +130,7 @@
 ## OCR and inn movement capability map
 
 For OCR, saved-screen replay, emulator input, or inn movement work, read the canonical agent_brain guide at `\\wsl.localhost\Ubuntu\home\andre\proj\agent_brain\knowledge\maa-ocr-tooling.md` before building new tooling. The guide distinguishes MaaCore from MaaFramework and includes a bounded emulator plan. The guide is published on agent_brain main and shared across threads.
+
+## Fork modularity
+
+Keep fork-owned features behind small integration points in shared upstream files. Follow [.cursor/rules/fork-modularity.mdc](.cursor/rules/fork-modularity.mdc) for domain boundaries and merge-friendly changes. Combat options live in `autofight/feature_flags.go`; custom schema validators live in `tools/schema/extensions/`.

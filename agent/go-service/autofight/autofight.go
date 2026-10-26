@@ -21,15 +21,7 @@ import (
 // autoFightAttach 是 AutoFight 节点 attach 字段的反序列化目标，
 // 字段含义参考 assets/resource/pipeline/Interface/AutoFight.json。
 type autoFightAttach struct {
-	CombatMode                   string   `json:"combat_mode"`
-	VerifiedTargetAcquisition    bool     `json:"verified_target_acquisition"`
-	MobileApproach               bool     `json:"mobile_approach"`
-	ConfirmedTimeline            bool     `json:"confirmed_timeline"`
-	CurrentComboChecks           bool     `json:"current_combo_checks"`
-	CombatTrace                  bool     `json:"combat_trace"`
-	TeamProfile                  string   `json:"team_profile"`
-	RotationPreview              bool     `json:"rotation_preview"`
-	RotationMovement             string   `json:"rotation_movement"`
+	combatExtensions
 	EnableAttack                 bool     `json:"enable_attack"`
 	EnableCombo                  bool     `json:"enable_combo"`
 	EnableDodge                  bool     `json:"enable_dodge"`

@@ -1,0 +1,16 @@
+---
+description: Keep fork features modular and upstream integrations small
+alwaysApply: true
+---
+
+# Fork modularity
+
+- Keep fork features in focused domain modules; shared upstream files should contain small, explicit calls or references.
+- Preserve upstream improvements and public settings contracts during merges. Do not copy whole upstream implementations merely to avoid integration work.
+- Pipeline owns UI workflow and input sequencing. Go owns complex recognition and policy. Python research tools should not become hidden production dependencies.
+- Keep combat extensions in dedicated autofight files; preserve flat JSON settings and native timeline ordering through contract tests.
+- Keep custom schema conditions in tools/schema/extensions by domain, with separate action and recognition entry points. Shared schema registries retain one extension reference each.
+- Keep inn navigation, kitchen scheduling, recognition, and run-state accounting in separate modules with explicit inputs and results.
+- Prefer stable IDs, resource overlays, and narrow adapters over duplicated nodes or cross-domain conditionals.
+- Refactor incrementally without changing behavior; verify the integration contract and affected domain before merging.
+- Avoid speculative plugin frameworks. Add an abstraction only when it removes an existing coupling or duplication.

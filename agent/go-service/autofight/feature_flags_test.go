@@ -57,3 +57,29 @@ func TestHardClearMode(t *testing.T) {
 		t.Fatal("custom mode changed")
 	}
 }
+
+func TestCombatExtensionsPreserveFlatSettingsContract(t *testing.T) {
+	p := defaultCombatExtensions()
+	if err := json.Unmarshal([]byte(`{"team_profile":"heat-si","rotation_preview":true,"verified_target_acquisition":false,"enable_attack":true}`), &p); err != nil {
+		t.Fatal(err)
+	}
+	if p.TeamProfile != "heat-si" || !p.RotationPreview || p.VerifiedTargetAcquisition || !p.EnableAttack {
+		t.Fatal("flat settings did not populate extension and upstream fields")
+	}
+	raw, err := json.Marshal(p)
+	if err != nil {
+		t.Fatal(err)
+	}
+	var fields map[string]json.RawMessage
+	if err := json.Unmarshal(raw, &fields); err != nil {
+		t.Fatal(err)
+	}
+	for _, key := range []string{"team_profile", "rotation_preview", "verified_target_acquisition", "enable_attack"} {
+		if _, ok := fields[key]; !ok {
+			t.Fatalf("flat field %s missing: %s", key, raw)
+		}
+	}
+	if _, nested := fields["combatExtensions"]; nested {
+		t.Fatal("extension settings became nested")
+	}
+}

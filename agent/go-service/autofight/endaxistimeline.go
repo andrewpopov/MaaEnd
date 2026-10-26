@@ -691,11 +691,13 @@ func collectTimelineActions(sc *timelineScenarioRaw) []EndAxisAction {
 			switch actionType {
 			case "battleSkill":
 				actionType = "skill"
-			case "comboSkill":
-				actionType = "combo"
-			case "ultimate", "skill", "combo":
+			case "ultimate", "skill":
 			default:
-				continue
+				var supported bool
+				actionType, supported = extendedTimelineAction(actionType)
+				if !supported {
+					continue
+				}
 			}
 			out = append(out, EndAxisAction{
 				Type:         actionType,
