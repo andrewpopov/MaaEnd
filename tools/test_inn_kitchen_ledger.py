@@ -117,6 +117,16 @@ class RefillTests(unittest.TestCase):
         self.assertEqual(nodes["InnRefillAck1"]["custom_recognition_param"]["expected"],{"shroom_dumpling":1,"fin_dumpling":1})
         self.assertEqual(len(t.jobs),2)
 
+    def test_cold_kitchen_transition_is_observed_before_planning(self):
+        t=self.driver();calls=[]
+        views=iter([kitchen(1),{"phase":"unknown","queue_verified":False},kitchen(2)])
+        t.snapshot=lambda **kw:{"view":next(views)}
+        t.execute=lambda entry,nodes,name:calls.append((entry,nodes))
+        t.fill(initial=True)
+        self.assertEqual(len(t.jobs),2)
+        self.assertEqual(sum(entry=="InnServiceKitchen" for entry,nodes in calls),2)
+        self.assertEqual(sum(entry=="InnRefillBefore" for entry,nodes in calls),1)
+
     def test_nearly_ready_kitchen_remembers_unvisited_refill(self):
         t=self.driver();t.execute=lambda *a:None
         t.snapshot=lambda **kw:{"view":kitchen(queue={"fin_dumpling":1},active="fin_dumpling",seconds=2)}

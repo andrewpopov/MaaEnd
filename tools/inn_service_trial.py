@@ -73,6 +73,18 @@ def tray_ack(expected):
         "pre_delay":0,"post_delay":0}
 
 
+
+def service_receipt(view,target,dish,before,expected_tray):
+    """Require matching inventory and target demand from the same fresh read."""
+    if view.get("unknown") or view.get("phase") not in ("active","closing","closed_serving"):
+        return False,False
+    seat=next((s for s in (view.get("seats") or []) if s["seat"]==str(target)),None)
+    target_ack=bool(seat and (dish in (seat.get("served") or []) or
+        (seat["phase"]=="waiting" and Counter(seat.get("dishes") or [])[dish]<before[dish]) or
+        (seat["phase"] in ("dining","bill_ready") and sum(before.values())==1)))
+    return Counter(view.get("tray") or {})==Counter(expected_tray),target_ack
+
+
 def pickup_destination(path):
     frame=cv2.imread(str(path))
     if frame is None:return -1
@@ -145,7 +157,7 @@ class ServiceTrial(Trial):
         if focus:
             node["action"]["param"]["custom_action_param"]={"focus":focus}
         succeeded=self.run("InnServiceRead",{"InnServiceRead":node},"Native inn observation",60)
-        task=self.get("/maa/state")["instances"]["innreact"]["task_run_state"]["pending_task_ids"][0]
+        task=self.last_task_id
         for file in sorted((self.root/"install/data/Innkeeping").glob("decision-"+str(task)+"-*.json"),key=lambda p:p.stat().st_mtime,reverse=True):
             report=json.loads(file.read_text("utf8"))
             if report.get("task_id")==task:
@@ -274,7 +286,10 @@ class ServiceTrial(Trial):
             self.execute("InnServiceKitchen",{"InnServiceKitchen":click([180 if kitchen==1 else 450,120,110,30],"Kitchen "+str(kitchen))},"Select kitchen "+str(kitchen))
             warm=bool(self.ledger.kitchens.get(str(kitchen),{}).get("recipes"))
             report=self.snapshot(focus="kitchen" if warm else None);view=report["view"]
-            if warm and (not view.get("queue_verified") or view.get("unknown")):
+            if (view.get("phase")!="kitchen" or str(view.get("kitchen"))!=str(kitchen)
+                    or not view.get("queue_verified") or view.get("unknown")):
+                # A cold kitchen can still be switching chefs. Observe once
+                # before planning; never queue from the previous chef's page.
                 report=self.snapshot();view=report["view"]
             now=time.monotonic()
             synced=self.ledger.observe(kitchen,view,now)
@@ -650,11 +665,15 @@ class ServiceTrial(Trial):
                     self.trace("delivery_retry",seat=target,dish=dish,attempt=attempt+1,image=report["image"])
                     continue
                 break
-            after_seat=next(s for s in view["seats"] if s["seat"]==str(target))
-            badge_confirmed=dish in (after_seat.get("served") or [])
-            demand_changed=(after_seat["phase"]=="waiting" and Counter(after_seat.get("dishes") or [])[dish]<target_before[dish])
-            meal_completed=after_seat["phase"] in ("dining","bill_ready") and sum(target_before.values())==1
-            if Counter(view["tray"])!=expected_tray or not (badge_confirmed or demand_changed or meal_completed):
+            receipt=service_receipt(view,target,dish,target_before,expected_tray)
+            if not all(receipt) and any(receipt):
+                # Inventory and the diner HUD animate independently. A partial
+                # receipt authorizes one observation, never another Serve click.
+                self.trace("delivery_receipt_pending",seat=target,dish=dish,image=report["image"])
+                report=self.snapshot(focus="service");view=report["view"]
+                if view["phase"]=="ended":return report
+                receipt=service_receipt(view,target,dish,target_before,expected_tray)
+            if not all(receipt):
                 raise RuntimeError("Selected tray dish and target-specific service were not both acknowledged")
             self.pending_serve=None
             self.served+=1
@@ -955,6 +974,9 @@ class ServiceTrial(Trial):
             return True
         if view["phase"] not in ("active","closing","closed_serving"):
             return False
+        if message=="Unexpected inn phase":
+            # This fresh read proves the menu fade ended. Keep the same round.
+            return True
         pending=getattr(self,"pending_pickup",None)
         if pending and not view.get("unknown"):
             expected=Counter(pending["before"])+Counter({pending["dish"]:1})
@@ -965,13 +987,9 @@ class ServiceTrial(Trial):
                 self.pending_pickup=None
         pending=getattr(self,"pending_serve",None)
         if pending and not view.get("unknown"):
-            seat=next((s for s in (view.get("seats") or []) if s["seat"]==str(pending["target"])),None)
             dish=pending["dish"]
             before=Counter(pending["target_before"])
-            acknowledged=seat and (dish in (seat.get("served") or []) or
-                (seat["phase"]=="waiting" and Counter(seat.get("dishes") or [])[dish]<before[dish]) or
-                (seat["phase"] in ("dining","bill_ready") and sum(before.values())==1))
-            if acknowledged and Counter(view.get("tray") or {})==Counter(pending["expected_tray"]):
+            if all(service_receipt(view,pending["target"],dish,before,pending["expected_tray"])):
                 self.served+=1
                 self.ledger.served[dish]=self.ledger.served.get(dish,0)+1
                 self.trace("delayed_service_verified",seat=pending["target"],dish=dish,count=self.served,image=report["image"])

@@ -104,7 +104,7 @@
                 "custom_action": "MapNavigateAction",
                 "custom_action_param": {
                     "map_name": "Wuling_Base",
-                    "heading_source": "camera",
+                    "heading_source": "character",
                     "enable_bootstrap_navmesh": false,
                     "enable_local_driver": false,
                     "zip": false,
@@ -120,7 +120,7 @@
                                 2200.56,
                                 499.15
                             ],
-                            "strict_arrival": true,
+                            "strict_arrival": false,
                             "required": true
                         },
                         {
@@ -129,7 +129,7 @@
                                 2205.62,
                                 495.09
                             ],
-                            "strict_arrival": true,
+                            "strict_arrival": false,
                             "required": true
                         },
                         {
@@ -138,7 +138,7 @@
                                 2209.49,
                                 492.41
                             ],
-                            "strict_arrival": true,
+                            "strict_arrival": false,
                             "required": true
                         },
                         {
@@ -178,7 +178,7 @@
                 "custom_action": "MapNavigateAction",
                 "custom_action_param": {
                     "map_name": "",
-                    "heading_source": "camera",
+                    "heading_source": "character",
                     "enable_bootstrap_navmesh": false,
                     "enable_local_driver": false,
                     "zip": false,

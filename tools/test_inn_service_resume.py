@@ -158,6 +158,35 @@ class DeliveryRetryTests(unittest.TestCase):
         self.assertEqual(t.served,1)
         self.assertIsNone(t.pending_serve)
 
+    def test_inventory_receipt_before_diner_animation_observes_without_serving_again(self):
+        partial=self.report();partial["view"]["tray"]={};partial["view"]["tray_slots"]=[""]
+        confirmed=self.report(False)
+        # Actual delayed service reads use a served badge before dining starts.
+        confirmed["view"]["seats"][0].update(phase="served",dishes=None,served=["fin_dumpling"])
+        t=self.trial(iter([partial,confirmed]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,1)
+        self.assertIsNone(t.pending_serve)
+
+    def test_diner_receipt_before_tray_animation_observes_without_serving_again(self):
+        partial=self.report(False);partial["view"]["tray"]={"fin_dumpling":1};partial["view"]["tray_slots"]=["fin_dumpling"]
+        t=self.trial(iter([partial,self.report(False)]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,1)
+
+    def test_partial_receipt_is_not_success_if_second_observation_still_disagrees(self):
+        partial=self.report();partial["view"]["tray"]={};partial["view"]["tray_slots"]=[""]
+        t=self.trial(iter([partial,partial]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        with self.assertRaisesRegex(RuntimeError,"not both acknowledged"):t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,0)
+        self.assertIsNotNone(t.pending_serve)
+
     def test_action_timeout_still_accepts_observed_delivery(self):
         t=self.trial(iter([self.report(),self.report(False)]))
         def timeout(*a):raise RuntimeError("task observation timed out")
@@ -190,6 +219,26 @@ class DeliveryRetryTests(unittest.TestCase):
             with self.assertRaises(RuntimeError):t.serve(2)
             self.assertEqual(len(calls),1)
 
+
+
+class TransientPhaseRecoveryTests(unittest.TestCase):
+    def test_fresh_active_read_after_blank_menu_fade_keeps_round_without_inputs(self):
+        t=ServiceTrial.__new__(ServiceTrial)
+        t.recoveries=0
+        t.get=lambda path:{"instances":{"current":{"is_running":False}}}
+        t.snapshot=lambda:{"image":"paired-native-frame","view":{"phase":"active"}}
+        t.trace=lambda *a,**kw:None
+        t.execute=lambda *a:self.fail("Phase reconciliation must not send input")
+        self.assertTrue(t.recover(RuntimeError("Unexpected inn phase")))
+        self.assertEqual(t.recoveries,1)
+
+    def test_unrelated_world_screen_does_not_resume_service(self):
+        t=ServiceTrial.__new__(ServiceTrial)
+        t.recoveries=0
+        t.get=lambda path:{"instances":{"current":{"is_running":False}}}
+        t.snapshot=lambda:{"image":"paired-native-frame","view":{"phase":"world"}}
+        t.trace=lambda *a,**kw:None
+        self.assertFalse(t.recover(RuntimeError("Unexpected inn phase")))
 
 
 class AutomaticPreflightEntryTests(unittest.TestCase):
