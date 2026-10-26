@@ -7,10 +7,10 @@ const mobileTargetingInterval = 1200 * time.Millisecond
 // mobileTargetingState acquires a visible target once, or turns the camera and
 // waits for a new frame. Target recovery must never translate the character.
 type mobileTargetingState struct {
-	lastActionAt         time.Time
-	lastTargetAt         time.Time
-	lockAttempted        bool
-	bossAcquireAttempted bool
+	lastActionAt           time.Time
+	lastTargetAt           time.Time
+	lockAttempted          bool
+	nativeAcquireAttempted bool
 }
 
 func (sa *ScreenAnalyzer) mobileTargetCentered() bool {
@@ -19,14 +19,15 @@ func (sa *ScreenAnalyzer) mobileTargetCentered() bool {
 }
 
 func (s *mobileTargetingState) next(sa *ScreenAnalyzer, now time.Time) (ActionType, bool) {
-	// Let native lock-on find an active boss before manual camera recovery.
-	// Health alone never authorizes offensive actions.
+	// Let native lock-on acquire an enemy before manual camera recovery.
+	// This input does not authorize attacks or character movement.
 	if sa.GetEnemyLocked() {
 		s.lastTargetAt = now
 		return 0, false
 	}
-	if sa.GetEnemyBossHealth() && !s.bossAcquireAttempted {
-		s.bossAcquireAttempted = true
+	if !s.nativeAcquireAttempted {
+		s.nativeAcquireAttempted = true
+		s.lockAttempted = true
 		s.lastActionAt = now
 		return ActionLockTarget, true
 	}

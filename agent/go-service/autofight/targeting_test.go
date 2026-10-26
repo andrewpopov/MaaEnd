@@ -10,8 +10,8 @@ func TestMobileTargetRecoveryDoesNotWalkIntoWalls(t *testing.T) {
 	now := time.Now()
 	sa := &ScreenAnalyzer{mobileLayout: true, frames: []screenFrame{{Timestamp: now}}}
 	state := &mobileTargetingState{}
-	if action, ok := state.next(sa, now); !ok || action != ActionFaceEnemyRight {
-		t.Fatal("unknown bearing must scan camera, never walk forward")
+	if action, ok := state.next(sa, now); !ok || action != ActionLockTarget {
+		t.Fatal("unknown bearing must first try native lock without walking")
 	}
 	if sa.mobileTargetCentered() {
 		t.Fatal("no target must release held attacks")
@@ -19,8 +19,11 @@ func TestMobileTargetRecoveryDoesNotWalkIntoWalls(t *testing.T) {
 	if _, ok := state.next(sa, now.Add(100*time.Millisecond)); ok {
 		t.Fatal("must wait for next camera observation")
 	}
+	if action, ok := state.next(sa, now.Add(1500*time.Millisecond)); !ok || action != ActionFaceEnemyRight {
+		t.Fatal("unconfirmed native lock must fall back to camera recovery")
+	}
 	sa.frames[0].Detections = []screenDetection{{Label: LabelEnemyFacing, Box: maa.Rect{350, 250, 15, 15}}}
-	if action, ok := state.next(sa, now.Add(2*time.Second)); !ok || action != ActionFaceEnemyLeft {
+	if action, ok := state.next(sa, now.Add(3*time.Second)); !ok || action != ActionFaceEnemyLeft {
 		t.Fatal("left bearing must turn camera left without strafing")
 	}
 }
