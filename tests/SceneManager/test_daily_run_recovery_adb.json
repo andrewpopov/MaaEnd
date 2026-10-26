@@ -43,7 +43,8 @@
             "image": "daily_run_guest_terminal.png",
             "hits": [
                 "VisitFriendsEnterMenuTerminalSuccess",
-                "CloseButtonType1"
+                "CloseButtonType1",
+                "VisitFriendsMenuTerminalExitToWorldShip"
             ]
         },
         {
@@ -51,6 +52,15 @@
             "image": "daily_run_menu_mission.png",
             "hits": [
                 "__ScenePrivateMenuListClickMenuMission"
+            ]
+        },
+        {
+            "name": "Full assisted Guest Terminal remains closable",
+            "image": "daily_run_guest_terminal_assisted.png",
+            "hits": [
+                "VisitFriendsEnterMenuTerminalSuccess",
+                "CloseButtonType1",
+                "VisitFriendsMenuTerminalExitToWorldShip"
             ]
         }
     ]

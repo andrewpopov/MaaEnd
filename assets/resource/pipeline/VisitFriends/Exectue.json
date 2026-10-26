@@ -159,8 +159,8 @@
         "roi": [
             0,
             0,
-            200,
-            70
+            330,
+            80
         ],
         "expected": [
             "访客终端",
@@ -684,23 +684,7 @@
         "desc": "从好友菜单返回世界界面",
         "recognition": "And",
         "all_of": [
-            {
-                "recognition": "OCR",
-                "roi": [
-                    0,
-                    0,
-                    200,
-                    70
-                ],
-                "expected": [
-                    "访客终端",
-                    "訪客終端",
-                    "Guest Terminal",
-                    "GUEST TERMINAL",
-                    "訪問端末",
-                    "방문자 단말기"
-                ]
-            },
+            "VisitFriendsEnterMenuTerminalSuccess",
             "CloseButtonType1"
         ],
         "box_index": 1,
