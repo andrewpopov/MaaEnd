@@ -17,7 +17,7 @@ from import_inn_route import BOXES, sample_scene, architecture_mask
 
 
 def fresh_frame(http):
-    api = os.environ.get('MAAEND_API_URL', 'http://127.0.0.1:12701/api').rstrip('/') + '/maa/instances/innreact'
+    api = os.environ.get('MAAEND_API_URL', 'http://127.0.0.1:12701/api').rstrip('/') + '/maa/instances/' + os.environ.get('MAAEND_INSTANCE_ID', 'innreact')
     previous = http.open(api + '/screenshot', timeout=8).read()
     request = urllib.request.Request(api + '/screenshot/subscribe',
         data=b'{"subscriber_id":"inn-route-status","interval_ms":100}',

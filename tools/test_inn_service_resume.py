@@ -158,6 +158,35 @@ class DeliveryRetryTests(unittest.TestCase):
         self.assertEqual(t.served,1)
         self.assertIsNone(t.pending_serve)
 
+    def test_inventory_receipt_before_diner_animation_observes_without_serving_again(self):
+        partial=self.report();partial["view"]["tray"]={};partial["view"]["tray_slots"]=[""]
+        confirmed=self.report(False)
+        # Actual delayed service reads use a served badge before dining starts.
+        confirmed["view"]["seats"][0].update(phase="served",dishes=None,served=["fin_dumpling"])
+        t=self.trial(iter([partial,confirmed]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,1)
+        self.assertIsNone(t.pending_serve)
+
+    def test_diner_receipt_before_tray_animation_observes_without_serving_again(self):
+        partial=self.report(False);partial["view"]["tray"]={"fin_dumpling":1};partial["view"]["tray_slots"]=["fin_dumpling"]
+        t=self.trial(iter([partial,self.report(False)]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,1)
+
+    def test_partial_receipt_is_not_success_if_second_observation_still_disagrees(self):
+        partial=self.report();partial["view"]["tray"]={};partial["view"]["tray_slots"]=[""]
+        t=self.trial(iter([partial,partial]));t.last=self.report();calls=[]
+        t.execute=lambda *a:calls.append(a)
+        with self.assertRaisesRegex(RuntimeError,"not both acknowledged"):t.serve(2)
+        self.assertEqual(len(calls),1)
+        self.assertEqual(t.served,0)
+        self.assertIsNotNone(t.pending_serve)
+
     def test_action_timeout_still_accepts_observed_delivery(self):
         t=self.trial(iter([self.report(),self.report(False)]))
         def timeout(*a):raise RuntimeError("task observation timed out")

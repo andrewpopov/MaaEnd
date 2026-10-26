@@ -99,7 +99,9 @@ class Trial:
     def __init__(self,root,output):
         self.root=root;self.output=output;output.mkdir(parents=True,exist_ok=False)
         self.http=urllib.request.build_opener(urllib.request.ProxyHandler({}))
-        self.api=os.environ.get('MAAEND_API_URL','http://127.0.0.1:12701/api').rstrip('/');self.instance=self.api+'/maa/instances/innreact'
+        self.api=os.environ.get('MAAEND_API_URL','http://127.0.0.1:12701/api').rstrip('/')
+        self.instance_id=os.environ.get('MAAEND_INSTANCE_ID','innreact')
+        self.instance=self.api+'/maa/instances/'+self.instance_id
         self.base=json.loads((root/'.cache/inn-reactive-trial.json').read_text('utf8'))
         self.last_hash=None;self.last_image=None
     def get(self,path):return json.load(self.http.open(self.api+path,timeout=10))
@@ -129,7 +131,7 @@ class Trial:
         (self.output/(str(task)+'-pipeline.json')).write_text(json.dumps(nodes,indent=4)+'\n',encoding='utf8')
         deadline=time.monotonic()+timeout
         while time.monotonic()<deadline:
-            time.sleep(getattr(self,"poll_interval",.5));self.capture();state=self.get('/maa/state')['instances']['innreact']
+            time.sleep(getattr(self,"poll_interval",.5));self.capture();state=self.get('/maa/state')['instances'][self.instance_id]
             current=state.get('task_run_state',{})
             if task in current.get('pending_task_ids',[]) and not state['is_running']:
                 status=current.get('overall_status');self.trace('task_finished',task=task,status=status);return status=='Succeeded'
