@@ -1011,15 +1011,16 @@
             {
                 "recognition": "OCR",
                 "roi": [
-                    370,
+                    260,
                     240,
-                    500,
-                    150
+                    760,
+                    120
                 ],
                 "expected": [
                     "以下限时道具已过期",
                     "以下限時道具已過期",
                     "These limited-time items have expired",
+                    "These LTO sanity meds have been automatically used",
                     "以下の時限アイテムは有効期限が切れました",
                     "다음 기간 한정 아이템이 만료되었습니다",
                     "以下到期理智药剂已自动使用",
