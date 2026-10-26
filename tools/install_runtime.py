@@ -82,11 +82,16 @@ def validate_package(package, output):
         if not resource.post_bundle(package / name).wait().succeeded:
             raise RuntimeError("Resource bundle failed to load: " + name)
         bundles.append(name)
+    # A live instance loads base resources again after controller overlays.
+    # Validate that inherited recognition fields also survive that warm reload.
+    for name in bundles:
+        if not resource.post_bundle(package / name).wait().succeeded:
+            raise RuntimeError("Resource bundle failed to reload after controller overlay: " + name)
     agents = {
         "go-service": probe_agent(package, runtime, "go-service.exe", "AutoFightMainAction", "AutoFightEntryRecognition"),
         "cpp-algo": probe_agent(package, runtime, "cpp-algo.exe", "MapNavigateAction"),
     }
-    report = {"package": str(package), "resources": bundles, "agents": agents, "game_controller_bound": False}
+    report = {"package": str(package), "resources": bundles, "resource_reload_order": bundles + bundles, "agents": agents, "game_controller_bound": False}
     output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf8")
     return report
 

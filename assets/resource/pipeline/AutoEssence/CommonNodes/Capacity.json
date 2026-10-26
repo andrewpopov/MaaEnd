@@ -1098,7 +1098,8 @@
             "param": {
                 "all_of": [
                     "AutoEssenceCapacityOnWeaponTab"
-                ]
+                ],
+                "box_index": 0
             }
         },
         "pre_delay": 0,

@@ -73,8 +73,9 @@
     },
     "__CharacterControllerDeltaSwipeAction": {
         "desc": "ADB 镜头旋转：真实按下的触摸拖动",
+        "end_hold": 200,
         "only_hover": false,
-        "contact": 1
+        "contact": 0
     },
     "__CharacterControllerDeltaClickCenterAction": {
         "desc": "ADB 无 Alt 悬停模式，空动作",

@@ -5,11 +5,10 @@
     "properties": {
         "custom_recognition": {
             "enum": [
+                "AutoFightEntryRecognition",
                 "AeroSalvageBalloonStateRecognition",
                 "AeroSalvageGridRecognition",
                 "AeroSalvageInitialStateRecognition",
-                "AutoCollectRouteDue",
-                "AutoFightEntryRecognition",
                 "AutoSellPriceCompareRecognition",
                 "AutoSellScanItemRecognition",
                 "AutoStockpile.Recognition",
@@ -18,9 +17,8 @@
                 "EssenceGridPendingRecognition",
                 "ExpendableRecognition",
                 "ExpressionRecognition",
-                "IconRecognition",
                 "ImageCheckNotPassedRecognition",
-                "InnkeepingReadyFoodOffset",
+                "IconRecognition",
                 "IntelArchiveScanDetailRecognition",
                 "IntelArchiveScanItemsRecognition",
                 "ItemDataReady",
@@ -45,15 +43,18 @@
                 "ReceptionRoomWaitExchangeKeepAliveDueRecognition",
                 "ScheduleRecognition",
                 "ScreenshotStableRecognition",
-                "ScrollbarCompleteRecognition",
                 "ScrollbarRecognition",
-                "SeizeDeliveryJobsFindTargetRecognition",
-                "SeizeDeliveryJobsScanTargetRecognition",
+                "ScrollbarCompleteRecognition",
+                "TextInputExhaustedRecognition",
                 "TrialOfSwordmancy.Recognize",
                 "TrialOfSwordmancy.RecognizeAband",
                 "TrialOfSwordmancy.RecognizeDeck",
+                "SeizeDeliveryJobsFindTargetRecognition",
+                "SeizeDeliveryJobsScanTargetRecognition",
                 "autoEcoFarmCalculateSwipeTarget",
                 "autoEcoFarmFindNearestRecognitionResult",
+                "AutoCollectRouteDue",
+                "InnkeepingReadyFoodOffset",
                 "InnkeepingPhysicalBoard",
                 "InnkeepingKitchenQueueCount",
                 "InnkeepingCounterOrigin",
@@ -62,6 +63,9 @@
         }
     },
     "allOf": [
+        {
+            "$ref": "./extensions/fork.recognition.schema.json"
+        },
         {
             "if": {
                 "type": "object",
@@ -677,291 +681,6 @@
                 "properties": {
                     "custom_recognition_param": {
                         "$ref": "./components/outpost_trading.schema.json#/$defs/PriorityItemRecognitionParam"
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "AutoCollectRouteDue"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "properties": {
-                            "route": {
-                                "type": "string",
-                                "pattern": "^AutoCollectCommonRoute[1-9][0-9]*$"
-                            }
-                        },
-                        "required": [
-                            "route"
-                        ],
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "InnkeepingReadyFoodOffset"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "dish",
-                            "side"
-                        ],
-                        "properties": {
-                            "dish": {
-                                "enum": [
-                                    "hot_sour_soup",
-                                    "fin_dumpling",
-                                    "tuber_fries",
-                                    "salted_cheese_crackers"
-                                ]
-                            },
-                            "side": {
-                                "enum": [
-                                    "left",
-                                    "right",
-                                    "center"
-                                ]
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "InnkeepingPhysicalBoard"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "number",
-                            "box",
-                            "template"
-                        ],
-                        "properties": {
-                            "number": {
-                                "enum": [
-                                    "1",
-                                    "2",
-                                    "3",
-                                    "4",
-                                    "5",
-                                    "6"
-                                ]
-                            },
-                            "box": {
-                                "type": "array",
-                                "items": {
-                                    "type": "integer"
-                                },
-                                "minItems": 4,
-                                "maxItems": 4
-                            },
-                            "template": {
-                                "type": "string",
-                                "minLength": 1
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "InnkeepingKitchenQueueCount"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "kitchen",
-                            "count"
-                        ],
-                        "properties": {
-                            "kitchen": {
-                                "enum": [
-                                    "1",
-                                    "2"
-                                ]
-                            },
-                            "count": {
-                                "type": "integer",
-                                "minimum": 0,
-                                "maximum": 3
-                            },
-                            "expected": {
-                                "type": "object",
-                                "additionalProperties": {
-                                    "type": "integer",
-                                    "minimum": 0,
-                                    "maximum": 3
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "type": "object",
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "InnkeepingCounterOrigin"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "reference",
-                            "mode"
-                        ],
-                        "properties": {
-                            "mode": {
-                                "enum": [
-                                    "aligned",
-                                    "left_fine",
-                                    "right_fine",
-                                    "left_coarse",
-                                    "right_coarse",
-                                    "left_large",
-                                    "right_large"
-                                ]
-                            },
-                            "reference": {
-                                "type": "array",
-                                "minItems": 2,
-                                "maxItems": 2,
-                                "items": {
-                                    "type": "object",
-                                    "required": [
-                                        "box",
-                                        "pixels"
-                                    ],
-                                    "properties": {
-                                        "box": {
-                                            "type": "array",
-                                            "minItems": 4,
-                                            "maxItems": 4,
-                                            "items": {
-                                                "type": "integer"
-                                            }
-                                        },
-                                        "pixels": {
-                                            "type": "string"
-                                        },
-                                        "architecture_only": {
-                                            "type": "boolean"
-                                        }
-                                    }
-                                }
-                            },
-                            "capture_failure": {
-                                "type": "boolean"
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_recognition"
-                ],
-                "properties": {
-                    "custom_recognition": {
-                        "const": "InnkeepingTrayContents"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_recognition_param"
-                ],
-                "properties": {
-                    "custom_recognition_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "expected"
-                        ],
-                        "properties": {
-                            "expected": {
-                                "type": "object",
-                                "maxProperties": 5,
-                                "additionalProperties": {
-                                    "type": "integer",
-                                    "minimum": 1,
-                                    "maximum": 5
-                                }
-                            }
-                        }
                     }
                 }
             }

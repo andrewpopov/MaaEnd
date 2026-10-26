@@ -181,7 +181,7 @@ def main():
             shutil.copy2(root/'tools'/filename,tool_dest/filename)
         shutil.copytree(root/'tools/combat_reference',tool_dest/'combat_reference')
         run(root,'go','-C',root/'agent/go-service','test','./accountscan','./autofight','./innkeeping',env=native_go_environment(root))
-        version='fork-'+commit[:8]+'-local-'+stamp
+        version='v0.0.0-fork.'+commit[:8]+'.'+stamp.replace('-', '')
         run(root,'go','-C',root/'agent/go-service','build','-trimpath','-ldflags=-X main.Version='+version,'-o',package/'agent/go-service.exe','.',env=native_go_environment(root))
         run(root,sys.executable,root/'tools/fill_interface.py','--version',version,'--maafw-lib-dir',install/'maafw','--interface',package/'interface.json')
         if before!=inputs(root):raise RuntimeError('Source changed during build. Re-run to build a consistent snapshot.')

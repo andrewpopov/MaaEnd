@@ -210,7 +210,7 @@ export async function fetchCases(): Promise<TestCases[]> {
             name: formatMatrixTestName(matrix, testCases.configs.name),
             controller,
             resource,
-            imageRoot: path.join(controllerPath, resourcePath),
+            imageRoot: path.join(testCases.configs.imageRoot ?? '', controllerPath, resourcePath),
           },
           cases: normalizedCases,
         })

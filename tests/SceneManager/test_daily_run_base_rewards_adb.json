@@ -2,7 +2,8 @@
     "configs": {
         "name": "English ADB daily-run delayed base clue rewards",
         "controller": "ADB",
-        "resource": "官服"
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
     },
     "cases": [
         {
@@ -13,6 +14,15 @@
                 "InNoticeRewards",
                 "CloseRewardsButton",
                 "SceneNoticeRewardsConfirmClick"
+            ]
+        },
+        {
+            "name": "Full English clue collection panel remains closable",
+            "image": "daily_run_clue_collection_full.png",
+            "hits": [
+                "InReceptionRoomCollectionClues",
+                "ReceptionRoomSendCluesClueCollectionFull",
+                "ReceptionRoomSendCluesClueCollectionFullClose"
             ]
         }
     ]

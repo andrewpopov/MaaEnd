@@ -130,8 +130,6 @@
                         "AutoEssenceObtainMode",
                         "AutoEssenceRepeatCount"
                     ],
-                    // 随机模式不配置预刻写词条：跳过条件检查/调整，直接开刷；
-                    // 未选词条时由 AutoEssenceDismissWarningPreEngrave 关闭警告弹窗
                     "pipeline_override": {
                         "AutoEssenceClickEssenceStartPrepare": {
                             "next": [
@@ -182,7 +180,6 @@
                                 "Node.Action.Starting": "🎉**目标模式：基质目标已满足或任务结束**"
                             }
                         },
-                        // 目标模式依赖战后精确匹配 Add 更新内存库存，强制开启战后基质筛选
                         "EssenceFilterAfterBattleStart": {
                             "enabled": true
                         },
@@ -465,8 +462,6 @@
                     "pipeline_override": {
                         "__AutoUseSpMedicationOCRRecognitionEmergencySanityBoosterRemainingTime": {
                             "expected": [
-                                // 剩余时间 OCR：行首锚定，避免匹配「剩余23小时」「剩余1天」等带前缀文本
-                                // @i18n-skip
                                 "^(\\d+小时|([1-9]|1[0-3])天)",
                                 "(?i)^(?:\\d+\\s*h|(?:[1-9]|1[0-3])\\s*d)$"
                             ]
@@ -479,8 +474,6 @@
                     "pipeline_override": {
                         "__AutoUseSpMedicationOCRRecognitionEmergencySanityBoosterRemainingTime": {
                             "expected": [
-                                // 剩余时间 OCR：行首锚定，避免匹配「剩余23小时」「剩余1天」等带前缀文本
-                                // @i18n-skip
                                 "^(\\d+小时|([1-9]|10)天)",
                                 "(?i)^(?:\\d+\\s*h|(?:[1-9]|10)\\s*d)$"
                             ]
@@ -493,8 +486,6 @@
                     "pipeline_override": {
                         "__AutoUseSpMedicationOCRRecognitionEmergencySanityBoosterRemainingTime": {
                             "expected": [
-                                // 剩余时间 OCR：行首锚定，避免匹配「剩余23小时」「剩余1天」等带前缀文本
-                                // @i18n-skip
                                 "^(\\d+小时|[1-7]天)",
                                 "(?i)^(?:\\d+\\s*h|[1-7]\\s*d)$"
                             ]
@@ -507,8 +498,6 @@
                     "pipeline_override": {
                         "__AutoUseSpMedicationOCRRecognitionEmergencySanityBoosterRemainingTime": {
                             "expected": [
-                                // 剩余时间 OCR：行首锚定，避免匹配「剩余23小时」「剩余1天」等带前缀文本
-                                // @i18n-skip
                                 "^(\\d+小时|[1-3]天)",
                                 "(?i)^(?:\\d+\\s*h|[1-3]\\s*d)$"
                             ]
@@ -521,8 +510,6 @@
                     "pipeline_override": {
                         "__AutoUseSpMedicationOCRRecognitionEmergencySanityBoosterRemainingTime": {
                             "expected": [
-                                // 剩余时间 OCR：行首锚定，避免匹配「剩余23小时」「剩余1天」等带前缀文本
-                                // @i18n-skip
                                 "^(\\d+小时|1天)",
                                 "(?i)^(?:\\d+\\s*h|1\\s*d)$"
                             ]
@@ -831,6 +818,7 @@
                 {
                     "name": "Yes",
                     "option": [
+                        "EssenceFilterAfterBattlePerfectMinLevelTotal",
                         "EssenceFilterAfterBattleKeepFuturePromising",
                         "EssenceFilterAfterBattleKeepSlot3Level3Practical",
                         "EssenceFilterAfterBattleDiscardUnmatched"
@@ -841,6 +829,26 @@
                 }
             ],
             "default_case": "No"
+        },
+        "EssenceFilterAfterBattlePerfectMinLevelTotal": {
+            "type": "input",
+            "label": "$option.PerfectMinLevelTotal.label",
+            "inputs": [
+                {
+                    "name": "EssenceFilterAfterBattlePerfectMinLevelTotal",
+                    "label": "$option.PerfectMinLevelTotal.inputs.PerfectMinLevelTotal.label",
+                    "default": "3",
+                    "pipeline_type": "int",
+                    "verify": "^[3-9]$|^1[0-5]$"
+                }
+            ],
+            "pipeline_override": {
+                "EssenceFilterAfterBattleInit": {
+                    "attach": {
+                        "perfect_min_level_total": "{EssenceFilterAfterBattlePerfectMinLevelTotal}"
+                    }
+                }
+            }
         },
         "EssenceFilterAfterBattleKeepFuturePromising": {
             "type": "switch",

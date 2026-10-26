@@ -583,7 +583,7 @@ class ServiceTrial(Trial):
     def board(self,report,target):
         # The paired native read already contains confidently detected plaques.
         # Do not load a second OCR runtime just to reread the same screenshot.
-        box=physical_boards(report["tokens"]).get(str(target))
+        box=physical_boards(report.get("tokens") or []).get(str(target))
         if box:
             # Table 3's measured service pose puts its plaque at 569,266;
             # the common front-row range incorrectly rejected that valid pose.

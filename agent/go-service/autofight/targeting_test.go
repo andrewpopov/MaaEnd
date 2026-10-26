@@ -10,8 +10,8 @@ func TestMobileTargetRecoveryDoesNotWalkIntoWalls(t *testing.T) {
 	now := time.Now()
 	sa := &ScreenAnalyzer{mobileLayout: true, frames: []screenFrame{{Timestamp: now}}}
 	state := &mobileTargetingState{}
-	if action, ok := state.next(sa, now); !ok || action != ActionFaceEnemyRight {
-		t.Fatal("unknown bearing must scan camera, never walk forward")
+	if action, ok := state.next(sa, now); !ok || action != ActionLockTarget {
+		t.Fatal("unknown bearing must first try native lock without walking")
 	}
 	if sa.mobileTargetCentered() {
 		t.Fatal("no target must release held attacks")
@@ -19,8 +19,11 @@ func TestMobileTargetRecoveryDoesNotWalkIntoWalls(t *testing.T) {
 	if _, ok := state.next(sa, now.Add(100*time.Millisecond)); ok {
 		t.Fatal("must wait for next camera observation")
 	}
+	if action, ok := state.next(sa, now.Add(1500*time.Millisecond)); !ok || action != ActionFaceEnemyRight {
+		t.Fatal("unconfirmed native lock must fall back to camera recovery")
+	}
 	sa.frames[0].Detections = []screenDetection{{Label: LabelEnemyFacing, Box: maa.Rect{350, 250, 15, 15}}}
-	if action, ok := state.next(sa, now.Add(2*time.Second)); !ok || action != ActionFaceEnemyLeft {
+	if action, ok := state.next(sa, now.Add(3*time.Second)); !ok || action != ActionFaceEnemyLeft {
 		t.Fatal("left bearing must turn camera left without strafing")
 	}
 }
@@ -51,8 +54,8 @@ func TestMobileOffscreenLockDoesNotEnableForwardAttacks(t *testing.T) {
 	if sa.mobileTargetCentered() {
 		t.Fatal("offscreen lock must not enable held auto-lunges")
 	}
-	if a, ok := (&mobileTargetingState{}).next(sa, now); !ok || a != ActionFaceEnemyRight {
-		t.Fatal("off-center lock must recenter without toggling lock")
+	if _, ok := (&mobileTargetingState{}).next(sa, now); ok {
+		t.Fatal("native lock must retain control of the camera")
 	}
 }
 
@@ -82,8 +85,8 @@ func TestBossAcquisitionTriesNativeLockBeforeCamera(t *testing.T) {
 		t.Fatal("must observe after lock input")
 	}
 	sa.frames = append(sa.frames, screenFrame{Timestamp: now.Add(time.Second), Detections: []screenDetection{{Label: LabelEnemyLocked, Box: maa.Rect{1100, 250, 20, 20}}}})
-	if _, ok := state.next(sa, now.Add(100*time.Millisecond)); ok {
-		t.Fatal("lock input must settle before recentering")
+	if _, ok := state.next(sa, now.Add(time.Second)); ok {
+		t.Fatal("confirmed lock must suppress camera recovery")
 	}
 	if sa.mobileTargetCentered() {
 		t.Fatal("off-center lock must not authorize melee")

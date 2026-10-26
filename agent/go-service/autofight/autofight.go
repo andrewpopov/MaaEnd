@@ -21,17 +21,7 @@ import (
 // autoFightAttach 是 AutoFight 节点 attach 字段的反序列化目标，
 // 字段含义参考 assets/resource/pipeline/Interface/AutoFight.json。
 type autoFightAttach struct {
-	CombatMode                   string   `json:"combat_mode"`
-	SharedInterrupts             bool     `json:"shared_interrupts"`
-	InterruptSkillSlots          []int    `json:"interrupt_skill_slots"`
-	VerifiedTargetAcquisition    bool     `json:"verified_target_acquisition"`
-	MobileApproach               bool     `json:"mobile_approach"`
-	ConfirmedTimeline            bool     `json:"confirmed_timeline"`
-	CurrentComboChecks           bool     `json:"current_combo_checks"`
-	CombatTrace                  bool     `json:"combat_trace"`
-	TeamProfile                  string   `json:"team_profile"`
-	RotationPreview              bool     `json:"rotation_preview"`
-	RotationMovement             string   `json:"rotation_movement"`
+	combatExtensions
 	EnableAttack                 bool     `json:"enable_attack"`
 	EnableCombo                  bool     `json:"enable_combo"`
 	EnableDodge                  bool     `json:"enable_dodge"`
@@ -45,6 +35,44 @@ type autoFightAttach struct {
 	EndAxisTimelineCode          string   `json:"end_axis_timeline_code"`
 	SkipComboCooldown            bool     `json:"skip_combo_cooldown"`
 	PauseExitNodes               []string `json:"pause_exit_nodes"`
+	SkillMode1                   string   `json:"skill_mode_1"`
+	SkillMode2                   string   `json:"skill_mode_2"`
+	SkillMode3                   string   `json:"skill_mode_3"`
+	SkillMode4                   string   `json:"skill_mode_4"`
+}
+
+// 每名干员的战技释放方式；空值按 cycle 处理。
+const (
+	skillModeCycle = "cycle"
+	skillModeOnce  = "once"
+	skillModeNever = "never"
+)
+
+func (p *autoFightAttach) skillModes() [4]string {
+	return [4]string{p.SkillMode1, p.SkillMode2, p.SkillMode3, p.SkillMode4}
+}
+
+// pickSkillOperator 从 cycleIndex 起轮转查找下一个可释放战技的干员（1-based），
+// 跳过 never 以及已释放过的 once；返回选中的干员与下一轮的起点，找不到时 ok 为 false。
+func pickSkillOperator(modes [4]string, usedOnce *[4]bool, cycleIndex, characterCount int) (op, next int, ok bool) {
+	n := characterCount
+	if n <= 0 || n > 4 {
+		n = 4
+	}
+	for i := range n {
+		candidate := ((cycleIndex-1+i)%n + n) % n
+		switch modes[candidate] {
+		case skillModeNever:
+			continue
+		case skillModeOnce:
+			if usedOnce[candidate] {
+				continue
+			}
+			usedOnce[candidate] = true
+		}
+		return candidate + 1, candidate + 2, true
+	}
+	return 0, cycleIndex, false
 }
 
 var screenAnalyzer = NewScreenAnalyzer()
@@ -321,11 +349,12 @@ func switchCharacterAction(idx int) ActionType {
 }
 
 type fightAction struct {
-	executeAt  time.Time
-	action     ActionType
-	comboSlot  int
-	interrupt  bool
-	observedAt time.Time
+	executeAt    time.Time
+	action       ActionType
+	comboSlot    int
+	interrupt    bool
+	noEnergyCost bool
+	observedAt   time.Time
 }
 
 var actionQueue []fightAction
@@ -448,6 +477,8 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 	characterCount := -1
 	skillCycleIndex := 1
 	teamAttackHeld := false
+	skillModes := params.skillModes()
+	var skillUsedOnce [4]bool
 
 	if params.EnableAttack && team == nil && !params.VerifiedTargetAcquisition {
 		ctx.RunAction("__AutoFightActionAttackTouchDown", maa.Rect{600, 320, 80, 80}, "", nil)
@@ -850,31 +881,24 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 			}
 			if params.EnableSkill && energyLevel >= 1 {
 				if params.EnableBreakAccumulatingPower && len(params.InterruptSkillSlots) == 0 && screenAnalyzer.GetEnemyAccumulatingPower(true) {
-					maafocus.Print(ctx, i18n.T("autofight.enemy_accumulating_power"))
-					op := skillCycleIndex
-					if characterCount > 0 {
-						op = ((op - 1) % characterCount) + 1
+					if op, next, ok := pickSkillOperator(skillModes, &skillUsedOnce, skillCycleIndex, characterCount); ok {
+						maafocus.Print(ctx, i18n.T("autofight.enemy_accumulating_power"))
+						enqueueAction(fightAction{executeAt: time.Now(), action: skillAction(op), interrupt: true})
+						skillCycleIndex = next
 					}
-					enqueueAction(fightAction{
-						executeAt: time.Now(),
-						action:    skillAction(op),
-					})
-					skillCycleIndex++
 				} else if energyLevel > params.damageSkillReserve() && hasEnemyTarget {
 					log.Debug().
 						Str("component", "AutoFight").
 						Int("energyLevel", energyLevel).
 						Int("reserveLevel", params.ReserveSkillLevel).
 						Msg("energy level above reserve, using skill")
-					op := skillCycleIndex
-					if characterCount > 0 {
-						op = ((op - 1) % characterCount) + 1
+					if op, next, ok := pickSkillOperator(skillModes, &skillUsedOnce, skillCycleIndex, characterCount); ok {
+						enqueueAction(fightAction{
+							executeAt: time.Now(),
+							action:    skillAction(op),
+						})
+						skillCycleIndex = next
 					}
-					enqueueAction(fightAction{
-						executeAt: time.Now(),
-						action:    skillAction(op),
-					})
-					skillCycleIndex++
 				}
 				screenAnalyzer.MarkLabelUsed(LabelEnergyLevelFull)
 			}
@@ -910,12 +934,15 @@ func (a *AutoFightMainAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bo
 							timeline.PopFrontAction()
 						}
 					case "skill":
-						if params.EnableSkill && energyLevel > params.damageSkillReserve() && hasEnemyTarget {
+						if params.EnableSkill && (energyLevel > params.damageSkillReserve() || action.NoEnergyCost) && hasEnemyTarget {
 							enqueueAction(fightAction{
-								executeAt: time.Now(),
-								action:    skillAction(op),
+								executeAt:    time.Now(),
+								action:       skillAction(op),
+								noEnergyCost: action.NoEnergyCost,
 							})
-							screenAnalyzer.MarkLabelUsed(LabelEnergyLevelFull)
+							if !action.NoEnergyCost {
+								screenAnalyzer.MarkLabelUsed(LabelEnergyLevelFull)
+							}
 							timeline.PopFrontAction()
 						}
 					}
@@ -1016,7 +1043,7 @@ func drainActionQueue(ctx combatActionContext, trace *combatTrace, currentComboC
 		if !ok {
 			break
 		}
-		if fa.action >= ActionSkill1 && fa.action <= ActionSkill4 && !fa.interrupt && execution.damageReserve > 0 &&
+		if fa.action >= ActionSkill1 && fa.action <= ActionSkill4 && !fa.interrupt && !fa.noEnergyCost && execution.damageReserve > 0 &&
 			screenAnalyzer.timelineObservation(time.Now()).energy <= execution.damageReserve {
 			execution.rejectedSkill = int(fa.action-ActionSkill1) + 1
 			trace.event("dispatch_rejected", map[string]any{"action": int(fa.action), "reason": "interrupt_sp_reserved"})
@@ -1064,9 +1091,9 @@ func drainActionQueue(ctx combatActionContext, trace *combatTrace, currentComboC
 		case ActionLockTarget:
 			run("__AutoFightActionLockTarget")
 		case ActionFaceEnemyLeft:
-			run("__CameraScanMoveRight")
-		case ActionFaceEnemyRight:
 			run("__CameraScanMoveLeft")
+		case ActionFaceEnemyRight:
+			run("__CameraScanMoveRight")
 		case ActionDodge:
 			run("__AutoFightActionDodge")
 		case ActionSleepSecond:

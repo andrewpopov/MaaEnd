@@ -7,7 +7,7 @@ import (
 )
 
 func TestConfiguredInterruptReservesSPWithoutOverridingLargerReserve(t *testing.T) {
-	p := autoFightAttach{SharedInterrupts: true, EnableSkill: true, EnableBreakAccumulatingPower: true}
+	p := autoFightAttach{combatExtensions: combatExtensions{SharedInterrupts: true}, EnableSkill: true, EnableBreakAccumulatingPower: true}
 	if p.damageSkillReserve() != 0 {
 		t.Fatal("unconfigured skill cannot be assumed to interrupt")
 	}
@@ -27,7 +27,7 @@ func TestConfiguredInterruptReservesSPWithoutOverridingLargerReserve(t *testing.
 }
 
 func TestFreshTelegraphsSuspendDamageUntilCleared(t *testing.T) {
-	p := autoFightAttach{EnableDodge: true, SharedInterrupts: true, EnableSkill: true, EnableBreakAccumulatingPower: true, InterruptSkillSlots: []int{2}}
+	p := autoFightAttach{combatExtensions: combatExtensions{SharedInterrupts: true, InterruptSkillSlots: []int{2}}, EnableDodge: true, EnableSkill: true, EnableBreakAccumulatingPower: true}
 	sa := &ScreenAnalyzer{frames: []screenFrame{{Detections: []screenDetection{warningAt(100)}}}}
 	if !sa.defensiveThreat(p) {
 		t.Fatal("dodge warning did not suspend damage")

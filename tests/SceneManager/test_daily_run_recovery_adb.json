@@ -2,7 +2,8 @@
     "configs": {
         "name": "English ADB daily-run failure regressions",
         "controller": "ADB",
-        "resource": "官服"
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
     },
     "cases": [
         {

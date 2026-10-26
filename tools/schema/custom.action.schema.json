@@ -6,21 +6,18 @@
         "custom_action": {
             "enum": [
                 "325",
-                "AccountScanCaptureAction",
-                "AccountScanRosterStepAction",
                 "AccountSwitchWindowAction",
                 "AddItemData",
                 "AeroSalvageConfigureSwipeAction",
                 "AttachToExpectedRegexAction",
                 "AutoAltClickAction",
                 "AutoAltSwipeAction",
-                "AutoCollectHistory",
                 "AutoCtrlClickAction",
+                "AutoFightMainAction",
                 "AutoDeliveryResolveDepotAction",
                 "AutoDeliveryResolveDestinationAction",
                 "AutoEssenceLoadInventoryAction",
                 "AutoEssenceTargetPlanAction",
-                "AutoFightMainAction",
                 "AutoSellItemExecuteItemTaskAction",
                 "AutoStockStapleQuantityControlAction",
                 "AutoStockpile.ReconcileDecision",
@@ -30,14 +27,11 @@
                 "BatchAddFriendsFriendListFullAction",
                 "BatchAddFriendsStrangersFinishAction",
                 "BatchAddFriendsStrangersOnAddAction",
-                "BatchAddFriendsUIDEnterAction",
                 "BatchAddFriendsUIDFinishAction",
-                "BatchAddFriendsUIDLoopTopAction",
                 "BatchAddFriendsUIDOnAddAction",
                 "BatchAddFriendsUIDOnEmptyAction",
                 "BetterSliding",
                 "CameraScanAction",
-                "CaptureUid",
                 "CharacterControllerForwardAxisAction",
                 "CharacterControllerPitchDeltaAction",
                 "CharacterControllerRelativeMoveAction",
@@ -45,6 +39,7 @@
                 "CharacterMoveToTargetAction",
                 "CharacterMoveToTargetNotFoundAction",
                 "CharacterSearchAction",
+                "CaptureUid",
                 "ClearHitCount",
                 "CloseGameAction",
                 "CreditShoppingScanItemAction",
@@ -59,26 +54,16 @@
                 "EssenceFilterSkillDecisionAction",
                 "ExitGameLauncherAction",
                 "FailureCollectorFinish",
-                "FailureCollectorReset",
                 "FailureCollectorRunTask",
+                "FailureCollectorReset",
                 "FalseAction",
                 "FocusOCRAction",
                 "ImageCheckSetResultAction",
                 "ImportBluePrintsEnterCodeAction",
                 "ImportBluePrintsFinishAction",
                 "ImportBluePrintsInitTextAction",
-                "InnkeepingAssistAction",
-                "InnkeepingCameraSearchAction",
-                "InnkeepingFixedRouteStepAction",
-                "InnkeepingMenuAction",
-                "InnkeepingOpenAction",
-                "InnkeepingReactiveAction",
-                "InnkeepingReactiveClickAction",
-                "InnkeepingReactiveNavigateAction",
-                "InnkeepingSetupNavigateAction",
-                "InnkeepingWalkBurstAction",
-                "IntelArchiveResetSessionAction",
                 "IntelArchiveResolveTruncAction",
+                "IntelArchiveResetSessionAction",
                 "IntelArchiveShowInventoryAction",
                 "ItemTransferFallbackAction",
                 "ItemTransferOCRAction",
@@ -92,18 +77,16 @@
                 "PostStop",
                 "PullCountCalculatorAction",
                 "PuzzleAction",
+                "SeizeDeliveryJobsResetScanStateAction",
+                "SeizeDeliveryJobsScanTargetAction",
                 "RealTimeTaskAction",
                 "RepeatUntilFoundAction",
                 "RepeatUntilNotFoundAction",
                 "SceneManagerMenuListClickItemAction",
-                "SeizeDeliveryJobsResetScanStateAction",
-                "SeizeDeliveryJobsScanTargetAction",
                 "SubTask",
                 "SyncItemData",
-                "TeamCombatCaptureAction",
-                "TeamCombatPrepareAction",
-                "TeamManagementAction",
-                "TeamMemberLevelAction",
+                "TextInputAction",
+                "TextInputInitAction",
                 "TrialOfSwordmancy.Decide",
                 "UpdateItemQuantity",
                 "WebEvent202605Action",
@@ -111,11 +94,31 @@
                 "autoEcoFarmInterruptibleSleep",
                 "autoEcoFarmOverrideTargetTemplate",
                 "autoEcoFarmResetSwipeState",
+                "AccountScanCaptureAction",
+                "AccountScanRosterStepAction",
+                "AutoCollectHistory",
+                "InnkeepingAssistAction",
+                "InnkeepingCameraSearchAction",
+                "InnkeepingFixedRouteStepAction",
+                "InnkeepingMenuAction",
+                "InnkeepingOpenAction",
+                "InnkeepingReactiveAction",
+                "InnkeepingReactiveClickAction",
+                "InnkeepingReactiveNavigateAction",
+                "InnkeepingSetupNavigateAction",
+                "InnkeepingWalkBurstAction",
+                "TeamCombatCaptureAction",
+                "TeamCombatPrepareAction",
+                "TeamManagementAction",
+                "TeamMemberLevelAction",
                 "CharacterControllerJoystickAction"
             ]
         }
     },
     "allOf": [
+        {
+            "$ref": "./extensions/fork.action.schema.json"
+        },
         {
             "if": {
                 "properties": {
@@ -182,6 +185,30 @@
                             }
                         },
                         "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "TextInputInitAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "texts": {
+                                "type": "string"
+                            }
+                        }
                     }
                 }
             }
@@ -481,344 +508,6 @@
                 "required": [
                     "custom_action_param"
                 ]
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_action"
-                ],
-                "properties": {
-                    "custom_action": {
-                        "const": "AutoCollectHistory"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_action_param"
-                ],
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "route": {
-                                "type": "string",
-                                "pattern": "^AutoCollect(Common)?Route[1-9][0-9]*$"
-                            },
-                            "event": {
-                                "enum": [
-                                    "started",
-                                    "completed"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "route",
-                            "event"
-                        ],
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "custom_action": {
-                        "const": "AccountScanCaptureAction"
-                    }
-                },
-                "required": [
-                    "custom_action"
-                ]
-            },
-            "then": {
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "task_id": {
-                                "enum": [
-                                    "account_identity",
-                                    "operators",
-                                    "skills",
-                                    "equipped_weapons",
-                                    "weapon_inventory",
-                                    "equipped_gear",
-                                    "gear_inventory",
-                                    "gear_plans",
-                                    "gear_recipes",
-                                    "craft_materials",
-                                    "artificing",
-                                    "team_presets"
-                                ]
-                            },
-                            "page": {
-                                "type": "string"
-                            },
-                            "talent_count": {
-                                "enum": [
-                                    8,
-                                    12
-                                ]
-                            }
-                        },
-                        "required": [
-                            "task_id"
-                        ],
-                        "additionalProperties": false
-                    }
-                },
-                "required": [
-                    "custom_action_param"
-                ]
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "custom_action": {
-                        "const": "AccountScanRosterStepAction"
-                    }
-                }
-            },
-            "then": {
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "resume": {
-                                "type": "boolean"
-                            },
-                            "step": {
-                                "enum": [
-                                    "begin",
-                                    "prepare",
-                                    "grid_top",
-                                    "dispatch",
-                                    "matrix_align",
-                                    "operator_done",
-                                    "advance",
-                                    "advance_after_scroll",
-                                    "scroll_start",
-                                    "scroll_capture",
-                                    "scroll_check",
-                                    "finish"
-                                ]
-                            },
-                            "task_id": {
-                                "enum": [
-                                    "operators",
-                                    "skills",
-                                    "equipped_weapons",
-                                    "equipped_gear"
-                                ]
-                            },
-                            "page": {
-                                "type": "string"
-                            },
-                            "next": {
-                                "type": "string"
-                            },
-                            "points": {
-                                "type": "array",
-                                "minItems": 9,
-                                "maxItems": 13,
-                                "items": {
-                                    "type": "array",
-                                    "minItems": 2,
-                                    "maxItems": 2,
-                                    "items": {
-                                        "type": "integer",
-                                        "minimum": 0,
-                                        "maximum": 1280
-                                    }
-                                }
-                            }
-                        },
-                        "required": [
-                            "step"
-                        ],
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "custom_action": {
-                        "const": "InnkeepingReactiveAction"
-                    }
-                },
-                "required": [
-                    "custom_action"
-                ]
-            },
-            "then": {
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "reset": {
-                                "type": "boolean"
-                            },
-                            "automatic": {
-                                "type": "boolean"
-                            },
-                            "route_id": {
-                                "type": "string",
-                                "minLength": 1
-                            },
-                            "trial_profile": {
-                                "const": "front-row-maatouch-v1"
-                            }
-                        },
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "custom_action": {
-                        "const": "TeamManagementAction"
-                    }
-                },
-                "required": [
-                    "custom_action"
-                ]
-            },
-            "then": {
-                "required": [
-                    "custom_action_param"
-                ],
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "mode": {
-                                "enum": [
-                                    "recommend",
-                                    "plan",
-                                    "farm",
-                                    "capture"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "mode"
-                        ],
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "properties": {
-                    "custom_action": {
-                        "const": "TeamMemberLevelAction"
-                    }
-                },
-                "required": [
-                    "custom_action"
-                ]
-            },
-            "then": {
-                "required": [
-                    "custom_action_param"
-                ],
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "properties": {
-                            "step": {
-                                "enum": [
-                                    "init",
-                                    "read",
-                                    "review",
-                                    "verify"
-                                ]
-                            }
-                        },
-                        "required": [
-                            "step"
-                        ],
-                        "additionalProperties": false
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_action"
-                ],
-                "properties": {
-                    "custom_action": {
-                        "const": "CharacterControllerJoystickAction"
-                    }
-                }
-            },
-            "then": {
-                "required": [
-                    "custom_action_param"
-                ],
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "required": [
-                            "direction",
-                            "duration"
-                        ],
-                        "properties": {
-                            "direction": {
-                                "enum": [
-                                    "forward",
-                                    "backward",
-                                    "left",
-                                    "right"
-                                ]
-                            },
-                            "duration": {
-                                "type": "integer",
-                                "minimum": 1,
-                                "maximum": 1500
-                            }
-                        }
-                    }
-                }
-            }
-        },
-        {
-            "if": {
-                "required": [
-                    "custom_action"
-                ],
-                "properties": {
-                    "custom_action": {
-                        "const": "InnkeepingAssistAction"
-                    }
-                }
-            },
-            "then": {
-                "properties": {
-                    "custom_action_param": {
-                        "type": "object",
-                        "additionalProperties": false,
-                        "properties": {
-                            "focus": {
-                                "enum": [
-                                    "kitchen"
-                                ]
-                            }
-                        }
-                    }
-                }
             }
         }
     ],

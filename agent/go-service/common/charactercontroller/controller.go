@@ -29,8 +29,8 @@ func absInt(v int) int {
 func rotateView(ctx *maa.Context, dx, dy int) {
 	cx, cy := screenW/2, screenH/2
 	if pienv.IsAdbLikeControllerType(pienv.ControllerType()) {
-		// Touch drags pan opposite to desktop cursor motion. Each gesture starts
-		// at the center; desktop hover offsets do not apply to a lifted finger.
+		// Use the same ADB gesture origin as CameraScan. Starting over the
+		// character at screen center can swallow the drag; never accumulate hover offsets.
 		begin, end := touchCameraSwipe(dx, dy)
 		ctx.RunAction("__CharacterControllerDeltaSwipeAction", maa.Rect{}, "", map[string]any{
 			"__CharacterControllerDeltaSwipeAction": map[string]any{"begin": begin, "end": end},
@@ -106,6 +106,18 @@ func (a *CharacterControllerRelativeMoveAction) Run(ctx *maa.Context, arg *maa.C
 }
 
 func moveAxis(ctx *maa.Context, duration int) {
+	if duration != 0 && pienv.IsAdbLikeControllerType(pienv.ControllerType()) {
+		tasker := ctx.GetTasker()
+		controller := tasker.GetController()
+		y := 471
+		if duration < 0 {
+			y = 631
+		}
+		if !HoldJoystick(controller, 195, y, time.Duration(absInt(duration))*time.Millisecond, tasker.Stopping) {
+			log.Warn().Msg("native target-approach joystick input failed")
+		}
+		return
+	}
 	if duration > 0 {
 		override := map[string]any{
 			"__CharacterControllerAxisLongPressForwardAction": map[string]any{
@@ -384,6 +396,6 @@ func (a *CharacterMoveToTargetNotFoundAction) Run(ctx *maa.Context, arg *maa.Cus
 }
 
 func touchCameraSwipe(dx, dy int) (maa.Rect, maa.Rect) {
-	cx, cy := screenW/2, screenH/2
-	return maa.Rect{cx, cy, 1, 1}, maa.Rect{max(1, min(screenW-2, cx-dx)), max(1, min(screenH-2, cy-dy)), 1, 1}
+	cx, cy := 520, screenH/2
+	return maa.Rect{cx, cy, 1, 1}, maa.Rect{max(1, min(screenW-2, cx+dx)), max(1, min(screenH-2, cy-dy)), 1, 1}
 }
