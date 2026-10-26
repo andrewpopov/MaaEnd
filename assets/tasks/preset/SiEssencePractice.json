@@ -1,0 +1,47 @@
+{
+    "preset": [
+        {
+            "name": "SiEssencePractice",
+            "label": "$preset.SiEssencePractice.label",
+            "description": "$preset.SiEssencePractice.description",
+            "task": [
+                {
+                    "name": "AutoEssence",
+                    "option": {
+                        "AutoEssenceSchedule": [
+                            "AutoEssenceScheduleMonday",
+                            "AutoEssenceScheduleTuesday",
+                            "AutoEssenceScheduleWednesday",
+                            "AutoEssenceScheduleThursday",
+                            "AutoEssenceScheduleFriday",
+                            "AutoEssenceScheduleSaturday",
+                            "AutoEssenceScheduleSunday"
+                        ],
+                        "AutoEssenceMenu": "Location",
+                        "AutoEssenceSelectLocation": "VFTheHub",
+                        "AutoEssenceLocationSlot1": [
+                            "s1_2",
+                            "s1_3",
+                            "s1_5"
+                        ],
+                        "AutoEssenceLocationSecondary_VFTheHub": "s2_1",
+                        "AutoEssenceObtainModeClaimOnly": "ObtainScaling2",
+                        "AutoEssenceRepeatCount": {
+                            "AutoEssenceRepeatCountValue": "1"
+                        },
+                        "AutoEssenceDoOverride": "Yes",
+                        "EssenceFilterAfterBattle": "No",
+                        "AutoUseSpMedication": "UseMedication",
+                        "AutoEssenceSpMedicationExpireWithinDays": "All",
+                        "AutoFightSettingFull": "Yes",
+                        "AutoFightAttack": "Yes",
+                        "AutoFightAxisFullSetting": "No",
+                        "AutoFightCombo": "Yes",
+                        "AutoFightSkill": "Yes",
+                        "AutoFightEndSkill": "Yes"
+                    }
+                }
+            ]
+        }
+    ]
+}

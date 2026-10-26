@@ -1,0 +1,493 @@
+{
+    "schema_version": 2,
+    "id": "guide-si-dps",
+    "name": "Si / Arcane WILL / Tangtang / Xaihi",
+    "members": [
+        "Si",
+        "Arcane",
+        "Tangtang",
+        "Xaihi"
+    ],
+    "driver_slot": 1,
+    "minimum_level": 80,
+    "identity_signal": "team_identity_matches",
+    "required_signals": [
+        "arcane_combo_active",
+        "arcane_combo_confirmed",
+        "arcane_skill_confirmed",
+        "arcane_skill_ready",
+        "arcane_ultimate_confirmed",
+        "cryo_infliction_applied",
+        "cryo_three_stacks",
+        "dive_attack_observed",
+        "si_combo_active",
+        "si_combo_confirmed",
+        "si_brushwork",
+        "si_skill_confirmed",
+        "si_skill_ready",
+        "si_ultimate_confirmed",
+        "sp_160_ready",
+        "tangtang_combo_active",
+        "tangtang_combo_available",
+        "tangtang_combo_confirmed",
+        "tangtang_skill_confirmed",
+        "tangtang_skill_ready",
+        "tangtang_ultimate_confirmed",
+        "team_identity_matches",
+        "xaihi_combo_active",
+        "xaihi_combo_confirmed",
+        "xaihi_skill_confirmed",
+        "xaihi_skill_ready",
+        "xaihi_ultimate_confirmed"
+    ],
+    "signals": {},
+    "rules": [],
+    "execution_status": "combat_hud_calibration_required",
+    "build_requirements": [
+        {
+            "operator": "Arcane",
+            "field": "attributes.will",
+            "gt_field": "attributes.intellect"
+        },
+        {
+            "operator": "Si",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 29.9
+        },
+        {
+            "operator": "Arcane",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 39.7
+        },
+        {
+            "operator": "Tangtang",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 25.7
+        },
+        {
+            "operator": "Xaihi",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 44.3
+        }
+    ],
+    "rotation": {
+        "source_url": "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-si-dps-team-guide",
+        "source_updated": "2026-10-18",
+        "variant": "Si / Arcane WILL / Tangtang / Xaihi",
+        "repeat_from": 0,
+        "steps": [
+            {
+                "id": "01-si-skill",
+                "action": "skill",
+                "slot": 1,
+                "requires": [
+                    "si_skill_ready",
+                    "si_brushwork"
+                ],
+                "confirm": [
+                    "si_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "si_skill_confirmed"
+                ]
+            },
+            {
+                "id": "02-tangtang-combo",
+                "action": "combo",
+                "slot": 3,
+                "requires": [
+                    "tangtang_combo_active"
+                ],
+                "confirm": [
+                    "tangtang_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_combo_confirmed"
+                ]
+            },
+            {
+                "id": "03-arcane-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "04-xaihi-skill",
+                "action": "skill",
+                "slot": 4,
+                "requires": [
+                    "xaihi_skill_ready"
+                ],
+                "confirm": [
+                    "xaihi_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_skill_confirmed"
+                ]
+            },
+            {
+                "id": "05-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "tangtang_combo_available"
+                ],
+                "allow_basic_attacks": true
+            },
+            {
+                "id": "06-xaihi-combo",
+                "action": "combo",
+                "slot": 4,
+                "requires": [
+                    "xaihi_combo_active"
+                ],
+                "confirm": [
+                    "xaihi_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_combo_confirmed"
+                ]
+            },
+            {
+                "id": "07-tangtang-combo",
+                "action": "combo",
+                "slot": 3,
+                "requires": [
+                    "tangtang_combo_active"
+                ],
+                "confirm": [
+                    "tangtang_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_combo_confirmed"
+                ]
+            },
+            {
+                "id": "08-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "sp_160_ready"
+                ],
+                "allow_basic_attacks": true
+            },
+            {
+                "id": "09-arcane-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "arcane_skill_ready",
+                    "cryo_three_stacks"
+                ],
+                "confirm": [
+                    "arcane_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_skill_confirmed"
+                ]
+            },
+            {
+                "id": "10-tangtang-skill",
+                "action": "skill",
+                "slot": 3,
+                "requires": [
+                    "tangtang_skill_ready"
+                ],
+                "confirm": [
+                    "tangtang_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_skill_confirmed"
+                ]
+            },
+            {
+                "id": "11-arcane-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "arcane_combo_active",
+                    "cryo_infliction_applied"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "12-si-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "si_combo_active"
+                ],
+                "confirm": [
+                    "si_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "si_combo_confirmed"
+                ]
+            },
+            {
+                "id": "13-xaihi-skill",
+                "action": "skill",
+                "slot": 4,
+                "requires": [
+                    "xaihi_skill_ready"
+                ],
+                "confirm": [
+                    "xaihi_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_skill_confirmed"
+                ]
+            },
+            {
+                "id": "14-xaihi-combo",
+                "action": "combo",
+                "slot": 4,
+                "requires": [
+                    "xaihi_combo_active"
+                ],
+                "confirm": [
+                    "xaihi_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_combo_confirmed"
+                ]
+            },
+            {
+                "id": "15-tangtang-combo",
+                "action": "combo",
+                "slot": 3,
+                "requires": [
+                    "tangtang_combo_active"
+                ],
+                "confirm": [
+                    "tangtang_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_combo_confirmed"
+                ]
+            },
+            {
+                "id": "16-arcane-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "17-xaihi-ultimate",
+                "action": "ultimate",
+                "slot": 4,
+                "requires": [
+                    "ultimate_4_ready"
+                ],
+                "confirm": [
+                    "xaihi_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "18-arcane-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "arcane_skill_ready"
+                ],
+                "confirm": [
+                    "arcane_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_skill_confirmed"
+                ]
+            },
+            {
+                "id": "19-tangtang-skill",
+                "action": "skill",
+                "slot": 3,
+                "requires": [
+                    "tangtang_skill_ready"
+                ],
+                "confirm": [
+                    "tangtang_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_skill_confirmed"
+                ]
+            },
+            {
+                "id": "20-arcane-ultimate",
+                "action": "ultimate",
+                "slot": 2,
+                "requires": [
+                    "ultimate_2_ready"
+                ],
+                "confirm": [
+                    "arcane_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "21-si-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "si_combo_active"
+                ],
+                "confirm": [
+                    "si_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "si_combo_confirmed"
+                ]
+            },
+            {
+                "id": "22-si-ultimate",
+                "action": "ultimate",
+                "slot": 1,
+                "requires": [
+                    "ultimate_1_ready"
+                ],
+                "confirm": [
+                    "si_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "si_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "23-tangtang-ultimate",
+                "action": "ultimate",
+                "slot": 3,
+                "requires": [
+                    "ultimate_3_ready"
+                ],
+                "confirm": [
+                    "tangtang_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "tangtang_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "24-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "dive_attack_observed"
+                ],
+                "allow_basic_attacks": true,
+                "event": true
+            },
+            {
+                "id": "25-arcane-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "arcane_skill_ready"
+                ],
+                "confirm": [
+                    "arcane_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_skill_confirmed"
+                ]
+            },
+            {
+                "id": "26-si-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "si_combo_active"
+                ],
+                "confirm": [
+                    "si_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "si_combo_confirmed"
+                ]
+            }
+        ]
+    },
+    "capture_tasks": [
+        "operators",
+        "skills",
+        "equipped_weapons",
+        "equipped_gear",
+        "gear_plans",
+        "team_presets"
+    ],
+    "limitations": [
+        "Guide timings depend on the verified build and enemy state.",
+        "Wait steps for Final Strikes or dive attacks require visual confirmation; movement stays with player/route.",
+        "Not a measured optimum for this account until live validation."
+    ]
+}

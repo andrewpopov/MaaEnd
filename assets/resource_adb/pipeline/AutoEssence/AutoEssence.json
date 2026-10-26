@@ -44,6 +44,10 @@
                 ],
                 "box_index": 0
             }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
         }
     },
     "AutoEssenceMistakeFactoryDevice": {
@@ -157,6 +161,69 @@
                     485,
                     160,
                     52
+                ]
+            }
+        }
+    },
+    "AutoEssenceDispatcher": {
+        "next": [
+            "AutoEssenceCloseRewardsPreview",
+            "AutoEssenceClickEssenceStartPrepare",
+            "AutoEssenceClickObtainButton",
+            "AutoEssenceClickDiscardButton",
+            "[JumpBack]AutoEssenceInObtain",
+            "AutoEssenceClickTriggerButton",
+            "__AutoEssenceForceTeleportOnce",
+            "[Anchor]AutoEssenceMoveToTriggerPoint"
+        ]
+    },
+    "AutoEssenceReadyToStart": {
+        "next": [
+            "AutoEssenceCloseRewardsPreview",
+            "AutoEssenceMistakeFactoryDevice",
+            "AutoEssenceClickEssenceStartPrepare"
+        ]
+    },
+    "AutoEssenceCloseRewardsPreview": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    430,
+                    170,
+                    420,
+                    65
+                ],
+                "expected": [
+                    "Rewards Preview",
+                    "奖励预览",
+                    "獎勵預覽"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1201,
+                    187,
+                    32,
+                    34
+                ]
+            }
+        },
+        "next": [
+            "AutoEssenceClickEssenceStartPrepare"
+        ]
+    },
+    "AutoEssenceFindAttributeSelectionSuccess": {
+        "recognition": {
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    360,
+                    65
                 ]
             }
         }

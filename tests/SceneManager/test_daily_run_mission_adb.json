@@ -1,0 +1,16 @@
+{
+    "configs": {
+        "name": "English ADB daily-run Mission page",
+        "controller": "ADB",
+        "resource": "官服"
+    },
+    "cases": [
+        {
+            "name": "Singular Mission heading confirms navigation completed",
+            "image": "daily_run_mission_page.png",
+            "hits": [
+                "InMenuMission"
+            ]
+        }
+    ]
+}

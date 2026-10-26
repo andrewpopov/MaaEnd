@@ -126,3 +126,7 @@
 - [MaaEnd 开发者文档（中文索引）](docs/zh_cn/developers/README.md) · [English index](docs/en_us/developers/README.md)
 - [Go Service `pkg/` 公共包](docs/zh_cn/developers/go-service-pkg.md)（And 解包、条件计算等）
 - [Android 构建环境准备](docs/zh_cn/developers/android-build-env.md)（JDK / Android SDK / NDK / Ninja 安装与环境变量）
+
+## OCR and inn movement capability map
+
+For OCR, saved-screen replay, emulator input, or inn movement work, read the canonical agent_brain guide at `\\wsl.localhost\Ubuntu\home\andre\proj\agent_brain\knowledge\maa-ocr-tooling.md` before building new tooling. The guide distinguishes MaaCore from MaaFramework and includes a bounded emulator plan. The guide is published on agent_brain main and shared across threads.

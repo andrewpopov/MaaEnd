@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"time"
 
+	"github.com/MaaXYZ/MaaEnd/agent/go-service/pkg/pienv"
+
 	"github.com/MaaXYZ/maa-framework-go/v4"
 	"github.com/rs/zerolog/log"
 )
@@ -26,6 +28,15 @@ func absInt(v int) int {
 
 func rotateView(ctx *maa.Context, dx, dy int) {
 	cx, cy := screenW/2, screenH/2
+	if pienv.IsAdbLikeControllerType(pienv.ControllerType()) {
+		// Touch drags pan opposite to desktop cursor motion. Each gesture starts
+		// at the center; desktop hover offsets do not apply to a lifted finger.
+		begin, end := touchCameraSwipe(dx, dy)
+		ctx.RunAction("__CharacterControllerDeltaSwipeAction", maa.Rect{}, "", map[string]any{
+			"__CharacterControllerDeltaSwipeAction": map[string]any{"begin": begin, "end": end},
+		})
+		return
+	}
 	if absInt(cursorDX) > screenW/4 || absInt(cursorDY) > screenH/4 {
 		ctx.RunAction("__CharacterControllerDeltaAltKeyDownAction",
 			maa.Rect{0, 0, 0, 0}, "", nil)
@@ -161,6 +172,21 @@ func (a *CharacterControllerForwardAxisAction) Run(ctx *maa.Context, arg *maa.Cu
 	if err := json.Unmarshal([]byte(arg.CustomActionParam), &params); err != nil {
 		log.Error().Err(err).Msg("Failed to parse CustomActionParam")
 		return false
+	}
+	if pienv.ControllerType() == "Adb" && params.Axis != 0 && params.Axis >= -15 && params.Axis <= 15 {
+		tasker := ctx.GetTasker()
+		if tasker == nil {
+			return false
+		}
+		ctrl := tasker.GetController()
+		if ctrl == nil {
+			return false
+		}
+		y := 471
+		if params.Axis < 0 {
+			y = 631
+		}
+		return HoldJoystick(ctrl, 195, y, time.Duration(absInt(params.Axis))*100*time.Millisecond, tasker.Stopping)
 	}
 	moveAxis(ctx, 100*params.Axis)
 	return true
@@ -355,4 +381,9 @@ func (a *CharacterMoveToTargetNotFoundAction) Run(ctx *maa.Context, arg *maa.Cus
 	rotateView(ctx, dx, 0)
 
 	return true
+}
+
+func touchCameraSwipe(dx, dy int) (maa.Rect, maa.Rect) {
+	cx, cy := screenW/2, screenH/2
+	return maa.Rect{cx, cy, 1, 1}, maa.Rect{max(1, min(screenW-2, cx-dx)), max(1, min(screenH-2, cy-dy)), 1, 1}
 }

@@ -188,6 +188,7 @@ try {
     $manifest.compatibility_test='passed: queue preservation and stop while paused'
     Save-Manifest
 }
+Invoke-Checked $repo $python @('-X','utf8','tools/install_runtime.py','--package',$package,'--output',(Join-Path $stage 'native-validation.json')) | Out-Host
 $installerArgs=@{PackagePath=$package; GuiPath=$gui; InstallPath=$InstallPath; SourceCommit=$selected.headSha}
 if ($Action -eq 'Install') { $installerArgs.Apply=$true }
 & (Join-Path $PSScriptRoot 'Install-Layered.ps1') @installerArgs

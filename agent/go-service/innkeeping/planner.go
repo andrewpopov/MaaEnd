@@ -20,12 +20,18 @@ func Observe(tokens []screenocr.Token) Observation {
 	o := Observation{Phase: "unknown"}
 	text := ""
 	kitchens := 0
+	activeHeader := false
 	for _, t := range tokens {
 		if t.Score < .8 {
 			continue
 		}
 		text += strings.ToLower(t.Text) + "\n"
-		if t.Text == "Kitchen 1" || t.Text == "Kitchen 2" {
+		if strings.EqualFold(strings.TrimSpace(t.Text), "End Session") && t.Box[0] >= 70 && t.Box[0] < 215 && t.Box[1] >= 30 && t.Box[1] < 75 {
+			activeHeader = true
+		}
+		// The trailing slot circles are occasionally read as o/0 in live Android OCR.
+		label := strings.TrimRight(t.Text, " oO0")
+		if label == "Kitchen 1" || label == "Kitchen 2" {
 			kitchens++
 		}
 		if strings.Contains(t.Text, "Collecting") && t.Box[0] > 1000 && t.Box[1] < 110 {
@@ -37,7 +43,7 @@ func Observe(tokens []screenocr.Token) Observation {
 	o.HelperCollecting = o.HelperCollecting || has("is helping to collect the dining bills")
 	o.CarryingRestriction = has("cannot jump or dash/dodge while holding trays")
 	switch {
-	case has("session ended") || has("auto-collect remaining income"):
+	case has("session ended") || has("auto-collect remaining income") || (has("revenue") && has("inn stats") && has("highest streak")):
 		o.Phase = "ended"
 	case has("innkeeping: gourmand") || has("gourmand service:"):
 		o.Phase = "tutorial"
@@ -45,10 +51,14 @@ func Observe(tokens []screenocr.Token) Observation {
 		o.Phase = "closed_serving"
 	case has("closing soon"):
 		o.Phase = "closing"
+	case has("inn settings") || has("menu design") || has("theme settings"):
+		o.Phase = "preparation"
 	case kitchens >= 2:
 		o.Phase = "kitchen"
-	case o.QueueFull || (has("current income") && has("patrons seated") && has("dishes sold")):
+	case activeHeader || o.QueueFull || (has("current income") && has("patrons seated") && has("dishes sold")):
 		o.Phase = "active"
+	case has("explore") && has("yuanyuan innkeeper"):
+		o.Phase = "world"
 	}
 	return o
 }

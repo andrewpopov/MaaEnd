@@ -454,11 +454,20 @@
                 {
                     "name": "Yes",
                     "option": [
+                        "AutoFightCombatMode",
+                        "AutoFightInterruptSlot",
                         "AutoFightAttack",
                         "AutoFightDodge",
                         "AutoFightLockTarget",
                         "AutoFightHealthDangerousSwitch",
-                        "AutoFightAxisFullSetting"
+                        "AutoFightAxisFullSetting",
+                        "AutoFightTeamProfile",
+                        "AutoFightGuideMode",
+                        "AutoFightConfirmedTimeline",
+                        "AutoFightCurrentComboChecks",
+                        "AutoFightMobileApproach",
+                        "AutoFightCombatTrace",
+                        "AutoFightRotationMovement"
                     ]
                 },
                 {

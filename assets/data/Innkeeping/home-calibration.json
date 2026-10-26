@@ -1,0 +1,335 @@
+{
+    "version": 1,
+    "status": "measured_candidates_require_replay",
+    "resolution": [
+        1280,
+        720
+    ],
+    "home": {
+        "id": "home-middle-counter",
+        "start": [
+            {
+                "box": [
+                    690,
+                    170,
+                    120,
+                    40
+                ],
+                "pixels": "99jD9dvRV1FIVk5DSU9GSVNHRE9BPUU6NTsxLigiLSYgKiQdJiEaKyQcKCIb8tXH68/KYVdOVU5GUV1QSVRIRlNEPUc7NT4zLCkhMykfMScdIx4XJB4XJh4X9ebh8dnQcWhicmljfpWGdY59cox5Y3toW3BgPTguSjonQTIiJyAZJR4XIxwU8dnT/PDtcmhhenNtiaKSh5+Qf5mJdpB+bIZySUE4RTUjQjIhMyofKSAXIxwT69PM5s3EcmhheHRqiqWVhqCSgZyMco97Yn5pR0A4SzgkRTQiLyUbJh0UIRoS",
+                "architecture_only": true
+            },
+            {
+                "box": [
+                    910,
+                    170,
+                    120,
+                    40
+                ],
+                "pixels": "Oh0JQCAMQSAJIREGHhQKHhMJHRMJGxEHHBAHGxEHGxEHHBEHHhEIHBEHFAsERiIKTSYNTygNIhcMJBkOJBoOIxgNIxcMIhYLIBULIBQKIBMJIRQKHxMIEAgDSSQKVy4OVS0OKR0QKx8SKh4SKh0QKBsPKRsPJhkNJBgNJBgNJRcLIxYLCwUCUioOXzIQVC4OMCIUMiQUMCQULyETLh8RLx8RLB0QKRwQKBsPJxoOJhkOEQgEUSoOXDEQVCsOMSUUNSYYNCYXMiMUMiMTMyMUMCASLR4SKx0QKxwQKhsPKhsO",
+                "architecture_only": true
+            }
+        ],
+        "reference_image": "I:\\MaaEndData\\Images\\Innkeeping\\20261022-043351-native-observation-1639303425.png",
+        "checks": [
+            {
+                "image": "I:\\MaaEndData\\Images\\Innkeeping\\20261022-043351-native-observation-1639303425.png",
+                "match": {
+                    "id": "home-middle-counter",
+                    "endpoint": "start",
+                    "patches": [
+                        {
+                            "accepted": true,
+                            "mean_error": 0.0,
+                            "changed_fraction": 0.0,
+                            "offset": [
+                                0,
+                                0
+                            ]
+                        },
+                        {
+                            "accepted": true,
+                            "mean_error": 0.0,
+                            "changed_fraction": 0.0,
+                            "offset": [
+                                0,
+                                0
+                            ]
+                        }
+                    ],
+                    "interval_present": false,
+                    "photometric_matches": true,
+                    "interval_geometry_matches": true,
+                    "landmark_gate_matches": true,
+                    "numbered_board_check_required": false
+                }
+            },
+            {
+                "image": "I:\\MaaEndData\\Images\\Innkeeping\\20261022-043634-native-observation-3595777253.png",
+                "match": {
+                    "id": "home-middle-counter",
+                    "endpoint": "start",
+                    "patches": [
+                        {
+                            "accepted": false,
+                            "mean_error": 27.509284297818642,
+                            "changed_fraction": 0.34108527131782945,
+                            "offset": [
+                                6,
+                                0
+                            ]
+                        },
+                        {
+                            "accepted": true,
+                            "mean_error": 5.455762962962963,
+                            "changed_fraction": 0.044444444444444446,
+                            "offset": [
+                                6,
+                                -4
+                            ]
+                        }
+                    ],
+                    "interval_present": false,
+                    "photometric_matches": false,
+                    "interval_geometry_matches": true,
+                    "landmark_gate_matches": false,
+                    "numbered_board_check_required": false
+                }
+            },
+            {
+                "image": "I:\\MaaEndData\\Images\\Innkeeping\\20261022-043023-native-observation-1132626273.png",
+                "match": {
+                    "id": "home-middle-counter",
+                    "endpoint": "start",
+                    "patches": [
+                        {
+                            "accepted": true,
+                            "mean_error": 4.3212547322877235,
+                            "changed_fraction": 0.0,
+                            "offset": [
+                                2,
+                                -2
+                            ]
+                        },
+                        {
+                            "accepted": true,
+                            "mean_error": 2.558459259259259,
+                            "changed_fraction": 0.0,
+                            "offset": [
+                                6,
+                                -2
+                            ]
+                        }
+                    ],
+                    "interval_present": false,
+                    "photometric_matches": true,
+                    "interval_geometry_matches": true,
+                    "landmark_gate_matches": true,
+                    "numbered_board_check_required": false
+                }
+            },
+            {
+                "image": "I:\\MaaEndData\\Images\\Innkeeping\\20261022-044511-native-observation-3875521064.png",
+                "match": {
+                    "id": "home-middle-counter",
+                    "endpoint": "start",
+                    "patches": [
+                        {
+                            "accepted": false,
+                            "mean_error": 29.2291328646115,
+                            "changed_fraction": 0.3953488372093023,
+                            "offset": [
+                                6,
+                                -2
+                            ]
+                        },
+                        {
+                            "accepted": true,
+                            "mean_error": 8.781985185185185,
+                            "changed_fraction": 0.08,
+                            "offset": [
+                                6,
+                                -4
+                            ]
+                        }
+                    ],
+                    "interval_present": false,
+                    "photometric_matches": false,
+                    "interval_geometry_matches": true,
+                    "landmark_gate_matches": false,
+                    "numbered_board_check_required": false
+                },
+                "mode": "world"
+            }
+        ],
+        "production_verified": false
+    },
+    "table_approaches": [
+        {
+            "table": 1,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042907-native-observation-948363507.png",
+            "physical_board": [
+                804,
+                327,
+                14,
+                26
+            ]
+        },
+        {
+            "table": 2,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042911-native-observation-3569576348.png",
+            "physical_board": [
+                485,
+                341,
+                25,
+                37
+            ]
+        },
+        {
+            "table": 3,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042917-native-observation-899036711.png",
+            "physical_board": [
+                722,
+                328,
+                26,
+                38
+            ]
+        },
+        {
+            "table": 4,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042920-native-observation-2053802077.png",
+            "physical_board": [
+                472,
+                344,
+                25,
+                31
+            ]
+        },
+        {
+            "table": 5,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042927-native-observation-1273964994.png",
+            "physical_board": [
+                733,
+                328,
+                24,
+                39
+            ]
+        },
+        {
+            "table": 6,
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-042931-native-observation-3249789130.png",
+            "physical_board": [
+                475,
+                342,
+                46,
+                44
+            ]
+        }
+    ],
+    "counter_slots": [
+        {
+            "slot": "kitchen1_slot3",
+            "measured_sweep_offset_ms": 650,
+            "dish_in_test": "salted_cheese_crackers",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043449-native-observation-3839711230.png"
+        },
+        {
+            "slot": "kitchen1_slot2",
+            "measured_sweep_offset_ms": 900,
+            "dish_in_test": "tonic_congee_greens",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043532-native-observation-567958335.png"
+        },
+        {
+            "slot": "kitchen1_slot1",
+            "measured_sweep_offset_ms": 1150,
+            "dish_in_test": "shroom_dumpling",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043536-native-observation-925238261.png"
+        },
+        {
+            "slot": "kitchen2_slot1",
+            "measured_sweep_offset_ms": 400,
+            "dish_in_test": "tonic_congee_greens",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043540-native-observation-4054774547.png"
+        },
+        {
+            "slot": "kitchen2_slot2",
+            "measured_sweep_offset_ms": 150,
+            "dish_in_test": "shroom_dumpling",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043543-native-observation-2827155301.png"
+        },
+        {
+            "slot": "kitchen2_slot3",
+            "measured_sweep_offset_ms": -100,
+            "dish_in_test": "salted_cheese_crackers",
+            "image": "I:/MaaEndData/Images/Innkeeping\\20261022-043546-native-observation-1970682423.png"
+        }
+    ],
+    "loaded_meals_completed": [
+        1,
+        6
+    ],
+    "native_route_ids": [
+        "homehub-20261022-table1",
+        "homehub-20261022-table2",
+        "homehub-20261022-table3",
+        "homehub-20261022-table4",
+        "homehub-20261022-table5",
+        "homehub-20261022-table6",
+        "homehub-20261022-kitchen1_slot3",
+        "homehub-20261022-kitchen1_slot2",
+        "homehub-20261022-kitchen1_slot1",
+        "homehub-20261022-kitchen2_slot1",
+        "homehub-20261022-kitchen2_slot2",
+        "homehub-20261022-kitchen2_slot3",
+        "homehub-20261022-loaded-home-table1",
+        "homehub-20261022-loaded-table1-table6"
+    ],
+    "independent_home_spokes_verified": false,
+    "reverse_routes_verified": false,
+    "note": "Preserves actual measured prefixes. Table tour and counter sweep have separate departure fingerprints; do not treat their home aliases as interchangeable until alignment passes. No fabricated reverse or replay credit.",
+    "home_recovery_tests": [
+        {
+            "offset_ms": 200,
+            "alignment_task": 200000418,
+            "seconds": 4.797000000002299,
+            "strict_checks": 2
+        },
+        {
+            "offset_ms": -200,
+            "alignment_task": 200000420,
+            "seconds": 4.73399999999674,
+            "strict_checks": 2
+        }
+    ],
+    "home_recovery_world_verified": true,
+    "home_alignment_method": "InnkeepingCounterOrigin: two architectural patches, bounded lateral corrections, two strict confirmations",
+    "local_world_return": {
+        "departure_image": "I:/MaaEndData/Images/Innkeeping/20261022-044328-native-observation-1685978693.png",
+        "arrival_image": "I:/MaaEndData/Images/Innkeeping/20261022-044511-native-observation-3875521064.png",
+        "steps": [
+            {
+                "direction": "right",
+                "milliseconds": 400
+            },
+            {
+                "direction": "backward",
+                "milliseconds": 1400
+            },
+            {
+                "direction": "backward",
+                "milliseconds": 1400
+            },
+            {
+                "direction": "backward",
+                "milliseconds": 1100
+            }
+        ],
+        "open_inn_observed": true,
+        "same_as_trial_timing": false
+    },
+    "repeat_status": {
+        "canonical_tour": "failed later-row repeat: did not independently confirm all intended physical tables",
+        "direct_counter_spoke": "kitchen1_slot1 at combined 1150ms overshot to bar; rejected by prompt check",
+        "timing_constraint": "Summing measured pulse durations or removing between-gesture settling is unverified; retain exact input sequence and verify endpoints",
+        "settled_replay": "pending"
+    }
+}

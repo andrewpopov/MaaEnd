@@ -223,6 +223,10 @@ func (a *BatchAction) Run(ctx *maa.Context, arg *maa.CustomActionArg) bool {
 				name = fmt.Sprintf("AccountBatchTalentOpen%02d", i)
 			}
 			override[name] = map[string]any{"action": map[string]any{"type": "Click", "param": map[string]any{"target": maa.Rect{x - 2, y - 2, 4, 4}}}}
+			// Retry stages use the same image-aligned node, never the generator fallback.
+			for attempt := 1; attempt <= 2; attempt++ {
+				override[fmt.Sprintf("%sRetry%d", name, attempt)] = override[name]
+			}
 		}
 		if len(points) == 13 {
 			override["AccountBatchTalentBack08"] = map[string]any{"next": []string{"AccountBatchTalentOpen09", "AccountBatchTalentBackRetry08"}}

@@ -1,0 +1,688 @@
+{
+    "task": [
+        {
+            "name": "TeamManagementRecommend",
+            "label": "$task.TeamManagementRecommend.label",
+            "entry": "TeamManagementRecommend",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "TeamManagementPlan",
+            "label": "$task.TeamManagementPlan.label",
+            "entry": "TeamManagementPlan",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ],
+            "option": [
+                "TeamManagementLineup",
+                "TeamManagementTargets"
+            ]
+        },
+        {
+            "name": "TeamManagementFarm",
+            "label": "$task.TeamManagementFarm.label",
+            "entry": "TeamManagementFarm",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ],
+            "option": [
+                "TeamManagementLineup",
+                "TeamManagementTargets",
+                "AutoFightSetting",
+                "ProtocolSpaceTeamChoose",
+                "ProtocolSpaceSuccessCount",
+                "ProtocolSpaceFailedCount",
+                "TeamManagementMedication"
+            ]
+        },
+        {
+            "name": "TeamManagementCapture",
+            "label": "$task.TeamManagementCapture.label",
+            "entry": "TeamManagementCapture",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ]
+        },
+        {
+            "name": "TeamMemberLevel",
+            "label": "$task.TeamMemberLevel.label",
+            "entry": "TeamMemberLevel",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ],
+            "option": [
+                "TeamManagementLineup",
+                "TeamMemberLevelTarget"
+            ]
+        }
+    ],
+    "option": {
+        "TeamManagementLineup": {
+            "type": "select",
+            "label": "$option.TeamManagementLineup.label",
+            "default_case": "moba-si-dps",
+            "cases": [
+                {
+                    "name": "moba-si-dps",
+                    "label": "Si DPS — Si / Arcane / Tangtang / Xaihi",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-si-dps"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-arcane-dps",
+                    "label": "Arcane DPS — Arcane / Tangtang / Xaihi / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-arcane-dps"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-electric-gilberta",
+                    "label": "Electric — Gilberta — Zhuang Fangyi / Perlica / Arclight / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-electric-gilberta"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-rossi-arts",
+                    "label": "Rossi Arts — Camille — Rossi / Camille / Perlica / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-rossi-arts"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-laevatain-camille",
+                    "label": "Laevatain — Camille — Laevatain / Camille / Wulfgard / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-laevatain-camille"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-last-rite-arcane-si",
+                    "label": "Last Rite — Arcane/Si — Last Rite / Arcane / Si / Xaihi",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-last-rite-arcane-si"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-yvonne-si-arcane",
+                    "label": "Yvonne — Si/Arcane — Yvonne / Si / Tangtang / Arcane",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-yvonne-si-arcane"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "moba-rossi-hybrid",
+                    "label": "Rossi hybrid — Rossi / Camille / Mi Fu / Pogranichnik",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "moba-rossi-hybrid"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "laevatain-01",
+                    "label": "laevatain-01 — Laevatain / Wulfgard / Antal / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "laevatain-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "laevatain-02",
+                    "label": "laevatain-02 — Laevatain / Akekuri / Antal / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "laevatain-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "laevatain-03",
+                    "label": "laevatain-03 — Laevatain / Wulfgard / Akekuri / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "laevatain-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "rossi-01",
+                    "label": "rossi-01 — Rossi / Wulfgard / Endministrator / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "rossi-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "rossi-02",
+                    "label": "rossi-02 — Rossi / Wulfgard / Perlica / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "rossi-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "rossi-03",
+                    "label": "rossi-03 — Rossi / Wulfgard / Endministrator / Perlica",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "rossi-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "yvonne-01",
+                    "label": "yvonne-01 — Yvonne / Xaihi / Tangtang / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "yvonne-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "yvonne-02",
+                    "label": "yvonne-02 — Yvonne / Xaihi / Alesh / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "yvonne-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "yvonne-03",
+                    "label": "yvonne-03 — Yvonne / Xaihi / Alesh / Estella",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "yvonne-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "last-rite-01",
+                    "label": "last-rite-01 — Last Rite / Xaihi / Tangtang / Perlica",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "last-rite-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "last-rite-02",
+                    "label": "last-rite-02 — Last Rite / Perlica / Xaihi / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "last-rite-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "last-rite-03",
+                    "label": "last-rite-03 — Last Rite / Fluorite / Xaihi / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "last-rite-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "avywenna-01",
+                    "label": "avywenna-01 — Avywenna / Arclight / Perlica / Antal",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "avywenna-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "avywenna-02",
+                    "label": "avywenna-02 — Avywenna / Arclight / Perlica / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "avywenna-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "avywenna-03",
+                    "label": "avywenna-03 — Avywenna / Akekuri / Perlica / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "avywenna-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "endministrator-01",
+                    "label": "endministrator-01 — Endministrator / Pogranichnik / Chen Qianyu / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "endministrator-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "endministrator-02",
+                    "label": "endministrator-02 — Endministrator / Lifeng / Chen Qianyu / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "endministrator-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "endministrator-03",
+                    "label": "endministrator-03 — Endministrator / Estella / Alesh / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "endministrator-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "lifeng-02",
+                    "label": "lifeng-02 — Lifeng / Da Pan / Chen Qianyu / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "lifeng-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "lifeng-03",
+                    "label": "lifeng-03 — Lifeng / Pogranichnik / Chen Qianyu / Da Pan",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "lifeng-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "da-pan-02",
+                    "label": "da-pan-02 — Da Pan / Pogranichnik / Chen Qianyu / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "da-pan-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "da-pan-03",
+                    "label": "da-pan-03 — Da Pan / Endministrator / Chen Qianyu / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "da-pan-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "arcane-01",
+                    "label": "arcane-01 — Arcane / Tangtang / Xaihi / Akekuri",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "arcane-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "arcane-02",
+                    "label": "arcane-02 — Yvonne / Tangtang / Xaihi / Arcane",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "arcane-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "arcane-03",
+                    "label": "arcane-03 — Arcane / Perlica / Xaihi / Akekuri",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "arcane-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "mi-fu-01",
+                    "label": "mi-fu-01 — Mi Fu / Chen Qianyu / Pogranichnik / Ardelia",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "mi-fu-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "mi-fu-02",
+                    "label": "mi-fu-02 — Mi Fu / Rossi / Pogranichnik / Akekuri",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "mi-fu-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "mi-fu-03",
+                    "label": "mi-fu-03 — Mi Fu / Chen Qianyu / Pogranichnik / Lifeng",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "mi-fu-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "typhoeus-01",
+                    "label": "typhoeus-01 — Typhoeus / Perlica / Arcane / Liino",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "typhoeus-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "typhoeus-02",
+                    "label": "typhoeus-02 — Typhoeus / Ardelia / Arcane / Liino",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "typhoeus-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "typhoeus-03",
+                    "label": "typhoeus-03 — Typhoeus / Perlica / Gilberta / Liino",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "typhoeus-03"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "zhuang-fangyi-01",
+                    "label": "zhuang-fangyi-01 — Zhuang Fangyi / Perlica / Arclight / Liino",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "zhuang-fangyi-01"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "zhuang-fangyi-02",
+                    "label": "zhuang-fangyi-02 — Zhuang Fangyi / Perlica / Arclight / Gilberta",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "zhuang-fangyi-02"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "zhuang-fangyi-03",
+                    "label": "zhuang-fangyi-03 — Zhuang Fangyi / Perlica / Arclight / Antal",
+                    "pipeline_override": {
+                        "TeamManagementSettings": {
+                            "attach": {
+                                "team_id": "zhuang-fangyi-03"
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "TeamManagementTargets": {
+            "type": "input",
+            "label": "$option.TeamManagementTargets.label",
+            "inputs": [
+                {
+                    "name": "operator_level",
+                    "label": "$option.TeamManagementTargets.operator_level",
+                    "default": "90",
+                    "pipeline_type": "int",
+                    "verify": "^([1-9]|[1-8][0-9]|90)$"
+                },
+                {
+                    "name": "weapon_level",
+                    "label": "$option.TeamManagementTargets.weapon_level",
+                    "default": "90",
+                    "pipeline_type": "int",
+                    "verify": "^([1-9]|[1-8][0-9]|90)$"
+                },
+                {
+                    "name": "skill_rank",
+                    "label": "$option.TeamManagementTargets.skill_rank",
+                    "default": "9",
+                    "pipeline_type": "int",
+                    "verify": "^[1-9]$"
+                },
+                {
+                    "name": "mastery_rank",
+                    "label": "$option.TeamManagementTargets.mastery_rank",
+                    "default": "0",
+                    "pipeline_type": "int",
+                    "verify": "^[0-3]$"
+                }
+            ],
+            "pipeline_override": {
+                "TeamManagementSettings": {
+                    "attach": {
+                        "operator_level": "{operator_level}",
+                        "weapon_level": "{weapon_level}",
+                        "skill_rank": "{skill_rank}",
+                        "mastery_rank": "{mastery_rank}"
+                    }
+                }
+            }
+        },
+        "TeamManagementMedication": {
+            "type": "select",
+            "label": "$option.TeamManagementMedication.label",
+            "cases": [
+                {
+                    "name": "EndTask",
+                    "label": "$option.AutoUseSpMedication.cases.EndTask.label",
+                    "pipeline_override": {
+                        "ProtocolSpacePopupSanityLowExit": {
+                            "enabled": true
+                        },
+                        "ProtocolSpacePopupSanityLowUseSpMedicationPrepare": {
+                            "enabled": false
+                        },
+                        "ProtocolSpaceRewardClaimSuccessSanityLowDialog": {
+                            "enabled": true
+                        },
+                        "ProtocolSpaceRewardClaimSuccessSanityLowUseSpMedicationPrepare": {
+                            "enabled": false
+                        },
+                        "ProtocolSpaceRewardClaimRestoreSanityUseMedication": {
+                            "enabled": false
+                        }
+                    }
+                },
+                {
+                    "name": "UseMedication",
+                    "label": "$option.AutoUseSpMedication.cases.UseMedication.label",
+                    "option": [
+                        "ProtocolSpaceSpMedicationExpireWithinDays"
+                    ],
+                    "pipeline_override": {
+                        "ProtocolSpacePopupSanityLowExit": {
+                            "enabled": false
+                        },
+                        "ProtocolSpacePopupSanityLowUseSpMedicationPrepare": {
+                            "enabled": true
+                        },
+                        "ProtocolSpaceRewardClaimSuccessSanityLowDialog": {
+                            "enabled": false
+                        },
+                        "ProtocolSpaceRewardClaimSuccessSanityLowUseSpMedicationPrepare": {
+                            "enabled": true
+                        },
+                        "ProtocolSpaceRewardClaimRestoreSanityUseMedication": {
+                            "enabled": true
+                        }
+                    }
+                }
+            ],
+            "default_case": "EndTask"
+        },
+        "TeamMemberLevelTarget": {
+            "type": "input",
+            "label": "$option.TeamMemberLevelTarget.label",
+            "inputs": [
+                {
+                    "name": "operator_name",
+                    "label": "$option.TeamMemberLevelTarget.operator_name",
+                    "default": "Si",
+                    "verify": "^[A-Za-z][A-Za-z :'-]{0,39}$"
+                },
+                {
+                    "name": "operator_level",
+                    "label": "$option.TeamMemberLevelTarget.operator_level",
+                    "default": "90",
+                    "pipeline_type": "int",
+                    "verify": "^(8[0-9]|90)$"
+                },
+                {
+                    "name": "currency_budget",
+                    "label": "$option.TeamMemberLevelTarget.currency_budget",
+                    "default": "0",
+                    "pipeline_type": "int",
+                    "verify": "^(0|[1-9][0-9]{0,8})$"
+                }
+            ],
+            "pipeline_override": {
+                "TeamManagementSettings": {
+                    "attach": {
+                        "operator_name": "{operator_name}",
+                        "operator_level": "{operator_level}",
+                        "currency_budget": "{currency_budget}"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,416 @@
+{
+    "task": [
+        {
+            "name": "TeamCombatPrepare",
+            "label": "$task.TeamCombatPrepare.label",
+            "entry": "TeamCombatPrepare",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ],
+            "option": [
+                "TeamCombatSelectedProfile"
+            ]
+        },
+        {
+            "name": "TeamCombatCapture",
+            "label": "$task.TeamCombatCapture.label",
+            "entry": "TeamCombatCapture",
+            "group": [
+                "team_management"
+            ],
+            "controller": [
+                "ADB",
+                "CloudADB",
+                "Win32-Front"
+            ],
+            "option": [
+                "TeamCombatSelectedProfile"
+            ]
+        }
+    ],
+    "option": {
+        "AutoFightTeamProfile": {
+            "type": "select",
+            "label": "$option.AutoFightTeamProfile.label",
+            "cases": [
+                {
+                    "name": "Generic",
+                    "label": "$option.AutoFightTeamProfile.generic",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "team_profile": ""
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "HeatSi",
+                    "label": "$option.AutoFightTeamProfile.heat_si",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "team_profile": "heat-si"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideSi",
+                    "label": "$option.RotationProfile.GuideSi",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "team_profile": "guide-si-dps"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideArcane",
+                    "label": "$option.RotationProfile.GuideArcane",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "team_profile": "guide-arcane-f2p"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideLaevatain",
+                    "label": "$option.RotationProfile.GuideLaevatain",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "team_profile": "guide-laevatain-camille"
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Generic"
+        },
+        "TeamCombatSelectedProfile": {
+            "type": "select",
+            "label": "$option.TeamCombatSelectedProfile.label",
+            "cases": [
+                {
+                    "name": "HeatSi",
+                    "label": "$option.RotationProfile.HeatSi",
+                    "pipeline_override": {
+                        "TeamCombatSettings": {
+                            "attach": {
+                                "profile_id": "heat-si"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideSi",
+                    "label": "$option.RotationProfile.GuideSi",
+                    "pipeline_override": {
+                        "TeamCombatSettings": {
+                            "attach": {
+                                "profile_id": "guide-si-dps"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideArcane",
+                    "label": "$option.RotationProfile.GuideArcane",
+                    "pipeline_override": {
+                        "TeamCombatSettings": {
+                            "attach": {
+                                "profile_id": "guide-arcane-f2p"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "GuideLaevatain",
+                    "label": "$option.RotationProfile.GuideLaevatain",
+                    "pipeline_override": {
+                        "TeamCombatSettings": {
+                            "attach": {
+                                "profile_id": "guide-laevatain-camille"
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "HeatSi"
+        },
+        "AutoFightGuideMode": {
+            "type": "select",
+            "label": "$option.AutoFightGuideMode.label",
+            "cases": [
+                {
+                    "name": "Preview",
+                    "label": "$option.AutoFightGuideMode.Preview",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "rotation_preview": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Execute",
+                    "label": "$option.AutoFightGuideMode.Execute",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "rotation_preview": false
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Preview"
+        },
+        "AutoFightRotationMovement": {
+            "type": "select",
+            "label": "$option.AutoFightRotationMovement.label",
+            "cases": [
+                {
+                    "name": "External",
+                    "label": "$option.AutoFightRotationMovement.External",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "rotation_movement": "external"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Combat",
+                    "label": "$option.AutoFightRotationMovement.Combat",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "rotation_movement": "combat"
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "External"
+        },
+        "AutoFightConfirmedTimeline": {
+            "type": "switch",
+            "label": "$option.AutoFightConfirmedTimeline.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "confirmed_timeline": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "confirmed_timeline": false
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "AutoFightCurrentComboChecks": {
+            "type": "switch",
+            "label": "$option.AutoFightCurrentComboChecks.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "current_combo_checks": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "current_combo_checks": false
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "AutoFightCombatTrace": {
+            "type": "switch",
+            "label": "$option.AutoFightCombatTrace.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "combat_trace": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "combat_trace": false
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "AutoFightMobileApproach": {
+            "type": "switch",
+            "label": "$option.AutoFightMobileApproach.label",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "mobile_approach": true
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "mobile_approach": false
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "AutoFightCombatMode": {
+            "type": "select",
+            "label": "$option.AutoFightCombatMode.label",
+            "cases": [
+                {
+                    "name": "Custom",
+                    "label": "$option.AutoFightCombatMode.Custom",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "combat_mode": "custom"
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "HardClear",
+                    "label": "$option.AutoFightCombatMode.HardClear",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "combat_mode": "hard_clear"
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Custom"
+        },
+        "AutoFightInterruptSlot": {
+            "type": "select",
+            "label": "$option.AutoFightInterruptSlot.label",
+            "cases": [
+                {
+                    "name": "None",
+                    "label": "$option.AutoFightInterruptSlot.None",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "interrupt_skill_slots": []
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Slot1",
+                    "label": "$option.AutoFightInterruptSlot.Slot1",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "interrupt_skill_slots": [
+                                    1
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Slot2",
+                    "label": "$option.AutoFightInterruptSlot.Slot2",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "interrupt_skill_slots": [
+                                    2
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Slot3",
+                    "label": "$option.AutoFightInterruptSlot.Slot3",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "interrupt_skill_slots": [
+                                    3
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Slot4",
+                    "label": "$option.AutoFightInterruptSlot.Slot4",
+                    "pipeline_override": {
+                        "AutoFight": {
+                            "attach": {
+                                "interrupt_skill_slots": [
+                                    4
+                                ]
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "None"
+        }
+    }
+}

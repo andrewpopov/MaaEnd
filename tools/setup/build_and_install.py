@@ -9,6 +9,7 @@ from pathlib import Path
 
 from .cli_support import Console, init_localization
 from .path_utils import remove_directory_or_link
+from .agent_runtime import copy_agent_runtime
 
 LOCALS_DIR = Path(__file__).parent / "locals" / "build_and_install"
 
@@ -223,6 +224,9 @@ def build_go_agent(
     print(f"  {Console.info(t('output_path'))}: {output_path}")
 
     env = {**os.environ, "GOOS": goos, "GOARCH": goarch, "CGO_ENABLED": "0"}
+    module = (go_service_dir / "go.mod").read_text(encoding="utf8")
+    declared_go = next(line.split()[1] for line in module.splitlines() if line.startswith("go "))
+    env["GOTOOLCHAIN"] = "go" + declared_go
 
     # 开发模式下自动同步 go.mod / go.sum；CI 模式下只校验是否已同步，避免静默改动依赖文件。
     tidy_cmd = ["go", "mod", "tidy"]
@@ -851,6 +855,9 @@ def main() -> None:
     scan_specs.mkdir(parents=True, exist_ok=True)
     shutil.copy2(root_dir / "tools" / "account_scan.py", scan_tools / "account_scan.py")
     shutil.copy2(root_dir / "tools" / "gear_workflow.py", scan_tools / "gear_workflow.py")
+    shutil.copy2(root_dir / "tools" / "team_manager.py", scan_tools / "team_manager.py")
+    shutil.copy2(root_dir / "tools" / "rotation_readiness.py", scan_tools / "rotation_readiness.py")
+    shutil.copy2(root_dir / "tools" / "combat_team.py", scan_tools / "combat_team.py")
     shutil.copy2(
         root_dir / "tools" / "combat_reference" / "account_scan_tasks.json",
         scan_specs / "account_scan_tasks.json",
@@ -895,6 +902,8 @@ def main() -> None:
 
     print()
     print(t("separator"))
+    if (install_dir / "agent/cpp-algo.exe").is_file() and (maafw_dir / "MaaFramework.dll").is_file():
+        copy_agent_runtime(install_dir, install_dir)
     print(Console.ok(t("install_complete")))
 
     if not use_copy:

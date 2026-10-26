@@ -19,16 +19,16 @@ import (
 )
 
 // 时间单位与游戏一致：60fps，prepDuration=300，因此战斗 t=0 对应 frame 300。
-// 上层只看 ultimate / skill 两类动作；Endaxis 的 battleSkill 与 skill 等价派发。
-// 其余 type（link / attack / comboSkill 等）不进入派发队列。
+// Dispatch ultimate, skill and combo; normalize battleSkill and comboSkill.
+// comboSkill is dispatched in order; link and attack remain outside this queue.
 const (
 	timelineFrameBase = 300
 	timelineFPS       = 60.0
 )
 
-// EndAxisAction 是从时间轴中提取出的一个待派发的 ultimate/skill 动作。
+// EndAxisAction is an ordered skill, ultimate, or combo input.
 type EndAxisAction struct {
-	Type      string // "ultimate" | "skill"（battleSkill 收集时已规范化为 skill）
+	Type      string // "ultimate" | "skill" | "combo"
 	TrackIdx  int    // 0..3，对应 scenario.data.tracks 的下标
 	StartTime int    // 帧（与 JSON 里 startTime 一致，基准 300）
 	Duration  int    // 帧
@@ -87,10 +87,11 @@ type timelineRootRaw struct {
 // 时序：SelectScenario 成功后内部计时即开始；当 FrontAction 返回一个动作时，
 // 计时被自动暂停，直到 PopFrontAction 调用后再恢复。
 type EndAxisTimeline struct {
-	root        *timelineRootRaw
-	selectedID  string
-	queue       []EndAxisAction
-	energyLevel int
+	OrderedCombos bool
+	root          *timelineRootRaw
+	selectedID    string
+	queue         []EndAxisAction
+	energyLevel   int
 
 	started        bool          // SelectScenario 是否成功启动了时间轴
 	paused         bool          // 当前是否处于暂停（等待 PopFrontAction）
@@ -102,7 +103,7 @@ type EndAxisTimeline struct {
 
 // NewEndAxisTimeline 返回一个空的时间轴对象，使用前需先调用 SetTimelineCode。
 func NewEndAxisTimeline() *EndAxisTimeline {
-	return &EndAxisTimeline{}
+	return &EndAxisTimeline{OrderedCombos: true}
 }
 
 // SetTimelineCode 解析传入的 Endaxis 数据码（base64url(gzip(JSON))）。
@@ -231,6 +232,9 @@ func (t *EndAxisTimeline) SelectScenario(ctx *maa.Context, characterCount int, c
 		}
 
 		actions := collectTimelineActions(sc)
+		if !t.OrderedCombos {
+			actions = slices.DeleteFunc(actions, func(a EndAxisAction) bool { return a.Type == "combo" })
+		}
 		if len(actions) == 0 {
 			log.Debug().
 				Str("component", "EndAxisTimeline").
@@ -411,7 +415,7 @@ func computeTimelineEndFrame(sc *timelineScenarioRaw) int {
 	return end
 }
 
-// collectTimelineActions 从 scenario 的 4 条 track 中抽取所有 ultimate/skill 动作，
+// collectTimelineActions extracts skill, ultimate and explicit combo actions.
 // 并按 startTime 升序合并为一个全局派发队列。battleSkill 与 skill 等价，统一为 skill。
 func collectTimelineActions(sc *timelineScenarioRaw) []EndAxisAction {
 	var out []EndAxisAction
@@ -421,7 +425,9 @@ func collectTimelineActions(sc *timelineScenarioRaw) []EndAxisAction {
 			switch actionType {
 			case "battleSkill":
 				actionType = "skill"
-			case "ultimate", "skill":
+			case "comboSkill":
+				actionType = "combo"
+			case "ultimate", "skill", "combo":
 			default:
 				continue
 			}

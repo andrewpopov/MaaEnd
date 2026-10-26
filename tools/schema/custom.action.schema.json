@@ -68,6 +68,15 @@
                 "ImportBluePrintsFinishAction",
                 "ImportBluePrintsInitTextAction",
                 "InnkeepingAssistAction",
+                "InnkeepingCameraSearchAction",
+                "InnkeepingFixedRouteStepAction",
+                "InnkeepingMenuAction",
+                "InnkeepingOpenAction",
+                "InnkeepingReactiveAction",
+                "InnkeepingReactiveClickAction",
+                "InnkeepingReactiveNavigateAction",
+                "InnkeepingSetupNavigateAction",
+                "InnkeepingWalkBurstAction",
                 "IntelArchiveResetSessionAction",
                 "IntelArchiveResolveTruncAction",
                 "IntelArchiveShowInventoryAction",
@@ -91,13 +100,18 @@
                 "SeizeDeliveryJobsScanTargetAction",
                 "SubTask",
                 "SyncItemData",
+                "TeamCombatCaptureAction",
+                "TeamCombatPrepareAction",
+                "TeamManagementAction",
+                "TeamMemberLevelAction",
                 "TrialOfSwordmancy.Decide",
                 "UpdateItemQuantity",
                 "WebEvent202605Action",
                 "ZiplineImport",
                 "autoEcoFarmInterruptibleSleep",
                 "autoEcoFarmOverrideTargetTemplate",
-                "autoEcoFarmResetSwipeState"
+                "autoEcoFarmResetSwipeState",
+                "CharacterControllerJoystickAction"
             ]
         }
     },
@@ -627,6 +641,182 @@
                             "step"
                         ],
                         "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "InnkeepingReactiveAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "reset": {
+                                "type": "boolean"
+                            },
+                            "automatic": {
+                                "type": "boolean"
+                            },
+                            "route_id": {
+                                "type": "string",
+                                "minLength": 1
+                            },
+                            "trial_profile": {
+                                "const": "front-row-maatouch-v1"
+                            }
+                        },
+                        "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "TeamManagementAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "required": [
+                    "custom_action_param"
+                ],
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "mode": {
+                                "enum": [
+                                    "recommend",
+                                    "plan",
+                                    "farm",
+                                    "capture"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "mode"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "properties": {
+                    "custom_action": {
+                        "const": "TeamMemberLevelAction"
+                    }
+                },
+                "required": [
+                    "custom_action"
+                ]
+            },
+            "then": {
+                "required": [
+                    "custom_action_param"
+                ],
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "properties": {
+                            "step": {
+                                "enum": [
+                                    "init",
+                                    "read",
+                                    "review",
+                                    "verify"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "step"
+                        ],
+                        "additionalProperties": false
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "required": [
+                    "custom_action"
+                ],
+                "properties": {
+                    "custom_action": {
+                        "const": "CharacterControllerJoystickAction"
+                    }
+                }
+            },
+            "then": {
+                "required": [
+                    "custom_action_param"
+                ],
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "required": [
+                            "direction",
+                            "duration"
+                        ],
+                        "properties": {
+                            "direction": {
+                                "enum": [
+                                    "forward",
+                                    "backward",
+                                    "left",
+                                    "right"
+                                ]
+                            },
+                            "duration": {
+                                "type": "integer",
+                                "minimum": 1,
+                                "maximum": 1500
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "if": {
+                "required": [
+                    "custom_action"
+                ],
+                "properties": {
+                    "custom_action": {
+                        "const": "InnkeepingAssistAction"
+                    }
+                }
+            },
+            "then": {
+                "properties": {
+                    "custom_action_param": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "focus": {
+                                "enum": [
+                                    "kitchen"
+                                ]
+                            }
+                        }
                     }
                 }
             }

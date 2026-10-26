@@ -130,5 +130,40 @@ for name,n in nodes.items():
  if 'Back' in name or name.startswith('AccountBatchRecover'):
   n['post_wait_freezes']={'time':500,'target':[170,80,1060,520]}
  if name.startswith('AccountBatchRecover'):n['max_hit']=4
+
+# Slow emulators: destination recognition wins before a still-visible source can
+# be clicked again. Retry stages are finite, read-only, and source-guarded.
+for name, current in list(nodes.items()):
+ if current.get('action',{}).get('type') != 'Click' or not current.get('next'):
+  continue
+ if 'Retry' in name or name.startswith('AccountBatchRecover'):
+  continue
+ destination=list(current['next'])
+ # Existing back retries are replaced with the same finite mechanism.
+ destination=[x for x in destination if 'Retry' not in x]
+ current['next']=destination+[name+'Retry1']
+ current['post_wait_freezes']={'time':700,'target':[80,10,1120,650]}
+ current['timeout']=60000
+ for attempt in (1,2):
+  retry=__import__('copy').deepcopy(current)
+  retry['pre_wait_freezes']={'time':700,'target':[80,10,1120,650]}
+  retry['rate_limit']=2000
+  retry['next']=destination+([name+'Retry2'] if attempt==1 else [])
+  nodes[name+'Retry'+str(attempt)]=retry
+# Header, selected rail and the equipped item state jointly identify kit panels;
+# allow lower contrast English OCR without dropping the selected-slot check.
+for name,current in nodes.items():
+ if name.startswith('AccountBatchGearRead'):
+  current['pre_wait_freezes']={'time':700,'target':[920,75,285,520]}
+  for part in current['recognition']['param']['all_of']:
+   r=part.get('recognition',{})
+   if r.get('type')=='OCR' and r['param'].get('expected') in (['Kit'],['Gloves'],['Armor']):
+    r['param'].update({'roi':[920,85,280,115],'threshold':.65})
+ # On max-potential weapons Select Material may be absent or unreadable.
+ # Skill Details is a separate stable heading on the same captured panel.
+ if name in ('AccountBatchPotentialRead','AccountBatchPotentialBack','AccountBatchRecoverPotential'):
+  current['recognition']=both(ocr(r'^.*\s*/\s*POTENTIAL$',(0,0,740,85)),{'type':'Or','param':{'any_of':[{'recognition':ocr('Select Material',(960,600,310,100))},{'recognition':ocr('Skill Details',(1030,5,170,65))}]}})
+  current['pre_wait_freezes']={'time':700,'target':[60,0,1140,670]}
+
 OUT.write_text(json.dumps(nodes,indent=4)+'\n',encoding='utf-8')
 print(f'Generated {len(nodes)} read-only scanner nodes: {OUT}')

@@ -1,0 +1,485 @@
+{
+    "schema_version": 2,
+    "id": "guide-arcane-f2p",
+    "name": "Arcane INT / Perlica / Xaihi / Akekuri",
+    "members": [
+        "Arcane",
+        "Perlica",
+        "Xaihi",
+        "Akekuri"
+    ],
+    "driver_slot": 1,
+    "minimum_level": 80,
+    "identity_signal": "team_identity_matches",
+    "required_signals": [
+        "akekuri_combo_active",
+        "akekuri_combo_confirmed",
+        "akekuri_ultimate_confirmed",
+        "arcane_combo_active",
+        "arcane_combo_confirmed",
+        "arcane_skill_confirmed",
+        "arcane_skill_ready",
+        "arcane_ultimate_confirmed",
+        "final_strike_observed",
+        "finisher_observed",
+        "perlica_combo_active",
+        "perlica_combo_confirmed",
+        "perlica_skill_confirmed",
+        "perlica_skill_ready",
+        "perlica_ultimate_confirmed",
+        "team_identity_matches",
+        "xaihi_ultimate_confirmed",
+        "arcane_sequence_2_ready"
+    ],
+    "signals": {},
+    "rules": [],
+    "execution_status": "combat_hud_calibration_required",
+    "build_requirements": [
+        {
+            "operator": "Arcane",
+            "field": "attributes.intellect",
+            "gte_field": "attributes.will"
+        },
+        {
+            "operator": "Arcane",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 35.96
+        },
+        {
+            "operator": "Xaihi",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 49.69
+        },
+        {
+            "operator": "Akekuri",
+            "field": "ultimate_gain_efficiency_percent",
+            "minimum": 48.66
+        }
+    ],
+    "rotation": {
+        "source_url": "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-arcane-team-guide",
+        "source_updated": "2026-09-04",
+        "variant": "Arcane INT / Perlica / Xaihi / Akekuri",
+        "repeat_from": 0,
+        "steps": [
+            {
+                "id": "01-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "02-perlica-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "perlica_combo_active"
+                ],
+                "confirm": [
+                    "perlica_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_combo_confirmed"
+                ]
+            },
+            {
+                "id": "03-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "04-arcane-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "05-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "06-perlica-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "perlica_combo_active"
+                ],
+                "confirm": [
+                    "perlica_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_combo_confirmed"
+                ]
+            },
+            {
+                "id": "07-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "08-arcane-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "09-arcane-skill",
+                "action": "skill",
+                "slot": 1,
+                "requires": [
+                    "arcane_skill_ready"
+                ],
+                "confirm": [
+                    "arcane_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_skill_confirmed"
+                ]
+            },
+            {
+                "id": "10-akekuri-combo",
+                "action": "combo",
+                "slot": 4,
+                "requires": [
+                    "akekuri_combo_active"
+                ],
+                "confirm": [
+                    "akekuri_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "akekuri_combo_confirmed"
+                ]
+            },
+            {
+                "id": "11-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "12-perlica-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "perlica_combo_active"
+                ],
+                "confirm": [
+                    "perlica_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_combo_confirmed"
+                ]
+            },
+            {
+                "id": "13-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "14-arcane-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "15-arcane-ultimate",
+                "action": "ultimate",
+                "slot": 1,
+                "requires": [
+                    "ultimate_1_ready"
+                ],
+                "confirm": [
+                    "arcane_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "16-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "final_strike_observed"
+                ],
+                "allow_basic_attacks": true,
+                "event": true
+            },
+            {
+                "id": "17-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "finisher_observed"
+                ],
+                "allow_basic_attacks": true,
+                "event": true
+            },
+            {
+                "id": "18-akekuri-combo",
+                "action": "combo",
+                "slot": 4,
+                "requires": [
+                    "akekuri_combo_active"
+                ],
+                "confirm": [
+                    "akekuri_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "akekuri_combo_confirmed"
+                ]
+            },
+            {
+                "id": "19-perlica-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "perlica_combo_active"
+                ],
+                "confirm": [
+                    "perlica_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_combo_confirmed"
+                ]
+            },
+            {
+                "id": "20-perlica-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "perlica_skill_ready"
+                ],
+                "confirm": [
+                    "perlica_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_skill_confirmed"
+                ]
+            },
+            {
+                "id": "21-xaihi-ultimate",
+                "action": "ultimate",
+                "slot": 3,
+                "requires": [
+                    "ultimate_3_ready"
+                ],
+                "confirm": [
+                    "xaihi_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "xaihi_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "22-arcane-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "arcane_combo_active"
+                ],
+                "confirm": [
+                    "arcane_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_combo_confirmed"
+                ]
+            },
+            {
+                "id": "23-arcane-skill",
+                "action": "skill",
+                "slot": 1,
+                "requires": [
+                    "arcane_skill_ready"
+                ],
+                "confirm": [
+                    "arcane_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_skill_confirmed"
+                ]
+            },
+            {
+                "id": "24-perlica-ultimate",
+                "action": "ultimate",
+                "slot": 2,
+                "requires": [
+                    "ultimate_2_ready"
+                ],
+                "confirm": [
+                    "perlica_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "perlica_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "25-akekuri-ultimate",
+                "action": "ultimate",
+                "slot": 4,
+                "requires": [
+                    "ultimate_4_ready"
+                ],
+                "confirm": [
+                    "akekuri_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "akekuri_ultimate_confirmed"
+                ]
+            },
+            {
+                "id": "26-arcane-ultimate",
+                "action": "ultimate",
+                "slot": 1,
+                "requires": [
+                    "arcane_sequence_2_ready"
+                ],
+                "confirm": [
+                    "arcane_ultimate_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "arcane_ultimate_confirmed"
+                ],
+                "ready_signal": "arcane_sequence_2_ready"
+            }
+        ]
+    },
+    "capture_tasks": [
+        "operators",
+        "skills",
+        "equipped_weapons",
+        "equipped_gear",
+        "gear_plans",
+        "team_presets"
+    ],
+    "limitations": [
+        "Guide timings depend on the verified build and enemy state.",
+        "Wait steps for Final Strikes or dive attacks require visual confirmation; movement stays with player/route.",
+        "Not a measured optimum for this account until live validation."
+    ]
+}

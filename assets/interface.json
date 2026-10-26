@@ -165,6 +165,11 @@
             "default_expand": true
         },
         {
+            "name": "team_management",
+            "label": "$group.team_management.label",
+            "default_expand": true
+        },
+        {
             "name": "innkeeping",
             "label": "$group.innkeeping.label",
             "default_expand": false
@@ -214,6 +219,7 @@
     "import": [
         "tasks/Innkeeping.json",
         "tasks/AccountScan.json",
+        "tasks/TeamCombat.json",
         "tasks/pretasks/LaunchGamePC.json",
         "tasks/OutpostTrading.json",
         "tasks/SeizeDeliveryJobs.json",
@@ -281,7 +287,9 @@
         "tasks/preset/DailyFull.json",
         "tasks/preset/QuickDaily.json",
         "tasks/preset/RealtimeAssist.json",
+        "tasks/preset/SiEssencePractice.json",
         "tasks/setting/Keymap.json",
-        "tasks/setting/Zipline.json"
+        "tasks/setting/Zipline.json",
+        "tasks/TeamManagement.json"
     ]
 }

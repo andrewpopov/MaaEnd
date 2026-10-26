@@ -145,8 +145,16 @@
         "recognition": {
             "type": "OCR",
             "param": {
-                "roi": [200,220,900,230],
-                "expected": ["理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?"
+                ]
             }
         },
         "focus": {
@@ -381,8 +389,8 @@
         "post_delay": 800,
         "next": [
             "ProtocolSpaceTouchStartTouch",
-            "[JumpBack]ProtocolSpaceTouchStartMoveToTarget",
-            "[JumpBack]ProtocolSpaceTouchStartNotFound"
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
         ]
     },
     "ProtocolSpaceTouchStartMoveToTarget": {
@@ -410,6 +418,11 @@
             "align_threshold": 120
         },
         "post_delay": 600,
+        "next": [
+            "ProtocolSpaceTouchStartTouch",
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$task.ProtocolSpace.focus.move_to_start"
         }
@@ -427,6 +440,11 @@
             "delta": 45
         },
         "post_delay": 0,
+        "next": [
+            "ProtocolSpaceTouchStartTouch",
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
+        ],
         "focus": {
             "Node.Action.Succeeded": "$task.ProtocolSpace.focus.start_point_not_found"
         }
@@ -1007,8 +1025,19 @@
         "all_of": [
             {
                 "recognition": "OCR",
-                "roi": [200,220,900,230],
-                "expected": ["当前理智不足","目前理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?","理性が不足しているため","현재 이성이 부족해"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "当前理智不足",
+                    "目前理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?",
+                    "理性が不足しているため",
+                    "현재 이성이 부족해"
+                ]
             },
             "GrayCancelButton"
         ],
@@ -1026,8 +1055,19 @@
         "all_of": [
             {
                 "recognition": "OCR",
-                "roi": [200,220,900,230],
-                "expected": ["当前理智不足","目前理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?","理性が不足しているため","현재 이성이 부족해"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "当前理智不足",
+                    "目前理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?",
+                    "理性が不足しているため",
+                    "현재 이성이 부족해"
+                ]
             },
             "GrayCancelButton"
         ],

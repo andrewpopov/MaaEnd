@@ -1,0 +1,402 @@
+[
+    {
+        "box": [
+            20,
+            692,
+            54,
+            14
+        ],
+        "score": 0.999661,
+        "text": "62ms"
+    },
+    {
+        "box": [
+            46,
+            26,
+            136,
+            19
+        ],
+        "score": 0.985119,
+        "text": "/ /INN SETTINGS"
+    },
+    {
+        "box": [
+            48,
+            107,
+            224,
+            28
+        ],
+        "score": 0.998235,
+        "text": "Appetizing Start"
+    },
+    {
+        "box": [
+            56,
+            156,
+            438,
+            24
+        ],
+        "score": 0.999462,
+        "text": "A spicy and sour dish a day keeps the heat and humid"
+    },
+    {
+        "box": [
+            56,
+            177,
+            70,
+            22
+        ],
+        "score": 0.997175,
+        "text": "qi away."
+    },
+    {
+        "box": [
+            56,
+            226,
+            112,
+            26
+        ],
+        "score": 0.999964,
+        "text": "more quickly."
+    },
+    {
+        "box": [
+            58,
+            303,
+            163,
+            18
+        ],
+        "score": 0.979992,
+        "text": "Activate 1 Full Blaze"
+    },
+    {
+        "box": [
+            58,
+            383,
+            200,
+            19
+        ],
+        "score": 0.986523,
+        "text": "\u2265 1 [Sour]or [Spicy] dish"
+    },
+    {
+        "box": [
+            60,
+            209,
+            429,
+            18
+        ],
+        "score": 0.999388,
+        "text": "Stove Fire heats up faster. Full Blaze can be activated"
+    },
+    {
+        "box": [
+            61,
+            342,
+            120,
+            27
+        ],
+        "score": 0.998618,
+        "text": "Menu REQ"
+    },
+    {
+        "box": [
+            62,
+            264,
+            144,
+            23
+        ],
+        "score": 0.996926,
+        "text": "Theme Bonus"
+    },
+    {
+        "box": [
+            65,
+            427,
+            129,
+            19
+        ],
+        "score": 0.999523,
+        "text": "What is Hot"
+    },
+    {
+        "box": [
+            80,
+            479,
+            172,
+            18
+        ],
+        "score": 0.999618,
+        "text": "an additional 10% tip."
+    },
+    {
+        "box": [
+            81,
+            459,
+            395,
+            18
+        ],
+        "score": 0.985056,
+        "text": "For every Hot trend met by a dish or a drink, gain"
+    },
+    {
+        "box": [
+            357,
+            104,
+            91,
+            28
+        ],
+        "score": 0.987282,
+        "text": "\u2606\u2606\u2606"
+    },
+    {
+        "box": [
+            478,
+            111,
+            22,
+            18
+        ],
+        "score": 0.940402,
+        "text": "\u2606"
+    },
+    {
+        "box": [
+            553,
+            214,
+            89,
+            24
+        ],
+        "score": 0.998158,
+        "text": "Kitchen 1"
+    },
+    {
+        "box": [
+            570,
+            401,
+            82,
+            18
+        ],
+        "score": 0.973495,
+        "text": "Chef Ember"
+    },
+    {
+        "box": [
+            577,
+            633,
+            319,
+            26
+        ],
+        "score": 0.986212,
+        "text": "Reset all Chefs and Menu Designs"
+    },
+    {
+        "box": [
+            581,
+            450,
+            109,
+            22
+        ],
+        "score": 0.997605,
+        "text": "Operator UP"
+    },
+    {
+        "box": [
+            616,
+            505,
+            82,
+            36
+        ],
+        "score": 0.901787,
+        "text": "Spicy\u4e2a"
+    },
+    {
+        "box": [
+            656,
+            166,
+            57,
+            19
+        ],
+        "score": 0.999935,
+        "text": "Collect"
+    },
+    {
+        "box": [
+            668,
+            398,
+            90,
+            21
+        ],
+        "score": 0.992912,
+        "text": "Chef Akekuri"
+    },
+    {
+        "box": [
+            734,
+            181,
+            40,
+            14
+        ],
+        "score": 0.999954,
+        "text": "Drinks"
+    },
+    {
+        "box": [
+            736,
+            165,
+            37,
+            18
+        ],
+        "score": 0.999963,
+        "text": "Serve"
+    },
+    {
+        "box": [
+            789,
+            214,
+            92,
+            24
+        ],
+        "score": 0.999259,
+        "text": "Kitchen 2"
+    },
+    {
+        "box": [
+            802,
+            180,
+            44,
+            18
+        ],
+        "score": 0.999984,
+        "text": "Dishes"
+    },
+    {
+        "box": [
+            806,
+            166,
+            38,
+            17
+        ],
+        "score": 0.999976,
+        "text": "Serve"
+    },
+    {
+        "box": [
+            812,
+            408,
+            65,
+            20
+        ],
+        "score": 0.999779,
+        "text": "Wulfgard"
+    },
+    {
+        "box": [
+            814,
+            448,
+            110,
+            23
+        ],
+        "score": 0.999192,
+        "text": "Operator UP"
+    },
+    {
+        "box": [
+            826,
+            391,
+            38,
+            20
+        ],
+        "score": 0.999956,
+        "text": "Chef"
+    },
+    {
+        "box": [
+            914,
+            411,
+            67,
+            15
+        ],
+        "score": 0.999969,
+        "text": "Laevatain"
+    },
+    {
+        "box": [
+            930,
+            391,
+            39,
+            20
+        ],
+        "score": 0.999931,
+        "text": "Chef"
+    },
+    {
+        "box": [
+            966,
+            129,
+            183,
+            23
+        ],
+        "score": 0.989817,
+        "text": "Quality Control"
+    },
+    {
+        "box": [
+            970,
+            162,
+            220,
+            18
+        ],
+        "score": 0.995054,
+        "text": "All Kitchens: Chance for [Choice] + 3%"
+    },
+    {
+        "box": [
+            1026,
+            214,
+            92,
+            24
+        ],
+        "score": 0.994082,
+        "text": "Kitchen 3"
+    },
+    {
+        "box": [
+            1032,
+            419,
+            202,
+            19
+        ],
+        "score": 0.999428,
+        "text": "Reach Inn Rating Level 4"
+    },
+    {
+        "box": [
+            1042,
+            439,
+            179,
+            18
+        ],
+        "score": 0.988884,
+        "text": "to unlock renovations"
+    },
+    {
+        "box": [
+            1069,
+            92,
+            92,
+            19
+        ],
+        "score": 0.999923,
+        "text": "Assist Role"
+    },
+    {
+        "box": [
+            1096,
+            633,
+            93,
+            24
+        ],
+        "score": 0.999919,
+        "text": "Set Menu"
+    }
+]

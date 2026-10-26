@@ -1,0 +1,2996 @@
+{
+    "AccountScanCraftMaterialsStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanCraftMaterialsReady",
+            "AccountScanCraftMaterialsNavigate"
+        ]
+    },
+    "AccountScanCraftMaterialsNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuValuablesProgressionTab"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanCraftMaterialsReady"
+        ]
+    },
+    "AccountScanCraftMaterialsReady": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    500,
+                                    90
+                                ],
+                                "expected": [
+                                    "Valuables"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    1280,
+                                    180
+                                ],
+                                "expected": [
+                                    "Progression"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanCraftMaterialsCapture"
+        ]
+    },
+    "AccountScanTeamPresetsStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanTeamPresetsReady",
+            "AccountScanTeamPresetsNavigate"
+        ]
+    },
+    "AccountScanTeamPresetsNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuTeam"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanTeamPresetsReady"
+        ]
+    },
+    "AccountScanTeamPresetsReady": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    600,
+                    100
+                ],
+                "expected": [
+                    "^(?:Team Setup|Team Management|Formation)$"
+                ],
+                "threshold": 0.75
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanTeamPresetsCapture"
+        ]
+    },
+    "AccountScanGearRecipesStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearRecipesReady",
+            "AccountScanGearRecipesNavigate"
+        ]
+    },
+    "AccountScanGearRecipesNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuGearAssembly"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearRecipesReady"
+        ]
+    },
+    "AccountScanGearRecipesReady": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    650,
+                    100
+                ],
+                "expected": [
+                    "^(?:Gear Assembly|Assembly Technique)$"
+                ],
+                "threshold": 0.75
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearRecipesCapture"
+        ]
+    },
+    "AccountScanGearPlansStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearPlansReady",
+            "AccountScanGearPlansOverview",
+            "AccountScanGearPlansNavigate"
+        ]
+    },
+    "AccountScanGearPlansReady": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    50,
+                                    0,
+                                    500,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.*Gear Plan$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    90,
+                                    240,
+                                    400,
+                                    75
+                                ],
+                                "expected": [
+                                    "List of Plans"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearPlansCapture"
+        ]
+    },
+    "AccountScanGearPlansOverview": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavPlansOpenGear"
+        ]
+    },
+    "AccountScanGearPlansNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuOperator"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearPlansOverview"
+        ]
+    },
+    "AccountScanGearInventoryStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearInventoryReady",
+            "AccountScanGearInventoryOverview",
+            "AccountScanGearInventoryNavigate"
+        ]
+    },
+    "AccountScanGearInventoryReady": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    60,
+                                    0,
+                                    300,
+                                    80
+                                ],
+                                "expected": [
+                                    "Equip"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    500,
+                                    0,
+                                    420,
+                                    100
+                                ],
+                                "expected": [
+                                    "Operator Stats & Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearInventoryCapture"
+        ]
+    },
+    "AccountScanGearInventoryOverview": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavInventoryOpenGear"
+        ]
+    },
+    "AccountScanGearInventoryNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuOperator"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearInventoryOverview"
+        ]
+    },
+    "AccountScanArtificingStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanArtificingReady",
+            "AccountScanArtificingOverview",
+            "AccountScanArtificingNavigate"
+        ]
+    },
+    "AccountScanArtificingReady": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    650,
+                    90
+                ],
+                "expected": [
+                    "Artificing"
+                ],
+                "threshold": 0.75
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanArtificingCapture"
+        ]
+    },
+    "AccountScanArtificingOverview": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavArtificeOpenGear"
+        ]
+    },
+    "AccountScanArtificingNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuOperator"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanArtificingOverview"
+        ]
+    },
+    "AccountScanWeaponInventoryStart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanWeaponInventoryReady",
+            "AccountScanWeaponInventoryOverview",
+            "AccountScanWeaponInventoryNavigate"
+        ]
+    },
+    "AccountScanWeaponInventoryReady": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    90
+                                ],
+                                "expected": [
+                                    "Weapons"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    580,
+                                    500,
+                                    110
+                                ],
+                                "expected": [
+                                    "Default"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanWeaponInventoryCapture"
+        ]
+    },
+    "AccountScanWeaponInventoryOverview": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavWeaponsOpen"
+        ]
+    },
+    "AccountScanWeaponInventoryNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "SubTask",
+                "custom_action_param": {
+                    "sub": [
+                        "SceneEnterMenuOperator"
+                    ],
+                    "strict": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanWeaponInventoryOverview"
+        ]
+    },
+    "AccountScanNavPlansOpenGear": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavPlansOpen",
+            "AccountScanNavPlansOpenGearRetry1"
+        ]
+    },
+    "AccountScanNavPlansOpenGearRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavPlansOpen",
+            "AccountScanNavPlansOpenGearRetry2"
+        ]
+    },
+    "AccountScanNavPlansOpenGearRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavPlansOpen"
+        ]
+    },
+    "AccountScanNavPlansOpen": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    0,
+                                                    0,
+                                                    550,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "^.+\\s*/\\s*Gear$"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    920,
+                                                    65,
+                                                    285,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Gear Bonus"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    0,
+                                    280,
+                                    80
+                                ],
+                                "expected": [
+                                    "Gear Plan"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearPlansReady",
+            "AccountScanNavPlansOpenRetry1"
+        ]
+    },
+    "AccountScanNavPlansOpenRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    0,
+                                                    0,
+                                                    550,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "^.+\\s*/\\s*Gear$"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    920,
+                                                    65,
+                                                    285,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Gear Bonus"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    0,
+                                    280,
+                                    80
+                                ],
+                                "expected": [
+                                    "Gear Plan"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanGearPlansReady",
+            "AccountScanNavPlansOpenRetry2"
+        ]
+    },
+    "AccountScanNavPlansOpenRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    0,
+                                                    0,
+                                                    550,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "^.+\\s*/\\s*Gear$"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    920,
+                                                    65,
+                                                    285,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Gear Bonus"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    0,
+                                    280,
+                                    80
+                                ],
+                                "expected": [
+                                    "Gear Plan"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanGearPlansReady"
+        ]
+    },
+    "AccountScanNavInventoryOpenGear": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavInventoryOpenArmor",
+            "AccountScanNavInventoryOpenGearRetry1"
+        ]
+    },
+    "AccountScanNavInventoryOpenGearRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavInventoryOpenArmor",
+            "AccountScanNavInventoryOpenGearRetry2"
+        ]
+    },
+    "AccountScanNavInventoryOpenGearRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavInventoryOpenArmor"
+        ]
+    },
+    "AccountScanNavInventoryOpenArmor": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanGearInventoryReady",
+            "AccountScanNavInventoryOpenArmorRetry1"
+        ]
+    },
+    "AccountScanNavInventoryOpenArmorRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanGearInventoryReady",
+            "AccountScanNavInventoryOpenArmorRetry2"
+        ]
+    },
+    "AccountScanNavInventoryOpenArmorRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanGearInventoryReady"
+        ]
+    },
+    "AccountScanNavArtificeOpenGear": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavArtificeOpenArmor",
+            "AccountScanNavArtificeOpenGearRetry1"
+        ]
+    },
+    "AccountScanNavArtificeOpenGearRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavArtificeOpenArmor",
+            "AccountScanNavArtificeOpenGearRetry2"
+        ]
+    },
+    "AccountScanNavArtificeOpenGearRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    438,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavArtificeOpenArmor"
+        ]
+    },
+    "AccountScanNavArtificeOpenArmor": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavArtificeOpen",
+            "AccountScanNavArtificeOpenArmorRetry1"
+        ]
+    },
+    "AccountScanNavArtificeOpenArmorRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavArtificeOpen",
+            "AccountScanNavArtificeOpenArmorRetry2"
+        ]
+    },
+    "AccountScanNavArtificeOpenArmorRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Gear$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    920,
+                                    65,
+                                    285,
+                                    100
+                                ],
+                                "expected": [
+                                    "Gear Bonus"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    548,
+                    198,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavArtificeOpen"
+        ]
+    },
+    "AccountScanNavArtificeOpen": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    60,
+                                                    0,
+                                                    300,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "Equip"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    500,
+                                                    0,
+                                                    420,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Operator Stats & Attributes"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    1010,
+                                    5,
+                                    190,
+                                    65
+                                ],
+                                "expected": [
+                                    "Artificing"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanArtificingReady",
+            "AccountScanNavArtificeOpenRetry1"
+        ]
+    },
+    "AccountScanNavArtificeOpenRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    60,
+                                                    0,
+                                                    300,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "Equip"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    500,
+                                                    0,
+                                                    420,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Operator Stats & Attributes"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    1010,
+                                    5,
+                                    190,
+                                    65
+                                ],
+                                "expected": [
+                                    "Artificing"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanArtificingReady",
+            "AccountScanNavArtificeOpenRetry2"
+        ]
+    },
+    "AccountScanNavArtificeOpenRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "And",
+                            "param": {
+                                "all_of": [
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    60,
+                                                    0,
+                                                    300,
+                                                    80
+                                                ],
+                                                "expected": [
+                                                    "Equip"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "recognition": {
+                                            "type": "OCR",
+                                            "param": {
+                                                "roi": [
+                                                    500,
+                                                    0,
+                                                    420,
+                                                    100
+                                                ],
+                                                "expected": [
+                                                    "Operator Stats & Attributes"
+                                                ],
+                                                "threshold": 0.75
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    1010,
+                                    5,
+                                    190,
+                                    65
+                                ],
+                                "expected": [
+                                    "Artificing"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": true
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanArtificingReady"
+        ]
+    },
+    "AccountScanNavWeaponsOpen": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    348,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanNavWeaponsSwitch",
+            "AccountScanNavWeaponsOpenRetry1"
+        ]
+    },
+    "AccountScanNavWeaponsOpenRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    348,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavWeaponsSwitch",
+            "AccountScanNavWeaponsOpenRetry2"
+        ]
+    },
+    "AccountScanNavWeaponsOpenRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Overview$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    80,
+                                    200,
+                                    300,
+                                    210
+                                ],
+                                "expected": [
+                                    "Attributes"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1248,
+                    348,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanNavWeaponsSwitch"
+        ]
+    },
+    "AccountScanNavWeaponsSwitch": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Weapons$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    605,
+                                    285,
+                                    90
+                                ],
+                                "expected": [
+                                    "Switch"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1070,
+                    647,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "AccountScanWeaponInventoryReady",
+            "AccountScanNavWeaponsSwitchRetry1"
+        ]
+    },
+    "AccountScanNavWeaponsSwitchRetry1": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Weapons$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    605,
+                                    285,
+                                    90
+                                ],
+                                "expected": [
+                                    "Switch"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1070,
+                    647,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanWeaponInventoryReady",
+            "AccountScanNavWeaponsSwitchRetry2"
+        ]
+    },
+    "AccountScanNavWeaponsSwitchRetry2": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    0,
+                                    0,
+                                    550,
+                                    80
+                                ],
+                                "expected": [
+                                    "^.+\\s*/\\s*Weapons$"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    },
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    930,
+                                    605,
+                                    285,
+                                    90
+                                ],
+                                "expected": [
+                                    "Switch"
+                                ],
+                                "threshold": 0.75
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 600,
+            "target": [
+                80,
+                10,
+                1120,
+                650
+            ]
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1070,
+                    647,
+                    4,
+                    4
+                ]
+            }
+        },
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 2000,
+        "next": [
+            "AccountScanWeaponInventoryReady"
+        ]
+    }
+}
