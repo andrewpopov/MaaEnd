@@ -62,6 +62,15 @@
                 "CloseButtonType1",
                 "VisitFriendsMenuTerminalExitToWorldShip"
             ]
+        },
+        {
+            "name": "Loaded English delivery list uses active tab and available orders",
+            "image": "daily_run_delivery_job_list.png",
+            "hits": [
+                "__SeizeDeliveryJobsRecoJobListLoaded",
+                "SeizeDeliveryJobsLoop",
+                "CloseButtonType1"
+            ]
         }
     ]
 }
