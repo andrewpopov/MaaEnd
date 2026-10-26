@@ -345,8 +345,15 @@ def observed_fields(task,page,tokens):
     if task == 'equipped_weapons' and page == 'weapons':
         titles = [t for t in tokens if t['box'][0]>=920 and 105<=t['box'][1]<=135 and t['box'][2]>=90]
         if titles: result['weapon_name'] = ' '.join(t['text'] for t in sorted(titles,key=lambda t:(t['box'][1],t['box'][0])))
-        numbers = [t for t in tokens if 920<=t['box'][0]<980 and 145<=t['box'][1]<190 and t['box'][3]>=30 and re.fullmatch(r'\d{1,3}',t['text'])]
-        if numbers: result['level'] = int(max(numbers,key=lambda t:t['box'][3])['text'])
+        levels = []
+        for token in tokens:
+            box = token['box']
+            if not (900<=box[0]<980 and 145<=box[1]<190 and box[3]>=30):
+                continue
+            match = re.fullmatch(r'(\d{1,3})(?:\s*/\s*(\d{1,3}))?',token['text'].strip())
+            if match and (match[2] is None or int(match[1])<=int(match[2])):
+                levels.append((box[3],int(match[1])))
+        if levels: result['level'] = max(levels,key=lambda value:value[0])[1]
     if task == 'equipped_gear' and page in {'armor','gloves','kit_1','kit_2'}:
         result['equipment_state_by_slot'] = {page:any(re.fullmatch('Unequip',t['text'],re.I) for t in tokens if t['box'][1]>=610)}
         if result['equipment_state_by_slot'][page]:

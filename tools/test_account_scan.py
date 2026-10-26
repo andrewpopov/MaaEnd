@@ -30,6 +30,18 @@ class ScanStoreTests(unittest.TestCase):
         self.store.complete(self.sid,'account_identity','UID and server read from account profile')
         return eid
 
+    def test_weapon_level_reads_current_value_from_live_level_fraction(self):
+        # Native OCR from Laevatain's 1280x720 Weapons page includes the cap.
+        for text, expected in [('90/90',90),('80 / 90',80),('80',80)]:
+            with self.subTest(text=text):
+                tokens=[{'text':text,'score':0.982139,'box':[918,150,114,53]}]
+                self.assertEqual(observed_fields('equipped_weapons','weapons',tokens)['level'],expected)
+
+    def test_weapon_level_does_not_read_unrelated_or_impossible_numbers(self):
+        for text, box in [('90/80',[918,150,114,53]),('116',[950,400,90,40])]:
+            with self.subTest(text=text):
+                self.assertNotIn('level',observed_fields('equipped_weapons','weapons',[{'text':text,'score':1,'box':box}]))
+
     def test_ui_ocr_rejects_world_screen_without_creating_record(self):
         image = Path(self.temp.name) / 'world.png'
         image.write_bytes(png())
