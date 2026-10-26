@@ -1,0 +1,43 @@
+{
+    "configs": {
+        "name": "English ADB Si essence farming handoff",
+        "controller": "ADB",
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
+    },
+    "cases": [
+        {
+            "name": "Rewards Preview has a recognized close path",
+            "image": "si_essence_rewards_preview.png",
+            "hits": [
+                "AutoEssenceCloseRewardsPreview",
+                "AutoEssenceClickEssenceStartPrepare"
+            ]
+        },
+        {
+            "name": "Entry screen is recognized before a second world click",
+            "image": "si_essence_entry.png",
+            "hits": [
+                "AutoEssenceClickEssenceStartPrepare",
+                "AutoEssenceFindAttributeSelection"
+            ]
+        },
+        {
+            "name": "English pre-engrave heading fits the OCR region",
+            "image": "si_essence_preengrave.png",
+            "hits": [
+                "AutoEssenceFindAttributeSelectionSuccess"
+            ]
+        },
+        {
+            "name": "Sanity potion confirmation includes the full English button label",
+            "image": "si_essence_sanity_confirmation.png",
+            "hits": [
+                "__AutoUseSpMedicationUseEmergencySpBooster",
+                "AutoUseSpMedicationDialogText",
+                "__AutoUseSpMedicationFindDeadlineEmergencySanityBooster",
+                "AutoEssenceClickEssenceStartPrepare"
+            ]
+        }
+    ]
+}

@@ -59,7 +59,7 @@
         {
             "name": "AccountScanWeaponInventory",
             "label": "$task.AccountScanWeaponInventory.label",
-            "entry": "AccountScanWeaponInventoryCapture",
+            "entry": "AccountScanWeaponInventoryStart",
             "description": "$task.AccountScanWeaponInventory.description",
             "group": [
                 "account_scans"
@@ -87,7 +87,7 @@
         {
             "name": "AccountScanGearInventory",
             "label": "$task.AccountScanGearInventory.label",
-            "entry": "AccountScanGearInventoryCapture",
+            "entry": "AccountScanGearInventoryStart",
             "description": "$task.AccountScanGearInventory.description",
             "group": [
                 "account_scans"
@@ -101,7 +101,7 @@
         {
             "name": "AccountScanGearPlans",
             "label": "$task.AccountScanGearPlans.label",
-            "entry": "AccountScanGearPlansCapture",
+            "entry": "AccountScanGearPlansStart",
             "description": "$task.AccountScanGearPlans.description",
             "group": [
                 "account_scans"
@@ -115,7 +115,7 @@
         {
             "name": "AccountScanGearRecipes",
             "label": "$task.AccountScanGearRecipes.label",
-            "entry": "AccountScanGearRecipesCapture",
+            "entry": "AccountScanGearRecipesStart",
             "description": "$task.AccountScanGearRecipes.description",
             "group": [
                 "account_scans"
@@ -129,7 +129,7 @@
         {
             "name": "AccountScanCraftMaterials",
             "label": "$task.AccountScanCraftMaterials.label",
-            "entry": "AccountScanCraftMaterialsCapture",
+            "entry": "AccountScanCraftMaterialsStart",
             "description": "$task.AccountScanCraftMaterials.description",
             "group": [
                 "account_scans"
@@ -143,7 +143,7 @@
         {
             "name": "AccountScanArtificing",
             "label": "$task.AccountScanArtificing.label",
-            "entry": "AccountScanArtificingCapture",
+            "entry": "AccountScanArtificingStart",
             "description": "$task.AccountScanArtificing.description",
             "group": [
                 "account_scans"
@@ -157,7 +157,7 @@
         {
             "name": "AccountScanTeamPresets",
             "label": "$task.AccountScanTeamPresets.label",
-            "entry": "AccountScanTeamPresetsCapture",
+            "entry": "AccountScanTeamPresetsStart",
             "description": "$task.AccountScanTeamPresets.description",
             "group": [
                 "account_scans"

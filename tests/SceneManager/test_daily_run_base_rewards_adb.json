@@ -1,0 +1,20 @@
+{
+    "configs": {
+        "name": "English ADB daily-run delayed base clue rewards",
+        "controller": "ADB",
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
+    },
+    "cases": [
+        {
+            "name": "Delayed 80-credit reward is handled after returning through the hub",
+            "image": "daily_run_base_credit_rewards.png",
+            "hits": [
+                "DijiangRewardsFastCollectAddItemData",
+                "InNoticeRewards",
+                "CloseRewardsButton",
+                "SceneNoticeRewardsConfirmClick"
+            ]
+        }
+    ]
+}

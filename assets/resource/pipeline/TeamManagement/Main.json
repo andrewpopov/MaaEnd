@@ -1,0 +1,213 @@
+{
+    "TeamManagementSettings": {
+        "recognition": "DirectHit",
+        "action": "DoNothing",
+        "attach": {
+            "team_id": "moba-si-dps",
+            "operator_level": 90,
+            "weapon_level": 90,
+            "skill_rank": 9,
+            "mastery_rank": 0
+        }
+    },
+    "TeamManagementRecommend": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamManagementAction",
+                "custom_action_param": {
+                    "mode": "recommend"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamManagementPlan": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamManagementAction",
+                "custom_action_param": {
+                    "mode": "plan"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamManagementFarm": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamManagementAction",
+                "custom_action_param": {
+                    "mode": "farm"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamManagementCapture": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamManagementAction",
+                "custom_action_param": {
+                    "mode": "capture"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamMemberLevel": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    75,
+                    15,
+                    550,
+                    50
+                ],
+                "expected": [
+                    "^.+\\s*/\\s*Overview$"
+                ],
+                "threshold": 0.9
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamMemberLevelAction",
+                "custom_action_param": {
+                    "step": "init"
+                }
+            }
+        },
+        "post_delay": 0,
+        "next": [
+            "TeamMemberLevelOpen"
+        ]
+    },
+    "TeamMemberLevelOpen": {
+        "enabled": false,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    996,
+                    230,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 0,
+        "next": [
+            "TeamMemberLevelRead"
+        ]
+    },
+    "TeamMemberLevelRead": {
+        "enabled": false,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamMemberLevelAction",
+                "custom_action_param": {
+                    "step": "read"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamMemberLevelIncrement": {
+        "enabled": false,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1260,
+                    145,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 0,
+        "next": [
+            "TeamMemberLevelReview"
+        ]
+    },
+    "TeamMemberLevelReview": {
+        "enabled": false,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamMemberLevelAction",
+                "custom_action_param": {
+                    "step": "review"
+                }
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamMemberLevelCommit": {
+        "enabled": false,
+        "max_hit": 1,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1110,
+                    646,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 0,
+        "next": [
+            "TeamMemberLevelVerify"
+        ]
+    },
+    "TeamMemberLevelVerify": {
+        "enabled": false,
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamMemberLevelAction",
+                "custom_action_param": {
+                    "step": "verify"
+                }
+            }
+        },
+        "post_delay": 0,
+        "timeout": 10000
+    },
+    "TeamMemberLevelDone": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0
+    }
+}

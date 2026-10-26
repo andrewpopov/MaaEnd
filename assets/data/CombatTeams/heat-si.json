@@ -1,0 +1,358 @@
+{
+    "schema_version": 1,
+    "id": "heat-si",
+    "name": "Laevatain / Si / Camille / Wulfgard",
+    "minimum_level": 80,
+    "driver_slot": 1,
+    "members": [
+        "Laevatain",
+        "Si",
+        "Camille",
+        "Wulfgard"
+    ],
+    "source_checked_on": "2026-10-18",
+    "provenance": "User-selected lineup; original conditional policy derived from character mechanics, not a published exact team timeline.",
+    "execution_status": "hud_calibration_and_equipment_verification_required",
+    "required_signals": [
+        "carry_return_safe",
+        "si_brushwork",
+        "si_initial_stroke",
+        "si_final_stroke",
+        "si_recording",
+        "si_detonate_safe",
+        "si_initial_useful",
+        "si_reset_useful",
+        "laevatain_four_flames",
+        "laevatain_burst_window",
+        "camille_mark_missing",
+        "camille_link_ready",
+        "wulfgard_heat_needed",
+        "combo_si_visible",
+        "combo_camille_visible",
+        "combo_wulfgard_visible",
+        "combo_laevatain_visible",
+        "team_identity_matches"
+    ],
+    "signals": {},
+    "characters": [
+        {
+            "name": "Laevatain",
+            "slot": 1,
+            "role": "On-field carry",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/laevatain",
+            "guide_target_weapon": "Forgeborn Scathe",
+            "skill_investment": "Ultimate = Battle Skill > Combo Skill > Basic Attack",
+            "combat_note": "Preserve basic strings; enhanced skill requires four Melting Flame stacks."
+        },
+        {
+            "name": "Si",
+            "slot": 2,
+            "role": "Recording window, combo damage, Heat amplification",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/si",
+            "guide_target_weapon": "Jade Vessel",
+            "skill_investment": "Combo Skill > Ultimate = Battle Skill > Basic Attack",
+            "combat_note": "Recognize the changed skill before every cast; hold Final Stroke during the damage window. Slot 1 Heat determines infliction."
+        },
+        {
+            "name": "Camille",
+            "slot": 3,
+            "role": "Heat application, SP recovery, Link",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/camille",
+            "guide_target_weapon": "Blessing of Lustrous Carmine",
+            "skill_investment": "Combo Skill = Battle Skill >= Ultimate > Basic Attack",
+            "combat_note": "Establish his mark early and align Link with the carry burst."
+        },
+        {
+            "name": "Wulfgard",
+            "slot": 4,
+            "role": "Heat application and combo enabler",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/wulfgard",
+            "guide_target_weapon": "Clannibal",
+            "skill_investment": "Basic Attack > Combo Skill >= Battle Skill >= Ultimate",
+            "combat_note": "Use free combo Heat; reserve SP for the carry and do not assume P5 reset access."
+        }
+    ],
+    "rules": [
+        {
+            "id": "return-carry",
+            "action": "switch",
+            "slot": 1,
+            "requires": [
+                "carry_return_safe"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "camille-mark",
+            "action": "skill",
+            "slot": 3,
+            "requires": [
+                "camille_mark_missing"
+            ],
+            "minimum_energy_bars": 1
+        },
+        {
+            "id": "si-open-recording",
+            "action": "skill",
+            "slot": 2,
+            "requires": [
+                "si_brushwork"
+            ],
+            "minimum_energy_bars": 1
+        },
+        {
+            "id": "si-pull-inksoul",
+            "action": "skill",
+            "slot": 2,
+            "requires": [
+                "si_initial_stroke",
+                "si_initial_useful"
+            ],
+            "minimum_energy_bars": 1
+        },
+        {
+            "id": "camille-combo",
+            "action": "combo",
+            "slot": 3,
+            "requires": [
+                "combo_camille_visible"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "wulfgard-combo",
+            "action": "combo",
+            "slot": 4,
+            "requires": [
+                "combo_wulfgard_visible"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "laevatain-combo",
+            "action": "combo",
+            "slot": 1,
+            "requires": [
+                "combo_laevatain_visible"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "si-combo",
+            "action": "combo",
+            "slot": 2,
+            "requires": [
+                "combo_si_visible"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "si-amplify",
+            "action": "ultimate",
+            "slot": 2,
+            "requires": [
+                "ultimate_2_ready",
+                "si_recording",
+                "laevatain_burst_window",
+                "si_reset_useful"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "camille-ultimate",
+            "action": "ultimate",
+            "slot": 3,
+            "requires": [
+                "ultimate_3_ready",
+                "si_recording"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "wulfgard-ultimate",
+            "action": "ultimate",
+            "slot": 4,
+            "requires": [
+                "ultimate_4_ready",
+                "wulfgard_heat_needed"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "wulfgard-heat",
+            "action": "skill",
+            "slot": 4,
+            "requires": [
+                "wulfgard_heat_needed"
+            ],
+            "minimum_energy_bars": 2
+        },
+        {
+            "id": "laevatain-enhanced",
+            "action": "skill",
+            "slot": 1,
+            "requires": [
+                "laevatain_four_flames",
+                "si_recording",
+                "camille_link_ready"
+            ],
+            "minimum_energy_bars": 1
+        },
+        {
+            "id": "laevatain-ultimate",
+            "action": "ultimate",
+            "slot": 1,
+            "requires": [
+                "ultimate_1_ready",
+                "si_recording",
+                "camille_link_ready"
+            ],
+            "minimum_energy_bars": 0
+        },
+        {
+            "id": "si-detonate",
+            "action": "skill",
+            "slot": 2,
+            "requires": [
+                "si_final_stroke",
+                "si_detonate_safe"
+            ],
+            "minimum_energy_bars": 0
+        }
+    ],
+    "gear_requests": {
+        "Laevatain": {
+            "operator": "Laevatain",
+            "loadout_name": "Heat Si - Laevatain",
+            "gear": {
+                "armor": {
+                    "item_name": "Redeemer Armor"
+                },
+                "gloves": {
+                    "item_name": "Hot Work Gauntlets"
+                },
+                "kit_1": {
+                    "item_name": "Hot Work Pyrometer"
+                },
+                "kit_2": {
+                    "item_name": "Hot Work Pyrometer"
+                }
+            },
+            "spend_limits": {},
+            "artifice_attempts": [],
+            "donor_allowlist": []
+        },
+        "Si": {
+            "operator": "Si",
+            "loadout_name": "Heat Si - Si",
+            "gear": {
+                "armor": {
+                    "item_name": "Type 50 Yinglung Soft Armor"
+                },
+                "gloves": {
+                    "item_name": "Type 50 Yinglung Gauntlets"
+                },
+                "kit_1": {
+                    "item_name": "Type 50 Yinglung Beacon"
+                },
+                "kit_2": {
+                    "item_name": "Redeemer Seal"
+                }
+            },
+            "spend_limits": {},
+            "artifice_attempts": [],
+            "donor_allowlist": []
+        },
+        "Camille": {
+            "operator": "Camille",
+            "loadout_name": "Heat Si - Camille",
+            "gear": {
+                "armor": {
+                    "item_name": "Frontiers Protection Suit"
+                },
+                "gloves": {
+                    "item_name": "Frontiers Fiber Gloves T1"
+                },
+                "kit_1": {
+                    "item_name": "Frontiers Extra O2 Tube"
+                },
+                "kit_2": {
+                    "item_name": "Rift Trekker Silver Blade"
+                }
+            },
+            "spend_limits": {},
+            "artifice_attempts": [],
+            "donor_allowlist": []
+        },
+        "Wulfgard": {
+            "operator": "Wulfgard",
+            "loadout_name": "Heat Si - Wulfgard",
+            "gear": {
+                "armor": {
+                    "item_name": "Type 50 Yinglung Heavy Armor T1"
+                },
+                "gloves": {
+                    "item_name": "LYNX Gloves"
+                },
+                "kit_1": {
+                    "item_name": "Redeemer Seal"
+                },
+                "kit_2": {
+                    "item_name": "Redeemer Seal"
+                }
+            },
+            "spend_limits": {},
+            "artifice_attempts": [],
+            "donor_allowlist": []
+        }
+    },
+    "capture_tasks": [
+        "account_identity",
+        "operators",
+        "skills",
+        "equipped_weapons",
+        "weapon_inventory",
+        "equipped_gear",
+        "gear_inventory",
+        "gear_plans",
+        "gear_recipes",
+        "craft_materials",
+        "artificing",
+        "team_presets"
+    ],
+    "gear_policy": {
+        "priority": [
+            "Si",
+            "Laevatain",
+            "Camille",
+            "Wulfgard"
+        ],
+        "reuse_owned_first": true,
+        "protect_other_loadouts": true,
+        "shared_resource_budget": true,
+        "si_armor_alternative": "Type 50 Yinglung Heavy Armor T1 only if measured energy coverage needs it",
+        "si_weapon_level_target": 90,
+        "artificing": "Only one observed donor/stat/cost preview per attempt; re-scan after the result.",
+        "weapon_essence": "Capture all three affixes before comparing. No unobserved affix targets or costs are inferred.",
+        "sustain": "No dedicated healer in this lineup; emergency evasion and healthy-member switching override damage rules."
+    },
+    "gear_alternatives": {
+        "Camille": {
+            "reason": "Evaluate Eternal Xiranite for team buff coverage or insufficient ultimate energy; compare against Frontiers SP and combo recovery after capture.",
+            "gear": {
+                "armor": "MI Security Armor T1",
+                "gloves": "Eternal Xiranite Gloves T1",
+                "kit_1": "Eternal Xiranite Power Core",
+                "kit_2": "Eternal Xiranite Power Core"
+            }
+        }
+    },
+    "exclusive_signals": [
+        [
+            "si_brushwork",
+            "si_initial_stroke",
+            "si_final_stroke"
+        ]
+    ],
+    "identity_signal": "team_identity_matches"
+}

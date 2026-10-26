@@ -432,12 +432,32 @@ func (sa *ScreenAnalyzer) GetEndSkillFull(unused bool) []int {
 }
 
 func (sa *ScreenAnalyzer) GetCharacterSelect() int {
-	for idx := 1; idx <= 4; idx++ {
-		if sa.hasLabelInFrames(LabelCharacterSelect, 5, false, characterRegion(idx-1)) {
-			return idx
+	// Prefer the newest selection; an old low-numbered slot must not win.
+	for i := len(sa.frames) - 1; i >= max(0, len(sa.frames)-5); i-- {
+		if selected := sa.selectedInFrame(sa.frames[i]); selected > 0 {
+			return selected
 		}
 	}
 	return 0
+}
+
+func (sa *ScreenAnalyzer) selectedInFrame(frame screenFrame) int {
+	selected := 0
+	for idx := 0; idx < 4; idx++ {
+		region := winCharacterRegions[idx]
+		if sa.mobileLayout {
+			region = adbCharacterRegions[idx]
+		}
+		for _, det := range frame.Detections {
+			if det.Label == LabelCharacterSelect && boxIntersects(det.Box, region) {
+				if selected != 0 && selected != idx+1 {
+					return 0
+				}
+				selected = idx + 1
+			}
+		}
+	}
+	return selected
 }
 
 func (sa *ScreenAnalyzer) GetCharacterSelectBox() (maa.Rect, bool) {
@@ -526,4 +546,25 @@ func (sa *ScreenAnalyzer) CombatReady() bool {
 // CombatTargetVisible lets skills run while lock-on is still being acquired.
 func (sa *ScreenAnalyzer) CombatTargetVisible(lockEnabled bool) bool {
 	return !lockEnabled || sa.GetEnemyLocked() || sa.GetEnemyTarget()
+}
+
+// currentComboSlots binds the currently visible prompt to portrait readiness in
+// this frame. Historical readiness must not authorize a time-limited combo.
+func (sa *ScreenAnalyzer) currentComboSlots() []int {
+	result := []int{}
+	if !sa.GetCharacterComboActive() {
+		return result
+	}
+	for idx := 1; idx <= 4; idx++ {
+		var region maa.Rect
+		if sa.mobileLayout {
+			region = adbCharacterRegions[idx-1]
+		} else {
+			region = winCharacterRegions[idx-1]
+		}
+		if sa.hasLabelInFrames(LabelCharacterComboFull, 1, false, region) {
+			result = append(result, idx)
+		}
+	}
+	return result
 }

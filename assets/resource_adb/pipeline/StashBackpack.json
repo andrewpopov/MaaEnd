@@ -1,20 +1,13 @@
 {
     "StashBackpackEnterSuccess": {
-        "recognition": "And",
-        "all_of": [
-            {
-                "recognition": "TemplateMatch",
-                "roi": [
-                    871,
-                    472,
-                    162,
-                    125
-                ],
-                "template": [
-                    "StashBackpack/QuickStash.png"
-                ],
-                "order_by": "Score"
+        "recognition": {
+            "type": "Or",
+            "param": {
+                "any_of": [
+                    "InBackpack",
+                    "InDijiangDepot"
+                ]
             }
-        ]
+        }
     }
 }

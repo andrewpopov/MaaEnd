@@ -252,9 +252,9 @@ PAGE_MARKERS = {
     'operators': [(r'Overview',), (r'Attributes',)],
     'skills': [(r'Ability Matrix', r'Combat Talents'), (r'Battle Skill', r'Combo Skill', r'Level Up')],
     'equipped_weapons': [(r'Weapons',), (r'Switch', r'Weapon Stats')],
-    'weapon_inventory': [(r'Weapons', r'Weapon Inventory'), (r'Filter', r'Sort')],
+    'weapon_inventory': [(r'Weapons', r'Weapon Inventory'), (r'Filter', r'Sort', r'Default')],
     'equipped_gear': [(r'Gear',), (r'Switch', r'Operator Stats')],
-    'gear_inventory': [(r'Gear',), (r'Filter', r'Sort')],
+    'gear_inventory': [(r'Gear', r'Equip'), (r'Filter', r'Sort', r'Default')],
     'gear_plans': [(r'Gear Plan', r'Loadouts')],
     'gear_recipes': [(r'Gear Assembly', r'Assembly Technique'), (r'Assemble', r'Recipe')],
     'craft_materials': [(r'Valuables', r'Materials'), (r'Progression', r'Inventory', r'Catalyst')],
@@ -282,6 +282,8 @@ def page_text(task, tokens):
     # Require complete marker words, rather than matching e.g. "Gear" in "Gearless".
     matched = all(any(re.search(r'(?<!\w)' + pattern.replace(' ',r'\s*') + r'(?!\w)', text, re.I)
                       for pattern in alternatives) for alternatives in PAGE_MARKERS[task])
+    if task == 'gear_inventory' and re.search(r'(?<!\w)Equip(?!\w)', text):
+        matched = matched and bool(re.search(r'Operator\s*Stats\s*&\s*Attributes', text, re.I))
     headers = {'operators':'Overview', 'skills':'Ability Matrix', 'equipped_weapons':'Weapons', 'equipped_gear':'Gear'}
     if task in headers:
         matched = matched and any(re.search(r'(?:^|/)\s*' + re.escape(headers[task]).replace(r'\ ',r'\s*') + r'$', t['text'], re.I)

@@ -1,0 +1,3821 @@
+{
+    "schema_version": 1,
+    "checked_on": "2026-10-20",
+    "ranking_note": "Owned lineups first, then recently inspected Mobalytics variants, then operator/weapon level readiness. This is a guide-fit ranking, not simulated damage.",
+    "teams": [
+        {
+            "id": "moba-si-dps",
+            "name": "Si DPS",
+            "members": [
+                "Si",
+                "Arcane",
+                "Tangtang",
+                "Xaihi"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-si-dps-team-guide"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": "WILL"
+        },
+        {
+            "id": "moba-arcane-dps",
+            "name": "Arcane DPS",
+            "members": [
+                "Arcane",
+                "Tangtang",
+                "Xaihi",
+                "Gilberta"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-arcane-team-guide"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": "INT"
+        },
+        {
+            "id": "moba-electric-gilberta",
+            "name": "Electric — Gilberta",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Gilberta"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-zhuang-fangyi-team"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "moba-rossi-arts",
+            "name": "Rossi Arts — Camille",
+            "members": [
+                "Rossi",
+                "Camille",
+                "Perlica",
+                "Gilberta"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/double-dps-tangtang-rossi-team"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "moba-laevatain-camille",
+            "name": "Laevatain — Camille",
+            "members": [
+                "Laevatain",
+                "Camille",
+                "Wulfgard",
+                "Gilberta"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-laevatain-team-guide"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "moba-last-rite-arcane-si",
+            "name": "Last Rite — Arcane/Si",
+            "members": [
+                "Last Rite",
+                "Arcane",
+                "Si",
+                "Xaihi"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-last-rite-team"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "moba-yvonne-si-arcane",
+            "name": "Yvonne — Si/Arcane",
+            "members": [
+                "Yvonne",
+                "Si",
+                "Tangtang",
+                "Arcane"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/yvonne-tangtang-team"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "moba-rossi-hybrid",
+            "name": "Rossi hybrid",
+            "members": [
+                "Rossi",
+                "Camille",
+                "Mi Fu",
+                "Pogranichnik"
+            ],
+            "sources": [
+                "https://mobalytics.gg/arknights-endfield/teams/rossi-physical-arts-hybrid-team"
+            ],
+            "guide_priority": 1,
+            "checked_on": "2026-10-20",
+            "rotation_order_verified": false,
+            "rotation_ids": [],
+            "arcane_form": null
+        },
+        {
+            "id": "laevatain-01",
+            "members": [
+                "Laevatain",
+                "Wulfgard",
+                "Antal",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Laevatain",
+                        "Wulfgard",
+                        "Antal",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2"
+            ],
+            "name": "laevatain-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/laevatain"
+            ]
+        },
+        {
+            "id": "laevatain-02",
+            "members": [
+                "Laevatain",
+                "Akekuri",
+                "Antal",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Laevatain",
+                        "Akekuri",
+                        "Antal",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "laevatain-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/laevatain"
+            ]
+        },
+        {
+            "id": "laevatain-03",
+            "members": [
+                "Laevatain",
+                "Wulfgard",
+                "Akekuri",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "laevatain",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Laevatain",
+                        "Wulfgard",
+                        "Akekuri",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "laevatain-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/laevatain"
+            ]
+        },
+        {
+            "id": "rossi-01",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Endministrator",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Endministrator",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "rossi-rotation-1",
+                "rossi-rotation-2"
+            ],
+            "name": "rossi-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/rossi"
+            ]
+        },
+        {
+            "id": "rossi-02",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "rossi-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/rossi"
+            ]
+        },
+        {
+            "id": "rossi-03",
+            "members": [
+                "Rossi",
+                "Wulfgard",
+                "Endministrator",
+                "Perlica"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "rossi",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Rossi",
+                        "Wulfgard",
+                        "Endministrator",
+                        "Perlica"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "rossi-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/rossi"
+            ]
+        },
+        {
+            "id": "yvonne-01",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Tangtang",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Tangtang",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "yvonne-rotation-1",
+                "yvonne-rotation-2"
+            ],
+            "name": "yvonne-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/yvonne"
+            ]
+        },
+        {
+            "id": "yvonne-02",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Alesh",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Alesh",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "yvonne-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/yvonne"
+            ]
+        },
+        {
+            "id": "yvonne-03",
+            "members": [
+                "Yvonne",
+                "Xaihi",
+                "Alesh",
+                "Estella"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "yvonne",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Yvonne",
+                        "Xaihi",
+                        "Alesh",
+                        "Estella"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "yvonne-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/yvonne"
+            ]
+        },
+        {
+            "id": "last-rite-01",
+            "members": [
+                "Last Rite",
+                "Xaihi",
+                "Tangtang",
+                "Perlica"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Last Rite",
+                        "Xaihi",
+                        "Tangtang",
+                        "Perlica"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "last-rite-rotation-1",
+                "last-rite-rotation-2"
+            ],
+            "name": "last-rite-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/last-rite"
+            ]
+        },
+        {
+            "id": "last-rite-02",
+            "members": [
+                "Last Rite",
+                "Perlica",
+                "Xaihi",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Last Rite",
+                        "Perlica",
+                        "Xaihi",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "last-rite-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/last-rite"
+            ]
+        },
+        {
+            "id": "last-rite-03",
+            "members": [
+                "Last Rite",
+                "Fluorite",
+                "Xaihi",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "last-rite",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Last Rite",
+                        "Fluorite",
+                        "Xaihi",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "last-rite-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/last-rite"
+            ]
+        },
+        {
+            "id": "avywenna-01",
+            "members": [
+                "Avywenna",
+                "Arclight",
+                "Perlica",
+                "Antal"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Avywenna",
+                        "Arclight",
+                        "Perlica",
+                        "Antal"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "avywenna-rotation-1",
+                "avywenna-rotation-2"
+            ],
+            "name": "avywenna-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/avywenna"
+            ]
+        },
+        {
+            "id": "avywenna-02",
+            "members": [
+                "Avywenna",
+                "Arclight",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Avywenna",
+                        "Arclight",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "avywenna-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/avywenna"
+            ]
+        },
+        {
+            "id": "avywenna-03",
+            "members": [
+                "Avywenna",
+                "Akekuri",
+                "Perlica",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "avywenna",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Avywenna",
+                        "Akekuri",
+                        "Perlica",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "avywenna-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/avywenna"
+            ]
+        },
+        {
+            "id": "endministrator-01",
+            "members": [
+                "Endministrator",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "endministrator-rotation-1",
+                "endministrator-rotation-2"
+            ],
+            "name": "endministrator-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/endministrator",
+                "https://www.prydwen.gg/arknights-endfield/characters/pogranichnik"
+            ]
+        },
+        {
+            "id": "endministrator-02",
+            "members": [
+                "Endministrator",
+                "Lifeng",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Endministrator",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Endministrator",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "lifeng-rotation-1"
+            ],
+            "name": "endministrator-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/endministrator",
+                "https://www.prydwen.gg/arknights-endfield/characters/lifeng"
+            ]
+        },
+        {
+            "id": "endministrator-03",
+            "members": [
+                "Endministrator",
+                "Estella",
+                "Alesh",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "endministrator",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Endministrator",
+                        "Estella",
+                        "Alesh",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "endministrator-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/endministrator"
+            ]
+        },
+        {
+            "id": "lifeng-02",
+            "members": [
+                "Lifeng",
+                "Da Pan",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Lifeng",
+                        "Da Pan",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Da Pan",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "lifeng-rotation-2"
+            ],
+            "name": "lifeng-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/lifeng",
+                "https://www.prydwen.gg/arknights-endfield/characters/da-pan"
+            ]
+        },
+        {
+            "id": "lifeng-03",
+            "members": [
+                "Lifeng",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Da Pan"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "lifeng",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Lifeng",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Da Pan"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Pogranichnik",
+                        "Lifeng",
+                        "Chen Qianyu",
+                        "Da Pan"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "lifeng-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/lifeng",
+                "https://www.prydwen.gg/arknights-endfield/characters/pogranichnik"
+            ]
+        },
+        {
+            "id": "da-pan-02",
+            "members": [
+                "Da Pan",
+                "Pogranichnik",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Da Pan",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                },
+                {
+                    "source_id": "pogranichnik",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Da Pan",
+                        "Pogranichnik",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "da-pan-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/da-pan",
+                "https://www.prydwen.gg/arknights-endfield/characters/pogranichnik"
+            ]
+        },
+        {
+            "id": "da-pan-03",
+            "members": [
+                "Da Pan",
+                "Endministrator",
+                "Chen Qianyu",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "da-pan",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Da Pan",
+                        "Endministrator",
+                        "Chen Qianyu",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "da-pan-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/da-pan"
+            ]
+        },
+        {
+            "id": "arcane-01",
+            "members": [
+                "Arcane",
+                "Tangtang",
+                "Xaihi",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Arcane",
+                        "Tangtang",
+                        "Xaihi",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "arcane-timeline-1"
+            ],
+            "name": "arcane-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/arcane"
+            ]
+        },
+        {
+            "id": "arcane-02",
+            "members": [
+                "Yvonne",
+                "Tangtang",
+                "Xaihi",
+                "Arcane"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Yvonne",
+                        "Tangtang",
+                        "Xaihi",
+                        "Arcane"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "arcane-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/arcane"
+            ]
+        },
+        {
+            "id": "arcane-03",
+            "members": [
+                "Arcane",
+                "Perlica",
+                "Xaihi",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "arcane",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Arcane",
+                        "Perlica",
+                        "Xaihi",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "arcane-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/arcane"
+            ]
+        },
+        {
+            "id": "mi-fu-01",
+            "members": [
+                "Mi Fu",
+                "Chen Qianyu",
+                "Pogranichnik",
+                "Ardelia"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Chen Qianyu",
+                        "Pogranichnik",
+                        "Ardelia"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "mi-fu-timeline-1"
+            ],
+            "name": "mi-fu-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/mi-fu"
+            ]
+        },
+        {
+            "id": "mi-fu-02",
+            "members": [
+                "Mi Fu",
+                "Rossi",
+                "Pogranichnik",
+                "Akekuri"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Rossi",
+                        "Pogranichnik",
+                        "Akekuri"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "mi-fu-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/mi-fu"
+            ]
+        },
+        {
+            "id": "mi-fu-03",
+            "members": [
+                "Mi Fu",
+                "Chen Qianyu",
+                "Pogranichnik",
+                "Lifeng"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "mi-fu",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Mi Fu",
+                        "Chen Qianyu",
+                        "Pogranichnik",
+                        "Lifeng"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "mi-fu-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/mi-fu"
+            ]
+        },
+        {
+            "id": "typhoeus-01",
+            "members": [
+                "Typhoeus",
+                "Perlica",
+                "Arcane",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Perlica",
+                        "Arcane",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "typhoeus-timeline-1"
+            ],
+            "name": "typhoeus-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/typhoeus"
+            ]
+        },
+        {
+            "id": "typhoeus-02",
+            "members": [
+                "Typhoeus",
+                "Ardelia",
+                "Arcane",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Ardelia",
+                        "Arcane",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "typhoeus-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/typhoeus"
+            ]
+        },
+        {
+            "id": "typhoeus-03",
+            "members": [
+                "Typhoeus",
+                "Perlica",
+                "Gilberta",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "typhoeus",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Typhoeus",
+                        "Perlica",
+                        "Gilberta",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "typhoeus-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/typhoeus"
+            ]
+        },
+        {
+            "id": "zhuang-fangyi-01",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Liino"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 1,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Liino"
+                    ]
+                }
+            ],
+            "rotation_ids": [
+                "zhuang-fangyi-timeline-1"
+            ],
+            "name": "zhuang-fangyi-01",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi"
+            ]
+        },
+        {
+            "id": "zhuang-fangyi-02",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Gilberta"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 2,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Gilberta"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "zhuang-fangyi-02",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi"
+            ]
+        },
+        {
+            "id": "zhuang-fangyi-03",
+            "members": [
+                "Zhuang Fangyi",
+                "Perlica",
+                "Arclight",
+                "Antal"
+            ],
+            "source_lineups": [
+                {
+                    "source_id": "zhuang-fangyi",
+                    "lineup_number": 3,
+                    "listed_order": [
+                        "Zhuang Fangyi",
+                        "Perlica",
+                        "Arclight",
+                        "Antal"
+                    ]
+                }
+            ],
+            "rotation_ids": [],
+            "name": "zhuang-fangyi-03",
+            "guide_priority": 0,
+            "checked_on": "2026-10-17",
+            "rotation_order_verified": false,
+            "sources": [
+                "https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi"
+            ]
+        }
+    ],
+    "characters": {
+        "Akekuri": {
+            "id": "akekuri",
+            "name": "Akekuri",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/akekuri",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "aa5b7410"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Thermite Cutter",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "OBJ Edge of Lightness",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Fortmaker",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Protection Suit",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Frontiers Extra O2 Tube T1",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "No Set",
+                    "equipment": {
+                        "armor": "Redeemer Armor",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Redeemer Seal",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Combo Skill > Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "laevatain-02",
+                "laevatain-03",
+                "avywenna-03",
+                "arcane-01",
+                "arcane-03",
+                "mi-fu-02"
+            ],
+            "rotation_catalog_ids": [
+                "arcane-timeline-1"
+            ],
+            "notes": []
+        },
+        "Alesh": {
+            "id": "alesh",
+            "name": "Alesh",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/alesh",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "144107bd"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Thermite Cutter",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Fortmaker",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Finchaser 3.0",
+                    "weapon_potential": 5,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Protection Suit",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Frontiers Extra O2 Tube T1",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "No Set",
+                    "equipment": {
+                        "armor": "Redeemer Armor",
+                        "gloves": "Eternal Xiranite Gloves",
+                        "kit_1": "Redeemer Seal",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Battle Skill = Combo Skill = Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "yvonne-02",
+                "yvonne-03",
+                "endministrator-03"
+            ],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Antal": {
+            "id": "antal",
+            "name": "Antal",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/antal",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "a6c9d693"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Detonation Unit",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Stanza of Memorials",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "OBJ Arts Identifier",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Overalls",
+                        "gloves": "Eternal Xiranite Gloves",
+                        "kit_1": "Eternal Xiranite Power Core",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill = Ultimate > Combo Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "laevatain-01",
+                "laevatain-02",
+                "avywenna-01",
+                "zhuang-fangyi-03"
+            ],
+            "rotation_catalog_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2",
+                "avywenna-rotation-1",
+                "avywenna-rotation-2"
+            ],
+            "notes": []
+        },
+        "Arcane": {
+            "id": "arcane",
+            "name": "Arcane",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/arcane",
+            "source_reported_update": "16/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "6fb6b316"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Type 42: Solemn Phalanx",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Junction Point",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Detonation Unit",
+                    "weapon_potential": 0,
+                    "section": "specialist",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 4,
+                    "name": "Oblivion",
+                    "weapon_potential": 0,
+                    "section": "specialist",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 5,
+                    "name": "Opus: Etch Figure",
+                    "weapon_potential": 0,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Hot Work",
+                    "equipment": {
+                        "armor": "Hot Work Exo-Rig",
+                        "gloves": "Hot Work Hands PPE",
+                        "kit_1": "Hot Work Insulation Slab",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Light Armor",
+                        "gloves": "Eternal Xiranite Wraps",
+                        "kit_1": "Eternal Xiranite Bracing Slab",
+                        "kit_2": "Eternal Xiranite Bracing Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Ultimate > Combo Skill > Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "arcane-01",
+                "arcane-02",
+                "arcane-03",
+                "typhoeus-01",
+                "typhoeus-02"
+            ],
+            "rotation_catalog_ids": [
+                "arcane-timeline-1",
+                "typhoeus-timeline-1"
+            ],
+            "notes": [
+                "Arcane has attribute-selected forms. INT uses Intellect >= Will; WILL uses Will > Intellect. Equipment changes can switch forms, so DPS and support loadouts must be matched to the intended team."
+            ]
+        },
+        "Arclight": {
+            "id": "arclight",
+            "name": "Arclight",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/arclight",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "2d2ced69"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Thermite Cutter",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "OBJ Edge of Lightness",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Twelve Questions",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Protection Suit",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Frontiers Extra O2 Tube T1",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Bonekrusha",
+                    "equipment": {
+                        "armor": "Bonekrusha Heavy Armor",
+                        "gloves": "Frontiers Blight RES Gloves",
+                        "kit_1": "Bonekrusha Mask",
+                        "kit_2": "Bonekrusha Mask"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill > Ultimate >= Combo Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "avywenna-01",
+                "avywenna-02",
+                "zhuang-fangyi-01",
+                "zhuang-fangyi-02",
+                "zhuang-fangyi-03"
+            ],
+            "rotation_catalog_ids": [
+                "avywenna-rotation-1",
+                "avywenna-rotation-2",
+                "zhuang-fangyi-timeline-1"
+            ],
+            "notes": []
+        },
+        "Ardelia": {
+            "id": "ardelia",
+            "name": "Ardelia",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/ardelia",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "5fc26ac0"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Dreams of the Starry Beach",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Stanza of Memorials",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Bonekrusha Poncho T1",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Eternal Xiranite Auxiliary Arm",
+                        "kit_2": "Eternal Xiranite Auxiliary Arm"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill > Combo Skill > Ultimate = Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "laevatain-01",
+                "laevatain-02",
+                "laevatain-03",
+                "last-rite-02",
+                "last-rite-03",
+                "endministrator-01",
+                "endministrator-02",
+                "endministrator-03",
+                "lifeng-02",
+                "da-pan-02",
+                "da-pan-03",
+                "mi-fu-01",
+                "typhoeus-02"
+            ],
+            "rotation_catalog_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2",
+                "endministrator-rotation-1",
+                "endministrator-rotation-2",
+                "lifeng-rotation-1",
+                "lifeng-rotation-2",
+                "mi-fu-timeline-1"
+            ],
+            "notes": []
+        },
+        "Argent Flow": {
+            "id": "argent-flow",
+            "name": "Argent Flow",
+            "publication_status": "upcoming_no_published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/argent-flow",
+            "source_reported_update": "08/October/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "9d91affa"
+            },
+            "weapon_recommendations": [],
+            "gear_loadouts": [],
+            "skill_upgrade_priorities": [],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": [
+                "The source directory marks this operator upcoming. No ideal build or guide strategy was invented."
+            ]
+        },
+        "Avywenna": {
+            "id": "avywenna",
+            "name": "Avywenna",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/avywenna",
+            "source_reported_update": "16/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "5d05d730"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "JET",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Cohesive Traction",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Aggeloslayer",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Bonekrusha",
+                    "equipment": {
+                        "armor": "Bonekrusha Poncho T1",
+                        "gloves": "Bonekrusha Gloves",
+                        "kit_1": "Bonekrusha Figurine",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Battle Skill > Ultimate >= Basic Attack > Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "avywenna-01",
+                "avywenna-02",
+                "avywenna-03"
+            ],
+            "rotation_catalog_ids": [
+                "avywenna-rotation-1",
+                "avywenna-rotation-2"
+            ],
+            "notes": []
+        },
+        "Camille": {
+            "id": "camille",
+            "name": "Camille",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/camille",
+            "source_reported_update": "16/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "881b2afa"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Blessing of Lustrous Carmine",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Beacon of Duty",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Protection Suit",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Frontiers Extra O2 Tube",
+                        "kit_2": "Rift Trekker Silver Blade"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "MI Security Armor T1",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Eternal Xiranite Power Core",
+                        "kit_2": "Eternal Xiranite Power Core"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Heat Support",
+                    "order": "Combo Skill = Battle Skill >= Ultimate > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Catcher": {
+            "id": "catcher",
+            "name": "Catcher",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/catcher",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "3c9309ef"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "OBJ Heavy Burden",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Thunderberge",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Former Finery",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Tide Fall Light Armor",
+                        "gloves": "Eternal Xiranite Gloves",
+                        "kit_1": "Eternal Xiranite Power Core",
+                        "kit_2": "Eternal Xiranite Power Core"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Combo Skill > Ultimate = Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Chen Qianyu": {
+            "id": "chen-qianyu",
+            "name": "Chen Qianyu",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/chen-qianyu",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "83832cc0"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Sundering Steel",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Glorious Memory",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Grand Vision",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Qingbo",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor T1",
+                        "gloves": "Qingbo Gauntlets",
+                        "kit_1": "Qingbo Positioning Kit T1",
+                        "kit_2": "Qingbo Positioning Kit T1"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Swordmancer",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor T1",
+                        "gloves": "Redeemer Gloves",
+                        "kit_1": "Swordmancer Dagger",
+                        "kit_2": "Swordmancer Dagger"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Basic Attack > Battle Skill >= Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "endministrator-01",
+                "endministrator-02",
+                "lifeng-02",
+                "lifeng-03",
+                "da-pan-02",
+                "da-pan-03",
+                "mi-fu-01",
+                "mi-fu-03"
+            ],
+            "rotation_catalog_ids": [
+                "endministrator-rotation-1",
+                "endministrator-rotation-2",
+                "lifeng-rotation-1",
+                "lifeng-rotation-2",
+                "mi-fu-timeline-1"
+            ],
+            "notes": []
+        },
+        "Da Pan": {
+            "id": "da-pan",
+            "name": "Da Pan",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/da-pan",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "2c663f95"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Amaranthine Tassel",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Exemplar",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Phantom Pain",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Grizzled Edge",
+                    "equipment": {
+                        "armor": "Grizzled Edge Armor",
+                        "gloves": "Grizzled Edge Gauntlets",
+                        "kit_1": "Grizzled Edge Push Knife",
+                        "kit_2": "Swordmancer NAV Beacon"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Swordmancer",
+                    "equipment": {
+                        "armor": "Swordmancer Light Armor",
+                        "gloves": "Swordmancer TAC Gauntlets T1",
+                        "kit_1": "Swordmancer NAV Beacon",
+                        "kit_2": "Swordmancer NAV Beacon"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Basic Attack > Combo Skill > Battle Skill = Ultimate"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "lifeng-02",
+                "lifeng-03",
+                "da-pan-02",
+                "da-pan-03"
+            ],
+            "rotation_catalog_ids": [
+                "lifeng-rotation-2"
+            ],
+            "notes": []
+        },
+        "Ember": {
+            "id": "ember",
+            "name": "Ember",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/ember",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "7145a43a"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Thunderberge",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Finishing Call",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Former Finery",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "LYNX",
+                    "equipment": {
+                        "armor": "LYNX Heavy Armor",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "Eternal Xiranite Power Core",
+                        "kit_2": "LYNX Aegis Injector"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Combo Skill > Ultimate = Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Endministrator": {
+            "id": "endministrator",
+            "name": "Endministrator",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/endministrator",
+            "source_reported_update": "14/July/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "5d384e1c"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Grand Vision",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Eminent Repute",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Sundering Steel",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Grizzled Edge",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor T1",
+                        "gloves": "Grizzled Edge Gauntlets T1",
+                        "kit_1": "Grizzled Edge Push Knife T1",
+                        "kit_2": "Grizzled Edge Push Knife T1"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Swordmancer",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor",
+                        "gloves": "Aethertech Gloves",
+                        "kit_1": "Swordmancer Flint",
+                        "kit_2": "Swordmancer Flint"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill = Ultimate >= Combo Skill >= Basic Attack"
+                },
+                {
+                    "role": "Main Field",
+                    "order": "Basic Attack > Battle Skill = Ultimate >= Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "rossi-01",
+                "rossi-03",
+                "endministrator-01",
+                "endministrator-02",
+                "endministrator-03",
+                "da-pan-03"
+            ],
+            "rotation_catalog_ids": [
+                "rossi-rotation-1",
+                "rossi-rotation-2",
+                "endministrator-rotation-1",
+                "endministrator-rotation-2",
+                "lifeng-rotation-1"
+            ],
+            "notes": []
+        },
+        "Estella": {
+            "id": "estella",
+            "name": "Estella",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/estella",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "12cbd85f"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "JET",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "OBJ Razohorn",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Valiant",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Type 50 Yinglung",
+                    "equipment": {
+                        "armor": "Type 50 Yinglung Light Armor",
+                        "gloves": "Swordmancer TAC Gloves",
+                        "kit_1": "Type 50 Yinglung Radar",
+                        "kit_2": "Type 50 Yinglung Radar"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Combo Skill > Ultimate > Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "yvonne-03",
+                "endministrator-03"
+            ],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Fluorite": {
+            "id": "fluorite",
+            "name": "Fluorite",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/fluorite",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "d6769b47"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "OBJ Velocitous",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Howling Guard",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "No Set",
+                    "equipment": {
+                        "armor": "Tide Fall Light Armor",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "Redeemer Seal",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Armor T3",
+                        "gloves": "Frontiers Blight RES Gloves",
+                        "kit_1": "Frontiers Extra O2 Tube",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Basic Attack >= Combo Skill > Ultimate > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "last-rite-03"
+            ],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Gilberta": {
+            "id": "gilberta",
+            "name": "Gilberta",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/gilberta",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "f6b5f59f"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Delivery Guaranteed",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Stanza of Memorials",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Opus: Etch Figure",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 4,
+                    "name": "OBJ Arts Identifier",
+                    "weapon_potential": 5,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Armor",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Eternal Xiranite Auxiliary Arm",
+                        "kit_2": "Eternal Xiranite Auxiliary Arm"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Swordmancer",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Swordmancer NAV Beacon",
+                        "kit_2": "Swordmancer NAV Beacon"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Combo Skill > Battle Skill = Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "rossi-01",
+                "rossi-02",
+                "yvonne-01",
+                "yvonne-02",
+                "avywenna-02",
+                "avywenna-03",
+                "typhoeus-03",
+                "zhuang-fangyi-02"
+            ],
+            "rotation_catalog_ids": [
+                "rossi-rotation-1",
+                "rossi-rotation-2",
+                "yvonne-rotation-1",
+                "yvonne-rotation-2"
+            ],
+            "notes": []
+        },
+        "Laevatain": {
+            "id": "laevatain",
+            "name": "Laevatain",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/laevatain",
+            "source_reported_update": "26/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "7fdae258"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Forgeborn Scathe",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Umbral Torch",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Umbral Torch",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 4,
+                    "name": "Fortmaker",
+                    "weapon_potential": 5,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Hot Work",
+                    "equipment": {
+                        "armor": "Redeemer Armor",
+                        "gloves": "Hot Work Gauntlets",
+                        "kit_1": "Hot Work Pyrometer",
+                        "kit_2": "Hot Work Pyrometer"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Hot Work",
+                    "equipment": {
+                        "armor": "Hot Work Exo-Rig",
+                        "gloves": "Hot Work Gauntlets",
+                        "kit_1": "Hot Work Pyrometer",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Ultimate = Battle Skill > Combo Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "laevatain-01",
+                "laevatain-02",
+                "laevatain-03"
+            ],
+            "rotation_catalog_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2"
+            ],
+            "notes": []
+        },
+        "Last Rite": {
+            "id": "last-rite",
+            "name": "Last Rite",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/last-rite",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "c875f03e"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Khravengger",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Sundered Prince",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Seeker of Dark Lung",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Tide Surge",
+                    "equipment": {
+                        "armor": "Aethertech Plating",
+                        "gloves": "Tide Surge Gauntlets",
+                        "kit_1": "Hanging River 02 Tube",
+                        "kit_2": "Hanging River 02 Tube"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Combo Skill >= Ultimate >= Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "last-rite-01",
+                "last-rite-02",
+                "last-rite-03"
+            ],
+            "rotation_catalog_ids": [
+                "last-rite-rotation-1",
+                "last-rite-rotation-2"
+            ],
+            "notes": []
+        },
+        "Lifeng": {
+            "id": "lifeng",
+            "name": "Lifeng",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/lifeng",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "b2fb803a"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Mountain Bearer",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Valiant",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Pathfinder's Beacon",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 4,
+                    "name": "Chimeric Justice",
+                    "weapon_potential": 5,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Swordmancer",
+                    "equipment": {
+                        "armor": "Swordmancer Heavy Armor T1",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Swordmancer Flint",
+                        "kit_2": "Swordmancer Flint"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Armor",
+                        "gloves": "Eternal Xiranite Gloves",
+                        "kit_1": "Swordmancer Flint",
+                        "kit_2": "Eternal Xiranite Power Core"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill > Ultimate >= Basic Attack = Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "endministrator-02",
+                "lifeng-02",
+                "lifeng-03",
+                "mi-fu-03"
+            ],
+            "rotation_catalog_ids": [
+                "lifeng-rotation-1",
+                "lifeng-rotation-2"
+            ],
+            "notes": []
+        },
+        "Liino": {
+            "id": "liino",
+            "name": "Liino",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/liino",
+            "source_reported_update": "02/September/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "e57b3b81"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Bedazzling Night Debut",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Golden Age",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Light Armor",
+                        "gloves": "Eternal Xiranite Hands",
+                        "kit_1": "Eternal Xiranite Bracing Slab T1",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "LYNX",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Light Armor",
+                        "gloves": "LYNX Gauntlets T1",
+                        "kit_1": "LYNX Slab",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Combo Skill = Battle Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "typhoeus-01",
+                "typhoeus-02",
+                "typhoeus-03",
+                "zhuang-fangyi-01"
+            ],
+            "rotation_catalog_ids": [
+                "typhoeus-timeline-1",
+                "zhuang-fangyi-timeline-1"
+            ],
+            "notes": []
+        },
+        "Mi Fu": {
+            "id": "mi-fu",
+            "name": "Mi Fu",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/mi-fu",
+            "source_reported_update": "16/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "ef6ff4ba"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Amaranthine Tassel",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Amaranthine Tassel",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Exemplar",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Grizzled Edge",
+                    "equipment": {
+                        "armor": "Swordmancer Light Armor",
+                        "gloves": "Grizzled Edge Gauntlets",
+                        "kit_1": "Grizzled Edge Push Knife",
+                        "kit_2": "Grizzled Edge Push Knife"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Battle Skill >= Basic Attack > Ultimate > Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "mi-fu-01",
+                "mi-fu-02",
+                "mi-fu-03"
+            ],
+            "rotation_catalog_ids": [
+                "mi-fu-timeline-1"
+            ],
+            "notes": []
+        },
+        "Perlica": {
+            "id": "perlica",
+            "name": "Perlica",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/perlica",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "31329775"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Stanza of Memorials",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Detonation Unit",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Wild Wanderer",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 4,
+                    "name": "Oblivion",
+                    "weapon_potential": 0,
+                    "section": "specialist",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Pulser Labs",
+                    "equipment": {
+                        "armor": "Pulser Labs Disruptor Suit",
+                        "gloves": "Aethertech Gloves",
+                        "kit_1": "Pulser Labs Calibrator",
+                        "kit_2": "Pulser Labs Calibrator"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Qingbo",
+                    "equipment": {
+                        "armor": "Qingbo Light Armor",
+                        "gloves": "Qingbo Gloves",
+                        "kit_1": "Qingbo Cask",
+                        "kit_2": "Qingbo Cask"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill >= Ultimate >= Basic Attack > Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "rossi-02",
+                "rossi-03",
+                "last-rite-01",
+                "last-rite-02",
+                "avywenna-01",
+                "avywenna-02",
+                "avywenna-03",
+                "arcane-03",
+                "typhoeus-01",
+                "typhoeus-03",
+                "zhuang-fangyi-01",
+                "zhuang-fangyi-02",
+                "zhuang-fangyi-03"
+            ],
+            "rotation_catalog_ids": [
+                "last-rite-rotation-1",
+                "last-rite-rotation-2",
+                "avywenna-rotation-1",
+                "avywenna-rotation-2",
+                "typhoeus-timeline-1",
+                "zhuang-fangyi-timeline-1"
+            ],
+            "notes": []
+        },
+        "Pogranichnik": {
+            "id": "pogranichnik",
+            "name": "Pogranichnik",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/pogranichnik",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "7229e2e2"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Thermite Cutter",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Never Rest",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Fortmaker",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Frontiers",
+                    "equipment": {
+                        "armor": "Frontiers Protection Suit",
+                        "gloves": "Frontiers Fiber Gloves T1",
+                        "kit_1": "Frontiers O2 Tube",
+                        "kit_2": "Hot Work Power Cartridge"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Hot Work",
+                    "equipment": {
+                        "armor": "Bonekrusha Poncho T1",
+                        "gloves": "Hot Work Gloves",
+                        "kit_1": "Hot Work Power Cartridge",
+                        "kit_2": "Hot Work Power Cartridge"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Supporting",
+                    "order": "Basic Attack = Ultimate >= Combo Skill > Battle Skill"
+                },
+                {
+                    "role": "Breaching",
+                    "order": "Basic Attack = Ultimate >= Combo Skill = Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "endministrator-01",
+                "lifeng-03",
+                "da-pan-02",
+                "mi-fu-01",
+                "mi-fu-02",
+                "mi-fu-03"
+            ],
+            "rotation_catalog_ids": [
+                "endministrator-rotation-1",
+                "endministrator-rotation-2",
+                "mi-fu-timeline-1"
+            ],
+            "notes": []
+        },
+        "Purrchena": {
+            "id": "purrchena",
+            "name": "Purrchena",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/purrchena",
+            "source_reported_update": "15/October/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "720785f2"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Dessert Moment",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Swordmancer Light Armor",
+                        "gloves": "Eternal Xiranite Gloves",
+                        "kit_1": "Eternal Xiranite Heavy Slab",
+                        "kit_2": "Eternal Xiranite Heavy Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "LYNX",
+                    "equipment": {
+                        "armor": "LYNX Cuirass T1",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "LYNX Aegis Injector",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate > Combo Skill > Battle Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Rossi": {
+            "id": "rossi",
+            "name": "Rossi",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/rossi",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "a4f32828"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Lupine Scarlet",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Glorious Memory",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Glorious Memory",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "MI Security",
+                    "equipment": {
+                        "armor": "MI Security Armor T1",
+                        "gloves": "MI Security Gloves T1",
+                        "kit_1": "MI Security Scope T1",
+                        "kit_2": "MI Security Scope T1"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Ultimate > Combo Skill > Basic Attack >= Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "rossi-01",
+                "rossi-02",
+                "rossi-03",
+                "mi-fu-02"
+            ],
+            "rotation_catalog_ids": [
+                "rossi-rotation-1",
+                "rossi-rotation-2"
+            ],
+            "notes": [
+                "Rossi's combo requires a timed second input. Skill investment order does not replace the state-dependent combo sequence."
+            ]
+        },
+        "Si": {
+            "id": "si",
+            "name": "Si",
+            "publication_status": "new_published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/si",
+            "source_reported_update": "15/October/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "fc930e6b"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Jade Vessel",
+                    "weapon_potential": 1,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Long Heritage",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Khravengger",
+                    "weapon_potential": 1,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Type 50 Yinglung",
+                    "equipment": {
+                        "armor": "Type 50 Yinglung Soft Armor",
+                        "gloves": "Type 50 Yinglung Gauntlets",
+                        "kit_1": "Type 50 Yinglung Beacon",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Overalls",
+                        "gloves": "Eternal Xiranite Channeling Gloves",
+                        "kit_1": "Eternal Xiranite Rangefinder",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Generalist",
+                    "order": "Combo Skill > Ultimate = Battle Skill > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Snowshine": {
+            "id": "snowshine",
+            "name": "Snowshine",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/snowshine",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "b03e996b"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Finishing Call",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Former Finery",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Thunderberge",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Bonekrusha Poncho T1",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Eternal Xiranite Auxiliary Arm",
+                        "kit_2": "Eternal Xiranite Auxiliary Arm"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "LYNX",
+                    "equipment": {
+                        "armor": "LYNX Heavy Armor",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "Eternal Xiranite Power Core",
+                        "kit_2": "LYNX Aegis Injector"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Combo Skill > Ultimate = Basic Attack > Battle Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [],
+            "rotation_catalog_ids": [],
+            "notes": []
+        },
+        "Tangtang": {
+            "id": "tangtang",
+            "name": "Tangtang",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/tangtang",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "ad10c77b"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Brigand's Calling",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Brigand's Calling",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Home Longing",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Qingbo",
+                    "equipment": {
+                        "armor": "Qingbo Heavy Armor",
+                        "gloves": "Qingbo Gauntlets",
+                        "kit_1": "Qingbo Positioning Kit",
+                        "kit_2": "Qingbo Positioning Kit"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Bonekrusha",
+                    "equipment": {
+                        "armor": "Bonekrusha Heavy Armor T2",
+                        "gloves": "Bonekrusha Wristband T1",
+                        "kit_1": "Bonekrusha Mask T2",
+                        "kit_2": "Bonekrusha Mask T2"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Battle Skill > Ultimate >= Basic Attack = Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "yvonne-01",
+                "last-rite-01",
+                "arcane-01",
+                "arcane-02"
+            ],
+            "rotation_catalog_ids": [
+                "yvonne-rotation-1",
+                "yvonne-rotation-2",
+                "last-rite-rotation-1",
+                "last-rite-rotation-2",
+                "arcane-timeline-1"
+            ],
+            "notes": []
+        },
+        "Typhoeus": {
+            "id": "typhoeus",
+            "name": "Typhoeus",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/typhoeus",
+            "source_reported_update": "24/September/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "6728a995"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Umbra of Frigid Eventide",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Umbra of Frigid Eventide",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Suffering's End",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Deep Rampart",
+                    "equipment": {
+                        "armor": "Deep Rampart Armor",
+                        "gloves": "Deep Rampart Gauntlets",
+                        "kit_1": "Deep Rampart Comms",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Battle Skill > Basic Attack = Combo Skill > Ultimate"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "typhoeus-01",
+                "typhoeus-02",
+                "typhoeus-03"
+            ],
+            "rotation_catalog_ids": [
+                "typhoeus-timeline-1"
+            ],
+            "notes": []
+        },
+        "Wulfgard": {
+            "id": "wulfgard",
+            "name": "Wulfgard",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/wulfgard",
+            "source_reported_update": "14/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "fb7727cd"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Clannibal",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "OBJ Velocitous",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Rational Farewell",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "No Set",
+                    "equipment": {
+                        "armor": "Type 50 Yinglung Heavy Armor T1",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "Redeemer Seal",
+                        "kit_2": "Redeemer Seal"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "Hot Work",
+                    "equipment": {
+                        "armor": "Hot Work Exoskeleton",
+                        "gloves": "LYNX Gloves",
+                        "kit_1": "Hot Work Power Bank",
+                        "kit_2": "Hot Work Power Bank"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Heat Support",
+                    "order": "Basic Attack > Combo Skill >= Battle Skill >= Ultimate"
+                },
+                {
+                    "role": "Wulfgard DPS",
+                    "order": "Battle Skill > Basic Attack > Combo Skill >= Ultimate"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "laevatain-01",
+                "laevatain-03",
+                "rossi-01",
+                "rossi-02",
+                "rossi-03"
+            ],
+            "rotation_catalog_ids": [
+                "laevatain-rotation-1",
+                "laevatain-rotation-2",
+                "rossi-rotation-1",
+                "rossi-rotation-2"
+            ],
+            "notes": [
+                "Support and damage skill priorities differ. The saved team catalog includes a separate P5-combo-reset rotation; do not use that branch without Wulfgard P5."
+            ]
+        },
+        "Xaihi": {
+            "id": "xaihi",
+            "name": "Xaihi",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/xaihi",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "324face6"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Detonation Unit",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Chivalric Virtues",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Stanza of Memorials",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Eternal Xiranite",
+                    "equipment": {
+                        "armor": "Eternal Xiranite Light Armor T1",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Eternal Xiranite Bracing Slab",
+                        "kit_2": "Frontiers Extra O2 Tube T1"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                },
+                {
+                    "source_order": 2,
+                    "set": "No Set",
+                    "equipment": {
+                        "armor": "Redeemer Armor",
+                        "gloves": "Eternal Xiranite Gloves T1",
+                        "kit_1": "Frontiers Extra O2 Tube T1",
+                        "kit_2": "Frontiers Extra O2 Tube T1"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Off Field",
+                    "order": "Ultimate >= Battle Skill > Combo Skill = Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "yvonne-01",
+                "yvonne-02",
+                "yvonne-03",
+                "last-rite-01",
+                "last-rite-02",
+                "last-rite-03",
+                "arcane-01",
+                "arcane-02",
+                "arcane-03"
+            ],
+            "rotation_catalog_ids": [
+                "yvonne-rotation-1",
+                "yvonne-rotation-2",
+                "last-rite-rotation-1",
+                "last-rite-rotation-2",
+                "arcane-timeline-1"
+            ],
+            "notes": []
+        },
+        "Yvonne": {
+            "id": "yvonne",
+            "name": "Yvonne",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/yvonne",
+            "source_reported_update": "14/June/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "9bacd460"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Artzy Tyrannical",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Navigator",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Wedge",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "MI Security",
+                    "equipment": {
+                        "armor": "MI Security Overalls",
+                        "gloves": "MI Security Hands PPE",
+                        "kit_1": "MI Security Toolkit",
+                        "kit_2": "MI Security Toolkit"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Ultimate > Basic Attack >= Battle Skill = Combo Skill"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "yvonne-01",
+                "yvonne-02",
+                "yvonne-03",
+                "arcane-02"
+            ],
+            "rotation_catalog_ids": [
+                "yvonne-rotation-1",
+                "yvonne-rotation-2"
+            ],
+            "notes": []
+        },
+        "Zhuang Fangyi": {
+            "id": "zhuang-fangyi",
+            "name": "Zhuang Fangyi",
+            "publication_status": "published_build",
+            "source_url": "https://www.prydwen.gg/arknights-endfield/characters/zhuang-fangyi",
+            "source_reported_update": "17/August/2026",
+            "retrieved_on": "2026-10-17",
+            "source_facts_fingerprint": {
+                "algorithm": "FNV-1a-32 of normalized extracted build facts",
+                "value": "ada091e2"
+            },
+            "weapon_recommendations": [
+                {
+                    "display_order": 1,
+                    "name": "Lone Barge",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 2,
+                    "name": "Lone Barge",
+                    "weapon_potential": 0,
+                    "section": "general",
+                    "ownership_checked": false
+                },
+                {
+                    "display_order": 3,
+                    "name": "Flickers in the Mist",
+                    "weapon_potential": 5,
+                    "section": "general",
+                    "ownership_checked": false
+                }
+            ],
+            "gear_loadouts": [
+                {
+                    "source_order": 1,
+                    "set": "Xiranflow",
+                    "equipment": {
+                        "armor": "Xiranflow Light Armor",
+                        "gloves": "Xiranflow Gloves",
+                        "kit_1": "Xiranflow Baton",
+                        "kit_2": "LYNX Slab"
+                    },
+                    "role_specific_conditions": "Consult the linked guide before choosing between these loadouts; set labels do not mean every piece belongs to that set.",
+                    "ownership_checked": false
+                }
+            ],
+            "skill_upgrade_priorities": [
+                {
+                    "role": "Main Field",
+                    "order": "Battle Skill >= Combo Skill > Ultimate > Basic Attack"
+                }
+            ],
+            "stat_priority": null,
+            "stat_priority_status": "No separately ranked stat list was extracted; use the linked guide for role-specific thresholds.",
+            "team_catalog_ids": [
+                "zhuang-fangyi-01",
+                "zhuang-fangyi-02",
+                "zhuang-fangyi-03"
+            ],
+            "rotation_catalog_ids": [
+                "zhuang-fangyi-timeline-1"
+            ],
+            "notes": []
+        }
+    },
+    "farm_resources": {
+        "T_CREDS": {
+            "name": "T-Creds",
+            "inventory_expression": "{item_gold}"
+        },
+        "PROTOHEDRON": {
+            "name": "Protohedron",
+            "inventory_expression": "{item_char_skill_level_7_12}"
+        },
+        "PROTOPRISM": {
+            "name": "Protoprism",
+            "inventory_expression": "{item_char_skill_level_1_6}"
+        },
+        "COGNITIVE_CARRIER_EXP": {
+            "name": "Cognitive Carrier EXP",
+            "inventory_expression": "({item_expcard_stage2_high}*10000+{item_expcard_stage2_low}*1000)"
+        },
+        "COMBAT_RECORD_EXP": {
+            "name": "Combat Record EXP",
+            "inventory_expression": "({item_expcard_stage1_high}*10000+{item_expcard_stage1_mid}*1000+{item_expcard_stage1_low}*200)"
+        },
+        "PROTOSET": {
+            "name": "Protoset",
+            "inventory_expression": "{item_char_break_stage_3_4}"
+        },
+        "PROTODISK": {
+            "name": "Protodisk",
+            "inventory_expression": "{item_char_break_stage_1_2}"
+        },
+        "WEAPON_EXP": {
+            "name": "Weapon EXP",
+            "inventory_expression": "({item_weapon_expcard_high}*10000+{item_weapon_expcard_mid}*1000+{item_weapon_expcard_low}*200)"
+        },
+        "HEAVY_CAST_DIE": {
+            "name": "Heavy Cast Die",
+            "inventory_expression": "{item_weapon_break_high}"
+        },
+        "CAST_DIE": {
+            "name": "Cast Die",
+            "inventory_expression": "{item_weapon_break_low}"
+        },
+        "WARP_PLASMA_COATED_SLIDE": {
+            "name": "Warp Plasma-Coated Slide",
+            "inventory_expression": "{item_char_skill_specialize_6}"
+        },
+        "TRIPHASIC_NANOFLAKE": {
+            "name": "Triphasic Nanoflake",
+            "inventory_expression": "{item_char_skill_specialize_5}"
+        },
+        "QUADRANT_FITTING_FLUID": {
+            "name": "Quadrant Fitting Fluid",
+            "inventory_expression": "{item_char_skill_specialize_4}"
+        },
+        "TACHYON_SCREENING_LATTICE": {
+            "name": "Tachyon Screening Lattice",
+            "inventory_expression": "{item_char_skill_specialize_3}"
+        },
+        "D96_STEEL_SAMPLE_4": {
+            "name": "D96 Steel Sample 4",
+            "inventory_expression": "{item_char_skill_specialize_2}"
+        },
+        "METADIASTIMA_PHOTOEMISSION_TUBE": {
+            "name": "Metadiastima Photoemission Tube",
+            "inventory_expression": "{item_char_skill_specialize_1}"
+        }
+    }
+}

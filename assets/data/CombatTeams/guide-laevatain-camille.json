@@ -1,0 +1,217 @@
+{
+    "schema_version": 2,
+    "id": "guide-laevatain-camille",
+    "name": "Laevatain / Camille / Wulfgard / Gilberta \u2014 zero-energy opener",
+    "members": [
+        "Laevatain",
+        "Camille",
+        "Wulfgard",
+        "Gilberta"
+    ],
+    "driver_slot": 1,
+    "minimum_level": 80,
+    "identity_signal": "team_identity_matches",
+    "required_signals": [
+        "camille_combo_active",
+        "camille_combo_confirmed",
+        "camille_skill_confirmed",
+        "camille_skill_ready",
+        "final_strike_observed",
+        "gilberta_combo_active",
+        "gilberta_combo_confirmed",
+        "laevatain_combo_active",
+        "laevatain_combo_confirmed",
+        "laevatain_four_flames",
+        "laevatain_skill_confirmed",
+        "laevatain_skill_ready",
+        "sp_300_ready",
+        "team_identity_matches",
+        "wulfgard_combo_active",
+        "wulfgard_combo_confirmed",
+        "wulfgard_skill_confirmed",
+        "wulfgard_skill_ready"
+    ],
+    "signals": {},
+    "rules": [],
+    "execution_status": "combat_hud_calibration_required",
+    "build_requirements": [],
+    "rotation": {
+        "source_url": "https://mobalytics.gg/arknights-endfield/teams/okmuzzy-laevatain-team-guide",
+        "source_updated": "2026-07-16",
+        "variant": "Laevatain / Camille / Wulfgard / Gilberta \u2014 zero-energy opener",
+        "repeat_from": 0,
+        "steps": [
+            {
+                "id": "01-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "sp_300_ready"
+                ],
+                "allow_basic_attacks": true
+            },
+            {
+                "id": "02-camille-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "camille_skill_ready"
+                ],
+                "confirm": [
+                    "camille_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "camille_skill_confirmed"
+                ]
+            },
+            {
+                "id": "03-wulfgard-combo",
+                "action": "combo",
+                "slot": 3,
+                "requires": [
+                    "wulfgard_combo_active"
+                ],
+                "confirm": [
+                    "wulfgard_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "wulfgard_combo_confirmed"
+                ]
+            },
+            {
+                "id": "04-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "final_strike_observed"
+                ],
+                "allow_basic_attacks": true,
+                "event": true
+            },
+            {
+                "id": "05-wulfgard-skill",
+                "action": "skill",
+                "slot": 3,
+                "requires": [
+                    "wulfgard_skill_ready"
+                ],
+                "confirm": [
+                    "wulfgard_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "wulfgard_skill_confirmed"
+                ]
+            },
+            {
+                "id": "06-camille-skill",
+                "action": "skill",
+                "slot": 2,
+                "requires": [
+                    "camille_skill_ready"
+                ],
+                "confirm": [
+                    "camille_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "camille_skill_confirmed"
+                ]
+            },
+            {
+                "id": "07-camille-combo",
+                "action": "combo",
+                "slot": 2,
+                "requires": [
+                    "camille_combo_active"
+                ],
+                "confirm": [
+                    "camille_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "camille_combo_confirmed"
+                ]
+            },
+            {
+                "id": "08-observe",
+                "action": "wait",
+                "slot": 1,
+                "requires": [
+                    "final_strike_observed"
+                ],
+                "allow_basic_attacks": true,
+                "event": true
+            },
+            {
+                "id": "09-laevatain-skill",
+                "action": "skill",
+                "slot": 1,
+                "requires": [
+                    "laevatain_skill_ready",
+                    "laevatain_four_flames"
+                ],
+                "confirm": [
+                    "laevatain_skill_confirmed"
+                ],
+                "minimum_energy_bars": 1,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "laevatain_skill_confirmed"
+                ]
+            },
+            {
+                "id": "10-gilberta-combo",
+                "action": "combo",
+                "slot": 4,
+                "requires": [
+                    "gilberta_combo_active"
+                ],
+                "confirm": [
+                    "gilberta_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "gilberta_combo_confirmed"
+                ]
+            },
+            {
+                "id": "11-laevatain-combo",
+                "action": "combo",
+                "slot": 1,
+                "requires": [
+                    "laevatain_combo_active"
+                ],
+                "confirm": [
+                    "laevatain_combo_confirmed"
+                ],
+                "minimum_energy_bars": 0,
+                "allow_basic_attacks": true,
+                "absent": [
+                    "laevatain_combo_confirmed"
+                ]
+            }
+        ]
+    },
+    "capture_tasks": [
+        "operators",
+        "skills",
+        "equipped_weapons",
+        "equipped_gear",
+        "gear_plans",
+        "team_presets"
+    ],
+    "limitations": [
+        "Guide timings depend on the verified build and enemy state.",
+        "Wait steps for Final Strikes or dive attacks require visual confirmation; movement stays with player/route.",
+        "Not a measured optimum for this account until live validation."
+    ]
+}

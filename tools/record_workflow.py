@@ -39,9 +39,17 @@ def record(base, instance, output, duration=1800, interval=.5, max_bytes=1024**3
               'ocr_status': 'pending_offline_processing', 'cache_freshness': 'not_independently_verified',
               'interval_seconds': interval, 'maximum_seconds': duration}
     def save():
+        # A Windows reader may briefly open status.json without FILE_SHARE_DELETE.
+        # Frame capture must not fail merely because the status rename is locked.
+        status.pop('status_write_warning', None)
         temp = output / 'status.tmp'
         temp.write_text(json.dumps(status, indent=4) + '\n', 'utf-8')
-        temp.replace(output / 'status.json')
+        try:
+            temp.replace(output / 'status.json')
+        except PermissionError:
+            status['status_write_warning'] = 'status.json temporarily locked by a reader'
+            if status['status'] in {'stopped', 'failed'}:
+                (output / 'status-final.json').write_text(json.dumps(status, indent=4) + '\n', 'utf-8')
     def post(path):
         req = urllib.request.Request(prefix + path, data=json.dumps(
             {'subscriber_id': subscriber, 'interval_ms': int(interval * 1000)}).encode(),

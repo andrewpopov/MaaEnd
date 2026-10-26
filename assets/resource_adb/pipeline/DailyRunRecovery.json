@@ -1,0 +1,185 @@
+{
+    "__ScenePrivateMenuListClickMenuMission": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "InMenuList",
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    -400,
+                                    0,
+                                    400,
+                                    720
+                                ],
+                                "expected": [
+                                    "任务",
+                                    "任務",
+                                    "(?i)^Missions?$",
+                                    "任務",
+                                    "임무"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "box_index": 1
+            }
+        }
+    },
+    "VisitFriendsEnterMenuTerminalSuccess": {
+        "roi": [
+            0,
+            0,
+            330,
+            80
+        ]
+    },
+    "VisitFriendsEnterShipConfirm": {
+        "next": [
+            "VisitFriendsEnterMenuTerminalSuccess",
+            "[JumpBack]SceneWaitLoadingExit",
+            "VisitFriendsEnterShipSuccess"
+        ]
+    },
+    "VisitFriendsEnterShip": {
+        "next": [
+            "VisitFriendsEnterMenuTerminalSuccess",
+            "[JumpBack]VisitFriendsQuickVisitNextEnable",
+            "VisitFriendsEnterShipConfirm"
+        ]
+    },
+    "ProtocolSpaceFightStartSuccess": {
+        "next": [
+            "ProtocolSpaceReward",
+            "ProtocolSpaceTouchExitTouch",
+            "ProtocolSpaceOperationFailed",
+            "[JumpBack]AutoFight",
+            "[JumpBack]ProtocolSpaceTouchExitMoveToTarget",
+            "[JumpBack]ProtocolSpaceTouchExitNotFound"
+        ]
+    },
+    "ProtocolSpaceTouchExitRetry": {
+        "next": [
+            "ProtocolSpaceReward",
+            "ProtocolSpaceTouchExitTouchRetry",
+            "[JumpBack]ProtocolSpaceTouchExitMoveToTarget",
+            "[JumpBack]ProtocolSpaceTouchExitNotFound"
+        ]
+    },
+    "ProtocolSpaceRewardDontUsePermit": {
+        "expected": [
+            "消耗",
+            "Cost",
+            "(?i)Spend\\s*\\d+\\s*to acquire rewards"
+        ]
+    },
+    "SceneNoticeRewardsConfirm": {
+        "next": [
+            "SceneNoticeRewardsConfirmClick",
+            "SceneNoticeRewardsAlreadyDismissed"
+        ]
+    },
+    "SceneNoticeRewardsAlreadyDismissed": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    "InNoticeRewards"
+                ]
+            }
+        },
+        "inverse": true,
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0
+    },
+    "__ScenePrivateWorldSpaceExit": {
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "RepeatUntilFoundAction",
+                "custom_action_param": {
+                    "custom_action": "AutoAltClickAction",
+                    "wait_nodes": [
+                        "__ScenePrivateWorldSpaceExitConfirm",
+                        "__ScenePrivateEndVisit",
+                        "SceneWaitLoadingExit",
+                        "InWorld",
+                        "CloseButtonType1"
+                    ]
+                }
+            }
+        },
+        "next": [
+            "__ScenePrivateWorldSpaceExitConfirm",
+            "__ScenePrivateEndVisit",
+            "[JumpBack]SceneWaitLoadingExit",
+            "__ScenePrivateAnyEnterWorldSuccess",
+            "[JumpBack]__ScenePrivateAnyExit"
+        ]
+    },
+    "ReceptionRoomCollectCluesExit": {
+        "next": [
+            "ReceptionRoomCollectCluesPanelExit",
+            "InReceptionRoom"
+        ]
+    },
+    "ReceptionRoomCollectCluesPanelExit": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": {
+                            "type": "OCR",
+                            "param": {
+                                "roi": [
+                                    720,
+                                    55,
+                                    240,
+                                    65
+                                ],
+                                "expected": [
+                                    "收集线索",
+                                    "收集線索",
+                                    "(?i)Collect\\s*Clue",
+                                    "手がかり収集"
+                                ]
+                            }
+                        }
+                    },
+                    "CloseButtonType1"
+                ],
+                "box_index": 1
+            }
+        },
+        "action": "Click",
+        "post_wait_freezes": 200,
+        "next": [
+            "InReceptionRoom"
+        ]
+    },
+    "InMenuMission": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    0,
+                    0,
+                    220,
+                    70
+                ],
+                "expected": [
+                    "任务",
+                    "任務",
+                    "(?i)Missions?",
+                    "임무"
+                ]
+            }
+        }
+    }
+}

@@ -39,7 +39,15 @@ class WorkflowRecordingTests(unittest.TestCase):
             clock[0] += seconds
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / 'capture'
-            with patch.object(record_workflow.urllib.request, 'build_opener', return_value=HTTP()), \
+            original_replace = Path.replace
+            locks = [1]
+            def locked_once(path, target):
+                if path.name == 'status.tmp' and locks[0]:
+                    locks[0] -= 1
+                    raise PermissionError('fixture: Windows reader holds status.json')
+                return original_replace(path, target)
+            with patch.object(Path, 'replace', locked_once), \
+                 patch.object(record_workflow.urllib.request, 'build_opener', return_value=HTTP()), \
                  patch.object(record_workflow.time, 'monotonic', side_effect=lambda: clock[0]), \
                  patch.object(record_workflow.time, 'sleep', side_effect=sleep):
                 status = record_workflow.record('http://127.0.0.1:12702/api', 'fixture', output, duration=36)

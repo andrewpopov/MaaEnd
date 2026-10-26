@@ -12,5 +12,1040 @@
         },
         "post_delay": 0,
         "rate_limit": 0
+    },
+    "InnkeepingReactiveInitialize": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingReactiveAction",
+                "custom_action_param": {
+                    "reset": true,
+                    "automatic": true
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingReactiveObserve": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingReactiveAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingReactiveClick": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_wait_freezes": {
+            "time": 250,
+            "target": [
+                480,
+                300,
+                320,
+                280
+            ],
+            "threshold": 0.99,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingReactiveClickAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingReactiveFastClick": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingReactiveClickAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingReactivePress": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "target": true,
+                "duration": 120,
+                "contact": 2
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "InnkeepingReactiveDone": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "InnkeepingReactiveNavigate": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingReactiveNavigateAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingCameraSearch": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingCameraSearchAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingWalkBurst": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingWalkBurstAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingFixedRouteDepart": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingFixedRouteStepAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingFixedRouteStep": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingFixedRouteStepAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingFixedRouteArrive": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingFixedRouteStepAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingStartDispatch": {
+        "recognition": {
+            "type": "DirectHit"
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingCloseDetails",
+            "InnkeepingSetupResultContinue",
+            "InnkeepingSetupResultFinish",
+            "InnkeepingStartWorld",
+            "InnkeepingStartTheme",
+            "InnkeepingStartSettings",
+            "InnkeepingStartMenu",
+            "InnkeepingStartActive",
+            "InnkeepingStartShip",
+            "InnkeepingStartExplore",
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingStartWorld": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    700,
+                    280,
+                    350,
+                    250
+                ],
+                "expected": [
+                    "Open the Inn"
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 300,
+            "target": [
+                720,
+                300,
+                320,
+                250
+            ],
+            "threshold": 0.995,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingOpenAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingAwaitTheme"
+        ]
+    },
+    "InnkeepingStartTheme": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    823,
+                    629,
+                    100,
+                    34
+                ],
+                "expected": [
+                    "Trial Run"
+                ],
+                "only_rec": true
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 200,
+            "target": [
+                480,
+                600,
+                780,
+                90
+            ],
+            "threshold": 0.98,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingAwaitSettings"
+        ]
+    },
+    "InnkeepingStartSettings": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    970,
+                    600,
+                    290,
+                    90
+                ],
+                "expected": [
+                    "Set Menu"
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 200,
+            "target": [
+                480,
+                600,
+                780,
+                90
+            ],
+            "threshold": 0.98,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingAwaitMenu"
+        ]
+    },
+    "InnkeepingStartMenu": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    15,
+                    5,
+                    260,
+                    75
+                ],
+                "expected": [
+                    "MENU DESIGN"
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 200,
+            "target": [
+                480,
+                600,
+                780,
+                90
+            ],
+            "threshold": 0.98,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingMenuAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingMenuStart": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1028,
+                    624,
+                    170,
+                    30
+                ],
+                "expected": [
+                    "Open the Inn"
+                ],
+                "only_rec": true
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 200,
+            "target": [
+                480,
+                600,
+                780,
+                90
+            ],
+            "threshold": 0.98,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingAwaitActive"
+        ]
+    },
+    "InnkeepingStartActive": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            15,
+                            15,
+                            205,
+                            65
+                        ],
+                        "expected": [
+                            "End Session"
+                        ]
+                    },
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            840,
+                            600,
+                            210,
+                            80
+                        ],
+                        "expected": [
+                            "Add Order"
+                        ]
+                    }
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingEarlyKitchenOpen"
+        ]
+    },
+    "InnkeepingStartExplore": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    40,
+                    200,
+                    420,
+                    65
+                ],
+                "expected": [
+                    "Yuanyuan Innkeeper III"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingSetupNavigateAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingAwaitTheme": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingSetupResultContinue",
+            "InnkeepingThemeVisible"
+        ]
+    },
+    "InnkeepingSetupResultContinue": {
+        "recognition": "And",
+        "all_of": [
+            {
+                "recognition": "OCR",
+                "roi": [
+                    750,
+                    290,
+                    260,
+                    65
+                ],
+                "expected": [
+                    "Inn Stats"
+                ]
+            },
+            {
+                "recognition": "OCR",
+                "roi": [
+                    750,
+                    385,
+                    310,
+                    65
+                ],
+                "expected": [
+                    "Highest Streak"
+                ]
+            },
+            {
+                "recognition": "OCR",
+                "roi": [
+                    1000,
+                    600,
+                    260,
+                    100
+                ],
+                "expected": [
+                    "Continue"
+                ]
+            }
+        ],
+        "box_index": 2,
+        "pre_delay": 0,
+        "action": "Click",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingThemeVisible": {
+        "recognition": {
+            "type": "And",
+            "param": {
+                "all_of": [
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            823,
+                            629,
+                            100,
+                            34
+                        ],
+                        "expected": [
+                            "Trial Run"
+                        ],
+                        "only_rec": true
+                    },
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            1058,
+                            631,
+                            134,
+                            32
+                        ],
+                        "expected": [
+                            "Open the Inn"
+                        ],
+                        "only_rec": true
+                    }
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartTheme"
+        ]
+    },
+    "InnkeepingSetupResultFinish": {
+        "recognition": "OCR",
+        "roi": [
+            1000,
+            600,
+            260,
+            100
+        ],
+        "expected": [
+            "Finish"
+        ],
+        "pre_delay": 0,
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "target": [
+                    1200,
+                    640,
+                    1,
+                    1
+                ],
+                "duration": 120,
+                "contact": 2
+            }
+        },
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                0,
+                1280,
+                720
+            ],
+            "threshold": 0.998,
+            "timeout": 5000
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingAwaitSettings": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    20,
+                    10,
+                    320,
+                    55
+                ],
+                "expected": [
+                    "INN SETTINGS"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartSettings"
+        ]
+    },
+    "InnkeepingSetupResultCleared": {
+        "recognition": "Or",
+        "any_of": [
+            {
+                "recognition": "OCR",
+                "roi": [
+                    30,
+                    15,
+                    220,
+                    45
+                ],
+                "expected": [
+                    "Explore"
+                ]
+            },
+            {
+                "recognition": "OCR",
+                "roi": [
+                    20,
+                    10,
+                    320,
+                    55
+                ],
+                "expected": [
+                    "THEME SETTINGS"
+                ]
+            }
+        ],
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingAwaitMenu": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    20,
+                    10,
+                    320,
+                    55
+                ],
+                "expected": [
+                    "MENU DESIGN"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingStartMenu"
+        ]
+    },
+    "InnkeepingAwaitActive": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    55,
+                    330,
+                    210,
+                    50
+                ],
+                "expected": [
+                    "Current Income"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingEarlyKitchenOpen"
+        ]
+    },
+    "InnkeepingResultContinue": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1000,
+                    600,
+                    260,
+                    100
+                ],
+                "expected": [
+                    "Continue"
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 200,
+            "target": [
+                1000,
+                600,
+                260,
+                100
+            ],
+            "threshold": 0.98,
+            "timeout": 3000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1080,
+                    628,
+                    70,
+                    28
+                ]
+            }
+        },
+        "post_wait_freezes": {
+            "time": 500,
+            "target": [
+                0,
+                0,
+                1280,
+                720
+            ],
+            "threshold": 0.998,
+            "timeout": 5000
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingResultFinish"
+        ]
+    },
+    "InnkeepingResultFinish": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    1000,
+                    600,
+                    260,
+                    100
+                ],
+                "expected": [
+                    "Finish"
+                ]
+            }
+        },
+        "pre_wait_freezes": {
+            "time": 500,
+            "target": [
+                1030,
+                610,
+                210,
+                70
+            ],
+            "threshold": 0.9995,
+            "timeout": 5000
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1110,
+                    628,
+                    60,
+                    28
+                ]
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingResultWorld"
+        ]
+    },
+    "InnkeepingResultWorld": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    30,
+                    15,
+                    180,
+                    40
+                ],
+                "expected": [
+                    "Explore"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "InnkeepingCloseDetails": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    20,
+                    10,
+                    300,
+                    55
+                ],
+                "expected": [
+                    "INN DETAILS"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1208,
+                    22,
+                    26,
+                    26
+                ]
+            }
+        },
+        "post_delay": 0,
+        "next": [
+            "InnkeepingAwaitWorld"
+        ]
+    },
+    "InnkeepingAwaitWorld": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "roi": [
+                    30,
+                    15,
+                    180,
+                    40
+                ],
+                "expected": [
+                    "Explore"
+                ]
+            }
+        },
+        "pre_delay": 0,
+        "action": {
+            "type": "DoNothing"
+        },
+        "post_delay": 0,
+        "next": [
+            "InnkeepingStartDispatch"
+        ]
+    },
+    "InnkeepingEarlyKitchenOpen": {
+        "recognition": "And",
+        "all_of": [
+            {
+                "recognition": "OCR",
+                "roi": [
+                    15,
+                    15,
+                    205,
+                    65
+                ],
+                "expected": [
+                    "End Session"
+                ]
+            },
+            {
+                "recognition": "OCR",
+                "roi": [
+                    840,
+                    600,
+                    210,
+                    80
+                ],
+                "expected": [
+                    "Add Order"
+                ]
+            }
+        ],
+        "box_index": 1,
+        "pre_delay": 0,
+        "action": {
+            "type": "LongPress",
+            "param": {
+                "target": [
+                    930,
+                    625,
+                    1,
+                    1
+                ],
+                "duration": 120,
+                "contact": 2
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingEarlyKitchenVisible"
+        ]
+    },
+    "InnkeepingEarlyKitchenVisible": {
+        "recognition": "And",
+        "all_of": [
+            {
+                "recognition": "OCR",
+                "roi": [
+                    160,
+                    110,
+                    155,
+                    50
+                ],
+                "expected": [
+                    "Kitchen 1"
+                ]
+            },
+            {
+                "recognition": "OCR",
+                "roi": [
+                    400,
+                    110,
+                    210,
+                    50
+                ],
+                "expected": [
+                    "Kitchen 2"
+                ]
+            }
+        ],
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingStartShip": {
+        "recognition": "And",
+        "all_of": [
+            "InDijiangWorld"
+        ],
+        "pre_delay": 0,
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    120,
+                    120,
+                    1,
+                    1
+                ]
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingSetupTravel"
+        ]
     }
 }

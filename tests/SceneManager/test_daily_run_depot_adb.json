@@ -1,0 +1,17 @@
+{
+    "configs": {
+        "name": "English ADB daily-run depot recognition",
+        "controller": "ADB",
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
+    },
+    "cases": [
+        {
+            "name": "Depot is accepted without the legacy Quick Stash image",
+            "image": "daily_run_depot_stash.png",
+            "hits": [
+                "StashBackpackEnterSuccess"
+            ]
+        }
+    ]
+}

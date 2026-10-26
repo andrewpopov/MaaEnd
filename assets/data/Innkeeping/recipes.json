@@ -1,0 +1,1086 @@
+{
+    "schema_version": 1,
+    "game_version": "1.6",
+    "sources": {
+        "endfieldhub_1_6": {
+            "url": "https://endfieldhub.org/guides/yuanyuan-inn-recipes-chefs-themes",
+            "checked_at": "2026-10-20",
+            "scope": "Structured recipe mechanics only; no guide prose or rankings. Verify against in-game Show Ingredients."
+        }
+    },
+    "recipes": [
+        {
+            "id": "meat_baozi",
+            "name": "Meat Baozi",
+            "category": "entree",
+            "ingredients": {
+                "Meat": 2,
+                "Flour": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "hand_kneaded_noodle",
+            "name": "Hand-Kneaded Noodle",
+            "category": "entree",
+            "ingredients": {
+                "Egg": 1,
+                "Flour": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "yuanyuan_veggy_rice",
+            "name": "Yuanyuan Veggy Rice",
+            "category": "entree",
+            "ingredients": {
+                "Amber Rice": 3,
+                "Cabbage": 1,
+                "Egg": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "shroom_dumpling",
+            "name": "Shroom Dumpling",
+            "category": "entree",
+            "ingredients": {
+                "Relishroom": 1,
+                "Flour": 4,
+                "Meat": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "tonic_congee_greens",
+            "name": "Tonic Congee & Greens",
+            "category": "entree",
+            "ingredients": {
+                "Amber Rice": 3,
+                "Cabbage": 1,
+                "Relishroom": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "meaty_pilaf",
+            "name": "Meaty Pilaf",
+            "category": "entree",
+            "ingredients": {
+                "Meat [A]": 1,
+                "Amber Rice": 2,
+                "Tartpepper": 4
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "salty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "traits_evidence": {
+                "image": "I:/MaaEndData/Images/Innkeeping/20261020-014158-input-queue-365569009.png",
+                "verified_at": "2026-10-19",
+                "scope": "All displayed trait tags on the fully visible recipe card"
+            },
+            "reference_audit_at": "2026-10-20"
+        },
+        {
+            "id": "fin_dumpling",
+            "name": "Fin Dumpling",
+            "category": "entree",
+            "ingredients": {
+                "Fin Fillet [A]": 1,
+                "Relishroom": 2,
+                "Flour": 6
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "savory"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "traits_evidence": {
+                "image": "I:/MaaEndData/Images/Innkeeping/20261020-014158-input-queue-365569009.png",
+                "verified_at": "2026-10-19",
+                "scope": "All displayed trait tags on the fully visible recipe card"
+            },
+            "reference_audit_at": "2026-10-20"
+        },
+        {
+            "id": "pea_topped_noodles",
+            "name": "Pea-Topped Noodles",
+            "category": "entree",
+            "ingredients": {
+                "Ballpea": 4,
+                "Ground Pepper": 1,
+                "Flour": 6
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "spicy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "eight_treasure_rice",
+            "name": "Eight Treasure Rice",
+            "category": "entree",
+            "ingredients": {
+                "Sourberry [A]": 1,
+                "Amber Rice": 3,
+                "Ballpea": 3,
+                "Sugar": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sweet",
+                "lovely"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "roll_of_fin_supreme",
+            "name": "Roll of Fin-Supreme",
+            "category": "entree",
+            "ingredients": {
+                "Fin Fillet [A]": 1,
+                "Cabbage [A]": 1,
+                "Flour": 6,
+                "Matoberry": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sour",
+                "savory"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "chaoshou_numbing_sauce",
+            "name": "Chaoshou & Numbing Sauce",
+            "category": "entree",
+            "ingredients": {
+                "Meat [A]": 3,
+                "Seed Oil": 2,
+                "Flour": 4,
+                "Ground Pepper": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "salty",
+                "spicy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "boundary_lung_roll",
+            "name": "Boundary Lung Roll",
+            "category": "entree",
+            "ingredients": {
+                "Cabbage [A]": 1,
+                "Meat [A]": 2,
+                "Spice Mix 130": 1,
+                "Flour": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "meaty",
+                "lovely"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "mato_egg",
+            "name": "Mato & Egg",
+            "category": "side",
+            "ingredients": {
+                "Matoberry": 1,
+                "Egg": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "shredded_tuber_pepper",
+            "name": "Shredded Tuber & Pepper",
+            "category": "side",
+            "ingredients": {
+                "Tartpepper": 1,
+                "Pingtuber": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "skilleted_fin",
+            "name": "Skilleted Fin",
+            "category": "side",
+            "ingredients": {
+                "Fin Fillet": 2,
+                "Starch": 5
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "melon_in_sauce",
+            "name": "Melon in Sauce",
+            "category": "side",
+            "ingredients": {
+                "Whitemelon": 2,
+                "Matoberry": 4
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "fin_savory_shreds",
+            "name": "Fin-Savory Shreds",
+            "category": "side",
+            "ingredients": {
+                "Cabbage": 2,
+                "Starch": 3,
+                "Meat": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [
+                "sweet"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "tuber_fries",
+            "name": "Tuber Fries",
+            "category": "side",
+            "ingredients": {
+                "Seed Oil": 3,
+                "Pingtuber": 5,
+                "Matoberry": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "salty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "fin_pickled_greens",
+            "name": "Fin & Pickled Greens",
+            "category": "side",
+            "ingredients": {
+                "Cabbage [A]": 1,
+                "Fin Fillet": 2,
+                "Cabbage": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "sour"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "roasted_kebab",
+            "name": "Roasted Kebab",
+            "category": "side",
+            "ingredients": {
+                "Meat [A]": 2,
+                "Relishroom": 2,
+                "Ground Pepper": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "spicy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "berry_fruity_toss",
+            "name": "Berry Fruity Toss",
+            "category": "side",
+            "ingredients": {
+                "Cabbage [A]": 1,
+                "Relishroom [A]": 1,
+                "Sourberry": 3,
+                "Matoberry": 1
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sour",
+                "veggy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "mala_xiang_guo",
+            "name": "Mala Xiang Guo",
+            "category": "side",
+            "ingredients": {
+                "Meat [A]": 1,
+                "Relishroom [A]": 1,
+                "Whitemelon": 3,
+                "Pingtuber": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "spicy",
+                "salty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "clay_jar_meat",
+            "name": "Clay Jar Meat",
+            "category": "side",
+            "ingredients": {
+                "Meat [A]": 2,
+                "Cabbage [A]": 1,
+                "Seed Oil": 2,
+                "Sugar": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sweet",
+                "meaty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "spoon_swimmer",
+            "name": "Spoon Swimmer",
+            "category": "side",
+            "ingredients": {
+                "Egg [A]": 1,
+                "Relishroom [A]": 1,
+                "Sugar": 3,
+                "Ballpea": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "savory",
+                "sweet"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "immortal_galore_of_fortune",
+            "name": "Immortal Galore of Fortune",
+            "category": "side",
+            "ingredients": {
+                "Meat [A]": 2,
+                "Fin Fillet [A]": 1,
+                "Relishroom [A]": 1,
+                "Fin Fillet": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "savory",
+                "rich"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "sweet_sour_fingot",
+            "name": "Sweet & Sour Fingot",
+            "category": "side",
+            "ingredients": {
+                "Fin Fillet [A]": 2,
+                "Spice Mix 130": 1,
+                "Matoberry": 4
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "classy",
+                "finny"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "hot_sour_soup",
+            "name": "Hot & Sour Soup",
+            "category": "soup",
+            "ingredients": {
+                "Relishroom [A]": 2,
+                "Starch": 4,
+                "Tartpepper": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "spicy",
+                "sour"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "traits_evidence": {
+                "image": "I:/MaaEndData/Images/Innkeeping/20261020-014158-input-queue-365569009.png",
+                "verified_at": "2026-10-19",
+                "scope": "All displayed trait tags on the fully visible recipe card"
+            },
+            "reference_audit_at": "2026-10-20"
+        },
+        {
+            "id": "berry_sweet_sip",
+            "name": "Berry-Sweet Sip",
+            "category": "soup",
+            "ingredients": {
+                "Sourberry [A]": 2,
+                "Ballpea": 3,
+                "Sugar": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "sweet",
+                "rich"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "fin_mato_soup",
+            "name": "Fin-Mato Soup",
+            "category": "soup",
+            "ingredients": {
+                "Fin Fillet [A]": 2,
+                "Cabbage [A]": 1,
+                "Seed Oil": 2,
+                "Matoberry": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "sour",
+                "finny"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "melon_meatball_soup",
+            "name": "Melon & Meatball Soup",
+            "category": "soup",
+            "ingredients": {
+                "Cabbage [A]": 2,
+                "Meat [A]": 1,
+                "Whitemelon": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "savory",
+                "rich"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "cream_of_shroom",
+            "name": "Cream of Shroom",
+            "category": "soup",
+            "ingredients": {
+                "Relishroom [A]": 1,
+                "Milk [A]": 2,
+                "Ballpea": 3,
+                "Flour": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "salty",
+                "veggy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "white_fin_broth",
+            "name": "White Fin Broth",
+            "category": "soup",
+            "ingredients": {
+                "Egg [A]": 2,
+                "Fin Fillet [A]": 2,
+                "Seed Oil": 4
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "savory",
+                "finny"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "snowshroom_lotus_soup",
+            "name": "Snowshroom & Lotus Soup",
+            "category": "soup",
+            "ingredients": {
+                "Relishroom [A]": 3,
+                "Ballpea": 3,
+                "Sugar": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "veggy",
+                "classy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "tofu_bouquet_soup",
+            "name": "Tofu Bouquet Soup",
+            "category": "soup",
+            "ingredients": {
+                "Spice Mix 130": 1,
+                "Cabbage [A]": 2,
+                "Ballpea": 2,
+                "Starch": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 40,
+            "traits": [
+                "lovely",
+                "classy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "sticky_rice_cake",
+            "name": "Sticky Rice Cake",
+            "category": "dessert",
+            "ingredients": {
+                "Amber Rice": 3,
+                "Starch": 3,
+                "Sugar": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "steamed_flan",
+            "name": "Steamed Flan",
+            "category": "dessert",
+            "ingredients": {
+                "Crunchcane": 2,
+                "Milk": 1,
+                "Egg": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "salted_cheese_crackers",
+            "name": "Salted Cheese Crackers",
+            "category": "dessert",
+            "ingredients": {
+                "Flour": 3,
+                "Egg": 3,
+                "Milk": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 15,
+            "traits": [
+                "salty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "traits_evidence": {
+                "image": "I:/MaaEndData/Images/Innkeeping/20261020-014158-input-queue-365569009.png",
+                "verified_at": "2026-10-19",
+                "scope": "All displayed trait tags on the fully visible recipe card"
+            },
+            "reference_audit_at": "2026-10-20"
+        },
+        {
+            "id": "beanpaste_tangyuan",
+            "name": "Beanpaste Tangyuan",
+            "category": "dessert",
+            "ingredients": {
+                "Amber Rice": 4,
+                "Sugar": 2,
+                "Ballpea": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "sweet"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "sourberry_pudding",
+            "name": "Sourberry Pudding",
+            "category": "dessert",
+            "ingredients": {
+                "Milk [A]": 1,
+                "Sourberry": 3,
+                "Starch": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "sour"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "sweetbeans_on_snow",
+            "name": "Sweetbeans on Snow",
+            "category": "dessert",
+            "ingredients": {
+                "Egg [A]": 1,
+                "Ballpea": 3,
+                "Seed Oil": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 25,
+            "traits": [
+                "sweet"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "goldfloss_chiffon",
+            "name": "Goldfloss Chiffon",
+            "category": "dessert",
+            "ingredients": {
+                "Meat [A]": 2,
+                "Egg [A]": 1,
+                "Sugar": 2,
+                "Flour": 2
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "salty",
+                "meaty"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "snow_veiled_mooncake",
+            "name": "Snow-Veiled Mooncake",
+            "category": "dessert",
+            "ingredients": {
+                "Egg [A]": 2,
+                "Whitemelon": 2,
+                "Sugar": 3,
+                "Flour": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "salty",
+                "classy"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "pearly_fruit_punch",
+            "name": "Pearly Fruit Punch",
+            "category": "dessert",
+            "ingredients": {
+                "Milk [A]": 1,
+                "Sourberry [A]": 2,
+                "Sugar": 3,
+                "Pingtuber": 3
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sweet",
+                "rich"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        },
+        {
+            "id": "redbloom_cheesecake",
+            "name": "Redbloom Cheesecake",
+            "category": "dessert",
+            "ingredients": {
+                "Egg [A]": 2,
+                "Milk [A]": 1,
+                "Sourberry [A]": 2,
+                "Starch": 6
+            },
+            "ingredients_complete": true,
+            "base_cook_seconds": 35,
+            "traits": [
+                "sour",
+                "lovely"
+            ],
+            "source": "endfieldhub_1_6",
+            "live_verified": false,
+            "traits_complete": true,
+            "reference_audit_at": "2026-10-20",
+            "traits_evidence": {
+                "source": "endfieldhub_1_6",
+                "verified_at": "2026-10-20",
+                "scope": "Complete trait column, including explicit None; reference audit, not live verification"
+            }
+        }
+    ],
+    "audit": {
+        "checked_at": "2026-10-20",
+        "recipe_count": 44,
+        "scope": "All 44 category, ingredient quantity and full displayed trait rows cross-checked against the cited reference; not a full live game verification",
+        "ingredient_list_complete": 44,
+        "trait_list_complete": 44
+    }
+}

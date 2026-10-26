@@ -1,0 +1,206 @@
+{
+    "InnkeepingSetupTravel": {
+        "recognition": "DirectHit",
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "InnkeepingSetupNavigateAction"
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0
+    },
+    "InnkeepingEntranceLedger": {
+        "recognition": "OCR",
+        "roi": [
+            700,
+            280,
+            350,
+            250
+        ],
+        "expected": [
+            "Open the Inn"
+        ],
+        "pre_delay": 0,
+        "action": "DoNothing",
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingReactiveObserve"
+        ]
+    },
+    "InnkeepingTravelToManor": {
+        "pre_delay": 0,
+        "anchor": {
+            "__ScenePrivateMapTeleportPickAnchor": "__ScenePrivateMapWulingSisPaintingEnterWorldWulingSisPaintingYuanyuanManor"
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingTravelMap",
+            "[JumpBack]SceneEnterMapWulingSisPainting"
+        ]
+    },
+    "InnkeepingTravelMap": {
+        "recognition": "And",
+        "all_of": [
+            "InMapWulingSisPainting"
+        ],
+        "pre_delay": 0,
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingTravelArrived",
+            "[JumpBack]SceneMapLayerSwitchToMain",
+            "[JumpBack]__ScenePrivateMapZoomOut",
+            "[JumpBack][Anchor]__ScenePrivateMapTeleportPickAnchor"
+        ]
+    },
+    "InnkeepingTravelArrived": {
+        "recognition": "OCR",
+        "roi": [
+            30,
+            15,
+            220,
+            45
+        ],
+        "expected": [
+            "Explore"
+        ],
+        "pre_wait_freezes": {
+            "time": 800,
+            "target": [
+                70,
+                80,
+                70,
+                60
+            ],
+            "timeout": 2000
+        },
+        "pre_delay": 0,
+        "post_delay": 0,
+        "timeout": 60000,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingEntranceRoute"
+        ]
+    },
+    "InnkeepingEntranceRoute": {
+        "recognition": "OCR",
+        "roi": [
+            30,
+            15,
+            220,
+            45
+        ],
+        "expected": [
+            "Explore"
+        ],
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "map_name": "Wuling_Base",
+                    "heading_source": "camera",
+                    "enable_bootstrap_navmesh": false,
+                    "enable_local_driver": false,
+                    "zip": false,
+                    "arrival_timeout": 15000,
+                    "path": [
+                        {
+                            "action": "ZONE",
+                            "zone_id": "Wuling_Base"
+                        },
+                        {
+                            "action": "RUN",
+                            "target": [
+                                2200.56,
+                                499.15
+                            ],
+                            "strict_arrival": true,
+                            "required": true
+                        },
+                        {
+                            "action": "RUN",
+                            "target": [
+                                2205.62,
+                                495.09
+                            ],
+                            "strict_arrival": true,
+                            "required": true
+                        },
+                        {
+                            "action": "RUN",
+                            "target": [
+                                2209.49,
+                                492.41
+                            ],
+                            "strict_arrival": true,
+                            "required": true
+                        },
+                        {
+                            "action": "RUN",
+                            "target": [
+                                2217.94,
+                                489.11
+                            ],
+                            "strict_arrival": true,
+                            "required": true
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingLedgerApproach"
+        ]
+    },
+    "InnkeepingLedgerApproach": {
+        "recognition": "OCR",
+        "roi": [
+            30,
+            15,
+            220,
+            45
+        ],
+        "expected": [
+            "Explore"
+        ],
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "MapNavigateAction",
+                "custom_action_param": {
+                    "map_name": "",
+                    "heading_source": "camera",
+                    "enable_bootstrap_navmesh": false,
+                    "enable_local_driver": false,
+                    "zip": false,
+                    "arrival_timeout": 15000,
+                    "path": [
+                        {
+                            "action": "TRIGGER",
+                            "target": [
+                                2224,
+                                489
+                            ],
+                            "trigger_node": "InnkeepingEntranceLedger",
+                            "required": true
+                        }
+                    ]
+                }
+            }
+        },
+        "post_delay": 0,
+        "rate_limit": 0,
+        "next": [
+            "InnkeepingEntranceLedger"
+        ]
+    }
+}

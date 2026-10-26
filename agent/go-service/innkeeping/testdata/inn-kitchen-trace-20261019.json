@@ -1,0 +1,3411 @@
+{
+    "source_task_id": 200003681,
+    "menu_open_at": "2026-10-19T22:29:29.1460136-07:00",
+    "menu_close_at": "2026-10-19T22:30:12.850985-07:00",
+    "observations": [
+        {
+            "at": "2026-10-19T22:27:42.8402681-07:00",
+            "kind": "open",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:27:44.8529224-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 293,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    914,
+                    640,
+                    86,
+                    23
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:27:46.2929127-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:27:47.9408272-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 289,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:27:49.2032502-07:00",
+            "kind": "close",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:27:50.7556604-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 286,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:27:53.7271933-07:00",
+            "kind": "open",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:27:55.6132793-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 282,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    914,
+                    640,
+                    86,
+                    23
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:27:57.3131136-07:00",
+            "kind": "queue",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:28:00.201703-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 279,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:01.6696235-07:00",
+            "kind": "close",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:28:03.5979641-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "shroom_dumpling": 1
+                },
+                "active_dish": "shroom_dumpling",
+                "active_seconds": 8,
+                "queue_verified": true,
+                "remaining_seconds": 274,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:07.9833334-07:00",
+            "kind": "open",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:28:09.5715444-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 268,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    914,
+                    640,
+                    86,
+                    23
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:10.9671062-07:00",
+            "kind": "queue",
+            "dish": "fin_dumpling",
+            "confirmed_at": "2026-10-19T22:28:13.1201929-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 265,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:14.3249379-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:28:16.1997572-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 15,
+                "queue_verified": true,
+                "remaining_seconds": 261,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:17.5439488-07:00",
+            "kind": "queue",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:28:18.969935-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 258,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:20.2695117-07:00",
+            "kind": "close",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:28:21.5161538-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "salted_cheese_crackers": 1
+                },
+                "active_dish": "salted_cheese_crackers",
+                "active_seconds": 13,
+                "queue_verified": true,
+                "remaining_seconds": 255,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:42.457999-07:00",
+            "kind": "pickup",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:28:43.9360836-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "pickup",
+                "prompt_box": [
+                    808,
+                    404,
+                    108,
+                    39
+                ],
+                "prompt_dish": "salted_cheese_crackers",
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:28:47.855903-07:00",
+            "kind": "pickup",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:28:48.7854309-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {
+                    "salted_cheese_crackers": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": 0,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "pickup",
+                "prompt_box": [
+                    809,
+                    410,
+                    165,
+                    29
+                ],
+                "prompt_dish": "shroom_dumpling",
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:01.9122688-07:00",
+            "kind": "pickup",
+            "dish": "fin_dumpling",
+            "confirmed_at": "2026-10-19T22:29:02.8664279-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "unknown",
+                        "dishes": null
+                    }
+                ],
+                "tray": {
+                    "salted_cheese_crackers": 1,
+                    "shroom_dumpling": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "shroom_dumpling",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": 0,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "pickup",
+                "prompt_box": [
+                    807,
+                    408,
+                    135,
+                    33
+                ],
+                "prompt_dish": "fin_dumpling",
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:11.085331-07:00",
+            "kind": "select_tray",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:29:12.1529163-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {
+                    "fin_dumpling": 1,
+                    "salted_cheese_crackers": 1,
+                    "shroom_dumpling": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "shroom_dumpling",
+                    "fin_dumpling",
+                    "",
+                    ""
+                ],
+                "selected_slot": 0,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:13.6168564-07:00",
+            "kind": "serve",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:29:15.2222908-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {
+                    "fin_dumpling": 1,
+                    "salted_cheese_crackers": 1,
+                    "shroom_dumpling": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "shroom_dumpling",
+                    "fin_dumpling",
+                    "",
+                    ""
+                ],
+                "selected_slot": 1,
+                "queue_verified": false,
+                "remaining_seconds": 202,
+                "prompt": "serve",
+                "prompt_box": [
+                    810,
+                    412,
+                    59,
+                    26
+                ],
+                "add_order_box": [
+                    914,
+                    640,
+                    86,
+                    23
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:21.2233651-07:00",
+            "kind": "serve",
+            "dish": "fin_dumpling",
+            "confirmed_at": "2026-10-19T22:29:22.8246904-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {
+                    "fin_dumpling": 1,
+                    "salted_cheese_crackers": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "fin_dumpling",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": 1,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "serve",
+                "prompt_box": [
+                    806,
+                    410,
+                    66,
+                    29
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:23.4352812-07:00",
+            "kind": "serve",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:29:25.0003594-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {
+                    "salted_cheese_crackers": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": 0,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "serve",
+                "prompt_box": [
+                    806,
+                    410,
+                    67,
+                    29
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:27.6659566-07:00",
+            "kind": "open",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:29:29.1460136-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "bill_ready",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "dining",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 188,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    914,
+                    640,
+                    86,
+                    23
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:32.7962806-07:00",
+            "kind": "queue",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:29:34.4590342-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 183,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:35.8470424-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:29:37.9603465-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "salted_cheese_crackers": 1
+                },
+                "active_dish": "salted_cheese_crackers",
+                "active_seconds": 14,
+                "queue_verified": true,
+                "remaining_seconds": 180,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:39.3917339-07:00",
+            "kind": "queue",
+            "dish": "fin_dumpling",
+            "confirmed_at": "2026-10-19T22:29:41.7032054-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue_verified": true,
+                "remaining_seconds": 176,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:43.2540065-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:29:45.3480126-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 19,
+                "queue_verified": true,
+                "remaining_seconds": 173,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:46.9589457-07:00",
+            "kind": "queue",
+            "dish": "fin_dumpling",
+            "confirmed_at": "2026-10-19T22:29:50.2785641-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "unknown",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "salted_cheese_crackers": 1
+                },
+                "active_dish": "salted_cheese_crackers",
+                "active_seconds": 3,
+                "queue_verified": true,
+                "remaining_seconds": 169,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:51.6553315-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:29:53.3700241-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 15,
+                "queue_verified": true,
+                "remaining_seconds": 164,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:54.9232507-07:00",
+            "kind": "queue",
+            "dish": "tonic_congee_greens",
+            "confirmed_at": "2026-10-19T22:29:57.6953089-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 7,
+                "queue_verified": true,
+                "remaining_seconds": 161,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:29:59.2376897-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:30:00.8838914-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1,
+                    "tonic_congee_greens": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 3,
+                "queue_verified": true,
+                "remaining_seconds": 157,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:02.2298193-07:00",
+            "kind": "queue",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:30:03.8463015-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 4,
+                "queue_verified": true,
+                "remaining_seconds": 153,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:05.2105447-07:00",
+            "kind": "select",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:30:06.7412682-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "1",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 18,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 15,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 11,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "fin_dumpling": 1,
+                    "salted_cheese_crackers": 1
+                },
+                "active_dish": "fin_dumpling",
+                "active_seconds": 1,
+                "queue_verified": true,
+                "remaining_seconds": 150,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:07.9570086-07:00",
+            "kind": "queue",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:30:09.7768678-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "tonic_congee_greens": 1
+                },
+                "active_dish": "tonic_congee_greens",
+                "active_seconds": 6,
+                "queue_verified": true,
+                "remaining_seconds": 147,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:11.3094193-07:00",
+            "kind": "close",
+            "dish": "",
+            "confirmed_at": "2026-10-19T22:30:12.850985-07:00",
+            "view": {
+                "phase": "kitchen",
+                "kitchen": "2",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "recipes": [
+                    {
+                        "dish": "fin_dumpling",
+                        "seconds": 21,
+                        "available": true,
+                        "box": [
+                            596,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "salted_cheese_crackers",
+                        "seconds": 14,
+                        "available": true,
+                        "box": [
+                            979,
+                            191,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "tonic_congee_greens",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            596,
+                            307,
+                            150,
+                            55
+                        ]
+                    },
+                    {
+                        "dish": "shroom_dumpling",
+                        "seconds": 13,
+                        "available": true,
+                        "box": [
+                            979,
+                            307,
+                            150,
+                            55
+                        ]
+                    }
+                ],
+                "queue": {
+                    "shroom_dumpling": 1,
+                    "tonic_congee_greens": 1
+                },
+                "active_dish": "tonic_congee_greens",
+                "queue_verified": true,
+                "remaining_seconds": 144,
+                "prompt_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:27.8120967-07:00",
+            "kind": "pickup",
+            "dish": "salted_cheese_crackers",
+            "confirmed_at": "2026-10-19T22:30:29.6652265-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {},
+                "tray_slots": [
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": -1,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "pickup",
+                "prompt_box": [
+                    808,
+                    404,
+                    108,
+                    38
+                ],
+                "prompt_dish": "salted_cheese_crackers",
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        },
+        {
+            "at": "2026-10-19T22:30:35.6412895-07:00",
+            "kind": "pickup",
+            "dish": "shroom_dumpling",
+            "confirmed_at": "2026-10-19T22:30:37.2879166-07:00",
+            "view": {
+                "phase": "active",
+                "seats": [
+                    {
+                        "seat": "1",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "2",
+                        "phase": "waiting",
+                        "dishes": [
+                            "tonic_congee_greens",
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "3",
+                        "phase": "waiting",
+                        "dishes": [
+                            "fin_dumpling",
+                            "fin_dumpling"
+                        ]
+                    },
+                    {
+                        "seat": "4",
+                        "phase": "waiting",
+                        "dishes": [
+                            "salted_cheese_crackers"
+                        ]
+                    },
+                    {
+                        "seat": "5",
+                        "phase": "gourmand",
+                        "dishes": null
+                    },
+                    {
+                        "seat": "6",
+                        "phase": "waiting",
+                        "dishes": [
+                            "shroom_dumpling"
+                        ]
+                    }
+                ],
+                "tray": {
+                    "salted_cheese_crackers": 1
+                },
+                "tray_slots": [
+                    "salted_cheese_crackers",
+                    "",
+                    "",
+                    "",
+                    ""
+                ],
+                "selected_slot": 0,
+                "queue_verified": false,
+                "remaining_seconds": 0,
+                "prompt": "pickup",
+                "prompt_box": [
+                    809,
+                    410,
+                    165,
+                    29
+                ],
+                "prompt_dish": "shroom_dumpling",
+                "add_order_box": [
+                    0,
+                    0,
+                    0,
+                    0
+                ]
+            }
+        }
+    ]
+}

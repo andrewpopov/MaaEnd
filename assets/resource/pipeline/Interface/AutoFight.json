@@ -22,7 +22,18 @@
             "enable_end_skill": true,
             "enable_lock_target": true,
             "end_axis_timeline_code": "",
-            "skip_combo_cooldown": false
+            "skip_combo_cooldown": false,
+            "team_profile": "",
+            "rotation_preview": true,
+            "rotation_movement": "external",
+            "confirmed_timeline": true,
+            "current_combo_checks": true,
+            "combat_trace": true,
+            "mobile_approach": true,
+            "skill_mode_1": "cycle",
+            "skill_mode_2": "cycle",
+            "skill_mode_3": "cycle",
+            "skill_mode_4": "cycle"
         }
     }
 }

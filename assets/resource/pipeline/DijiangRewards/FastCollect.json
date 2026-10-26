@@ -158,6 +158,28 @@
         ]
     },
     "DijiangRewardsFastCollectCluesUnavailable": {
+        "recognition": "And",
+        "all_of": [
+            "InDijiangControlNexus"
+        ],
+        "next": [
+            "DijiangRewardsFastCollectAddItemData",
+            "DijiangRewardsFastCollectCluesSuccess",
+            "DijiangRewardsFastCollectCluesAbsent"
+        ]
+    },
+    "DijiangRewardsFastCollectCluesReturned": {
+        "recognition": "And",
+        "all_of": [
+            "InDijiangControlNexus"
+        ],
+        "next": [
+            "DijiangRewardsFastCollectAddItemData",
+            "DijiangRewardsFastCollectCluesSuccess",
+            "DijiangRewardsFastCollectCluesUnavailable"
+        ]
+    },
+    "DijiangRewardsFastCollectCluesAbsent": {
         "recognition": "OCR",
         "roi": [
             1037,
@@ -173,18 +195,9 @@
         ],
         "inverse": true,
         "next": [
+            "DijiangRewardsFastCollectAddItemData",
             "DijiangRewardsFastCollectCluesSuccess",
             "InDijiangControlNexus"
-        ]
-    },
-    "DijiangRewardsFastCollectCluesReturned": {
-        "recognition": "And",
-        "all_of": [
-            "InDijiangControlNexus"
-        ],
-        "next": [
-            "DijiangRewardsFastCollectCluesSuccess",
-            "DijiangRewardsFastCollectCluesUnavailable"
         ]
     }
 }

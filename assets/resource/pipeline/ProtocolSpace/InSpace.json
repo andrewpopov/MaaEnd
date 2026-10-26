@@ -89,64 +89,25 @@
         "threshold": 0.9,
         "pre_wait_freezes": 200,
         "next": [
-            "[JumpBack]ProtocolSpaceTeamChoose",
+            "[JumpBack]PrepareTeamChoose",
             "ProtocolSpaceEnterSpaceConfirm"
         ]
-    },
-    "ProtocolSpaceTeamChooseTextRecognition": {
-        "desc": "识别协议空间队伍",
-        "recognition": "OCR",
-        "roi": [
-            0,
-            -70,
-            620,
-            45
-        ],
-        "expected": [
-            "01"
-        ]
-    },
-    "ProtocolSpaceTeamChoose": {
-        "desc": "选择协议空间队伍",
-        "recognition": "And",
-        "all_of": [
-            "ProtocolSpaceTeamChooseTextRecognition",
-            {
-                "recognition": "ColorMatch",
-                "roi": "ProtocolSpaceTeamChooseTextRecognition",
-                "roi_offset": [
-                    -30,
-                    0,
-                    10,
-                    0
-                ],
-                "lower": [
-                    0,
-                    0,
-                    0
-                ],
-                "upper": [
-                    45,
-                    45,
-                    45
-                ],
-                "connected": true,
-                "count": 200
-            }
-        ],
-        "action": "Click",
-        "post_wait_freezes": 200,
-        "focus": {
-            "Node.Action.Succeeded": "$task.ProtocolSpace.focus.select_team"
-        }
     },
     "ProtocolSpacePopupSanityLowExit": {
         "desc": "弹出理智不足",
         "recognition": {
             "type": "OCR",
             "param": {
-                "roi": [200,220,900,230],
-                "expected": ["理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?"
+                ]
             }
         },
         "focus": {
@@ -234,11 +195,29 @@
         "post_wait_freezes": 200,
         "post_delay": 0,
         "next": [
+            "ProtocolSpaceMechanismPopupClose",
             "ProtocolSpaceEnterSpaceMove1"
         ],
         "focus": {
             "Node.Recognition.Succeeded": "$task.ProtocolSpace.focus.enter_success"
         }
+    },
+    "ProtocolSpaceMechanismPopupClose": {
+        "desc": "部分设备在关卡开始时会弹出「机制特性」提示，点击右上角 X 关闭",
+        "recognition": "TemplateMatch",
+        "roi": [
+            1060,
+            200,
+            80,
+            70
+        ],
+        "template": "Common/Button/CloseButtonType4.png",
+        "threshold": 0.8,
+        "action": "Click",
+        "post_delay": 400, // 等待关闭提示关闭，大世界界面无法使用wait_freeze
+        "next": [
+            "ProtocolSpaceEnterSpaceMove1"
+        ]
     },
     "ProtocolSpaceEnterSpaceMove1": {
         "desc": "尝试第一次移动（技能提升界面起始位置，在全低画质下与光球重叠无法识别）",
@@ -381,8 +360,8 @@
         "post_delay": 800,
         "next": [
             "ProtocolSpaceTouchStartTouch",
-            "[JumpBack]ProtocolSpaceTouchStartMoveToTarget",
-            "[JumpBack]ProtocolSpaceTouchStartNotFound"
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
         ]
     },
     "ProtocolSpaceTouchStartMoveToTarget": {
@@ -410,6 +389,11 @@
             "align_threshold": 120
         },
         "post_delay": 600,
+        "next": [
+            "ProtocolSpaceTouchStartTouch",
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
+        ],
         "focus": {
             "Node.Recognition.Succeeded": "$task.ProtocolSpace.focus.move_to_start"
         }
@@ -427,6 +411,11 @@
             "delta": 45
         },
         "post_delay": 0,
+        "next": [
+            "ProtocolSpaceTouchStartTouch",
+            "ProtocolSpaceTouchStartMoveToTarget",
+            "ProtocolSpaceTouchStartNotFound"
+        ],
         "focus": {
             "Node.Action.Succeeded": "$task.ProtocolSpace.focus.start_point_not_found"
         }
@@ -1007,8 +996,19 @@
         "all_of": [
             {
                 "recognition": "OCR",
-                "roi": [200,220,900,230],
-                "expected": ["当前理智不足","目前理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?","理性が不足しているため","현재 이성이 부족해"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "当前理智不足",
+                    "目前理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?",
+                    "理性が不足しているため",
+                    "현재 이성이 부족해"
+                ]
             },
             "GrayCancelButton"
         ],
@@ -1026,8 +1026,19 @@
         "all_of": [
             {
                 "recognition": "OCR",
-                "roi": [200,220,900,230],
-                "expected": ["当前理智不足","目前理智不足","(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?","理性が不足しているため","현재 이성이 부족해"]
+                "roi": [
+                    100,
+                    220,
+                    1080,
+                    230
+                ],
+                "expected": [
+                    "当前理智不足",
+                    "目前理智不足",
+                    "(?i)Insufficient\\s+Sanity\\s+for\\s+claiming\\s+(?:deep\\s+dive\\s+)?rewards[.。]?\\s*Enter\\s+the\\s+Protocol\\s+Space\\s+anyway[?？]?",
+                    "理性が不足しているため",
+                    "현재 이성이 부족해"
+                ]
             },
             "GrayCancelButton"
         ],

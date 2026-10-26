@@ -1,0 +1,57 @@
+{
+    "configs": {
+        "name": "English ADB daily-run failure regressions",
+        "controller": "ADB",
+        "resource": "官服",
+        "imageRoot": "../local-fixtures"
+    },
+    "cases": [
+        {
+            "name": "clue collection",
+            "image": "daily_run_clue_collection.png",
+            "hits": [
+                "ReceptionRoomCollectCluesPanelExit",
+                "CloseButtonType1"
+            ]
+        },
+        {
+            "name": "protocol rewards",
+            "image": "daily_run_protocol_rewards.png",
+            "hits": [
+                "ProtocolSpaceReward",
+                "ProtocolSpaceRewardUsePermit",
+                "ProtocolSpaceRewardDontUsePermit",
+                "InNoticeRewards"
+            ]
+        },
+        {
+            "name": "protocol level select",
+            "image": "daily_run_protocol_level_select.png",
+            "hits": [
+                "CloseButtonType1"
+            ]
+        },
+        {
+            "name": "reward already closed",
+            "image": "daily_run_reward_already_closed.png",
+            "hits": [
+                "CloseButtonType1"
+            ]
+        },
+        {
+            "name": "guest terminal",
+            "image": "daily_run_guest_terminal.png",
+            "hits": [
+                "VisitFriendsEnterMenuTerminalSuccess",
+                "CloseButtonType1"
+            ]
+        },
+        {
+            "name": "menu mission",
+            "image": "daily_run_menu_mission.png",
+            "hits": [
+                "__ScenePrivateMenuListClickMenuMission"
+            ]
+        }
+    ]
+}

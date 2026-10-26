@@ -13,6 +13,118 @@
                 "ADB",
                 "CloudADB"
             ]
+        },
+        {
+            "name": "InnkeepingReactive",
+            "label": "$task.InnkeepingReactive.label",
+            "entry": "InnkeepingReactiveInitialize",
+            "description": "$task.InnkeepingReactive.description",
+            "group": [
+                "innkeeping"
+            ],
+            "controller": [
+                "ADB"
+            ],
+            "option": [
+                "InnkeepingAutomatic",
+                "InnkeepingSessionMode"
+            ]
         }
-    ]
+    ],
+    "option": {
+        "InnkeepingAutomatic": {
+            "type": "switch",
+            "label": "$task.InnkeepingReactive.automatic",
+            "cases": [
+                {
+                    "name": "Yes",
+                    "pipeline_override": {
+                        "InnkeepingReactiveInitialize": {
+                            "action": {
+                                "type": "Custom",
+                                "param": {
+                                    "custom_action": "InnkeepingReactiveAction",
+                                    "custom_action_param": {
+                                        "reset": true,
+                                        "automatic": true
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "No",
+                    "pipeline_override": {
+                        "InnkeepingReactiveInitialize": {
+                            "action": {
+                                "type": "Custom",
+                                "param": {
+                                    "custom_action": "InnkeepingReactiveAction",
+                                    "custom_action_param": {
+                                        "reset": true,
+                                        "automatic": false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Yes"
+        },
+        "InnkeepingSessionMode": {
+            "type": "select",
+            "label": "$task.InnkeepingReactive.session_mode",
+            "cases": [
+                {
+                    "name": "Trial",
+                    "label": "$task.InnkeepingReactive.trial",
+                    "pipeline_override": {
+                        "InnkeepingStartTheme": {
+                            "recognition": {
+                                "type": "OCR",
+                                "param": {
+                                    "roi": [
+                                        823,
+                                        629,
+                                        100,
+                                        34
+                                    ],
+                                    "expected": [
+                                        "Trial Run"
+                                    ],
+                                    "only_rec": true
+                                }
+                            }
+                        }
+                    }
+                },
+                {
+                    "name": "Daily",
+                    "label": "$task.InnkeepingReactive.daily",
+                    "pipeline_override": {
+                        "InnkeepingStartTheme": {
+                            "recognition": {
+                                "type": "OCR",
+                                "param": {
+                                    "roi": [
+                                        1058,
+                                        631,
+                                        134,
+                                        32
+                                    ],
+                                    "expected": [
+                                        "Open the Inn"
+                                    ],
+                                    "only_rec": true
+                                }
+                            }
+                        }
+                    }
+                }
+            ],
+            "default_case": "Trial"
+        }
+    }
 }

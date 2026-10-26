@@ -1,0 +1,27 @@
+{
+    "TeamCombatPrepare": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamCombatPrepareAction"
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamCombatCapture": {
+        "pre_delay": 0,
+        "action": {
+            "type": "Custom",
+            "param": {
+                "custom_action": "TeamCombatCaptureAction"
+            }
+        },
+        "post_delay": 0
+    },
+    "TeamCombatSettings": {
+        "attach": {
+            "profile_id": "heat-si"
+        }
+    }
+}

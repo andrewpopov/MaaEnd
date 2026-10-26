@@ -60,8 +60,7 @@
             "name": "PlayCover",
             "type": "PlayCover",
             "attach_resource_path": [
-                "./resource_adb",
-                "./resource_playcover"
+                "./resource_adb"
             ],
             "playcover": {
                 "uuid": "maa.playcover"
@@ -165,6 +164,11 @@
             "default_expand": true
         },
         {
+            "name": "team_management",
+            "label": "$group.team_management.label",
+            "default_expand": true
+        },
+        {
             "name": "innkeeping",
             "label": "$group.innkeeping.label",
             "default_expand": false
@@ -214,6 +218,7 @@
     "import": [
         "tasks/Innkeeping.json",
         "tasks/AccountScan.json",
+        "tasks/TeamCombat.json",
         "tasks/pretasks/LaunchGamePC.json",
         "tasks/OutpostTrading.json",
         "tasks/SeizeDeliveryJobs.json",
@@ -225,6 +230,7 @@
         "tasks/GearAssembly.json",
         "tasks/Weapon.json",
         "tasks/BatchUseDetector.json",
+        "tasks/SanityExtractor.json",
         "tasks/EssenceFilter.json",
         "tasks/DecomposeWeaponEssence.json",
         "tasks/ResourceRecycleStation.json",
@@ -252,6 +258,7 @@
         "tasks/AutoEssence/Location/WLYinglungPass.json",
         "tasks/AutoEssence/Location/WLNorthWulingExclusionZone.json",
         "tasks/AutoEssence/Location/WLSnowyForest.json",
+        "tasks/AutoEssence/Location/WLSisPainting.json",
         "tasks/AutoEssence/Target/Target.json",
         "tasks/ProtocolSpace.json",
         "tasks/DijiangRewards.json",
@@ -264,8 +271,10 @@
         "tasks/ReadAllWiki.json",
         "tasks/IntelArchive.json",
         "tasks/DailyRewards.json",
+        "tasks/LevelUpOperator.json",
         "tasks/ClaimSimulationRewards.json",
         "tasks/TrialOfSwordmancy.json",
+        "tasks/UmbralMonument.json",
         "tasks/CreditShopping.json",
         "tasks/AccountSwitch.json",
         "tasks/LaunchGameLinux.json",
@@ -281,7 +290,12 @@
         "tasks/preset/DailyFull.json",
         "tasks/preset/QuickDaily.json",
         "tasks/preset/RealtimeAssist.json",
+        "tasks/preset/SiEssencePractice.json",
+        "tasks/preset/IndependentTasks.json",
+        // setting
+
         "tasks/setting/Keymap.json",
-        "tasks/setting/Zipline.json"
+        "tasks/setting/Zipline.json",
+        "tasks/TeamManagement.json"
     ]
 }

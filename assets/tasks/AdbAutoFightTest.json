@@ -18,6 +18,9 @@
                 "MacOS-Front",
                 "PlayCover",
                 "Win32-Front"
+            ],
+            "option": [
+                "AutoFightSettingFull"
             ]
         }
     ]

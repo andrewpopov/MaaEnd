@@ -1,0 +1,64 @@
+{
+    "schema_version": 1,
+    "seats": 6,
+    "kitchens": [
+        {
+            "id": "1",
+            "capacity": 3,
+            "chefs": [
+                "Ember",
+                "Akekuri"
+            ],
+            "specialties": [
+                "entree",
+                "dessert"
+            ],
+            "bonuses_observed": true
+        },
+        {
+            "id": "2",
+            "capacity": 3,
+            "chefs": [
+                "Wulfgard",
+                "Laevatain"
+            ],
+            "specialties": [
+                "soup",
+                "side"
+            ],
+            "bonuses_observed": true
+        }
+    ],
+    "mode": "reactive",
+    "pre_cook": false,
+    "timing_events": "data/Innkeeping/events.jsonl",
+    "recipe_catalog": "data/Innkeeping/recipes.json",
+    "capture_root": "I:/MaaEndData/Images/Innkeeping",
+    "navigation_verified": false,
+    "automatic_round_start": true,
+    "tray_capacity": 2,
+    "movement_mode": "visual_markers",
+    "calibrated_dishes": [
+        "hot_sour_soup",
+        "fin_dumpling",
+        "tuber_fries",
+        "salted_cheese_crackers"
+    ],
+    "live_cycle_verified": {
+        "dish": "fin_dumpling",
+        "kitchen": "1",
+        "seat": "2",
+        "cook_seconds_displayed": 20,
+        "pickup_verified": true,
+        "serve_verified": true,
+        "dining_verified": true,
+        "helper_bill_collection_verified": true,
+        "trial_only": true
+    },
+    "session_mode_default": "trial",
+    "serving_scope": "ordinary visible orders; Gourmands remain manual",
+    "assistant_duties": [
+        "collect_bills",
+        "serve_drinks"
+    ]
+}
