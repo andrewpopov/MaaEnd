@@ -71,6 +71,13 @@
                 "SeizeDeliveryJobsLoop",
                 "CloseButtonType1"
             ]
+        },
+        {
+            "name": "English accepted delivery confirmation",
+            "image": "daily_run_delivery_accepted.png",
+            "hits": [
+                "SeizeDeliveryJobsIsSeizeSuccess"
+            ]
         }
     ]
 }
