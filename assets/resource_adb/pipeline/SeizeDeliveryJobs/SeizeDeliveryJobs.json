@@ -32,11 +32,50 @@
         ]
     },
     "SeizeDeliveryJobsIsSeizeSuccess": {
-        "roi": [
-            700,
-            570,
-            120,
-            100
+        "recognition": "Or",
+        "any_of": [
+            {
+                "recognition": "TemplateMatch",
+                "roi": [
+                    700,
+                    570,
+                    120,
+                    100
+                ],
+                "template": "SeizeDeliveryJobs/DepotNodePage/JobSeized.png",
+                "order_by": "Score"
+            },
+            {
+                "recognition": "And",
+                "all_of": [
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            550,
+                            560,
+                            650,
+                            100
+                        ],
+                        "expected": [
+                            "(?i)^Delivery job already accepted$"
+                        ]
+                    },
+                    {
+                        "recognition": "OCR",
+                        "roi": [
+                            490,
+                            640,
+                            320,
+                            55
+                        ],
+                        "expected": [
+                            "(?i)^– Tap to continue –$",
+                            "(?i)^Tap to continue$"
+                        ]
+                    }
+                ],
+                "box_index": 1
+            }
         ]
     },
     "SeizeDeliveryJobsRefresh": {
