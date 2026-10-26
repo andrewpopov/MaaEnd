@@ -36,7 +36,7 @@ func rowOffsetsForController(controllerKind string) jobRowOffsets {
 		return jobRowOffsets{
 			tokenToReward:  [4]int{0, 31, 3, -13},
 			rewardToOrigin: [4]int{-220, -40, 70, 15},
-			rewardToAccept: [4]int{210, -9, 130, 20},
+			rewardToAccept: [4]int{160, -20, 180, 40},
 			rewardToView:   [4]int{-220, -15, 80, 20},
 		}
 	}
