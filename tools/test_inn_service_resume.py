@@ -221,6 +221,26 @@ class DeliveryRetryTests(unittest.TestCase):
 
 
 
+class TransientPhaseRecoveryTests(unittest.TestCase):
+    def test_fresh_active_read_after_blank_menu_fade_keeps_round_without_inputs(self):
+        t=ServiceTrial.__new__(ServiceTrial)
+        t.recoveries=0
+        t.get=lambda path:{"instances":{"current":{"is_running":False}}}
+        t.snapshot=lambda:{"image":"paired-native-frame","view":{"phase":"active"}}
+        t.trace=lambda *a,**kw:None
+        t.execute=lambda *a:self.fail("Phase reconciliation must not send input")
+        self.assertTrue(t.recover(RuntimeError("Unexpected inn phase")))
+        self.assertEqual(t.recoveries,1)
+
+    def test_unrelated_world_screen_does_not_resume_service(self):
+        t=ServiceTrial.__new__(ServiceTrial)
+        t.recoveries=0
+        t.get=lambda path:{"instances":{"current":{"is_running":False}}}
+        t.snapshot=lambda:{"image":"paired-native-frame","view":{"phase":"world"}}
+        t.trace=lambda *a,**kw:None
+        self.assertFalse(t.recover(RuntimeError("Unexpected inn phase")))
+
+
 class AutomaticPreflightEntryTests(unittest.TestCase):
     def test_run_no_longer_requires_manual_camera_preparation_flag(self):
         from unittest.mock import patch

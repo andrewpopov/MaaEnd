@@ -286,7 +286,10 @@ class ServiceTrial(Trial):
             self.execute("InnServiceKitchen",{"InnServiceKitchen":click([180 if kitchen==1 else 450,120,110,30],"Kitchen "+str(kitchen))},"Select kitchen "+str(kitchen))
             warm=bool(self.ledger.kitchens.get(str(kitchen),{}).get("recipes"))
             report=self.snapshot(focus="kitchen" if warm else None);view=report["view"]
-            if warm and (not view.get("queue_verified") or view.get("unknown")):
+            if (view.get("phase")!="kitchen" or str(view.get("kitchen"))!=str(kitchen)
+                    or not view.get("queue_verified") or view.get("unknown")):
+                # A cold kitchen can still be switching chefs. Observe once
+                # before planning; never queue from the previous chef's page.
                 report=self.snapshot();view=report["view"]
             now=time.monotonic()
             synced=self.ledger.observe(kitchen,view,now)
@@ -971,6 +974,9 @@ class ServiceTrial(Trial):
             return True
         if view["phase"] not in ("active","closing","closed_serving"):
             return False
+        if message=="Unexpected inn phase":
+            # This fresh read proves the menu fade ended. Keep the same round.
+            return True
         pending=getattr(self,"pending_pickup",None)
         if pending and not view.get("unknown"):
             expected=Counter(pending["before"])+Counter({pending["dish"]:1})
