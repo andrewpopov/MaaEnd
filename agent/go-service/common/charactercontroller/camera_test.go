@@ -5,10 +5,10 @@ import (
 	"testing"
 )
 
-func TestTouchCameraUsesCenteredOppositeDrag(t *testing.T) {
+func TestTouchCameraUsesNativeCameraScanOriginAndYawDirection(t *testing.T) {
 	for _, delta := range []struct{ dx, dy int }{{90, 0}, {-90, 0}, {0, 60}, {0, -60}} {
 		begin, end := touchCameraSwipe(delta.dx, delta.dy)
-		if begin != (maa.Rect{640, 360, 1, 1}) || end != (maa.Rect{640 - delta.dx, 360 - delta.dy, 1, 1}) {
+		if begin != (maa.Rect{520, 360, 1, 1}) || end != (maa.Rect{520 + delta.dx, 360 - delta.dy, 1, 1}) {
 			t.Fatalf("incorrect Android camera gesture: %v -> %v", begin, end)
 		}
 		again, _ := touchCameraSwipe(delta.dx, delta.dy)

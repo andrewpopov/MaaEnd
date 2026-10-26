@@ -1015,9 +1015,9 @@ func drainActionQueue(ctx *maa.Context, trace *combatTrace, currentComboChecks b
 		case ActionLockTarget:
 			run("__AutoFightActionLockTarget")
 		case ActionFaceEnemyLeft:
-			run("__CameraScanMoveRight")
-		case ActionFaceEnemyRight:
 			run("__CameraScanMoveLeft")
+		case ActionFaceEnemyRight:
+			run("__CameraScanMoveRight")
 		case ActionDodge:
 			run("__AutoFightActionDodge")
 		case ActionSleepSecond:

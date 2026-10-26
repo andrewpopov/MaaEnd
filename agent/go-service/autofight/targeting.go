@@ -49,7 +49,7 @@ func (s *mobileTargetingState) next(sa *ScreenAnalyzer, now time.Time) (ActionTy
 	}
 	s.lastActionAt = now
 	s.lockAttempted = false
-	// A touch drag moves the scene with the finger: drag right to face left.
+	// The native CameraScan gesture turns left for a left bearing.
 	if sa.GetEnemyFacingLeft() && !sa.GetEnemyFacingRight() {
 		return ActionFaceEnemyLeft, true
 	}
