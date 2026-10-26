@@ -78,6 +78,14 @@
             "hits": [
                 "SeizeDeliveryJobsIsSeizeSuccess"
             ]
+        },
+        {
+            "name": "English expired sanity medicines automatically used notice",
+            "image": "daily_run_sanity_auto_use.png",
+            "hits": [
+                "__ScenePrivateValuablesItemsExpired",
+                "YellowConfirmButtonType1"
+            ]
         }
     ]
 }
